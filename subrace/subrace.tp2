@@ -1,0 +1,42 @@
+BACKUP ~weidu_external/subrace/backup~
+AUTHOR ~tipun. tipun.iwd@google.com~
+VERSION ~0.3.2~
+
+README ~subrace/readme.txt~
+
+ALWAYS
+  OUTER_SET INSTALLED_LEUI = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
+                               (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
+  OUTER_SET INSTALLED_LEUIBG = INSTALLED_LEUI AND GAME_IS ~bgee bg2ee eet~
+  OUTER_SET INSTALLED_DSUI = (FILE_EXISTS_IN_GAME ~RGCGWDE.png~)
+  OUTER_SET INSTALLED_TIPUN = (FILE_EXISTS_IN_GAME ~m_zZFunc.lua~)
+  OUTER_SET INSTALLED_IUI = (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0)
+END
+
+LANGUAGE  ~Russian~
+         ~ru_RU~
+         ~subrace/lang/ru_RU/subrace.tra~
+LANGUAGE ~English~
+         ~en_US~
+         ~subrace/lang/en_US/subrace.tra~
+LANGUAGE ~Francais (traduction: JohnBob)~
+         ~fr_FR~
+         ~subrace/lang/fr_FR/subrace.tra~
+
+BEGIN @1000001
+DESIGNATED 100
+SUBCOMPONENT @1000000
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000003
+
+OUTER_SET sr_colors = 1
+
+INCLUDE ~subrace/subrace.tph~
+
+BEGIN @1000002
+DESIGNATED 200
+SUBCOMPONENT @1000000
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000003
+
+OUTER_SET sr_colors = 2
+
+INCLUDE ~subrace/subrace.tph~
