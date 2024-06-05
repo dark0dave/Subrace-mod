@@ -1,5 +1,5 @@
 Subrace MOD for Enhanced Edition Games(BGEE, BG2EE, EET, IWDEE)
-				   Version 0.3.1
+				   Version 0.3.2
 			   http://www.arcanecoast.ru
 
 
@@ -115,7 +115,7 @@ In a time when the dwarven race is in sad decline, the gold dwarves of the Realm
 Advantages:
  +1 Charisma
  +2 dodge bonus against giants
- +1 +1 racial bonus to attack rolls against aberrations, the bizarre creatures that live in the Underdark
+ +1 racial bonus to attack rolls against aberrations, the bizarre creatures that live in the Underdark
 
 Disadvantages:
  -1 Dexterity
@@ -135,6 +135,77 @@ Disadvantages:
  -2 Charisma (-1 if Charisma is less than 3)
  Light Blindness: -1 THAC0 and save throws in daylight
  Gets only 90% of experience
+
+-----------------
+1a. Uncommon races
+-----------------
+
+Note, uncommon races show up as human subrace.
+
+GITHYANKI
+The infamous githyanki are a humanoid race of raiders and warriors who hail from the Astral Plane and who have a close affinity with red dragons. Githyanki were once humans, but aeons of enslavement to mind flayers transformed them. They developed psionic strength, and rose up under their supreme leader Gith to overthrow their masters.
+
+Advantages:
+ +1 Intelligence
+ Darkvision
+
+Disadvantages:
+ Gets only 90% of experience
+
+SAHUAGIN
+Often refered to as "sea devils" by sailors, are shark-like humanoids living in swamp dens, ruins, and coastal areas. They worship Sekolah, and grow large but not feeble as they age, and some rulers have been known to live for centuries, but most are killed before their thirtieth year.
+
+Advantages:
+ +1 Strength
+ +1 THAC0 with spears and Halbards
+
+Disadvantages:
+ -1 Intelligence
+ -25% weakness to electrical damage
+
+
+KOBOLD
+Are resourceful survivors whose snare-guarded warrens and opportunistic scavenging have cast them as villains to most other humanoids, with their draconic reverence lending them a reputation as mere minions and nuisances. Yet some kobolds have emerged from their secluded warrens seeking the relative safety of surface settlements, the lucrative prospects of the adventuring life, or validating awe from followers of their own.
+
+Advantages:
+ +1 Dexterity
+ +1 THAC0 with Short Bows & Short Swords
+ Up to -5 bonus to Death, Wand, and Spell saving throws with additional Constitution-based bonuses, see "Shorty" Saving Throws.
+ Darkvision
+
+Disadvantages:
+ -1 Strength
+ -1 Constitution
+
+-----------------
+1b. NonCore races
+-----------------
+
+Work in progress.
+
+CATFOLK
+Curious and gregarious wanderers, catfolk combine features of felines and humanoids in both appearance and temperament. They enjoy learning new things, collecting new tales and trinkets, and ensuring their loved ones are safe and happy. Catfolk view themselves as chosen guardians of natural places in the world and are often recklessly brave, even in the face of overwhelming opposition.
+
+Advantages:
+ +1 Dexterity
+ +1 Charisma
+ +1 Luck
+ Darkvision
+
+Disadvantages:
+ -2 Wisdom
+
+TENGU
+In maritime regions, tengus notably work as fishers, blacksmiths, and “jinx eaters”— members of ships’ crews who are believed, accurately or otherwise, to absorb misfortune. Having lived in a variety of conditions and locations, tengus tend to be nonjudgmental, especially with regard to social station, though their willingness to associate with lawbreakers has often led some to look at them with suspicion.
+
+Advantages:
+ +2 Dexterity
+ +1 racial bonus to all saving throws
+
+Disadvantages:
+ -1 Constitution
+ -1 Charisma
+ Low-light Vision: -1 THAC0 in daylight
 
 ----------------
 2. Installation
