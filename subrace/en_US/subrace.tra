@@ -74,7 +74,7 @@ This spell outlines one or more creatures with a pale violet glow, making positi
 @50   = ~Subrace selection:~
 @51   = ~SUBRACE SELECTION~
 
-@110  = ~Aasimar are human-based planetouched that carry the blood of a celestial or any other type of creatures of pure good alingment such as planetars, solars, and avorals. Aasimar are usually good-aligned and predisposed to fight against the evil in the world. They are typically uncommonly beautiful, and most possess pupil-less pale white, gray, or golden eyes and silver hair, although the specifics vary with the type of celestial they are descended from. Aasimar are blessed with insight and personal magnetism and are drawn to the cause and oath of paladins.
+@110  = ~AASIMAR: Aasimar are human-based planetouched that carry the blood of a celestial or any other type of creatures of pure good alingment such as planetars, solars, and avorals. Aasimar are usually good-aligned and predisposed to fight against the evil in the world. They are typically uncommonly beautiful, and most possess pupil-less pale white, gray, or golden eyes and silver hair, although the specifics vary with the type of celestial they are descended from. Aasimar are blessed with insight and personal magnetism and are drawn to the cause and oath of paladins.
 
 Aasimar have the following traits:
 – Infravision
@@ -83,7 +83,7 @@ Aasimar have the following traits:
 – Acid, cold, and electrical resistance: +20%
 – Gets only 95% of all experience gained~
 
-@120  = ~Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
+@120  = ~TIEFLINGS: Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
 
 Tieflings have the following traits:
 – Infravision
@@ -93,7 +93,7 @@ Tieflings have the following traits:
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained~
 
-@130  = ~Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+@130  = ~DROW: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
 
 Drow have the following traits:
 – May cast Faerie Fire three times per day
@@ -104,23 +104,23 @@ Drow have the following traits:
 – Light Blindness: -1 penalty to THAC0 and Saving Throws while under sunlight
 – Gets only 90% of all experience gained~
 
-@140  = ~The rare wild elves are rarely seen by others, because they live in the heart of thick forests and they have incredible skill at staying hidden. Also called green elves, their skin tends to be dark brown, and their hair ranges from black to light brown, lightening to silvery white with age.
+@140  = ~WILD ELVES: The rare wild elves are rarely seen by others, because they live in the heart of thick forests and they have incredible skill at staying hidden. Also called green elves, their skin tends to be dark brown, and their hair ranges from black to light brown, lightening to silvery white with age.
 
 Wild elves have the following traits:
 – +1 Constitution, -1 Intelligence~
 
-@150  = ~While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race. Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
+@150  = ~STRONGHEART HALFLINGS: While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race. Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
 
 Strongheart halflings have the following traits:
 – Gains one point in the Axe proficiency~
 
-@160  = ~Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
+@160  = ~GHOSTWISE HALFLINGS: Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
 
 Ghostwise halflings have the following traits:
 – May use the Set Snare ability once per day (stacks if the halfling is a thief)
 – +5% Find traps~
 
-@170  = ~Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
+@170  = ~DEEP GNOMES: Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
 
 Svirfneblin have the following traits:
 – May cast Mirror Image, Invisibility and Blur once per day
@@ -133,14 +133,14 @@ Svirfneblin have the following traits:
 – +1 THAC0 bonus vs. kobolds and goblinoids
 – Gets only 85% of all experience gained~
 
-@180  = ~In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
+@180  = ~GOLD DWARVES: In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
 
 Gold dwarves have the following traits:
 – +1 Charisma, -1 Dexterity
 – +2 Armor Class vs. giants
 – +1 bonus to THAC0 vs. aberrations that live in the Underdark~
 
-@190  = ~Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors that excel in stealthy movement. Duergar almost always have gray hair and skin.
+@190  = ~GRAY DWARVES: Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors that excel in stealthy movement. Duergar almost always have gray hair and skin.
 
 Duergar have the following traits:
 – Infravision
