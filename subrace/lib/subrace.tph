@@ -62,6 +62,7 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_svirfn    STR_VAR bam_file="SRSUBI
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_tiefling  STR_VAR bam_file="SRSUBICO" RET text_tiefling=index  Ztext_tiefling=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wild_elf  STR_VAR bam_file="SRSUBICO" RET text_wild_elf=index  Ztext_wild_elf=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_moon_elf  STR_VAR bam_file="SRSUBICO" RET text_moon_elf=index  Ztext_moon_elf=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_feyri  STR_VAR bam_file="SRSUBICO" RET text_feyri=index  Ztext_feyri=strref  END
 
 COPY ~subrace/lua/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
@@ -98,7 +99,7 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_TIEFL.spl~
    //Hair color
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 power=1   target=2 timing=9  parameter1=19 parameter2=6 END
   END
-   //intlligence +1
+   //intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 power=1  target=2 timing=1  parameter1=1 END
    //Dexterity +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=15 power=1  target=2 timing=1  parameter1=1 END
@@ -114,6 +115,30 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_TIEFL.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 power=1 target=2 timing=9  STR_VAR resource="SRBLIND" END
    //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6  power=1  target=2 timing=1  parameter1="-1" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=95 parameter2=2 END
+
+COPY ~subrace/spl/spell.spl~ ~override/SR_FEYRI.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_feyri END
+   //Skin color
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 power=1   target=2 timing=9  parameter1=84 parameter2=3 END
+   //Hair color
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 power=1   target=2 timing=9  parameter1=19 parameter2=6 END
+  END
+   //Charisma +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 power=1  target=2 timing=1  parameter1=1 END
+   //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 power=1  target=2 timing=1  parameter1=1 END
+   //Fire resistance +20
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 power=1  target=2 timing=9 parameter1=20 END
+   //Cold resistance +20
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 power=1  target=2 timing=9 parameter1=20 END
+   //Electricity resistance +20
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 power=1  target=2 timing=9 parameter1=20 END
+  //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 power=1 target=2 timing=9  STR_VAR resource="SRBLIND" END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=95 parameter2=2 END
 
