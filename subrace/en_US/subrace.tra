@@ -122,7 +122,7 @@ Ghostwise halflings have the following traits:
 
 @170  = ~DEEP GNOMES: Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
 
-Svirfneblin have the following traits:
+Deep gnomes have the following traits:
 – May cast Mirror Image, Invisibility and Blur once per day
 – +1 Dexterity, +1 Wisdom, -1 Strength, -2 Charisma (-1 if base Charisma is less than 3)
 – +2 Armor Class vs. missile
@@ -219,7 +219,7 @@ Disadvantages:
 
 /* elf */
 @1100 = ~MOON ELF~
-@1101 = ~The moon elves have chosen forests for solitude, as have many of their brethren. They worship the moon and derive their magical power from it. On a full moon, moon elves become especially powerful. They are the most sociable among their fellows and easily make contact with other races. Often, out of curiosity and a thirst for adventure, they join the groups of adventurers. More than other elves, they are drawn to a variety of paths. Moon elves love music and make excellent bards. They have fair skin, sometimes with a bluish tinge, and silver-white, black, or blue hair. Their eyes are blue or green with gold spots.
+@1101 = ~MOON ELVES: The moon elves have chosen forests for solitude, as have many of their brethren. They worship the moon and derive their magical power from it. On a full moon, moon elves become especially powerful. They are the most sociable among their fellows and easily make contact with other races. Often, out of curiosity and a thirst for adventure, they join the groups of adventurers. More than other elves, they are drawn to a variety of paths. Moon elves love music and make excellent bards. They have fair skin, sometimes with a bluish tinge, and silver-white, black, or blue hair. Their eyes are blue or green with gold spots.
 
 Moon elves have the following traits:
 – +10% Move Silently and Hide in Shadows
