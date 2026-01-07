@@ -33,7 +33,7 @@ END
 
 ACTION_PHP_EACH campscr AS wbcs => dummy BEGIN
 	ACTION_IF FILE_EXISTS_IN_GAME ~%wbcs%.bcs~ THEN BEGIN
-		EXTEND_TOP ~%wbcs%.bcs~ ~subrace/append_bald.baf~
+		EXTEND_TOP ~%wbcs%.bcs~ ~subrace/appendba.baf~
 	END
 END
 
