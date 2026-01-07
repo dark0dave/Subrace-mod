@@ -122,7 +122,7 @@ END
 
 
 //COPY ~subrace/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
-COPY ~subrace/subrace.ids~ ~override~
+COPY ~subrace/ids/subrace.ids~ ~override~
 
 
 OUTER_SPRINT ~tilde~ "~"
