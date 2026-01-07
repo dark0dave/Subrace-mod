@@ -335,7 +335,7 @@ COPY_EXISTING ~spwi206.spl~ ~override/SRSVINV.spl~
 	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode="-1" target=1 END
 	LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete=174 END
 	WRITE_SHORT 0x22 0
-//SRSVBLR  (spwi201) - Biur
+//SRSVBLR  (spwi201) - Blur
 COPY_EXISTING ~spwi201.spl~ ~override/SRSVBLR.spl~
 	LPM CONVERT_SPL_TO_INNATE
 //BLOCKEND
