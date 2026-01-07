@@ -1,8 +1,8 @@
 
-INCLUDE ~subrace/functions.tph~
+INCLUDE ~subrace/lib/functions.tph~
 
-INCLUDE ~subrace/lua_functions.tph~
-INCLUDE ~subrace/subrace_lua.tph~
+INCLUDE ~subrace/lib/lua_functions.tph~
+INCLUDE ~subrace/lib/subrace_lua.tph~
 
 LAF ADD_SPLPROT_ENTRY INT_VAR value_hex=1 STR_VAR label="OUTDOOR"    definition="0x106  0x1  8" RET outdoor   =index END
 LAF ADD_SPLPROT_ENTRY INT_VAR value_hex=1 STR_VAR label="NOTOUTDOOR" definition="0x106  0x1  9" RET notoutdoor=index END
@@ -33,25 +33,24 @@ END
 
 ACTION_PHP_EACH campscr AS wbcs => dummy BEGIN
 	ACTION_IF FILE_EXISTS_IN_GAME ~%wbcs%.bcs~ THEN BEGIN
-		EXTEND_TOP ~%wbcs%.bcs~ ~subrace/appendba.baf~
+		EXTEND_TOP ~%wbcs%.bcs~ ~subrace/baf/appendba.baf~
 	END
 END
 
 
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~SUNSCOH.BAM~) BEGIN
-	COPY ~subrace/SUNSCOH.BAM~ ~override~
+	COPY ~subrace/bam/SUNSCOH.BAM~ ~override~
 END
-COPY ~subrace/SRSUBICO.bam~ ~override~
+COPY ~subrace/bam/SRSUBICO.bam~ ~override~
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~DFF_P39.WAV~) BEGIN
-	COPY ~subrace/DFF_P39.WAV~ ~override~
+	COPY ~subrace/wav/DFF_P39.WAV~ ~override~
 END
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~IDPR113B.BAM~) BEGIN
-	COPY ~subrace/IDPR113B.BAM~ ~override~
+	COPY ~subrace/bam/IDPR113B.BAM~ ~override~
 END
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~IDPR113C.BAM~) BEGIN
-	COPY ~subrace/IDPR113C.BAM~ ~override~
+	COPY ~subrace/bam/IDPR113C.BAM~ ~override~
 END
-
 
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_aasimar   STR_VAR bam_file="SRSUBICO" RET text_aasimar=index   Ztext_aasimar=strref   END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_drow      STR_VAR bam_file="SRSUBICO" RET text_drow=index      Ztext_drow=strref      END
@@ -64,9 +63,9 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_tiefling  STR_VAR bam_file="SRSUBI
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wild_elf  STR_VAR bam_file="SRSUBICO" RET text_wild_elf=index  Ztext_wild_elf=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_moon_elf  STR_VAR bam_file="SRSUBICO" RET text_moon_elf=index  Ztext_moon_elf=strref  END
 
-COPY ~subrace/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
+COPY ~subrace/lua/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
-COPY ~subrace/spell.spl~ ~override/SR_AASIM.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_AASIM.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_aasimar END
    //Skin color
@@ -90,7 +89,7 @@ COPY ~subrace/spell.spl~ ~override/SR_AASIM.spl~
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=95 parameter2=2 END
 
-COPY ~subrace/spell.spl~ ~override/SR_TIEFL.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_TIEFL.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_tiefling END
    //Skin color
@@ -118,7 +117,7 @@ COPY ~subrace/spell.spl~ ~override/SR_TIEFL.spl~
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=95 parameter2=2 END
 
-COPY ~subrace/spell.spl~ ~override/SR_DROW.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_DROW.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_drow END
    //Skin color
@@ -155,7 +154,7 @@ COPY ~subrace/spell.spl~ ~override/SR_DROW.spl~
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=90 parameter2=2 END
 
-COPY ~subrace/spell.spl~ ~override/SR_EWILD.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_EWILD.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_wild_elf END
    //Skin color
@@ -169,7 +168,7 @@ COPY ~subrace/spell.spl~ ~override/SR_EWILD.spl~
    //intlligence -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19  power=1 target=2 timing=1  parameter1="-1" END
 
-COPY ~subrace/spell.spl~ ~override/SR_EMOON.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_EMOON.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_moon_elf END
    //Charisma +1
@@ -181,14 +180,14 @@ COPY ~subrace/spell.spl~ ~override/SR_EMOON.spl~
    //Constitution -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=10  power=1 target=2 timing=1  parameter1="-1" END
 
-COPY ~subrace/spell.spl~ ~override/SR_HLSTR.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_HLSTR.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_hflstrong END
    // +1 axe star
   LPF ADD_SPELL_EFFECT INT_VAR opcode=233 power=1 target=2 timing=9 parameter1=1 parameter2=65628 END
 
 
-COPY ~subrace/spell.spl~ ~override/SR_HLGHO.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_HLGHO.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_hflhide END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 power=1 target=2 duration=1 parameter1=205 parameter2=115 STR_VAR resource=SR_HLGHO END
@@ -198,7 +197,7 @@ COPY ~subrace/spell.spl~ ~override/SR_HLGHO.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 power=1 target=2 timing=9  STR_VAR resource="SPCL412" END
   //LPF ADD_SPELL_EFFECT INT_VAR opcode=272 power=1 target=2 parameter1=12 parameter2=3 timing=9 STR_VAR resource=SR_HLGHO END
 
-COPY ~subrace/spell.spl~ ~override/SR_SVIRF.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_SVIRF.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_svirfn END
    //Skin color
@@ -252,7 +251,7 @@ COPY ~subrace/spell.spl~ ~override/SR_SVIRF.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6  power=1  target=2 timing=1  parameter1="-1" END
   
 
-COPY ~subrace/spell.spl~ ~override/SR_DWGLD.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_DWGLD.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_dwfgold END
    //Charisma +1
@@ -268,7 +267,7 @@ COPY ~subrace/spell.spl~ ~override/SR_DWGLD.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=177 power=1 target=2 timing=9 parameter1=116 parameter2=4  STR_VAR resource="SRSVATK" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=177 power=1 target=2 timing=9 parameter1=123 parameter2=4  STR_VAR resource="SRSVATK" END
 
-COPY ~subrace/spell.spl~ ~override/SR_DUERG.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_DUERG.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_dwfduerg END
    //Skin color
@@ -307,8 +306,8 @@ COPY ~subrace/spell.spl~ ~override/SR_DUERG.spl~
 
 //BLOCK ABILITY SPELLS
 //SRSNSCOH (IDPR113)
-ADD_PROJECTILE ~subrace/idpro000.pro~
-COPY ~subrace/IDPR113.spl~ ~override/SRSNSCOH.spl~
+ADD_PROJECTILE ~subrace/pro/idpro000.pro~
+COPY ~subrace/spl/IDPR113.spl~ ~override/SRSNSCOH.spl~
 	SAY 0x08 @40
 	SAY 0x50 @41
 	LPM CONVERT_SPL_TO_INNATE
@@ -318,7 +317,7 @@ COPY ~subrace/IDPR113.spl~ ~override/SRSNSCOH.spl~
 COPY_EXISTING ~SPWI106.spl~ ~override/SRBLIND.spl~
 	LPM CONVERT_SPL_TO_INNATE
 //SRFFIRE  (sppr116)  (sppr100)
-COPY ~subrace/SPPR100.SPL~ ~override/SRFFIRE.spl~
+COPY ~subrace/spl/SPPR100.SPL~ ~override/SRFFIRE.spl~
 	SAY 0x08 @42
 	SAY 0x50 @43
 	LPM CONVERT_SPL_TO_INNATE
@@ -342,7 +341,7 @@ COPY_EXISTING ~spwi201.spl~ ~override/SRSVBLR.spl~
 
 //BLOCK SPELLS XP
 //SRSVATK.EFF - +1 THAC0
-COPY ~subrace/effect.EFF~ ~override/SRSVATK.EFF~
+COPY ~subrace/eff/effect.EFF~ ~override/SRSVATK.EFF~
   WRITE_LONG  0x10 278
   WRITE_LONG  0x14 2
   WRITE_LONG  0x1c 1
@@ -350,7 +349,7 @@ COPY ~subrace/effect.EFF~ ~override/SRSVATK.EFF~
   WRITE_SHORT 0x2c 100
 
 //SRDWACG.EFF - +4 AC
-COPY ~subrace/effect.EFF~ ~override/SRDWACG.EFF~
+COPY ~subrace/eff/effect.EFF~ ~override/SRDWACG.EFF~
   WRITE_LONG  0x10 0
   WRITE_LONG  0x14 2
   WRITE_LONG  0x1c 4
@@ -359,7 +358,7 @@ COPY ~subrace/effect.EFF~ ~override/SRDWACG.EFF~
 
 //Drow blindness
 //SRDBLIND.EFF - Cast Spell SRDBLIND.spl
-COPY ~subrace/effect.EFF~ ~override/SRDBLIND.EFF~
+COPY ~subrace/eff/effect.EFF~ ~override/SRDBLIND.EFF~
   WRITE_LONG  0x10 146
   WRITE_LONG  0x14 2
   WRITE_LONG  0x20 1
@@ -367,7 +366,7 @@ COPY ~subrace/effect.EFF~ ~override/SRDBLIND.EFF~
   WRITE_SHORT 0x2c 100
   WRITE_ASCII 0x30 ~SRDBLIND~ (8)
 
-COPY ~subrace/spell.spl~ ~override/SRDBLIND.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SRDBLIND.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=321 target=2 timing=1 STR_VAR resource="SRDBLIND" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 power=1 target=2 parameter2=%notoutdoor% duration=1 STR_VAR resource="SRDBLIND" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 power=1 target=2 parameter2=90 duration=1 STR_VAR resource="SRDBLIND" END
@@ -395,7 +394,7 @@ COPY ~subrace/spell.spl~ ~override/SRDBLIND.spl~
 
 //Hide in shadows no outdoors
 //SRSVSHD.EFF - Apply effect list SRSVSHD.spl
-COPY ~subrace/effect.EFF~ ~override/SRSVSHD.EFF~
+COPY ~subrace/eff/effect.EFF~ ~override/SRSVSHD.EFF~
   WRITE_LONG  0x10 146
   WRITE_LONG  0x14 2
   WRITE_LONG  0x20 1
@@ -403,7 +402,7 @@ COPY ~subrace/effect.EFF~ ~override/SRSVSHD.EFF~
   WRITE_SHORT 0x2c 100
   WRITE_ASCII 0x30 ~SRSVSHD~ (8)
 
-COPY ~subrace/spell.spl~ ~override/SRSVSHD.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SRSVSHD.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=321 target=2 timing=1 STR_VAR resource="SRSVSHD" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 power=1  target=2 parameter2=%outdoor% duration=1 STR_VAR resource="SRSVSHD" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=275 power=1 target=2 duration=60 parameter1=10 END
@@ -411,7 +410,7 @@ COPY ~subrace/spell.spl~ ~override/SRSVSHD.spl~
 //BLOCKEND
 
 //BLOCK NPC
-COPY ~subrace/spell.spl~ ~override/SR_VCBA.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_VCBA.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_drow END
   //Set spell state
@@ -433,11 +432,11 @@ ACTION_FOR_EACH scr IN VICONIA_ BDVICONI VICONIA VICO25 BAELOTH BDBAELOT BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ THEN BEGIN
   	OUTER_SPRINT ~SUBRA~ ~VCBA~
   	OUTER_SET lc_subr = 3
-    EXTEND_TOP ~%scr%.bcs~ ~subrace/sr_subr.baf~ EVALUATE_BUFFER
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
   END
 END
 
-COPY ~subrace/spell.spl~ ~override/SR_HAER.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_HAER.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_tiefling END
   //Give innate ability
@@ -449,11 +448,11 @@ ACTION_FOR_EACH scr IN HAERDALI HAER25 BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ THEN BEGIN
     OUTER_SPRINT ~SUBRA~ ~HAER~
     OUTER_SET lc_subr = 2
-    EXTEND_TOP ~%scr%.bcs~ ~subrace/sr_subr.baf~ EVALUATE_BUFFER
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
   END
 END
 
-COPY ~subrace/spell.spl~ ~override/SR_CAEL.spl~
+COPY ~subrace/spl/spell.spl~ ~override/SR_CAEL.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_aasimar END
    //Acid resistance +20
@@ -471,7 +470,7 @@ ACTION_FOR_EACH scr IN BDCAELAR BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ THEN BEGIN
 	OUTER_SET lc_subr = 1
     OUTER_SPRINT ~SUBRA~ ~CAEL~
-    EXTEND_TOP ~%scr%.bcs~ ~subrace/sr_subr.baf~ EVALUATE_BUFFER
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
   END
 END
 //BLOCKEND

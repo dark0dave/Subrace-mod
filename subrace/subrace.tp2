@@ -1,8 +1,7 @@
 BACKUP ~subrace/backup~
 AUTHOR ~tipun. tipun.iwd@google.com~
 VERSION ~0.3.2~
-
-README ~subrace/readme.txt~
+README ~subrace/Readme.txt~
 
 ALWAYS
   OUTER_SET INSTALLED_LEUI   = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
@@ -15,13 +14,13 @@ END
 
 LANGUAGE ~Russian~
 	     ~ru_RU~
-	     ~subrace/ru_RU/subrace.tra~
+	     ~subrace/lang/ru_RU/subrace.tra~
 LANGUAGE ~English~
 	     ~en_US~
-	     ~subrace/en_US/subrace.tra~
+	     ~subrace/lang/en_US/subrace.tra~
 LANGUAGE ~Francais (traduction: JohnBob)~
 	     ~fr_FR~
-	     ~subrace/fr_FR/subrace.tra~
+	     ~subrace/lang/fr_FR/subrace.tra~
 
 BEGIN @1000001
 DESIGNATED 100
@@ -30,7 +29,7 @@ REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000003
 
 OUTER_SET sr_colors = 1
 
-INCLUDE ~subrace/subrace.tph~
+INCLUDE ~subrace/lib/subrace.tph~
 
 BEGIN @1000002
 DESIGNATED 200
@@ -39,4 +38,4 @@ REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000003
 
 OUTER_SET sr_colors = 2
 
-INCLUDE ~subrace/subrace.tph~
+INCLUDE ~subrace/lib/subrace.tph~
