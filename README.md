@@ -1,5 +1,4 @@
 # Subrace-mod
-
 Subrace mod for Enhanced Edition games.
 
 Topic on forum: https://www.gibberlings3.net/forums/topic/32267-subrace-mod/
@@ -51,7 +50,8 @@ Disadvantages:
  Gets only 95% of experience
 
 DROW
-Dark elves, also known as drow, are the subterranean cousins of moon elves. Their black skin and pale hair are a curse for their allegiance with the spider goddess, Lolth. Drow societies are usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for s
+Dark elves, also known as drow, are the subterranean cousins of moon elves. Their black skin and pale hair are a curse for their allegiance with the spider goddess, Lolth. Drow societies are usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+
 Advantages:
  +1 Intelligence
  +1 Charisma
