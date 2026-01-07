@@ -58,6 +58,15 @@ WILD ELVES: The rare wild elves are rarely seen by others, because they live in 
 Wild elves have the following traits:
 – +1 Constitution, -1 Intelligence
 
+FEY'RI: Fey'ri are elven-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous and chaotic behavior, but not necessarily to evil. Though their appearance can be very elven-like, to the point where they are sometimes indistinguishable from regular elves, they often have telltale signs that belie their ancestry such as fangs, barbed tails, horns, forked tongues, and even wings in some rare cases. Due to the misconceptions about their nature, and the assumption of evil, they face a lot of discrimination in a similar way tieflings do.
+
+Fey'ri have the following traits:
+– May cast Blindness once per day
+– +1 Charisma
+– Fire, cold, and electrical resistance: +20%
+– +10% Hide in Shadows and Move Silently
+– Gets only 95% of all experience gained
+
 STRONGHEART HALFLINGS: While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race. Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
 
 Strongheart halflings have the following traits:
