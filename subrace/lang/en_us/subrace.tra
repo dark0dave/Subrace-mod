@@ -255,3 +255,56 @@ Half-drow have the following traits:
 @1132 = ~half-drow~
 @1133 = ~Half-drow~
 
+@1140 = "AIR GENASI"
+@1141 = ~AIR GENASI: 
+
+Air genasi have the following traits:
+– May cast Aura of Sweet Air once per day
+– Movement rate increased by a factor of 1
+– +1 Dexterity, -1 Charisma
+– +25% Electricity resistance
+– +5% Electricity damage dealt
+– Gets only 95% of all experience gained~
+
+@1442 = ~air genasi~
+@1443 = ~Air genasi~
+
+@1150 = "EARTH GENASI"
+@1151 = ~EARTH GENASI: 
+
+Earth genasi have the following traits:
+– May cast Earthskin once per day, effectively granting one layer of Stoneskin (two at level 10)
+– +1 Strength, +1 Constitution, -1 Dexterity, -1 Charisma
+– +25% Acid resistance
+– +5% Acid damage dealt
+– Gets only 95% of all experience gained~
+
+@1152 = ~earth genasi~
+@1153 = ~Earth genasi~
+
+@1160 = "FIRE GENASI"
+@1161 = ~FIRE GENASI: 
+
+Fire genasi have the following traits:
+– May cast Burning Hands twice per day
+– +1 Intelligence, -1 Charisma
+– +25% Fire resistance, -10% Cold resistance
+– +5% Fire damage dealt
+– Gets only 95% of all experience gained~
+
+@1162 = ~fire genasi~
+@1163 = ~Fire genasi~
+
+@1170 = "WATER GENASI"
+@1171 = ~WATER GENASI: 
+
+Water genasi have the following traits:
+– May cast Writhing Fog once per day
+– +1 Constitution, -1 Charisma
+– +25% Cold resistance
+– +5% Cold damage dealt
+– Gets only 95% of all experience gained~
+
+@1172 = ~water genasi~
+@1173 = ~Water genasi~
+
