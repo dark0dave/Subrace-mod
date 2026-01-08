@@ -1,1 +1,1 @@
-subrace/Readme.txt
+subrace/readme.txt
