@@ -39,17 +39,17 @@ END
 
 
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~SUNSCOH.BAM~) BEGIN
-	COPY ~subrace/bam/SUNSCOH.BAM~ ~override~
+	COPY ~subrace/bam/sunscoh.bam~ ~override/SUNSCOH.BAM~
 END
-COPY ~subrace/bam/SRSUBICO.bam~ ~override~
+COPY ~subrace/bam/srsubico.bam~ ~override~
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~DFF_P39.WAV~) BEGIN
-	COPY ~subrace/wav/DFF_P39.WAV~ ~override~
+	COPY ~subrace/wav/dff_p39.wav~ ~override~
 END
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~IDPR113B.BAM~) BEGIN
-	COPY ~subrace/bam/IDPR113B.BAM~ ~override~
+	COPY ~subrace/bam/idpr113b.bam~ ~override~
 END
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~IDPR113C.BAM~) BEGIN
-	COPY ~subrace/bam/IDPR113C.BAM~ ~override~
+	COPY ~subrace/bam/idpr113c.bam~ ~override~
 END
 
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_aasimar   STR_VAR bam_file="SRSUBICO" RET text_aasimar=index   Ztext_aasimar=strref   END
@@ -65,7 +65,7 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_moon_elf  STR_VAR bam_file="SRSUBI
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_feyri  STR_VAR bam_file="SRSUBICO" RET text_feyri=index  Ztext_feyri=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfdrow  STR_VAR bam_file="SRSUBICO" RET text_halfdrow=index  Ztext_halfdrow=strref  END
 
-COPY ~subrace/lua/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
+COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
 COPY ~subrace/spl/spell.spl~ ~override/SR_AASIM.spl~
   //Portrait icon
@@ -348,7 +348,7 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_DUERG.spl~
 //BLOCK ABILITY SPELLS
 //SRSNSCOH (IDPR113)
 ADD_PROJECTILE ~subrace/pro/idpro000.pro~
-COPY ~subrace/spl/IDPR113.spl~ ~override/SRSNSCOH.spl~
+COPY ~subrace/spl/idpr113.spl~ ~override/SRSNSCOH.spl~
 	SAY 0x08 @40
 	SAY 0x50 @41
 	LPM CONVERT_SPL_TO_INNATE
@@ -358,7 +358,7 @@ COPY ~subrace/spl/IDPR113.spl~ ~override/SRSNSCOH.spl~
 COPY_EXISTING ~SPWI106.spl~ ~override/SRBLIND.spl~
 	LPM CONVERT_SPL_TO_INNATE
 //SRFFIRE  (sppr116)  (sppr100)
-COPY ~subrace/spl/SPPR100.SPL~ ~override/SRFFIRE.spl~
+COPY ~subrace/spl/sppr100.spl~ ~override/SRFFIRE.spl~
 	SAY 0x08 @42
 	SAY 0x50 @43
 	LPM CONVERT_SPL_TO_INNATE
@@ -382,7 +382,7 @@ COPY_EXISTING ~spwi201.spl~ ~override/SRSVBLR.spl~
 
 //BLOCK SPELLS XP
 //SRSVATK.EFF - +1 THAC0
-COPY ~subrace/eff/effect.EFF~ ~override/SRSVATK.EFF~
+COPY ~subrace/eff/effect.eff~ ~override/SRSVATK.EFF~
   WRITE_LONG  0x10 278
   WRITE_LONG  0x14 2
   WRITE_LONG  0x1c 1
@@ -390,7 +390,7 @@ COPY ~subrace/eff/effect.EFF~ ~override/SRSVATK.EFF~
   WRITE_SHORT 0x2c 100
 
 //SRDWACG.EFF - +4 AC
-COPY ~subrace/eff/effect.EFF~ ~override/SRDWACG.EFF~
+COPY ~subrace/eff/effect.eff~ ~override/SRDWACG.EFF~
   WRITE_LONG  0x10 0
   WRITE_LONG  0x14 2
   WRITE_LONG  0x1c 4
@@ -399,7 +399,7 @@ COPY ~subrace/eff/effect.EFF~ ~override/SRDWACG.EFF~
 
 //Drow blindness
 //SRDBLIND.EFF - Cast Spell SRDBLIND.spl
-COPY ~subrace/eff/effect.EFF~ ~override/SRDBLIND.EFF~
+COPY ~subrace/eff/effect.eff~ ~override/SRDBLIND.EFF~
   WRITE_LONG  0x10 146
   WRITE_LONG  0x14 2
   WRITE_LONG  0x20 1
@@ -435,7 +435,7 @@ COPY ~subrace/spl/spell.spl~ ~override/SRDBLIND.spl~
 
 //Hide in shadows no outdoors
 //SRSVSHD.EFF - Apply effect list SRSVSHD.spl
-COPY ~subrace/eff/effect.EFF~ ~override/SRSVSHD.EFF~
+COPY ~subrace/eff/effect.eff~ ~override/SRSVSHD.EFF~
   WRITE_LONG  0x10 146
   WRITE_LONG  0x14 2
   WRITE_LONG  0x20 1

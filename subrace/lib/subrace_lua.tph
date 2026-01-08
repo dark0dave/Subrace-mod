@@ -128,11 +128,7 @@ ACTION_IF ( INSTALLED_DSUI ) BEGIN
 end~
 END
 
-
-
-//COPY ~subrace/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
 COPY ~subrace/ids/subrace.ids~ ~override~
-
 
 OUTER_SPRINT ~tilde~ "~"
 
