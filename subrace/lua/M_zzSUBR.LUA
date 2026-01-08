@@ -214,7 +214,7 @@ zZsubraceStrings = {
 	{nil, 0, -1, 10},
 	{nil, 2, %Ztext_moon_elf%, 11},
 	{nil, 2, %Ztext_feyri%, 12},
-	{nil, 2, %Ztext_halfdrow%, 13},
+	{nil, 3, %Ztext_halfdrow%, 13},
 }
 function zzCreateCharInfo(info)
 	local rc = 0
