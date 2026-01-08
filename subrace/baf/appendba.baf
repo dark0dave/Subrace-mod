@@ -68,8 +68,13 @@ THEN
 		Continue()
 	RESPONSE #12
 		SetGlobal("Player_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",11))
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",12))
 		ActionOverride(Player1,ApplySpellRES("SR_FEYRI",Myself))
+		Continue()
+	RESPONSE #13
+		SetGlobal("Player_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",13))
+		ActionOverride(Player1,ApplySpellRES("SR_HDROW",Myself))
 		Continue()
 END
 

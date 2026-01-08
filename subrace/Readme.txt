@@ -47,6 +47,15 @@ Drow have the following traits:
 – Light Blindness: -1 penalty to THAC0 and Saving Throws while under sunlight
 – Gets only 90% of all experience gained
 
+HALF-DROW: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors. 
+
+Half-drow have the following traits:
+– May cast Faerie Fire once per day
+– +1 Intelligence
+– +5% Find Traps
+– +10% Magic resistance
+– Gets only 95% of all experience gained
+
 MOON ELVES: The moon elves have chosen forests for solitude, as have many of their brethren. They worship the moon and derive their magical power from it. On a full moon, moon elves become especially powerful. They are the most sociable among their fellows and easily make contact with other races. Often, out of curiosity and a thirst for adventure, they join the groups of adventurers. More than other elves, they are drawn to a variety of paths. Moon elves love music and make excellent bards. They have fair skin, sometimes with a bluish tinge, and silver-white, black, or blue hair. Their eyes are blue or green with gold spots.
 
 Moon elves have the following traits:

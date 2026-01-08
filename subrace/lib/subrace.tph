@@ -63,6 +63,7 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_tiefling  STR_VAR bam_file="SRSUBI
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wild_elf  STR_VAR bam_file="SRSUBICO" RET text_wild_elf=index  Ztext_wild_elf=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_moon_elf  STR_VAR bam_file="SRSUBICO" RET text_moon_elf=index  Ztext_moon_elf=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_feyri  STR_VAR bam_file="SRSUBICO" RET text_feyri=index  Ztext_feyri=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfdrow  STR_VAR bam_file="SRSUBICO" RET text_halfdrow=index  Ztext_halfdrow=strref  END
 
 COPY ~subrace/lua/M_zzSUBR.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
@@ -153,7 +154,7 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_DROW.spl~
   END
   //Set spell state
   LPF ADD_SPELL_EFFECT INT_VAR opcode=328 power=1 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
-   //intlligence +1
+   //intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19  power=1 target=2 timing=1  parameter1=1 END
    //Charisma +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6  power=1  target=2 timing=1  parameter1=1 END
@@ -161,12 +162,7 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_DROW.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=91  power=1 target=2 timing=9 parameter1=10 END
    //Reputation
   LPF ADD_SPELL_EFFECT INT_VAR opcode=108 power=1 target=2 timing=1 parameter1="-2" END
-   //Magic resistance 40/45/50/55/60
- // LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=40 probability1=20  END
-  //LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=45 probability1=40  probability2=21 END
-  //LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=50 probability1=60  probability2=41 END
-  //LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=55 probability1=80  probability2=61 END
-  //LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=60 probability1=100 probability2=81 END
+   //Magic resistance 50%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=50 END
    //Save vs. spells +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=37  power=1 target=2 timing=9 parameter1=1 END
@@ -178,6 +174,26 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_DROW.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=272 power=1 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="SRDBLIND" END
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=90 parameter2=2 END
+
+COPY ~subrace/spl/spell.spl~ ~override/SR_HDROW.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 power=1 target=2 timing=9 parameter2=text_halfdrow END
+   //Skin color
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 power=1   target=2 timing=9  parameter1=63 parameter2=3 END
+   //Hair color
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 power=1   target=2 timing=9  parameter1=79 parameter2=6 END
+  END
+   //intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19  power=1 target=2 timing=1  parameter1=1 END
+   //Find traps +5
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=91  power=1 target=2 timing=9 parameter1=10 END
+  // 10% magic resistance
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=166 power=1 target=2 timing=9 parameter1=10 END
+   //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 power=1 target=2 timing=9  STR_VAR resource="SRFFIRE" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 power=1 target=2 timing=9 parameter1=95 parameter2=2 END
 
 COPY ~subrace/spl/spell.spl~ ~override/SR_EWILD.spl~
   //Portrait icon
