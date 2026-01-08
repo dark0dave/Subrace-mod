@@ -34,8 +34,11 @@ OUTER_SET hflhide_desc    = RESOLVE_STR_REF (@160)
 OUTER_SET gnome_title     = RESOLVE_STR_REF (@35)
 OUTER_SET svirfn_title    = RESOLVE_STR_REF (@27)
 OUTER_SET svirfn_desc     = RESOLVE_STR_REF (@170)
-//other
+//half elf
 OUTER_SET halfelf_title   = RESOLVE_STR_REF (@36)
+OUTER_SET halfdrow_title   = RESOLVE_STR_REF (@1130)
+OUTER_SET halfdrow_desc    = RESOLVE_STR_REF (@1131)
+// half orc
 OUTER_SET halforc_title   = RESOLVE_STR_REF (@37)
 
 //human
@@ -59,8 +62,10 @@ OUTER_SET Zhflhide_title   = RESOLVE_STR_REF (@526)
 //gnome
 OUTER_SET Zgnome_title     = RESOLVE_STR_REF (@535)
 OUTER_SET Zsvirfn_title    = RESOLVE_STR_REF (@527)
-//other
+// half elf
 OUTER_SET Zhalfelf_title   = RESOLVE_STR_REF (@536)
+OUTER_SET Zhalfdrow_title   = RESOLVE_STR_REF (@1132)
+// half orc
 OUTER_SET Zhalforc_title   = RESOLVE_STR_REF (@537)
 
 //first letter upper
@@ -75,7 +80,7 @@ OUTER_SET text_hflhide   = RESOLVE_STR_REF(@16)
 OUTER_SET text_svirfn    = RESOLVE_STR_REF(@17)
 OUTER_SET text_moon_elf  = RESOLVE_STR_REF(@1103)
 OUTER_SET text_feyri     = RESOLVE_STR_REF(@1123)
-
+OUTER_SET text_halfdrow  = RESOLVE_STR_REF(@1133)
 
 ACTION_IF ( GAME_IS ~iwdee~ ) BEGIN
 	OUTER_SET bghuman    = 37481  OUTER_SET bghuman_r    = 37482

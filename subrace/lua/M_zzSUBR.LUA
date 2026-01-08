@@ -24,6 +24,7 @@ zZsubrTitleTable = {
 	['%Ztext_svirfn%'] = {9, %svirfn_desc%},
 	['%Ztext_moon_elf%'] = {11, %moon_elf_desc%},
 	['%Ztext_feyri%'] = {12, %feyri_desc%},
+	['%Ztext_halfdrow%'] = {13, %halfdrow_desc%},
 }
 
 function subt(chr)
@@ -38,6 +39,7 @@ function subt(chr)
 	elseif (chr == 9) then return Infinity_FetchString(%svirfn_title%) --subrStrings.GNOME_DEEP
 	elseif (chr == 11) then return Infinity_FetchString(%moon_elf_title%) --subrStrings.MOON_ELF
 	elseif (chr == 12) then return Infinity_FetchString(%feyri_title%) --subrStrings.FEYRI
+	elseif (chr == 13) then return Infinity_FetchString(%halfdrow_title%) --subrStrings.HALF_DROW
 	else return ""
 	end
 end
@@ -87,6 +89,7 @@ function createSubraceTable(race)
 	if race == 3 then --halfelf
 		sbSubraceData = {
 			{%Zhalfelf_title%, %bghalfelf%, 10},
+			{%Zhalfdrow_title%, %halfdrow_desc%, 13},
 		}
 	end
 	if race == 4 then --dwarf
@@ -131,6 +134,7 @@ function createSubraceTableEx()
 		{0, 0, 10},
 		{%Zmoon_elf_title%, %moon_elf_desc%, 11},
 		{%Zfeyri_title%, %feyri_desc%, 12},
+		{%Zhalfdrow_title%, %halfdrow_desc%, 13},
 		}
 end
 createSubraceTableEx()
@@ -210,6 +214,7 @@ zZsubraceStrings = {
 	{nil, 0, -1, 10},
 	{nil, 2, %Ztext_moon_elf%, 11},
 	{nil, 2, %Ztext_feyri%, 12},
+	{nil, 3, %Ztext_halfdrow%, 13},
 }
 function zzCreateCharInfo(info)
 	local rc = 0
