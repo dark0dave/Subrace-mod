@@ -495,10 +495,10 @@ END
 COPY ~subrace/spl/spell.spl~ ~override/SR_CAEL.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_aasimar END
-   //Acid resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=20 END
-   //Electricity resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=20 END
+   //Acid resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=15 END
+   //Electricity resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=15 END
    //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
