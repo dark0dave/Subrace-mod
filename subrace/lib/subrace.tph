@@ -122,6 +122,64 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_tiefl.spl~
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
+COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_air_genasi END
+
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+   //Skin color
+   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=110 parameter2=3 END
+   // Hair color
+   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=31 parameter2=6 END
+  END
+
+   //intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
+  //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
+   //Fire resistance +25
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
+   //Cold resistance -10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
+   //Infravision
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
+  //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
+  // +5% fire damage dealt
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_earth_genasi END
+
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+   //Skin color
+   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=137 parameter2=3 END
+   // Hair color
+   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=137 parameter2=6 END
+  END
+
+   //intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
+  //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
+   //Fire resistance +25
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
+   //Cold resistance -10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
+   //Infravision
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
+  //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
+  // +5% fire damage dealt
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+
 COPY ~subrace/spl/spell.spl~ ~override/sr_fgena.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_fire_genasi END
@@ -131,6 +189,35 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_fgena.spl~
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=87 parameter2=3 END
    // Hair color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=80 parameter2=6 END
+  END
+
+   //intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
+  //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
+   //Fire resistance +25
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
+   //Cold resistance -10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
+   //Infravision
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
+  //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
+  // +5% fire damage dealt
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_wgena.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_water_genasi END
+
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+   //Skin color
+   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=189 parameter2=3 END
+   // Hair color
+   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=18 parameter2=6 END
   END
 
    //intelligence +1
