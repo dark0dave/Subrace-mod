@@ -63,6 +63,10 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wild_elf  STR_VAR bam_file="SRSUBI
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_moon_elf  STR_VAR bam_file="SRSUBICO" RET text_moon_elf=index  Ztext_moon_elf=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_feyri  STR_VAR bam_file="SRSUBICO" RET text_feyri=index  Ztext_feyri=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfdrow  STR_VAR bam_file="SRSUBICO" RET text_halfdrow=index  Ztext_halfdrow=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_air_genasi STR_VAR bam_file="SRSUBICO" RET text_air_genasi=index  Ztext_air_genasi=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_earth_genasi STR_VAR bam_file="SRSUBICO" RET text_earth_genasi=index  Ztext_earth_genasi=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_fire_genasi STR_VAR bam_file="SRSUBICO" RET text_fire_genasi=index  Ztext_fire_genasi=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_water_genasi STR_VAR bam_file="SRSUBICO" RET text_water_genasi=index  Ztext_water_genasi=strref  END
 
 COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
