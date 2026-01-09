@@ -46,6 +46,7 @@ Drow have the following traits:
 – +50% Magic resistance
 – Light Blindness: -1 penalty to THAC0 and Saving Throws while under sunlight
 – Gets only 90% of all experience gained
+– Starts with a -2 penalty to Reputation
 
 HALF-DROW: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors. 
 
