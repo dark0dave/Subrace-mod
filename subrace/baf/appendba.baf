@@ -79,22 +79,22 @@ THEN
 	RESPONSE #14
 		SetGlobal("Player_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player1,ApplySpellRES("SR_AGENAS",Myself))
+		ActionOverride(Player1,ApplySpellRES("SR_AGENA",Myself))
 		Continue()
 	RESPONSE #15
 		SetGlobal("Player_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player1,ApplySpellRES("SR_EGENAS",Myself))
+		ActionOverride(Player1,ApplySpellRES("SR_EGENA",Myself))
 		Continue()
 	RESPONSE #16
 		SetGlobal("Player_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player1,ApplySpellRES("SR_FGENAS",Myself))
+		ActionOverride(Player1,ApplySpellRES("SR_FGENA",Myself))
 		Continue()
 	RESPONSE #17
 		SetGlobal("Player_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player1,ApplySpellRES("SR_WGENAS",Myself))
+		ActionOverride(Player1,ApplySpellRES("SR_WGENA",Myself))
 		Continue()
 END
 
