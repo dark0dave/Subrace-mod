@@ -1,4 +1,4 @@
-BACKUP ~subrace/backup~
+BACKUP "weidu_external/subrace/backup/"
 AUTHOR ~tipun. tipun.iwd@google.com~
 VERSION ~0.3.2~
 README ~subrace/readme.txt~
@@ -13,19 +13,20 @@ ALWAYS
 END
 
 LANGUAGE ~Russian~
-	     ~ru_RU~
-	     ~subrace/lang/ru_RU/subrace.tra~
+         ~ru_RU~
+         ~subrace/lang/ru_RU/subrace.tra~
 LANGUAGE ~English~
-	     ~en_US~
-	     ~subrace/lang/en_US/subrace.tra~
+         ~en_US~
+         ~subrace/lang/en_US/subrace.tra~
+         ~subrace/lang/en_US/newrace.tra~
 LANGUAGE ~Francais (traduction: JohnBob)~
-	     ~fr_FR~
-	     ~subrace/lang/fr_FR/subrace.tra~
+         ~fr_FR~
+         ~subrace/lang/fr_FR/subrace.tra~
 
 BEGIN @1000001
 DESIGNATED 100
 SUBCOMPONENT @1000000
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000003
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 
 OUTER_SET sr_colors = 1
 
@@ -34,8 +35,16 @@ INCLUDE ~subrace/lib/subrace.tph~
 BEGIN @1000002
 DESIGNATED 200
 SUBCOMPONENT @1000000
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000003
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 
 OUTER_SET sr_colors = 2
 
 INCLUDE ~subrace/lib/subrace.tph~
+
+// New Races Component
+BEGIN @1000003
+DESIGNATED 300
+LABEL ~newraces~
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+
+INCLUDE ~subrace/lib/newrace.tph~
