@@ -77,12 +77,12 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_AASIM.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
    //Charisma +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
-   //Acid resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=20 END
-   //Cold resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=20 END
-   //Electricity resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=20 END
+   //Acid resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=15 END
+   //Cold resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=15 END
+   //Electricity resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=15 END
    //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
@@ -103,12 +103,12 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_TIEFL.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
    //Dexterity +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
-   //Fire resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=20 END
-   //Cold resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=20 END
-   //Electricity resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=20 END
+   //Fire resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=15 END
+   //Cold resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=15 END
+   //Electricity resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=15 END
    //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
@@ -131,12 +131,12 @@ COPY ~subrace/spl/spell.spl~ ~override/SR_FEYRI.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
    //Dexterity +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
-   //Fire resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=20 END
-   //Cold resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=20 END
-   //Electricity resistance +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=20 END
+   //Fire resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=15 END
+   //Cold resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=15 END
+   //Electricity resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=15 END
   //Give innate ability
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="SRBLIND" END
   //XP bonus - 95%

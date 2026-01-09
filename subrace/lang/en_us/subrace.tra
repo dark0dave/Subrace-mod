@@ -89,7 +89,7 @@ Tieflings have the following traits:
 – Infravision
 – May cast Blindness once per day
 – +1 Intelligence, +1 Dexterity, -1 Charisma
-– Fire, cold, and electrical resistance: +20%
+– Fire, cold, and electrical resistance: +15%
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained~
 
@@ -235,7 +235,7 @@ Moon elves have the following traits:
 Fey'ri have the following traits:
 – May cast Blindness once per day
 – +1 Charisma
-– Fire, cold, and electrical resistance: +20%
+– Fire, cold, and electrical resistance: +15%
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained~
 
@@ -256,9 +256,10 @@ Half-drow have the following traits:
 @1133 = ~Half-drow~
 
 @1140 = "AIR GENASI"
-@1141 = ~AIR GENASI: 
+@1141 = ~AIR GENASI: Air genasi are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Air, often from a djinn.
 
 Air genasi have the following traits:
+– Infravision
 – May cast Aura of Sweet Air once per day
 – Movement rate increased by a factor of 1
 – +1 Dexterity, -1 Charisma
@@ -270,9 +271,10 @@ Air genasi have the following traits:
 @1443 = ~Air genasi~
 
 @1150 = "EARTH GENASI"
-@1151 = ~EARTH GENASI: 
+@1151 = ~EARTH GENASI: Earth genasi (also known as stone princes and princesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Earth, often from a dao.
 
 Earth genasi have the following traits:
+– Infravision
 – May cast Earthskin once per day, effectively granting one layer of Stoneskin (two at level 10)
 – +1 Strength, +1 Constitution, -1 Dexterity, -1 Charisma
 – +25% Acid resistance
@@ -283,9 +285,10 @@ Earth genasi have the following traits:
 @1153 = ~Earth genasi~
 
 @1160 = "FIRE GENASI"
-@1161 = ~FIRE GENASI: 
+@1161 = ~FIRE GENASI: Fire genasi are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Fire, often from an efreet.
 
 Fire genasi have the following traits:
+– Infravision
 – May cast Burning Hands twice per day
 – +1 Intelligence, -1 Charisma
 – +25% Fire resistance, -10% Cold resistance
@@ -296,9 +299,10 @@ Fire genasi have the following traits:
 @1163 = ~Fire genasi~
 
 @1170 = "WATER GENASI"
-@1171 = ~WATER GENASI: 
+@1171 = ~WATER GENASI: Water genasi are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Water, often from a marid genie.
 
 Water genasi have the following traits:
+– Infravision
 – May cast Writhing Fog once per day
 – +1 Constitution, -1 Charisma
 – +25% Cold resistance

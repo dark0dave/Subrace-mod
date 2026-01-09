@@ -23,7 +23,7 @@ Aasimar have the following traits:
 – Infravision
 – May cast Sunscorch once per day
 – +1 Wisdom, +1 Charisma
-– Acid, cold, and electrical resistance: +20%
+– Acid, cold, and electrical resistance: +15%
 – Gets only 95% of all experience gained
 
 TIEFLINGS: Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
@@ -32,7 +32,7 @@ Tieflings have the following traits:
 – Infravision
 – May cast Blindness once per day
 – +1 Intelligence, +1 Dexterity, -1 Charisma
-– Fire, cold, and electrical resistance: +20%
+– Fire, cold, and electrical resistance: +15%
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained
 
