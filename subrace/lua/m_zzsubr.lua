@@ -32,8 +32,8 @@ function subt(chr)
 	elseif (chr == 13) then return Infinity_FetchString(%halfdrow_title%) --subrStrings.HALF_DROW
 	elseif (chr == 14) then return Infinity_FetchString(%air_genasi_title%) --subrStrings.AIR_GENASI
 	elseif (chr == 15) then return Infinity_FetchString(%earth_genasi_title%) --subrStrings.EARTH_GENASI
-	elseif (chr == 16) then return Infinity_FetchString(%fire_genasi_title%) --subrStrings.FIRE
-	elseif (chr == 17) then return Infinity_FetchString(%water_genasi_title%) --subrStrings.WATER
+	elseif (chr == 16) then return Infinity_FetchString(%fire_genasi_title%) --subrStrings.FIRE_GENASI
+	elseif (chr == 17) then return Infinity_FetchString(%water_genasi_title%) --subrStrings.WATER_GENASI
 	else return ""
 	end
 end
