@@ -1,7 +1,8 @@
-
 INCLUDE ~subrace/lib/functions.tph~
 INCLUDE ~subrace/lib/lua_functions.tph~
 INCLUDE ~subrace/lib/subrace_lua.tph~
+
+OUTER_SET spell_wizard_suffocate = IDS_OF_SYMBOL(spell WIZARD_SUFFOCATE)
 
 LAF ADD_SPLPROT_ENTRY INT_VAR value_hex=1 STR_VAR label="OUTDOOR"    definition="0x106  0x1  8" RET outdoor   =index END
 LAF ADD_SPLPROT_ENTRY INT_VAR value_hex=1 STR_VAR label="NOTOUTDOOR" definition="0x106  0x1  9" RET notoutdoor=index END
@@ -135,21 +136,28 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
 
    //intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
+   //dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
+  //Wisdom -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
   //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-   //Fire resistance +25
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
-   //Cold resistance -10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
+   //Electricity resistance +25
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=25 END
    //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
-  // +5% fire damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srswtair" END
+
+  // +5% electricity damage dealt
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=3 END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+
+  PATCH_IF spell_wizard_suffocate > 0 BEGIN
+    LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_SUFFOCATE" RET spell_res END
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=206 target=2 timing=9 STR_VAR resource = EVAL "%spell_res%" END  
+  END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
   //Portrait icon
@@ -176,7 +184,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
   // +5% fire damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=1 END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
@@ -205,7 +213,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_fgena.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
   // +5% fire damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=1 END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
@@ -234,7 +242,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_wgena.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
   // +5% fire damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=331 target=2 timing=9 parameter1=5 parameter2=1 STR_VAR resource="srbrnhds" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=1 END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
@@ -479,6 +487,10 @@ COPY_EXISTING ~spwi106.spl~ ~override/srblind.spl~
 
 COPY_EXISTING ~spwi103.spl~ ~override/srbrnhds.spl~
 	LPM CONVERT_SPL_TO_INNATE
+
+COPY_EXISTING ~sppr318.spl~ ~override/srswtair.spl~
+	LPM CONVERT_SPL_TO_INNATE
+
 //SRFFIRE  (sppr116)  (sppr100)
 COPY ~subrace/spl/sppr100.spl~ ~override/srffire.spl~
 	SAY 0x08 @42
