@@ -96,6 +96,11 @@ THEN
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",17))
 		ActionOverride(Player1,ApplySpellRES("SR_WGENA",Myself))
 		Continue()
+	RESPONSE #18
+		SetGlobal("Player_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",18))
+		ActionOverride(Player1,ApplySpellRES("SR_HGROC",Myself))
+		Continue()
 END
 
 IF
