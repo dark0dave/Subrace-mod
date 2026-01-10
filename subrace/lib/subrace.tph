@@ -322,6 +322,10 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_hgroc.spl~
 
    //Save +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=325 target=2 timing=9 parameter1=1 END
+  //AC +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=0 target=2 timing=9 parameter1=1 END
+  // Movement rate +2
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=176 target=2 timing=9 parameter1=2 END
    //Day blindness
   LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
   //XP bonus - 95%
