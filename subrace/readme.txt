@@ -23,7 +23,7 @@ Aasimar have the following traits:
 – Infravision
 – May cast Sunscorch once per day
 – +1 Wisdom, +1 Charisma
-– Acid, cold, and electrical resistance: +20%
+– Acid, cold, and electrical resistance: +15%
 – Gets only 95% of all experience gained
 
 TIEFLINGS: Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
@@ -32,8 +32,49 @@ Tieflings have the following traits:
 – Infravision
 – May cast Blindness once per day
 – +1 Intelligence, +1 Dexterity, -1 Charisma
-– Fire, cold, and electrical resistance: +20%
+– Fire, cold, and electrical resistance: +15%
 – +10% Hide in Shadows and Move Silently
+– Gets only 95% of all experience gained
+
+AIR GENASI: Air genasi (also known as wind dukes and duchesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Air, often from a djinn. These individuals see themselves as the inheritors of the sky, the wind and the very air of the world. They appear mostly human, with one or two unusual traits reflecting their quasi-elemental nature, such as a light blue color to their skin or hair, a slight breeze in their presence at all times, or flesh that is cool to the touch. 
+
+Air genasi have the following traits:
+– Infravision
+– Immunity to suffocation
+– May cast Aura of Sweet Air once per day
+– +1 Intelligence, +1 Dexterity, -1 Wisdom, -1 Charisma
+– +25% Electricity resistance
+– +5% Electricity damage dealt
+– Gets only 95% of all experience gained
+
+EARTH GENASI: Earth genasi (also known as stone princes and princesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Earth, often from a dao. These individuals are slow to act, ponderous in thought and set in their ways. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as earthlike skin, rough facial features or eyes like black pits. 
+
+Earth genasi have the following traits:
+– Infravision
+– May cast Stoneskin once per day, which for 9 hours, protects the genasi from the first physical attack they receive
+– +1 Strength, +1 Constitution, -1 Wisdom, -1 Charisma
+– +25% Acid resistance, +2% to all physical damage resistance
+– +5% Acid damage dealt
+– Gets only 95% of all experience gained
+
+FIRE GENASI: Fire genasi (also known as flame lords and ladies, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Fire, often from an efreet. These individuals are hot-blooded and quick to anger, proud and unafraid to take action. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as skin the color of burnt coal, red hair that waves like flames or eyes that glow when the Genasi is angry. 
+
+Fire genasi have the following traits:
+– Infravision
+– May cast Burning Hands twice per day
+– +1 Intelligence, -1 Charisma
+– +25% Fire resistance, -10% Cold resistance
+– +5% Fire damage dealt
+– Gets only 95% of all experience gained
+
+WATER GENASI: Water genasi (also known as sea kings and queens, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Water, often from a marid genie. These individuals are patient and slow to change, preferring to wear away opposition slowly, but are capable of great violence in extreme situations. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as lightly-scaled skin, clammy flesh, blue-green skin or hair that waves as if underwater. 
+
+Water genasi have the following traits:
+– Infravision
+– May cast Writhing Fog once per day 
+– +1 Constitution, -1 Charisma
+– +25% Cold resistance
+– +5% Cold damage dealt
 – Gets only 95% of all experience gained
 
 DROW: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.

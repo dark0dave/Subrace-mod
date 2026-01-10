@@ -1,17 +1,3 @@
---subrStrings = {
---10. NONE_STRINGS = "",
---1.  AASIMAR = "Аасимар",
---2.  TIEFLING = "Тифлинг",
---3.  DROW = "Дроу",
---4.  WILD_ELF = "Дикий эльф",
---5.  DWARF_GOLD = "Золотой дварф",
---6.  DWARF_GRAY = "Серый дварф",
---7.  HALFLING_STRONGHEART = "Крепкий полурослик",
---8.  HALFLING_GHOSTWISE = "Скрытный полурослик",
---9.  GNOME_DEEP = "Глубинный гном",
---11. MOON_ELF = "Лунный эльф",
---}
-
 zZsubrTitleTable = {
 	['%Ztext_aasimar%'] = {1, %aasimar_desc%},
 	['%Ztext_tiefling%'] = {2, %tiefling_desc%},
@@ -25,21 +11,29 @@ zZsubrTitleTable = {
 	['%Ztext_moon_elf%'] = {11, %moon_elf_desc%},
 	['%Ztext_feyri%'] = {12, %feyri_desc%},
 	['%Ztext_halfdrow%'] = {13, %halfdrow_desc%},
+	['%Ztext_air_genasi%'] = {14, %air_genasi_desc%},
+	['%Ztext_earth_genasi%'] = {15, %earth_genasi_desc%},
+	['%Ztext_fire_genasi%'] = {16, %fire_genasi_desc%},
+	['%Ztext_water_genasi%'] = {17, %water_genasi_desc%},
 }
 
 function subt(chr)
-	if     (chr == 1) then return Infinity_FetchString(%aasimar_title%) --subrStrings.AASIMAR
-	elseif (chr == 2) then return Infinity_FetchString(%tiefling_title%) --subrStrings.TIEFLING
-	elseif (chr == 3) then return Infinity_FetchString(%drow_title%) --subrStrings.DROW
-	elseif (chr == 4) then return Infinity_FetchString(%wild_elf_title%) --subrStrings.WILD_ELF
-	elseif (chr == 5) then return Infinity_FetchString(%dwfgold_title%) --subrStrings.DWARF_GOLD
-	elseif (chr == 6) then return Infinity_FetchString(%dwfduerg_title%) --subrStrings.DWARF_GRAY
-	elseif (chr == 7) then return Infinity_FetchString(%hflstrong_title%) --subrStrings.HALFLING_STRONGHEART
-	elseif (chr == 8) then return Infinity_FetchString(%hflhide_title%) --subrStrings.HALFLING_GHOSTWISE
-	elseif (chr == 9) then return Infinity_FetchString(%svirfn_title%) --subrStrings.GNOME_DEEP
+	if     (chr == 1)  then return Infinity_FetchString(%aasimar_title%) --subrStrings.AASIMAR
+	elseif (chr == 2)  then return Infinity_FetchString(%tiefling_title%) --subrStrings.TIEFLING
+	elseif (chr == 3)  then return Infinity_FetchString(%drow_title%) --subrStrings.DROW
+	elseif (chr == 4)  then return Infinity_FetchString(%wild_elf_title%) --subrStrings.WILD_ELF
+	elseif (chr == 5)  then return Infinity_FetchString(%dwfgold_title%) --subrStrings.DWARF_GOLD
+	elseif (chr == 6)  then return Infinity_FetchString(%dwfduerg_title%) --subrStrings.DWARF_GRAY
+	elseif (chr == 7)  then return Infinity_FetchString(%hflstrong_title%) --subrStrings.HALFLING_STRONGHEART
+	elseif (chr == 8)  then return Infinity_FetchString(%hflhide_title%) --subrStrings.HALFLING_GHOSTWISE
+	elseif (chr == 9)  then return Infinity_FetchString(%svirfn_title%) --subrStrings.GNOME_DEEP
 	elseif (chr == 11) then return Infinity_FetchString(%moon_elf_title%) --subrStrings.MOON_ELF
 	elseif (chr == 12) then return Infinity_FetchString(%feyri_title%) --subrStrings.FEYRI
 	elseif (chr == 13) then return Infinity_FetchString(%halfdrow_title%) --subrStrings.HALF_DROW
+	elseif (chr == 14) then return Infinity_FetchString(%air_genasi_title%) --subrStrings.AIR_GENASI
+	elseif (chr == 15) then return Infinity_FetchString(%earth_genasi_title%) --subrStrings.EARTH_GENASI
+	elseif (chr == 16) then return Infinity_FetchString(%fire_genasi_title%) --subrStrings.FIRE_GENASI
+	elseif (chr == 17) then return Infinity_FetchString(%water_genasi_title%) --subrStrings.WATER_GENASI
 	else return ""
 	end
 end
@@ -75,6 +69,10 @@ function createSubraceTable(race)
 			{%Zhuman_title%, %bghuman%, 10},
 			{%Zaasimar_title%, %aasimar_desc%, 1},
 			{%Ztiefling_title%, %tiefling_desc%, 2},
+			{%Zair_genasi_title%, %air_genasi_desc%, 14},
+			{%Zearth_genasi_title%, %earth_genasi_desc%, 15},
+			{%Zfire_genasi_title%, %fire_genasi_desc%, 16},
+			{%Zwater_genasi_title%, %water_genasi_desc%, 17},
 		}
 	end
 	if race == 2 then --elf
@@ -135,6 +133,10 @@ function createSubraceTableEx()
 		{%Zmoon_elf_title%, %moon_elf_desc%, 11},
 		{%Zfeyri_title%, %feyri_desc%, 12},
 		{%Zhalfdrow_title%, %halfdrow_desc%, 13},
+		{%Zair_genasi_title%, %air_genasi_desc%, 14},
+		{%Zearth_genasi_title%, %earth_genasi_desc%, 15},
+		{%Zfire_genasi_title%, %fire_genasi_desc%, 16},
+		{%Zwater_genasi_title%, %water_genasi_desc%, 17},
 		}
 end
 createSubraceTableEx()
@@ -215,6 +217,10 @@ zZsubraceStrings = {
 	{nil, 2, %Ztext_moon_elf%, 11},
 	{nil, 2, %Ztext_feyri%, 12},
 	{nil, 3, %Ztext_halfdrow%, 13},
+	{nil, 1, %Ztext_air_genasi%, 14},
+	{nil, 1, %Ztext_earth_genasi%, 15},
+	{nil, 1, %Ztext_fire_genasi%, 16},
+	{nil, 1, %Ztext_water_genasi%, 17},
 }
 function zzCreateCharInfo(info)
 	local rc = 0
