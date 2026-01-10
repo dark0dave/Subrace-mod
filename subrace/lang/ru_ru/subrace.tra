@@ -2,9 +2,9 @@
 @1000001 = ~Change subrace colors (Hair and Skin)~
 @1000002 = ~No change subrace colors (Hair and Skin)~
 @1000003 = ~This component is not compatible with your game~
-
-
-
+@1000004 = ~~
+@1000005 = ~~
+@1100000 = ~~
 
 @1    = ~Выберите подрасу:~
 @2    = ~Я желаю оставить чистую расу.~

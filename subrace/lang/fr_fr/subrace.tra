@@ -2,7 +2,9 @@
 @1000001 = ~Change les couleurs de la sous-race (Cheveux et Peau)~
 @1000002 = ~Ne pas changer les couleurs de la sous-race (Cheveux et Peau)~
 @1000003 = ~Ce composant n'est pas compatible avec votre jeu~
-
+@1000004 = ~~
+@1000005 = ~~
+@1100000 = ~~
 
 @1 = ~Sélectionner une sous-race :~
 @2 = ~Je veux garder la race d'origine.~
