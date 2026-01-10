@@ -1,4 +1,3 @@
-
 OUTER_SET select_subrace  = RESOLVE_STR_REF (@51)
 OUTER_SET select_subraceA = RESOLVE_STR_REF (@50)
 OUTER_SET select_sgenhlp  = RESOLVE_STR_REF (@200)
@@ -47,8 +46,9 @@ OUTER_SET halfelf_title   = RESOLVE_STR_REF (@36)
 OUTER_SET halfdrow_title   = RESOLVE_STR_REF (@1130)
 OUTER_SET halfdrow_desc    = RESOLVE_STR_REF (@1131)
 // half orc
-OUTER_SET halforc_title   = RESOLVE_STR_REF (@37)
-
+OUTER_SET halforc_title     = RESOLVE_STR_REF (@37)
+OUTER_SET halfgrayorc_title = RESOLVE_STR_REF (@1180)
+OUTER_SET halfgrayorc_desc  = RESOLVE_STR_REF (@1181)
 //human
 OUTER_SET Zhuman_title        = RESOLVE_STR_REF (@531)
 OUTER_SET Zaasimar_title      = RESOLVE_STR_REF (@521)
@@ -78,7 +78,8 @@ OUTER_SET Zsvirfn_title    = RESOLVE_STR_REF (@527)
 OUTER_SET Zhalfelf_title   = RESOLVE_STR_REF (@536)
 OUTER_SET Zhalfdrow_title   = RESOLVE_STR_REF (@1132)
 // half orc
-OUTER_SET Zhalforc_title   = RESOLVE_STR_REF (@537)
+OUTER_SET Zhalforc_title     = RESOLVE_STR_REF (@537)
+OUTER_SET Zhalfgrayorc_title = RESOLVE_STR_REF (@1182)
 
 //first letter upper
 OUTER_SET text_aasimar        = RESOLVE_STR_REF(@11)
@@ -97,6 +98,7 @@ OUTER_SET text_air_genasi     = RESOLVE_STR_REF(@1143)
 OUTER_SET text_earth_genasi   = RESOLVE_STR_REF(@1153)
 OUTER_SET text_fire_genasi    = RESOLVE_STR_REF(@1163)
 OUTER_SET text_water_genasi   = RESOLVE_STR_REF(@1173)
+OUTER_SET text_halfgrayorc    = RESOLVE_STR_REF(@1183)
 
 ACTION_IF ( GAME_IS ~iwdee~ ) BEGIN
 	OUTER_SET bghuman    = 37481  OUTER_SET bghuman_r    = 37482

@@ -69,6 +69,7 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_air_genasi STR_VAR bam_file="SRSUB
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_earth_genasi STR_VAR bam_file="SRSUBICO" RET text_earth_genasi=index  Ztext_earth_genasi=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_fire_genasi STR_VAR bam_file="SRSUBICO" RET text_fire_genasi=index  Ztext_fire_genasi=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_water_genasi STR_VAR bam_file="SRSUBICO" RET text_water_genasi=index  Ztext_water_genasi=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfgrayorc STR_VAR bam_file="SRSUBICO" RET text_halfgrayorc=index  Ztext_halfgrayorc=strref  END
 
 COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
@@ -300,6 +301,31 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_drow.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_hgroc.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_halfgrayorc END
+   //Skin color
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=14 parameter2=3 END
+  END
+
+  //Set spell state
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=328 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
+
+  // constitution -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
+  // Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
+  // Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
+
+   //Save +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=325 target=2 timing=9 parameter1=1 END
+   //Day blindness
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_hdrow.spl~
   //Portrait icon

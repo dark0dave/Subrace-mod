@@ -15,6 +15,7 @@ zZsubrTitleTable = {
 	['%Ztext_earth_genasi%'] = {15, %earth_genasi_desc%},
 	['%Ztext_fire_genasi%'] = {16, %fire_genasi_desc%},
 	['%Ztext_water_genasi%'] = {17, %water_genasi_desc%},
+	['%Ztext_halfgrayorc%'] = {18, %halfgrayorc_desc%},
 }
 
 function subt(chr)
@@ -34,6 +35,7 @@ function subt(chr)
 	elseif (chr == 15) then return Infinity_FetchString(%earth_genasi_title%) --subrStrings.EARTH_GENASI
 	elseif (chr == 16) then return Infinity_FetchString(%fire_genasi_title%) --subrStrings.FIRE_GENASI
 	elseif (chr == 17) then return Infinity_FetchString(%water_genasi_title%) --subrStrings.WATER_GENASI
+	elseif (chr == 18) then return Infinity_FetchString(%halfgrayorc_title%) --subrStrings.HALF_GRAY_ORC
 	else return ""
 	end
 end
@@ -113,6 +115,8 @@ function createSubraceTable(race)
 	if race == 7 then --halforc
 		sbSubraceData = {
 			{%Zhalforc_title%, %bghalforc%, 10},
+			{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
+		
 		}
 	end
 end
@@ -137,7 +141,8 @@ function createSubraceTableEx()
 		{%Zearth_genasi_title%, %earth_genasi_desc%, 15},
 		{%Zfire_genasi_title%, %fire_genasi_desc%, 16},
 		{%Zwater_genasi_title%, %water_genasi_desc%, 17},
-		}
+		{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
+	}
 end
 createSubraceTableEx()
 
@@ -221,6 +226,7 @@ zZsubraceStrings = {
 	{nil, 1, %Ztext_earth_genasi%, 15},
 	{nil, 1, %Ztext_fire_genasi%, 16},
 	{nil, 1, %Ztext_water_genasi%, 17},
+	{nil, 7, %Ztext_halfgrayorc%, 18},
 }
 function zzCreateCharInfo(info)
 	local rc = 0
