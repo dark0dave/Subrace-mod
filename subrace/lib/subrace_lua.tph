@@ -93,10 +93,10 @@ OUTER_SET text_svirfn         = RESOLVE_STR_REF(@17)
 OUTER_SET text_moon_elf       = RESOLVE_STR_REF(@1103)
 OUTER_SET text_feyri          = RESOLVE_STR_REF(@1123)
 OUTER_SET text_halfdrow       = RESOLVE_STR_REF(@1133)
-OUTER_SET Zair_genasi_title   = RESOLVE_STR_REF (@1143)
-OUTER_SET Zearth_genasi_title = RESOLVE_STR_REF (@1153)
-OUTER_SET Zfire_genasi_title  = RESOLVE_STR_REF (@1163)
-OUTER_SET Zwater_genasi_title = RESOLVE_STR_REF (@1173)
+OUTER_SET text_air_genasi     = RESOLVE_STR_REF(@1143)
+OUTER_SET text_earth_genasi   = RESOLVE_STR_REF(@1153)
+OUTER_SET text_fire_genasi    = RESOLVE_STR_REF(@1163)
+OUTER_SET text_water_genasi   = RESOLVE_STR_REF(@1173)
 
 ACTION_IF ( GAME_IS ~iwdee~ ) BEGIN
 	OUTER_SET bghuman    = 37481  OUTER_SET bghuman_r    = 37482

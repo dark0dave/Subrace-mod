@@ -13,7 +13,7 @@ zZsubrTitleTable = {
 	['%Ztext_halfdrow%'] = {13, %halfdrow_desc%},
 	['%Ztext_air_genasi%'] = {14, %air_genasi_desc%},
 	['%Ztext_earth_genasi%'] = {15, %earth_genasi_desc%},
-	['%Ztext_fire_genasi%'] = {16, %fire_alfdrow_desc%},
+	['%Ztext_fire_genasi%'] = {16, %fire_genasi_desc%},
 	['%Ztext_water_genasi%'] = {17, %water_genasi_desc%},
 }
 
