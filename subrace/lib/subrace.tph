@@ -234,21 +234,18 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_wgena.spl~
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=18 parameter2=6 END
   END
 
-   //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1=1 END
+  // constitution +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=9  parameter1=1 END
   //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
-   //Fire resistance +25
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
-   //Cold resistance -10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
+   //Cold resistance 25
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=25 END
    //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
-  // +5% fire damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srwrthfg" END
+  // +5% cold damage dealt
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=2 END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
@@ -498,6 +495,8 @@ COPY_EXISTING ~sppr408.spl~ ~override/srethskn.spl~
   // LPF ~CD_EXTEND-O-MATIC~ INT_VAR step_dur=0 level_cap=10 step_size=9 END
   // LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 header=1 parameter1=2 END
 
+COPY_EXISTING ~sppr408.spl~ ~override/srwrthfg.spl~
+  LPM CONVERT_SPL_TO_INNATE
 
 //SRFFIRE  (sppr116)  (sppr100)
 COPY ~subrace/spl/sppr100.spl~ ~override/srffire.spl~
