@@ -51,7 +51,7 @@ EARTH GENASI: Earth genasi (also known as stone princes and princesses, as they 
 
 Earth genasi have the following traits:
 – Infravision
-– May cast Stoneskin once per day, which for 9 hours, protects the genasi from the first physical attack they take
+– May cast Stoneskin once per day, which for 9 hours, protects the genasi from the first physical attack they receive
 – +1 Strength, +1 Constitution, -1 Wisdom, -1 Charisma
 – +25% Acid resistance, +2% to all physical damage resistance
 – +5% Acid damage dealt
