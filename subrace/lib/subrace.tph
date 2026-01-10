@@ -80,9 +80,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_aasim.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=154 parameter2=3 END
   END
    //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
    //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
    //Acid resistance +15
   LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=15 END
    //Cold resistance +15
@@ -106,9 +106,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_tiefl.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=19 parameter2=6 END
   END
    //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
    //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
    //Fire resistance +15
   LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=15 END
    //Cold resistance +15
@@ -120,7 +120,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_tiefl.spl~
   //Give innate ability
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srblind" END
    //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   //XP bonus - 95%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 
@@ -136,13 +136,13 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
   END
 
    //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
    //dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
   //Wisdom -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
    //Electricity resistance +25
   LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=25 END
    //Infravision
@@ -172,13 +172,13 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
   END
 
    // strength +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1=1 END
   // constitution +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1=1 END
   // Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   // Wisdom -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
    //Acid resistance +25
   LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=25 END
   // +2% physical resistance
@@ -206,9 +206,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_fgena.spl~
   END
 
    //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
    //Fire resistance +25
   LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
    //Cold resistance -10
@@ -235,9 +235,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_wgena.spl~
   END
 
   // constitution +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1=1 END
   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
    //Cold resistance 25
   LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=25 END
    //Infravision
@@ -259,9 +259,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_feyri.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=19 parameter2=6 END
   END
    //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
    //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
    //Fire resistance +15
   LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=15 END
    //Cold resistance +15
@@ -285,9 +285,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_drow.spl~
   //Set spell state
   LPF ADD_SPELL_EFFECT INT_VAR opcode=328 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
    //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
    //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
    //Find traps +10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
    //Reputation
@@ -315,7 +315,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_hdrow.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=79 parameter2=6 END
   END
    //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
    //Find traps +5
   LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
   // 10% magic resistance
@@ -335,21 +335,21 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_ewild.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=29 parameter2=6 END
   END
    //Constitution +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1=1 END
    //intlligence -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1="-1" END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_emoon.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_moon_elf END
    //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
    //Hide in shadows +10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=10 END
    //Move silently +10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=59 target=2 timing=9 parameter1=10 END
    //Constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_hlstr.spl~
   //Portrait icon
@@ -378,11 +378,11 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_svirf.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=0 parameter2=6 END
   END
    //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
    //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
    //Strength -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1="-1" END
   //Magic resistance 50
   LPF ADD_SPELL_EFFECT INT_VAR opcode=166 target=2 timing=9 parameter1=50 END
    //+2 Missile AC
@@ -409,19 +409,19 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_svirf.spl~
   //XP bonus - 85%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=85 parameter2=2 END
   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_SVIRF END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_dwgld.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dwfgold END
    //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
    //Dexterity -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1="-1" END
    //+2 AC vs giants
   LPF ADD_SPELL_EFFECT INT_VAR opcode=177 target=2 timing=9 parameter1=5 parameter2=3  STR_VAR resource="srdwacg" END
    //Attack bonus
@@ -461,10 +461,10 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_duerg.spl~
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
    //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_DUERG END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=9  parameter1="-1" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
 
 //BLOCKEND
 
