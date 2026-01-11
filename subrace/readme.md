@@ -128,7 +128,7 @@ Ghostwise halflings have the following traits:
 
 **DEEP GNOMES**: Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
 
-Deep gnomes have the following traits:
+Deep gnomes have the following traits:  
 – May cast Mirror Image, Invisibility and Blur once per day  
 – +1 Dexterity, +1 Wisdom, -1 Strength, -2 Charisma (-1 if base Charisma is less than 3)  
 – +2 Armor Class vs. missile  
