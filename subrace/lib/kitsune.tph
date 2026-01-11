@@ -1,0 +1,79 @@
+INCLUDE ~%MOD_FOLDER%/lib/newracelib.tph~
+
+// Kitsune
+OUTER_SPRINT key ~KITSUNE~
+OUTER_SET name = RESOLVE_STR_REF(@100)
+OUTER_SET desc = RESOLVE_STR_REF(@102)
+OUTER_SET uppercase = RESOLVE_STR_REF(@99)
+OUTER_SET biography = RESOLVE_STR_REF(@103)
+
+LAF zd_new_race_setup STR_VAR key=key name desc uppercase biography RET race_index END
+
+// Engine strings
+COPY_EXISTING ~enginest.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  READ_2DA_ENTRIES_NOW engine_data colcount
+  INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_HELP_%key%                                   %desc%~
+  INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_LOWER_%key%                                  %name%~
+  INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_BIOGRAPHY_%key%                        %biography%~
+  INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_%key%                                  %uppercase%~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+// Classes
+OUTER_TEXT_SPRINT classes "$ $ %key%" // first two rows are not expanded
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  COUNT_2DA_ROWS colcount row_count
+  READ_2DA_ENTRIES_NOW classdata colcount
+  FOR (row=0;row<row_count;++row) BEGIN
+    // Copy halfling classes
+    READ_2DA_ENTRY_FORMER classdata row 5 class_setting
+    SPRINT classes "%classes% %class_setting%"
+  END
+  APPEND_COL ~clsrcreq.2da~ ~%classes%~
+BUT_ONLY
+
+// Mage:
+// COPY_EXISTING ~mgsrcreq.2da~ ~override~
+
+// Stats
+COPY_EXISTING ~abracead.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  READ_2DA_ENTRIES_NOW statdata colcount
+  // name          MOD_STR  MOD_DEX  MOD_CON  MOD_INT  MOD_WIS  MOD_CHR
+  INSERT_2DA_ROW statdata colcount ~%key%   0        0        0        0        0        0~
+BUT_ONLY
+COPY_EXISTING ~abracerq.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  READ_2DA_ENTRIES_NOW statdata colcount
+  // name MIN_STR MAX_STR MIN_DEX MAX_DEX MIN_CON MAX_CON MIN_INT MAX_INT MIN_WIS MAX_WIS MIN_CHR MAX_CHR
+  INSERT_2DA_ROW statdata colcount ~%key%   3        18       3        18       3        18       3        18       3        18       3        18~
+BUT_ONLY
+
+// Kitable
+OUTER_TEXT_SPRINT kits "$ $ %key%" // first two rows are not expanded
+COPY_EXISTING ~kittable.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  READ_2DA_ENTRIES_NOW classdata colcount
+  FOR (row=0;row<classdata;++row) BEGIN
+    // Copy halfling classes
+    READ_2DA_ENTRY_FORMER classdata row 6 kits_setting
+    SPRINT kits "%kits% %kits_setting%"
+  END
+  APPEND_COL ~kittable.2da~ ~%kits%~
+BUT_ONLY
+
+// skillrac
+COPY_EXISTING ~skillrac.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  READ_2DA_ENTRIES_NOW statdata colcount
+  // name PICK_POCKETS OPEN_LOCKS FIND_TRAPS MOVE_SILENTLY HIDE_IN_SHADOWS DETECT_ILLUSION SET_TRAPS
+  INSERT_2DA_ROW statdata colcount ~%key%    20              15              10              20              20                0                 0~
+BUT_ONLY
+
+// TODO: Racecolor
+// racecolor.2da needs an extra column
+// racethac.2da for kitsune
+
+// TODO: Animations

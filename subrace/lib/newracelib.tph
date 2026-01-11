@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION zd_new_race_setup
+  INT_VAR
+    race_index = 0
+    race_id = 0
+  STR_VAR
+    key = ""
+    name = ""
+    desc = ""
+    uppercase = ""
+    biography = ""
+  RET
+    race_index
+BEGIN
+  // Race text
+  COPY_EXISTING "racetext.2da" ~override~
+    COUNT_2DA_COLS colcount
+    COUNT_2DA_ROWS colcount row_count
+    READ_2DA_ENTRIES_NOW racetext_data colcount
+    FOR (row = 0; race_id == row && row < row_count; ++row) BEGIN
+      READ_2DA_ENTRY_FORMER racetext_data row 1 race_id
+      SET race_index="%row%"
+    END
+    SET insert_index=race_index
+    SET race_index+=1
+    // name ID NAME DESCSTR UPPERCASE BIOGRAPHY
+    INSERT_2DA_ROW insert_index colcount ~%key%     %race_index%          %name%       %desc%       %uppercase%          %biography%~
+  BUT_ONLY
+
+  // Race IDS
+  COPY_EXISTING ~race.ids~ ~override~
+    INSERT_2DA_ROW race_index 2 ~%race_index% %key%~
+  BUT_ONLY
+
+END
