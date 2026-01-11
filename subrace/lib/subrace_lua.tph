@@ -25,6 +25,10 @@ OUTER_SET moon_elf_title  = RESOLVE_STR_REF (@1100)
 OUTER_SET moon_elf_desc   = RESOLVE_STR_REF (@1101)
 OUTER_SET feyri_title     = RESOLVE_STR_REF (@1120)
 OUTER_SET feyri_desc      = RESOLVE_STR_REF (@1121)
+OUTER_SET sun_elf_title   = RESOLVE_STR_REF (@1190)
+OUTER_SET sun_elf_desc    = RESOLVE_STR_REF (@1191)
+OUTER_SET wood_elf_title  = RESOLVE_STR_REF (@1200)
+OUTER_SET wood_elf_desc   = RESOLVE_STR_REF (@1201)
 //dwarf
 OUTER_SET dwarf_title     = RESOLVE_STR_REF (@33)
 OUTER_SET dwfgold_title   = RESOLVE_STR_REF (@28)
@@ -63,6 +67,8 @@ OUTER_SET Zdrow_title      = RESOLVE_STR_REF (@523)
 OUTER_SET Zwild_elf_title  = RESOLVE_STR_REF (@524)
 OUTER_SET Zmoon_elf_title  = RESOLVE_STR_REF (@1102)
 OUTER_SET Zfeyri_title     = RESOLVE_STR_REF (@1122)
+OUTER_SET Zsun_elf_title   = RESOLVE_STR_REF (@1192)
+OUTER_SET Zwood_elf_title  = RESOLVE_STR_REF (@1202)
 //dwarf
 OUTER_SET Zdwarf_title     = RESOLVE_STR_REF (@533)
 OUTER_SET Zdwfgold_title   = RESOLVE_STR_REF (@528)
@@ -99,6 +105,8 @@ OUTER_SET text_earth_genasi   = RESOLVE_STR_REF(@1153)
 OUTER_SET text_fire_genasi    = RESOLVE_STR_REF(@1163)
 OUTER_SET text_water_genasi   = RESOLVE_STR_REF(@1173)
 OUTER_SET text_halfgrayorc    = RESOLVE_STR_REF(@1183)
+OUTER_SET text_sun_elf        = RESOLVE_STR_REF(@1193)
+OUTER_SET text_wood_elf       = RESOLVE_STR_REF(@1203)
 
 ACTION_IF ( GAME_IS ~iwdee~ ) BEGIN
 	OUTER_SET bghuman    = 37481  OUTER_SET bghuman_r    = 37482
