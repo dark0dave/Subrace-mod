@@ -29,6 +29,7 @@ LANGUAGE ~Francais (traduction: JohnBob)~
 
 BEGIN @1000001
 DESIGNATED 100
+LABEL ~subraces~
 SUBCOMPONENT @1000000
 GROUP @1000005
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
@@ -39,6 +40,7 @@ INCLUDE ~subrace/lib/subrace.tph~
 
 BEGIN @1000002
 DESIGNATED 200
+LABEL ~subraces~
 SUBCOMPONENT @1000000
 GROUP @1000005
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
@@ -55,3 +57,11 @@ GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 
 INCLUDE ~subrace/lib/kitsune.tph~
+
+BEGIN @1000006
+DESIGNATED 301
+LABEL ~newraces~
+GROUP @1000003
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+
+INCLUDE ~subrace/lib/kenku.tph~

@@ -1,13 +1,14 @@
 INCLUDE ~%MOD_FOLDER%/lib/newracelib.tph~
 
-// Kitsune
-OUTER_SPRINT key @1
-OUTER_SET uppercase = RESOLVE_STR_REF(@1)
-OUTER_SET name = RESOLVE_STR_REF(@2)
-OUTER_SET desc = RESOLVE_STR_REF(@4)
-OUTER_SET biography = RESOLVE_STR_REF(@5)
+// Kenku
+OUTER_SPRINT key ~KENKU~
+OUTER_SET name = RESOLVE_STR_REF(@100)
+OUTER_SET desc = RESOLVE_STR_REF(@102)
+OUTER_SET uppercase = RESOLVE_STR_REF(@99)
+OUTER_SET biography = RESOLVE_STR_REF(@103)
 
 LAF zd_new_race_setup STR_VAR key name desc uppercase biography RET race_index END
+
 
 // Classes
 OUTER_TEXT_SPRINT classes "$ $ %key%" // first two rows are not expanded
