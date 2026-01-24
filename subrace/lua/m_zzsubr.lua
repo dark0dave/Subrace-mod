@@ -147,7 +147,7 @@ function createSubraceTableEx()
 		{%Zwater_genasi_title%, %water_genasi_desc%, 17},
 		{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
 		{%Zsun_elf_title%, %sun_elf_desc%, 19},
-		{%Zwood_elf_title%, %wood_elf_esc%, 20},
+		{%Zwood_elf_title%, %wood_elf_desc%, 20},
 	}
 end
 createSubraceTableEx()

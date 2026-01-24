@@ -379,12 +379,31 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_emoon.spl~
    //Constitution -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
 
+COPY ~subrace/spl/spell.spl~ ~override/sr_ewood.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wood_elf END
+   //Strength +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1=1 END
+  //Intelligence -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1="-1" END
+  // Bow THAC0 +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=183 parameter2=15 target=2 timing=1 STR_VAR resource="srwelfrg" END
+  // Crossbow THAC0 +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=183 parameter2=27 target=2 timing=1 STR_VAR resource="srwelfrg" END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_esun.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_sun_elf END
+   //Constitution -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
+  //Intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
+
 COPY ~subrace/spl/spell.spl~ ~override/sr_hlstr.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_hflstrong END
    // +1 axe proficiency point
   LPF ADD_SPELL_EFFECT INT_VAR opcode=233 target=2 timing=9 parameter1=1 parameter2=65628 END
-
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_hlgho.spl~
   //Portrait icon
@@ -606,6 +625,14 @@ COPY ~subrace/eff/effect.eff~ ~override/srsvshd.eff~
   WRITE_LONG  0x24 1
   WRITE_SHORT 0x2c 100
   WRITE_ASCII 0x30 ~srsvshd~ (8)
+
+// wood elf missile thaco +1
+COPY ~subrace/eff/effect.eff~ ~override/srwelfrg.eff~
+  WRITE_LONG  0x10 167
+  WRITE_LONG  0x14 2
+  WRITE_LONG  0x1c 1
+  WRITE_LONG  0x24 2
+  WRITE_SHORT 0x2c 100
 
 COPY ~subrace/spl/spell.spl~ ~override/srsvshd.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=321 target=2 timing=1 STR_VAR resource="srsvshd" END
