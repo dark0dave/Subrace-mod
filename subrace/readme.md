@@ -296,7 +296,7 @@ Deep gnome have the following traits:
 </details>
 
 <details>
-  <summary>Gold dwarve :</summary>
+  <summary>Gold dwarf :</summary>
 
 ---
 
@@ -312,7 +312,7 @@ Gold dwarf have the following traits:
 </details>
 
 <details>
-  <summary>Gray dwarve :</summary>
+  <summary>Gray dwarf :</summary>
 
 ---
 
