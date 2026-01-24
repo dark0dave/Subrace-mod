@@ -300,9 +300,9 @@ Deep gnome have the following traits:
 
 ---
 
-**GOLD DWARVE**: In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
+**GOLD DWARF**: In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
 
-Gold dwarves have the following traits:
+Gold dwarf have the following traits:
 - +1 Charisma, -1 Dexterity
 - +2 Armor Class vs. giants
 - +1 bonus to THAC0 vs. aberrations that live in the Underdark
@@ -316,7 +316,7 @@ Gold dwarves have the following traits:
 
 ---
 
-**GRAY DWARVE**: Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors that excel in stealthy movement. Duergar almost always have gray hair and skin.
+**GRAY DWARF**: Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors that excel in stealthy movement. Duergar almost always have gray hair and skin.
 
 Duergar have the following traits:
 - Infravision
