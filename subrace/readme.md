@@ -106,6 +106,17 @@ Moon elves have the following traits:
 Wild elves have the following traits:  
 – +1 Constitution, -1 Intelligence  
 
+**WOOD ELVES**: Wood elves are reclusive and solitary although not as withdrawn from society as the nearly feral wild elves, so it is rare, but not unheard of, to see wood elves venture from their homes in the High Forest. Wood elves are uncommonly strong for elves, but also smaller and less intuitive than most elves. Also called copper elves, they have coppery skin tinged with green, and brown, green, or hazel eyes. Their hair is usually brown or black, with blond and coppery-red occasionally found.
+
+Wood elves have the following traits:  
+– +1 Strength, -1 Intelligence  
+– +1 extra THAC0 with bows and crossbows  
+
+**SUN ELVES**: Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft.  
+
+Sun elves have the following traits:  
+– +1 Intelligence, -1 Constitution  
+
 **FEY'RI**: Fey'ri are elven-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous and chaotic behavior, but not necessarily to evil. Though their appearance can be very elven-like, to the point where they are sometimes indistinguishable from regular elves, they often have telltale signs that belie their ancestry such as fangs, barbed tails, horns, forked tongues, and even wings in some rare cases. Due to the misconceptions about their nature, and the assumption of evil, they face a lot of discrimination in a similar way tieflings do.  
 
 Fey'ri have the following traits:  

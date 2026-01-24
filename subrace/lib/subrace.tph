@@ -70,6 +70,8 @@ LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_earth_genasi STR_VAR bam_file="SRS
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_fire_genasi STR_VAR bam_file="SRSUBICO" RET text_fire_genasi=index  Ztext_fire_genasi=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_water_genasi STR_VAR bam_file="SRSUBICO" RET text_water_genasi=index  Ztext_water_genasi=strref  END
 LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfgrayorc STR_VAR bam_file="SRSUBICO" RET text_halfgrayorc=index  Ztext_halfgrayorc=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_sun_elf STR_VAR bam_file="SRSUBICO" RET text_sun_elf=index  Ztext_sun_elf=strref  END
+LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wood_elf STR_VAR bam_file="SRSUBICO" RET text_wood_elf=index  Ztext_wood_elf=strref  END
 
 COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
