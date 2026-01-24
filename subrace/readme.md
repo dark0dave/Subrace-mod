@@ -110,7 +110,7 @@ Wild elves have the following traits:
 
 Wood elves have the following traits:  
 – +1 Strength, -1 Intelligence  
-– +1 extra THAC0 with bows and crossbows  
+– +1 THAC0 with all ranged weapons  
 
 **SUN ELVES**: Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft.  
 
