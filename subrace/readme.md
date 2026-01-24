@@ -363,9 +363,11 @@ To uninstall, run "setup-subrace.exe" again and follow the prompts.
 
 ## Credits
 
-Writing, coding & testing: tipun
-English Translation: p_zombie, Apxu, yota13, tipun
-French translation: JohnBob
+Writing, coding & testing: tipun  
+Updated version and additions : dark0dave and szaumoor since v3.2
+
+English Translation: p_zombie, Apxu, yota13, tipun  
+French translation: JohnBob  
 
 Subrace MOD was created with the following software:
 
