@@ -333,7 +333,8 @@ Inconvénients :
 
 @1140 = ~GENASI D'AIR~
 @1141 = ~GENASI D'AIR : Les genasis d'air (également connus sous le nom de duc ou duchesse du vent) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'air, principalement des djinns.
-These individuals see themselves as the inheritors of the sky, the wind and the very air of the world. They appear mostly human, with one or two unusual traits reflecting their quasi-elemental nature, such as a light blue color to their skin or hair, a slight breeze in their presence at all times, or flesh that is cool to the touch.
+Se considérant comme les dépositaires du ciel, des vents et même de l'air dans son ensemble, les genasis d'air sont d'apparence humaine mais présentent toutefois un ou deux traits reflétant clairement leur nature élémentaire, comme une peau d'un bleu pâle et froide au toucher ou des cheveux aux reflets bleu azur.
+Une légère brise les enveloppe continuellement.
 
 Avantages :
 - Infravision
@@ -355,7 +356,8 @@ Inconvénients :
 
 @1150 = ~GENASI DE TERRE~
 @1151 = ~GENASI DE TERRE : Les genasis de terre (également connus sous le nom de prince ou princesse de la pierre) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de la terre, principalement des daos.
-These individuals are slow to act, ponderous in thought and set in their ways. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as earthlike skin, rough facial features or eyes like black pits.
+Très attachés à leurs habitudes, réfléchis et pondérés, ils prennent leur temps pour agir et parfaire leurs raisonnements.
+Ressemblant pour la plupart à des humains, les genasis de terre présentent toutefois un ou deux traits reflétant clairement leur nature élémentaire, comme une peau comparable à de la terre, des traits rugueux ou des yeux profonds entièrement noirs.
 
 Avantages :
 - Infravision
@@ -377,7 +379,7 @@ Inconvénients :
 
 @1160 = ~GENASI DE FEU~
 @1161 = ~GENASI DE FEU : Les genasis de feu (également connus sous le nom de seigneur ou seigneuresse des flammes) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire du feu, principalement des éfrits.
-These individuals are hot-blooded and quick to anger, proud and unafraid to take action. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as skin the color of burnt coal, red hair that waves like flames or eyes that glow when the Genasi is angry.
+Fougueux, colériques, fiers et intrépides, les genasis de feu ont une apparence presque humaine, à l'exception d'un ou deux traits reflétant clairement leur nature élémentaire, comme une peau couleur anthracite, des cheveux roux flamboyants ou bien des yeux étincelants au grè de leur humeur.
 
 Avantages :
 - Infravision
@@ -397,7 +399,8 @@ Inconvénients :
 
 @1170 = ~GENASI D'EAU~
 @1171 = ~GENASI D'EAU : Les genasis d'eau (également connus sous le nom de roi ou reine des océans) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'eau, principalement des marids.
-These individuals are patient and slow to change, preferring to wear away opposition slowly, but are capable of great violence in extreme situations. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as lightly-scaled skin, clammy flesh, blue-green skin or hair that waves as if underwater.
+D'une patience à toute épreuve et peu enclins au changement, leur stratégie consiste à affaiblir lentement leurs adversaires. Toutefois face à des situations extrêmes les genasis d'eau peuvent faire preuve d'une violence inouïe.
+D'apparence essentiellement humaine, ils présentent quelques caractéristiques reflétant clairement leur nature élémentaire, une peau recouverte de fines écailles et légèrement visqueuse, un teint bleu-vert ou bien une chevelure ondulante qui leur donnent l'impression d'évoluer sous l'eau.
 
 Avantages :
 - Infravision
@@ -414,8 +417,26 @@ Inconvénients :
 @1172 = ~genasi d'eau~
 @1173 = ~Genasi d'eau~
 
-@1180 = ~DEMI-ORQUE GRIS~
-@1181 = ~DEMI-ORQUE GRIS : Half gray orcs are descended from humans and specifically, gray orcs. Gray orcs are just as mean, savage, and barbaric as their northern cousins, but they lack the mountain orc's drive to conquer and enslave. Gray orcs are quite likely to react suddenly and irrationally to events, trusting their heart and instincts more readily than logic. When presented with an opportunity to attack a hated rival, a gray orc doesn't hesitate to attack even having been brutally defeated dozens of times before by the same enemy. The true power behind a tribe of gray orcs is not the chieftain, but the tribe's high priest, typically an adept or a cleric (often female), who has held the position for many years. The gray orcs are zealots, and the word of their tribal clerics is law.
+@1180 = ~DEMI-ORQUE GRIS~ ~DEMI-ORQUE GRISE~
+@1181 = ~DEMI-ORQUE GRIS : Les demi-orques gris descendent des humains et des orques gris. Tout aussi cruels, féroces et sanguinaires que leurs cousins du nord, les orques gris n'ont toutefois pas la même soif de conquête et de domination que les orques des montagnes.
+Ils ont tendance à réagir de manière impulsive et imprévisible, se fiant davantage à leur instinct. Préférant l'émotion à la raison lorsque l'occasion d'attaquer un rival redouté se présente, les orques gris n'hésitent pas à en découdre, même s'ils ont déjà été battus à maintes reprises par ce même ennemi.
+La véritable force d'une tribu d'orques gris ne réside pas dans son chef, mais dans son grand prêtre, généralement un adepte de la magie ou un clerc (souvent une femme) en poste depuis de nombreuses années.
+Les orques gris sont des fanatiques, et la parole des prêtres de leur tribu fait loi.
+
+Avantages :
+- Bonus de 2 points à la vitesse de déplacement
+- Bonus de de 1 à la sagesse
+- Bonus de 1 à la classe d'armure et aux jets de sauvegarde, grace à leur excellent flair
+
+Inconvénients :
+- Malus de 1 en Constitution
+- Malus de 1 au Charisme
+- Sensible à la lumière : Malus de 1 au TAC0 et aux jets de sauvegarde sous la lumière du jour
+- Obtient seulement 95 % de l'expérience acquise
+~ ~DEMI-ORQUE GRISE : Les demi-orques grise descendent des humains et des orques gris. Tout aussi cruelles, féroces et sanguinaires que leurs cousines du nord, les orques grise n'ont toutefois pas la même soif de conquête et de domination que les orques des montagnes.
+Elles ont tendance à réagir de manière impulsive et imprévisible, se fiant davantage à leur instinct. Préférant l'émotion à la raison lorsque l'occasion d'attaquer une rivale redoutée se présente, les orques grise n'hésitent pas à en découdre, même si elles ont déjà été battues à maintes reprises par cette même ennemie.
+La véritable force d'une tribu d'orques gris ne réside pas dans sa cheffe, mais dans sa grande prêtresse, généralement une adepte de la magie ou une clerc (rarement un homme) en poste depuis de nombreuses années.
+Les orques grise sont des fanatiques, et la parole des prêtresses de leur tribu fait loi.
 
 Avantages :
 - Bonus de 2 points à la vitesse de déplacement
@@ -429,11 +450,13 @@ Inconvénients :
 - Obtient seulement 95 % de l'expérience acquise
 ~
 
-@1182 = ~demi-orque gris~
-@1183 = ~Demi-orque gris~
+@1182 = ~demi-orque gris~ ~demi-orque grise~
+@1183 = ~Demi-orque gris~ ~Demi-orque grise~
 
 @1190 = ~ELFE DU SOLEIL~
-@1191 = ~ELFE DU SOLEIL : Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft. 
+@1191 = ~ELFE DU SOLEIL : Les elfes du soleil sont natifs d'Éternelle rencontre, une région interdite à ceux ou celles qui ne sont pas de leur espèce, aussi sont-ils moins nombreux à arpenter Féérune que les elfes de la lune.
+Également appelés elfes d'or, ils ont la peau cuivrée, les cheveux blonds dorés, roux ou noirs, et les yeux verts ou d'un jaune étincelant.
+Considérés comme les elfes les plus raffinés et les plus fiers, ils préfèrent se tenir à l'écart des autres races. La plupart d'entre eux mènent une vie dédiée à la recherche et à la contemplation, aiguisant leur esprit mais affaiblissant leur corps. 
 
 Avantages :
 - Bonus de 1 en Intelligence
@@ -446,7 +469,9 @@ Inconvénients :
 @1193 = ~Elfe du soleil~
 
 @1200 = ~ELFE DES BOIS~
-@1201 = ~ELFE DES BOIS : Wood elves are reclusive and solitary although not as withdrawn from society as the nearly feral wild elves, so it is rare, but not unheard of, to see wood elves venture from their homes in the High Forest. Wood elves are uncommonly strong for elves, but also smaller and less intuitive than most elves. Also called copper elves, they have coppery skin tinged with green, and brown, green, or hazel eyes. Their hair is usually brown or black, with blond and coppery-red occasionally found.
+@1201 = ~ELFE DES BOIS : Les elfes des bois sont des solitaires et des reclus sans être aussi farouches que les elfes verts, qui eux vivent presque à l'état sauvage. Il est donc rare, mais pas invraisemblable, d'en voir certains s'aventurer hors de la Haute Forêt.
+Les elfes des bois sont exceptionnellement vigoureux, mais aussi plus petits et moins perspicaces que la plupart de leurs congénères.
+Également appelés elfes de cuivre ou sylvestre, ils ont la peau d'un vert-de-gris et les yeux verts ou de couleur noisette. Leurs cheveux sont généralement bruns ou noirs et parfois blonds ou roux cuivré.
 
 Avantages :
 - Bonus de 1 en Force
