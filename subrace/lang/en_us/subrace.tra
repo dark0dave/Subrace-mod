@@ -5,6 +5,7 @@
 @1000004 = ~Kitsune~
 @1000005 = ~Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET)~
 @1100000 = ~This component is not compatible with your game~
+@1100001 = ~This component is not compatible with ToF New races and subraces~
 
 @1 = ~Select a subrace:~
 @2 = ~I want to keep the primary race.~
