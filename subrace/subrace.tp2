@@ -20,10 +20,14 @@ LANGUAGE ~English~
          ~subrace/lang/en_US/kitsune.tra~
 LANGUAGE ~Russian~
          ~ru_RU~
+         ~subrace/lang/en_US/subrace.tra~
+         ~subrace/lang/en_US/kitsune.tra~
          ~subrace/lang/ru_RU/subrace.tra~
          ~subrace/lang/ru_RU/kitsune.tra~
 LANGUAGE ~Francais (traduction: JohnBob)~
          ~fr_FR~
+         ~subrace/lang/en_US/subrace.tra~
+         ~subrace/lang/en_US/kitsune.tra~
          ~subrace/lang/fr_FR/subrace.tra~
          ~subrace/lang/fr_FR/kitsune.tra~
 
