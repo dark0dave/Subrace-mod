@@ -16,7 +16,7 @@ The mod adds subraces from the game Icewind Dale 2 to the Enhanced Edition games
 ## Available races
 
 <details>
-  <summary>Aasimar :</summary>
+  <summary>Aasimar</summary>
 
 ---
 
@@ -34,11 +34,11 @@ Aasimar have the following traits:
 </details>
 
 <details>
-  <summary>Tiefling :</summary>
+  <summary>Tiefling</summary>
 
 ---
 
-**TIEFLING**: Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
+**TIEFLINGS**: Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
 
 Tiefling have the following traits:
 - Infravision
@@ -53,7 +53,7 @@ Tiefling have the following traits:
 </details>
 
 <details>
-  <summary>Air genasi :</summary>
+  <summary>Air genasi</summary>
 
 ---
 
@@ -73,7 +73,7 @@ Air genasi have the following traits:
 </details>
 
 <details>
-  <summary>Earth genasi :</summary>
+  <summary>Earth genasi</summary>
 
 ---
 
@@ -92,7 +92,7 @@ Earth genasi have the following traits:
 </details>
 
 <details>
-  <summary>Fire genasi :</summary>
+  <summary>Fire genasi</summary>
 
 ---
 
@@ -111,7 +111,7 @@ Fire genasi have the following traits:
 </details>
 
 <details>
-  <summary>Water genasi :</summary>
+  <summary>Water genasi</summary>
 
 ---
 
@@ -130,11 +130,11 @@ Water genasi have the following traits:
 </details>
 
 <details>
-  <summary>Drow :</summary>
+  <summary>Drow</summary>
 
 ---
 
-**DROW**: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+**DROWS**: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
 
 Drow have the following traits:
 - May cast Faerie Fire three times per day
@@ -151,11 +151,11 @@ Drow have the following traits:
 </details>
 
 <details>
-  <summary>Half-drow :</summary>
+  <summary>Half-drow</summary>
 
 ---
 
-**HALF-DROW**: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
+**HALF-DROWS**: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
 
 Half-drow have the following traits:
 - May cast Faerie Fire once per day
@@ -169,11 +169,11 @@ Half-drow have the following traits:
 </details>
 
 <details>
-  <summary>Moon elf :</summary>
+  <summary>Moon elf</summary>
 
 ---
 
-**MOON ELF**: The moon elves have chosen forests for solitude, as have many of their brethren. They worship the moon and derive their magical power from it. On a full moon, moon elves become especially powerful. They are the most sociable among their fellows and easily make contact with other races. Often, out of curiosity and a thirst for adventure, they join the groups of adventurers. More than other elves, they are drawn to a variety of paths. Moon elves love music and make excellent bards. They have fair skin, sometimes with a bluish tinge, and silver-white, black, or blue hair. Their eyes are blue or green with gold spots.
+**MOON ELVES**: The moon elves have chosen forests for solitude, as have many of their brethren. They worship the moon and derive their magical power from it. On a full moon, moon elves become especially powerful. They are the most sociable among their fellows and easily make contact with other races. Often, out of curiosity and a thirst for adventure, they join the groups of adventurers. More than other elves, they are drawn to a variety of paths. Moon elves love music and make excellent bards. They have fair skin, sometimes with a bluish tinge, and silver-white, black, or blue hair. Their eyes are blue or green with gold spots.
 
 Moon elves have the following traits:
 - +10% Move Silently and Hide in Shadows
@@ -184,11 +184,11 @@ Moon elves have the following traits:
 </details>
 
 <details>
-  <summary>Wild elf :</summary>
+  <summary>Wild elf</summary>
 
 ---
 
-**WILD ELF**: The rare wild elves are rarely seen by others, because they live in the heart of thick forests and they have incredible skill at staying hidden. Also called green elves, their skin tends to be dark brown, and their hair ranges from black to light brown, lightening to silvery white with age.
+**WILD ELVES**: The rare wild elves are rarely seen by others, because they live in the heart of thick forests and they have incredible skill at staying hidden. Also called green elves, their skin tends to be dark brown, and their hair ranges from black to light brown, lightening to silvery white with age.
 
 Wild elves have the following traits:
 - +1 Constitution, -1 Intelligence
@@ -198,11 +198,11 @@ Wild elves have the following traits:
 </details>
 
 <details>
-  <summary>Wood elf :</summary>
+  <summary>Wood elf</summary>
 
 ---
 
-**WOOD ELF**: Wood elves are reclusive and solitary although not as withdrawn from society as the nearly feral wild elves, so it is rare, but not unheard of, to see wood elves venture from their homes in the High Forest. Wood elves are uncommonly strong for elves, but also smaller and less intuitive than most elves. Also called copper elves, they have coppery skin tinged with green, and brown, green, or hazel eyes. Their hair is usually brown or black, with blond and coppery-red occasionally found.
+**WOOD ELVES**: Wood elves are reclusive and solitary although not as withdrawn from society as the nearly feral wild elves, so it is rare, but not unheard of, to see wood elves venture from their homes in the High Forest. Wood elves are uncommonly strong for elves, but also smaller and less intuitive than most elves. Also called copper elves, they have coppery skin tinged with green, and brown, green, or hazel eyes. Their hair is usually brown or black, with blond and coppery-red occasionally found.
 
 Wood elves have the following traits:
 - +1 Strength, -1 Intelligence
@@ -213,11 +213,11 @@ Wood elves have the following traits:
 </details>
 
 <details>
-  <summary>Sun elf :</summary>
+  <summary>Sun elf</summary>
 
 ---
 
-**SUN ELF**: Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft.
+**SUN ELVES**: Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft.
 
 Sun elves have the following traits:
 - +1 Intelligence, -1 Constitution
@@ -227,7 +227,7 @@ Sun elves have the following traits:
 </details>
 
 <details>
-  <summary>Fey'ri :</summary>
+  <summary>Fey'ri</summary>
 
 ---
 
@@ -245,11 +245,11 @@ Fey'ri have the following traits:
 </details>
 
 <details>
-  <summary>Strongheart halfling :</summary>
+  <summary>Strongheart halfling</summary>
 
 ---
 
-**STRONGHEART HALFLING**: While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race. Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
+**STRONGHEART HALFLINGS**: While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race. Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
 
 Strongheart halflings have the following traits:
 - Gains one point in the Axe proficiency
@@ -259,11 +259,11 @@ Strongheart halflings have the following traits:
 </details>
 
 <details>
-  <summary>Ghostwise halfling :</summary>
+  <summary>Ghostwise halfling</summary>
 
 ---
 
-**GHOSTWISE HALFLING**: Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
+**GHOSTWISE HALFLINGS**: Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
 
 Ghostwise halflings have the following traits:
 - May use the Set Snare ability once per day (stacks if the halfling is a thief)
@@ -274,11 +274,11 @@ Ghostwise halflings have the following traits:
 </details>
 
 <details>
-  <summary>Deep gnome :</summary>
+  <summary>Deep gnomes</summary>
 
 ---
 
-**DEEP GNOME**: Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
+**DEEP GNOMES**: Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
 
 Deep gnome have the following traits:
 - May cast Mirror Image, Invisibility and Blur once per day
@@ -296,11 +296,11 @@ Deep gnome have the following traits:
 </details>
 
 <details>
-  <summary>Gold dwarf :</summary>
+  <summary>Gold dwarf</summary>
 
 ---
 
-**GOLD DWARF**: In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
+**GOLD DWARVES**: In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
 
 Gold dwarf have the following traits:
 - +1 Charisma, -1 Dexterity
@@ -312,11 +312,11 @@ Gold dwarf have the following traits:
 </details>
 
 <details>
-  <summary>Gray dwarf :</summary>
+  <summary>Gray dwarf</summary>
 
 ---
 
-**GRAY DWARF**: Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors that excel in stealthy movement. Duergar almost always have gray hair and skin.
+**GRAY DWARVES**: Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors that excel in stealthy movement. Duergar almost always have gray hair and skin.
 
 Duergar have the following traits:
 - Infravision
@@ -333,11 +333,11 @@ Duergar have the following traits:
 </details>
 
 <details>
-  <summary>Half gray orc :</summary>
+  <summary>Half gray orc</summary>
 
 ---
 
-**HALF GRAY ORC**: Half gray orcs are descended from humans and specifically, gray orcs. Gray orcs are just as mean, savage, and barbaric as their northern cousins, but they lack the mountain orc's drive to conquer and enslave. Gray orcs are quite likely to react suddenly and irrationally to events, trusting their heart and instincts more readily than logic. When presented with an opportunity to attack a hated rival, a gray orc doesn't hesitate to attack even having been brutally defeated dozens of times before by the same enemy. The true power behind a tribe of gray orcs is not the chieftain, but the tribe's high priest, typically an adept or a cleric (often female), who has held the position for many years. The gray orcs are zealots, and the word of their tribal clerics is law.
+**HALF GRAY ORCS**: Half gray orcs are descended from humans and specifically, gray orcs. Gray orcs are just as mean, savage, and barbaric as their northern cousins, but they lack the mountain orc's drive to conquer and enslave. Gray orcs are quite likely to react suddenly and irrationally to events, trusting their heart and instincts more readily than logic. When presented with an opportunity to attack a hated rival, a gray orc doesn't hesitate to attack even having been brutally defeated dozens of times before by the same enemy. The true power behind a tribe of gray orcs is not the chieftain, but the tribe's high priest, typically an adept or a cleric (often female), who has held the position for many years. The gray orcs are zealots, and the word of their tribal clerics is law.
 
 Half gray orc have the following traits:
 - Movement speed is 2 points higher than normal (default is 9)
@@ -364,16 +364,19 @@ To uninstall, run "setup-subrace.exe" again and follow the prompts.
 ## Credits
 
 Writing, coding & testing: tipun  
-Updated version and additions : dark0dave and szaumoor since v3.2
+Updated version and additions : dark0dave and szaumoor, since v3.2
 
 English Translation: p_zombie, Apxu, yota13, tipun  
 French translation: JohnBob  
 
 Subrace MOD was created with the following software:
 
-Near Infinity       https://github.com/Argent77/NearInfinity/releases
-WeiDU               http://www.weidu.org
-AkelPad             http://akelpad.sourceforge.net/ru/index.php
+- [Near Infinity](https://github.com/Argent77/NearInfinity/releases)
+- [WeiDU](http://www.weidu.org)
+- [AkelPad](http://akelpad.sourceforge.net/ru/index.php)
+- [vscodium](https://vscodium.com/)
+- [infinity viewer](https://github.com/dark0dave/infinity_viewer)
+
 
 ## Version History
 
