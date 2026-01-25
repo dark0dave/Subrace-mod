@@ -56,15 +56,15 @@ currSubrace = 10
 currRace = 0
 getSubrace = 0
 sbSubraceData = {}
-srText = ""
+srText = {}
 
 
 function zzSubraceString(char)
 	local rstr = Infinity_FetchString(char.race)
-	if srText == "" or char.PC ~= 1 then
+	if srText[selectedCharacter]  == nil or srText[selectedCharacter]  == 10 then
 		return rstr
 	else
-		return rstr .. " ( " .. srText .. " )"
+		return rstr .. " ( " .. srText[selectedCharacter]  .. " )"
 	end
 end
 
@@ -171,7 +171,27 @@ function getSubraceDescription(row)
 end
 
 function onSubraceButton(buttonNum)
-	C:SetGlobal("Pl_SUBRACE","GLOBAL",buttonNum)
+	if multiplayerScreen:GetEngineState() == 0 and not selectedCharacter then
+		C:SetGlobal("P1_SUBRACE","GLOBAL",buttonNum)
+	end
+	if selectedCharacter == 1 then
+		C:SetGlobal("P1_SUBRACE","GLOBAL",buttonNum)
+	end
+	if selectedCharacter == 2 then
+		C:SetGlobal("P2_SUBRACE","GLOBAL",buttonNum)
+	end
+	if selectedCharacter == 3 then
+		C:SetGlobal("P3_SUBRACE","GLOBAL",buttonNum)
+	end
+	if selectedCharacter == 4 then
+		C:SetGlobal("P4_SUBRACE","GLOBAL",buttonNum)
+	end
+	if selectedCharacter == 5 then
+		C:SetGlobal("P5_SUBRACE","GLOBAL",buttonNum)
+	end
+	if selectedCharacter == 6 then
+		C:SetGlobal("P6_SUBRACE","GLOBAL",buttonNum)
+	end
 end
 
 function SubRaceOrGeneralHelp(sbr)
@@ -238,7 +258,7 @@ zZsubraceStrings = {
 }
 function zzCreateCharInfo(info)
 	local rc = 0
-	local str, stra, strb = ''
+	local str, head, tail = ''
 	local x, y = 0, 0
 	if currentChargenRace ~= nil and currSubrace > 0 and currSubrace ~= 10 then
 		for k, v in pairs(zZraceStrings) do
@@ -251,11 +271,11 @@ function zzCreateCharInfo(info)
 		if rc > 0 then
 			x, y = string.find(info, str, 1, true)
 			if x ~= nil then
-				stra = string.sub(info, 1, y)
-				strb = string.sub(info, y + 1)
+				head = string.sub(info, 1, y)
+				tail = string.sub(info, y + 1)
 				for k, v in pairs(zZsubraceStrings) do
 					if rc == v[2] and currSubrace == v[4] then
-						info = stra .. ' ( ' .. Infinity_FetchString(v[3]) .. ' )' .. strb
+						info = head .. ' ( ' .. Infinity_FetchString(v[3]) .. ' )' .. tail
 					end
 				end
 			end

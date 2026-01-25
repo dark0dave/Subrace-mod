@@ -1035,7 +1035,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 		SET ofs = INDEX_BUFFER(~function[ %TAB%]+buildCharacterDetails~)
 		PATCH_IF ( ofs >= 0 ) BEGIN
 			SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
-			TEXT_SPRINT ~code~ ~%LNL%%TAB%srText = ""%srTextDesc%~
+			TEXT_SPRINT ~code~ ~%LNL%%TAB%srText[selectedCharacter]  = ""%srTextDesc%~
 			SET codeLen = STRING_LENGTH ~%code%~
 			INSERT_BYTES ofs2 codeLen
 			WRITE_ASCIIE ofs2 ~%code%~
@@ -1044,7 +1044,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 		SET ofs = INDEX_BUFFER(~function[ %TAB%]+updateAttrTable~)
 		PATCH_IF ( ofs >= 0 ) BEGIN
 			SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
-			TEXT_SPRINT ~code~ ~%LNL%%TAB%srText = ""%srTextDesc%~
+			TEXT_SPRINT ~code~ ~%LNL%%TAB%srText[selectedCharacter]  = ""%srTextDesc%~
 			SET codeLen = STRING_LENGTH ~%code%~
 			INSERT_BYTES ofs2 codeLen
 			WRITE_ASCIIE ofs2 ~%code%~
@@ -1054,7 +1054,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 			SET ofs = INDEX_BUFFER(~function[ %TAB%]+updateAttrTable~ ofs)
 			PATCH_IF ( ofs >= 0 ) BEGIN
 				SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
-				TEXT_SPRINT ~code~ ~%LNL%%TAB%srText = ""%srTextDesc%~
+				TEXT_SPRINT ~code~ ~%LNL%%TAB%srText[selectedCharacter]  = ""%srTextDesc%~
 				SET codeLen = STRING_LENGTH ~%code%~
 				INSERT_BYTES ofs2 codeLen
 				WRITE_ASCIIE ofs2 ~%code%~
@@ -1072,7 +1072,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 			READ_ASCII ofs line ( ofs2 - ofs )
 			TEXT_SPRINT code ~
 			%if_patch%
-				srText = Infinity_FetchString(v.strRef)%srTextDescLine%
+				srText[selectedCharacter]  = Infinity_FetchString(v.strRef)%srTextDescLine%
 			else
 				%line%
 			end~
@@ -1091,7 +1091,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 			SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
 			READ_ASCII ofs line ( ofs2 - ofs )
 			TEXT_SPRINT code ~	%if_patch%
-				srText = Infinity_FetchString(v.strRef)%srTextDescLine%
+				srText[selectedCharacter]  = Infinity_FetchString(v.strRef)%srTextDescLine%
 			else
 				%line%
 			end~
@@ -1109,7 +1109,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 					SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
 					READ_ASCII ofs line ( ofs2 - ofs )
 					TEXT_SPRINT code ~	%if_patch%
-				srText = Infinity_FetchString(v.strRef)%srTextDescLine%
+				srText[selectedCharacter]  = Infinity_FetchString(v.strRef)%srTextDescLine%
 			else
 				%line%
 			end~
@@ -1124,7 +1124,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 					SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
 					READ_ASCII ofs line ( ofs2 - ofs )
 					TEXT_SPRINT code ~	%if_patch%
-				srText = Infinity_FetchString(v.strRef)%srTextDescLine%
+				srText[selectedCharacter]  = Infinity_FetchString(v.strRef)%srTextDescLine%
 			else
 				%line%
 			end~
