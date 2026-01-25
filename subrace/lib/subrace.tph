@@ -650,6 +650,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_vcba.spl~
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
 
+// TODO: Make this its own component
 ACTION_FOR_EACH scr IN viconia_ bdviconi viconia vico25 baeloth bdbaelot BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ BEGIN
   	OUTER_SPRINT ~SUBRA~ ~VCBA~
