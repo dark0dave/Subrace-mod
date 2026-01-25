@@ -76,9 +76,9 @@ Ce sort entoure une ou plusieurs créatures d'une pâle lueur violette, rendant 
 @50   = ~Sélection de la sous-race :~
 @51   = ~SÉLECTION DE LA SOUS-RACE~
 
-@110  = ~AASIMAR : Les aasimars sont des êtres avec du sang céleste, issue de l'union d'un mortel et d'une divinité. Ils sont généralement d'alignement bon et combattent le mal de par le monde.
+@110  = ~AASIMARS : Les aasimars sont des êtres avec du sang céleste, issue de l'union d'un mortel et d'une divinité. Ils sont généralement d'alignement bon et combattent le mal de par le monde.
 La peau claire, les yeux gris ou dorés et les cheveux argentés, ils présentent souvent une marque de naissance ayant la forme du symbole sacré de leur ancêtre divin.
-Les Aasimar sont dotés d'un charisme et d'une sagacité remarquable, ils suivent souvent la voie du paladin.
+Les Aasimars sont dotés d'un charisme et d'une sagacité remarquable, ils suivent souvent la voie du paladin.
 
 Avantages :
 - Bonus de 1 en Sagesse
@@ -91,7 +91,7 @@ Inconvénients :
 - Obtient seulement 95 % de l'expérience acquise
 ~
 
-@120  = ~TIEFFELIN : Les équivalents infernaux des aasimar sont nommés tieffelins, des humains avec une légère part diabolique dans leur lignée, les prédisposant à un comportement erratique sans être nécessairement maléfique, leur alignement varie autant que celui des humains primaires.
+@120  = ~TIEFFELINS : Les équivalents infernaux des aasimar sont nommés tieffelins, des humains avec une légère part diabolique dans leur lignée, les prédisposant à un comportement erratique sans être nécessairement maléfique, leur alignement varie autant que celui des humains primaires.
 Bien que leur apparence soit généralement humaine, ils présentent souvent des signes révélateurs de leur ascendance. Une peau sombre et des cheveux foncés ou roux. Bien que beaucoup arborent de petites cornes, des yeux de chat, une queue, des dents plus acérées ou d'autres caractéristiques insolites comme des pied fourchus.
 La plupart des tieffelins ont à cœur de cacher leurs différences aux humains en raison des idées reçues sur leur nature et de la discrimination qui en découle.
 
@@ -108,7 +108,7 @@ Inconvénients :
 - Obtient seulement 95 % de l'expérience acquise
 ~
 
-@130  = ~ELFE NOIR :Les elfes noirs, également connus sous le nom de drow, sont les cousins des elfes d'Argent et vivent principalement en Ombre-Terre. Leur peau noire et leurs cheveux pâles sont les stigmates de leur allégeance à Lolth, la déesse araignée. Les sociétés elfes noirs sont matriarcal, habituellement dirigées par de cruelles prêtresses de Lolth et leurs maisons. Ils sont connus pour leur arrogance, leur cruauté et leur penchant pour la sédition.
+@130  = ~ELFE NOIRS :Les elfes noirs, également connus sous le nom de drows, sont les cousins des elfes d'Argent et vivent principalement en Ombre-Terre. Leur peau noire et leurs cheveux pâles sont les stigmates de leur allégeance à Lolth, la déesse araignée. Les sociétés elfes noirs sont matriarcal, habituellement dirigées par de cruelles prêtresses de Lolth et leurs maisons. Ils sont connus pour leur arrogance, leur cruauté et leur penchant pour la sédition.
 
 Avantages :
 - Bonus de 1 en Intelligence
@@ -124,7 +124,7 @@ Inconvénients :
 - Malus de 2 à la Réputation
 ~
 
-@140  = ~ELFE SAUVAGE : Vivant au cœur d'épaisses forêts, les elfes sauvages sont rarement aperçu et ont une incroyable aptitude à la dissimulation. Également appelés elfes vert, leur peau tend à être de couleur brune et foncé, et leurs cheveux vont du noir au châtain clair, blanchissant avec l'âge vers une couleur argenté.
+@140  = ~ELFE SAUVAGES : Vivant au cœur d'épaisses forêts, les elfes sauvages sont rarement aperçu et ont une incroyable aptitude à la dissimulation. Également appelés elfes vert, leur peau tend à être de couleur brune et foncé, et leurs cheveux vont du noir au châtain clair, blanchissant avec l'âge vers une couleur argenté.
 
 Avantages :
 - Bonus de 1 en Constitution
@@ -133,7 +133,7 @@ Inconvénients :
 - Malus de 1 en Intelligence
 ~
 
-@150  = ~COSTAUD : Alors que les petites-personnes communes apprécient l'expérience acquise en voyageant, ainsi que la découverte de nouvelles terres et de nouveaux peuples, les Costauds sont une race plus organisée, ordonnée et productive. Les Costauds surprennent souvent ceux qui sont habitués à leurs cousins itinérant, par leur nature confiante et compétitive.
+@150  = ~COSTAUDS : Alors que les petites-personnes communes apprécient l'expérience acquise en voyageant, ainsi que la découverte de nouvelles terres et de nouveaux peuples, les Costauds sont une race plus organisée, ordonnée et productive. Les Costauds surprennent souvent ceux qui sont habitués à leurs cousins itinérant, par leur nature confiante et compétitive.
 
 Avantages :
 - Spécial : 1 point de compétence supplémentaire dans le combat à la hache
@@ -142,7 +142,7 @@ Inconvénients :
 - aucun
  ~
 
-@160  = ~SAGESPECTRE : Contrairement à leurs cousins, les sagespectres sont plus farouches et réservés. On les trouve le plus souvent dans les forêts au sud des royaumes ou ils vivent en petites communautés. Même si on les voit rarement dans les grandes villes, les sagespectres partent parfois à l'aventure pour des raisons qu'ils sont les seuls à connaître. Les voyageurs qui se sont rendus dans leurs villages rapportent souvent que les sagespectres ont des liens de parenté si étroits avec leurs semblables qu'ils peuvent communiquer sans parler.
+@160  = ~SAGESPECTRES : Contrairement à leurs cousins, les sagespectres sont plus farouches et réservés. On les trouve le plus souvent dans les forêts au sud des royaumes ou ils vivent en petites communautés. Même si on les voit rarement dans les grandes villes, les sagespectres partent parfois à l'aventure pour des raisons qu'ils sont les seuls à connaître. Les voyageurs qui se sont rendus dans leurs villages rapportent souvent que les sagespectres ont des liens de parenté si étroits avec leurs semblables qu'ils peuvent communiquer sans parler.
 
 Avantages :
 - Bonus de 5 % en Détection des pièges (pour les voleurs)
@@ -152,7 +152,7 @@ Inconvénients :
 - aucun
 ~
 
-@170  = ~SVIRFNEBLIN : Également connus sous le nom de gnomes des profondeurs, les svirfneblins sont une race secrète et mystérieuse. Installés dans les profondeurs de l'Ombre-Terre, ils vivent dans la crainte constante d'être réduits en esclavage ou anéantis par les elfes noirs, les Flagelleurs Mentaux et les duergars. Les svirfneblins sont légendaires pour leur aptitude à manipuler la pierre et les gemmes. Ils ont la peau brune ou grise et les cheveux gris ou blancs.
+@170  = ~SVIRFNEBLINS : Également connus sous le nom de gnomes des profondeurs, les svirfneblins sont une race secrète et mystérieuse. Installés dans les profondeurs de l'Ombre-Terre, ils vivent dans la crainte constante d'être réduits en esclavage ou anéantis par les elfes noirs, les Flagelleurs Mentaux et les duergars. Les svirfneblins sont légendaires pour leur aptitude à manipuler la pierre et les gemmes. Ils ont la peau brune ou grise et les cheveux gris ou blancs.
 
 Avantages :
 - Bonus de 1 en Dextérité
@@ -174,7 +174,7 @@ Inconvénients :
 - Obtient seulement 85 % de l'expérience acquise
 ~
 
-@180  = ~NAIN DES COLLINES : À une époque où la race naine était tristement en déclin, Moradin, le Créateur offrit aux nains des collines, à travers les royaumes, une faveur divine. Le père de tout les nains leur a accordé la Bénédiction du Tonnerre, et provoqua ainsi un nouvel essor de la population des nains des collines. Bien que ses effets ne se fassent pas sentir avant des décennies, ils commencent déjà à se multiplier dans les Royaumes en tant que commerçants avisés ainsi qu'en fiers et quelque peu hautains, guerriers.
+@180  = ~NAINS DES COLLINES : À une époque où la race naine était tristement en déclin, Moradin, le Créateur offrit aux nains des collines, à travers les royaumes, une faveur divine. Le père de tout les nains leur a accordé la Bénédiction du Tonnerre, et provoqua ainsi un nouvel essor de la population des nains des collines. Bien que ses effets ne se fassent pas sentir avant des décennies, ils commencent déjà à se multiplier dans les Royaumes en tant que commerçants avisés ainsi qu'en fiers et quelque peu hautains, guerriers.
 
 Avantages :
 - Bonus de 1 au Charisme
@@ -186,7 +186,7 @@ Inconvénients :
 - Malus de 1 en Dextérité
 ~ // (Illithids, Tyrannœils, Driders, Giths, Kuo-toas, hydres and Aboleths)
 
-@190  = ~DUERGAR : Également connus sous le nom de nains gris, Les duergars des royaumes oubliés vivent encore plus profondément sous terre que leurs cousins les nains d'écu et les nains des collines. Ils ont peu de choses en commun avec les autres nains, pratiquant l'esclavage dans leurs gigantesques cités souterraines, leur réputation des guerriers perfides, discrets et efficaces est connue dans tous les royaumes. Souvent motivés par la cupidité et l'ivresse du pouvoir, les duergars ont presque toujours les cheveux et la peau gris.
+@190  = ~DUERGARS : Également connus sous le nom de nains gris, Les duergars des royaumes oubliés vivent encore plus profondément sous terre que leurs cousins les nains d'écu et les nains des collines. Ils ont peu de choses en commun avec les autres nains, pratiquant l'esclavage dans leurs gigantesques cités souterraines, leur réputation des guerriers perfides, discrets et efficaces est connue dans tous les royaumes. Souvent motivés par la cupidité et l'ivresse du pouvoir, les duergars ont presque toujours les cheveux et la peau gris.
 
 Avantages :
 - Bonus de 10 % à la détection des pièges et des ouvrages en pierre inhabituels, tels que les murs coulissants, les portes secrètes, et les constructions récentes
@@ -228,7 +228,7 @@ Inconvénients :
 /*new subraces*/
 /*HUMAN*/
 @1000 = ~DEMI-DRAGON~
-@1001 = ~DEMI-DRAGON : Lorsqu'un dragon se métamorphose et s'accouple avec une autre espèce, il arrive que le fruit de cette union donne naissance à un demi-dragon. Une créature peut également se voir transformer en demi-dragon à la suite d'un sortilège lancé par un sorcier fou ou après un bain rituel dans du sang de dragon.
+@1001 = ~DEMI-DRAGONS : Lorsqu'un dragon se métamorphose et s'accouple avec une autre espèce, il arrive que le fruit de cette union donne naissance à un demi-dragon. Une créature peut également se voir transformer en demi-dragon à la suite d'un sortilège lancé par un sorcier fou ou après un bain rituel dans du sang de dragon.
 À chaque fois, l'entité qui en résulte combine l'essence d'un dragon avec sa forme initial. Indépendamment de leurs origines, tous les demi-dragons ont des caractéristiques et une apparence similaires, ils gagnent des sens supplémentaires, une résistance à l'énergie destructive et la capacité souffle du dragon.
 
 Avantages :
@@ -266,12 +266,13 @@ Inconvénients :
 - Malus de 1 au Charisme
 - Obtient seulement 85 % de l'expérience acquise
 ~
+
 @1002 = ~demi-Dragon~
 @1003 = ~Demi-Dragon~
 
 /* elf */
 @1100 = ~ELFE DE LA LUNE~
-@1101 = ~ELFE DE LA LUNE : Les elfes de la lune ou elfes d'argent, comme beaucoup de leurs congénères ont choisi les forêts pour leur tranquillité. Ils vénèrent la lune et en tirent leur pouvoir magique, lorsque celle-ci est pleine, les elfes de la lune deviennent particulièrement puissants.
+@1101 = ~ELFES DE LA LUNE : Les elfes de la lune ou elfes d'argent, comme beaucoup de leurs congénères ont choisi les forêts pour leur tranquillité. Ils vénèrent la lune et en tirent leur pouvoir magique, lorsque celle-ci est pleine, les elfes de la lune deviennent particulièrement puissants.
 Contrairement à leurs semblables, ils sont plus sociables et entrent facilement en contact avec d'autres races. Souvent, par curiosité ou par soif d'aventure, ils rejoignent des groupes d'aventuriers. Attirés par toute sorte de choses. Les elfes de la lune aiment la musique et font d'excellents bardes.
 Ils ont la peau claire, parfois légèrement bleuté, les cheveux argentés, sombres ou bleus et leurs yeux sont bleus ou verts aux reflets dorés.
 
@@ -280,12 +281,14 @@ Avantages :
 - Bonus de 1 au Charisme
 
 Inconvénients :
-- Malus de 1 en Constitution~
+- Malus de 1 en Constitution
+~
+
 @1102 = ~elfe de la lune~
 @1103 = ~Elfe de la lune~
 
 @1120  = ~FEY'RI~
-@1121  = ~FEY'RI : Les Fey'ris à l'instar des tieffelins, sont des elfes avec une part diabolique dans leur lignée. Parfois impossibles à distinguer de leurs ancêtres elfiques mais présentant tout de même des signes trahissant leur ascendance.
+@1121  = ~FEY'RIS : Les Fey'ris à l'instar des tieffelins, sont des elfes avec une part diabolique dans leur lignée. Parfois impossibles à distinguer de leurs ancêtres elfiques mais présentant tout de même des signes trahissant leur ascendance.
 Des crocs, des cornes, une langue ou une queue fourchue et même des ailes dans certains cas.
 Prédisposés à un comportement erratique sans être nécessairement maléfique, les Fey'ris sont aussi victimes de nombreuses discriminations en raison des idées fausses sur leur nature malveillante.
 
@@ -303,20 +306,9 @@ Inconvénients :
 @1123  = ~Fey'ri~
 
 @1130 = ~DEMI-ELFE NOIR~ ~DEMI-ELFE NOIRE~
-@1131 = ~DEMI-ELFE NOIR : Un demi-elfe noir ou demi-drow est issu de l'union d'humains et d'elfes noirs. Leur ascendance elfe noir étant principalement affiliés à la Seldarine, la plupart d'entre eux ne sont pas élevés en Ombre-Terre.
+@1131 = ~DEMI-ELFES NOIRS : Un demi-elfe noir ou demi-drow est issu de l'union d'humains et d'elfes noirs. Leur ascendance elfe noir étant principalement affiliés à la Seldarine, la plupart d'entre eux ne sont pas élevés en Ombre-Terre.
 Leur peau est habituellement mate et leurs cheveux sont argentés ou blancs.
 Les demi-elfes noirs ont des yeux de forme et de couleur humaine.
-
-Avantages :
-- Lueur féérique une fois par jour
-- Bonus de 1 en Intelligence
-- Bonus de 5 % en Détection des pièges (pour les voleurs)
-- Résistance à la magie : Bonus de 10 %
-
-Inconvénients :
-- Obtient seulement 95 % de l'expérience acquise
-~ ~DEMI-ELFE NOIRE : Une demi-elfe noire ou demi-drow est issue de l'union d'humains et d'elfes noirs. Leur ascendance elfe noir étant principalement affiliés à la Seldarine, la plupart d'entre elles ne sont pas élevées en Ombre-Terre. Leur peau est habituellement mate et leurs cheveux sont argentés ou blancs.
-Les demi-elfes noires ont des yeux de forme et de couleur humaine.
 
 Avantages :
 - Lueur féérique une fois par jour
@@ -332,7 +324,7 @@ Inconvénients :
 @1133 = ~Demi-elfe noir~ ~Demi-elfe noire~
 
 @1140 = ~GENASI D'AIR~
-@1141 = ~GENASI D'AIR : Les genasis d'air (également connus sous le nom de duc ou duchesse du vent) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'air, principalement des djinns.
+@1141 = ~GENASIS D'AIR : Les genasis d'air (également connus sous le nom de duc ou duchesse du vent) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'air, principalement des djinns.
 Se considérant comme les dépositaires du ciel, des vents et même de l'air dans son ensemble, les genasis d'air sont d'apparence humaine mais présentent toutefois un ou deux traits reflétant clairement leur nature élémentaire, comme une peau d'un bleu pâle et froide au toucher ou des cheveux aux reflets bleu azur.
 Une légère brise les enveloppe continuellement.
 
@@ -355,7 +347,7 @@ Inconvénients :
 @1143 = ~Genasi d'air~
 
 @1150 = ~GENASI DE TERRE~
-@1151 = ~GENASI DE TERRE : Les genasis de terre (également connus sous le nom de prince ou princesse de la pierre) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de la terre, principalement des daos.
+@1151 = ~GENASIS DE TERRE : Les genasis de terre (également connus sous le nom de prince ou princesse de la pierre) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de la terre, principalement des daos.
 Très attachés à leurs habitudes, réfléchis et pondérés, ils prennent leur temps pour agir et parfaire leurs raisonnements.
 Ressemblant pour la plupart à des humains, les genasis de terre présentent toutefois un ou deux traits reflétant clairement leur nature élémentaire, comme une peau comparable à de la terre, des traits rugueux ou des yeux profonds entièrement noirs.
 
@@ -378,7 +370,7 @@ Inconvénients :
 @1153 = ~Genasi de terre~
 
 @1160 = ~GENASI DE FEU~
-@1161 = ~GENASI DE FEU : Les genasis de feu (également connus sous le nom de seigneur ou seigneuresse des flammes) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire du feu, principalement des éfrits.
+@1161 = ~GENASIS DE FEU : Les genasis de feu (également connus sous le nom de seigneur ou seigneuresse des flammes) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire du feu, principalement des éfrits.
 Fougueux, colériques, fiers et intrépides, les genasis de feu ont une apparence presque humaine, à l'exception d'un ou deux traits reflétant clairement leur nature élémentaire, comme une peau couleur anthracite, des cheveux roux flamboyants ou bien des yeux étincelants au grè de leur humeur.
 
 Avantages :
@@ -398,7 +390,7 @@ Inconvénients :
 @1163 = ~Genasi de feu~
 
 @1170 = ~GENASI D'EAU~
-@1171 = ~GENASI D'EAU : Les genasis d'eau (également connus sous le nom de roi ou reine des océans) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'eau, principalement des marids.
+@1171 = ~GENASIS D'EAU : Les genasis d'eau (également connus sous le nom de roi ou reine des océans) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'eau, principalement des marids.
 D'une patience à toute épreuve et peu enclins au changement, leur stratégie consiste à affaiblir lentement leurs adversaires. Toutefois face à des situations extrêmes les genasis d'eau peuvent faire preuve d'une violence inouïe.
 D'apparence essentiellement humaine, ils présentent quelques caractéristiques reflétant clairement leur nature élémentaire, une peau recouverte de fines écailles et légèrement visqueuse, un teint bleu-vert ou bien une chevelure ondulante qui leur donnent l'impression d'évoluer sous l'eau.
 
@@ -418,25 +410,10 @@ Inconvénients :
 @1173 = ~Genasi d'eau~
 
 @1180 = ~DEMI-ORQUE GRIS~ ~DEMI-ORQUE GRISE~
-@1181 = ~DEMI-ORQUE GRIS : Les demi-orques gris descendent des humains et des orques gris. Tout aussi cruels, féroces et sanguinaires que leurs cousins du nord, les orques gris n'ont toutefois pas la même soif de conquête et de domination que les orques des montagnes.
+@1181 = ~DEMI-ORQUES GRIS : Les demi-orques gris descendent des humains et des orques gris. Tout aussi cruels, féroces et sanguinaires que leurs cousins du nord, les orques gris n'ont toutefois pas la même soif de conquête et de domination que les orques des montagnes.
 Ils ont tendance à réagir de manière impulsive et imprévisible, se fiant davantage à leur instinct. Préférant l'émotion à la raison lorsque l'occasion d'attaquer un rival redouté se présente, les orques gris n'hésitent pas à en découdre, même s'ils ont déjà été battus à maintes reprises par ce même ennemi.
 La véritable force d'une tribu d'orques gris ne réside pas dans son chef, mais dans son grand prêtre, généralement un adepte de la magie ou un clerc (souvent une femme) en poste depuis de nombreuses années.
 Les orques gris sont des fanatiques, et la parole des prêtres de leur tribu fait loi.
-
-Avantages :
-- Bonus de 2 points à la vitesse de déplacement
-- Bonus de de 1 à la sagesse
-- Bonus de 1 à la classe d'armure et aux jets de sauvegarde, grace à leur excellent flair
-
-Inconvénients :
-- Malus de 1 en Constitution
-- Malus de 1 au Charisme
-- Sensible à la lumière : Malus de 1 au TAC0 et aux jets de sauvegarde sous la lumière du jour
-- Obtient seulement 95 % de l'expérience acquise
-~ ~DEMI-ORQUE GRISE : Les demi-orques grise descendent des humains et des orques gris. Tout aussi cruelles, féroces et sanguinaires que leurs cousines du nord, les orques grise n'ont toutefois pas la même soif de conquête et de domination que les orques des montagnes.
-Elles ont tendance à réagir de manière impulsive et imprévisible, se fiant davantage à leur instinct. Préférant l'émotion à la raison lorsque l'occasion d'attaquer une rivale redoutée se présente, les orques grise n'hésitent pas à en découdre, même si elles ont déjà été battues à maintes reprises par cette même ennemie.
-La véritable force d'une tribu d'orques gris ne réside pas dans sa cheffe, mais dans sa grande prêtresse, généralement une adepte de la magie ou une clerc (rarement un homme) en poste depuis de nombreuses années.
-Les orques grise sont des fanatiques, et la parole des prêtresses de leur tribu fait loi.
 
 Avantages :
 - Bonus de 2 points à la vitesse de déplacement
@@ -454,7 +431,7 @@ Inconvénients :
 @1183 = ~Demi-orque gris~ ~Demi-orque grise~
 
 @1190 = ~ELFE DU SOLEIL~
-@1191 = ~ELFE DU SOLEIL : Les elfes du soleil sont natifs d'Éternelle rencontre, une région interdite à ceux ou celles qui ne sont pas de leur espèce, aussi sont-ils moins nombreux à arpenter Féérune que les elfes de la lune.
+@1191 = ~ELFES DU SOLEIL : Les elfes du soleil sont natifs d'Éternelle rencontre, une région interdite à ceux ou celles qui ne sont pas de leur espèce, aussi sont-ils moins nombreux à arpenter Féérune que les elfes de la lune.
 Également appelés elfes d'or, ils ont la peau cuivrée, les cheveux blonds dorés, roux ou noirs, et les yeux verts ou d'un jaune étincelant.
 Considérés comme les elfes les plus raffinés et les plus fiers, ils préfèrent se tenir à l'écart des autres races. La plupart d'entre eux mènent une vie dédiée à la recherche et à la contemplation, aiguisant leur esprit mais affaiblissant leur corps. 
 
@@ -469,7 +446,7 @@ Inconvénients :
 @1193 = ~Elfe du soleil~
 
 @1200 = ~ELFE DES BOIS~
-@1201 = ~ELFE DES BOIS : Les elfes des bois sont des solitaires et des reclus sans être aussi farouches que les elfes verts, qui eux vivent presque à l'état sauvage. Il est donc rare, mais pas invraisemblable, d'en voir certains s'aventurer hors de la Haute Forêt.
+@1201 = ~ELFES DES BOIS : Les elfes des bois sont des solitaires et des reclus sans être aussi farouches que les elfes verts, qui eux vivent presque à l'état sauvage. Il est donc rare, mais pas invraisemblable, d'en voir certains s'aventurer hors de la Haute Forêt.
 Les elfes des bois sont exceptionnellement vigoureux, mais aussi plus petits et moins perspicaces que la plupart de leurs congénères.
 Également appelés elfes de cuivre ou sylvestre, ils ont la peau d'un vert-de-gris et les yeux verts ou de couleur noisette. Leurs cheveux sont généralement bruns ou noirs et parfois blonds ou roux cuivré.
 
