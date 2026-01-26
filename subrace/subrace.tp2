@@ -1,4 +1,4 @@
-BACKUP "weidu_external/subrace/backup/"
+BACKUP ~weidu_external/subrace/backup~
 AUTHOR ~tipun. tipun.iwd@google.com~
 VERSION ~0.3.2~
 README ~subrace/readme.md~
@@ -38,6 +38,7 @@ LANGUAGE ~Português Brasileiro~
          ~subrace/lang/pt_BR/kitsune.tra~
 BEGIN @1000001
 DESIGNATED 100
+LABEL ~Subrace-Tipun_Hair-and-Skin~
 SUBCOMPONENT @1000000
 GROUP @1000005
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
@@ -49,6 +50,7 @@ INCLUDE ~subrace/lib/subrace.tph~
 
 BEGIN @1000002
 DESIGNATED 200
+LABEL ~Subrace-Tipun_No_Hair-and-Skin~
 SUBCOMPONENT @1000000
 GROUP @1000005
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
@@ -61,7 +63,7 @@ INCLUDE ~subrace/lib/subrace.tph~
 // New Races Components
 BEGIN @1000004
 DESIGNATED 300
-LABEL ~newraces~
+LABEL ~Subrace-szaumoor-dark0dave_Kitsune~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 

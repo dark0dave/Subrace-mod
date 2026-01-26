@@ -1,19 +1,62 @@
-# Subrace MOD for Enhanced Edition Games(BGEE, BG2EE, EET, IWDEE)
+# Subrace MOD for Enhanced Edition
+
+#### For BGEE, BG2EE, EET, IWDEE
+
+[![Release](https://img.shields.io/github/v/release/dark0dave/Subrace-mod?include_prereleases&color=41788a)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Published](https://img.shields.io/github/release-date-pre/dark0dave/Subrace-mod?display_date=published_at&label=published&color=014a69)](https://github.com/dark0dave/Subrace-mod/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/dark0dave/Subrace-mod/total?color=41788a)](https://github.com/dark0dave/Subrace-mod/releases)
+
+[![Language](https://img.shields.io/badge/language-english%20%7C%20russian%20%7C%20french-014a69)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Games](https://img.shields.io/badge/games-BGEE%20%a0%20BG2EE%20%a0%20EET%20%a0%20IWDEE-41788a)](https://github.com/dark0dave/Subrace-mod/releases)
+
+<!--
+
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fdark0dave%2FSubrace-mod&countColor=41788a&style=flat)
+
+[![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-014a69)](https://github.com/dark0dave/Subrace-mod/releases)
+-->
+
+---
+
+**Updated by** : **szaumoor and dark0dave**
+
+[Link to Mod forum](https://www.gibberlings3.net/forums/topic/32267-subrace-mod/#comment-290572)
+
+---
+
+**Original Author** : **Tipun**
+
+[Link to original Mod download](https://github.com/tipun81/Subrace-mod)
+
+[Link to original Mod forum](https://arcanecoast.ru/forum/viewtopic.php?f=31&t=1655&hilit=subrace&sid=f9f3a70c1c65f44447ac9399d6b758a9)
 
 ## Contents
 
 0. Introduction
-1. [Available races](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-races)
-2. Installation
-3. Credits
-4. [Version History](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#version-history)
-5. Legal Information
+1. [Compatibility](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#compatibility)
+2. [Available subraces](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-subraces)
+3. [Available races](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-races)
+4. Installation
+5. Credits
+6. [Version History](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#version-history)
+7. Legal Information
 
 ## Introduction
 
-The mod adds subraces from the game Icewind Dale 2 to the Enhanced Edition games. Installation requires game versions 2.5+.
+The mod adds subraces and new races to the Enhanced Edition games. Installation requires game versions 2.5+.
 
-## Available races
+
+## Compatibility
+
+
+- Subrace main component `"Subraces for Baldur's Gate Enhanced Edition"` is not compatible with the following components : 
+   - ["New races and subraces"](https://htmlpreview.github.io/?https://github.com/Gibberlings3/TalentsOfFaerun/blob/master/dw_talents/doc/readme-dw_talents.html#races) from the mod [Talent of Faerûn](https://github.com/Gibberlings3/TalentsOfFaerun).
+   - ["Ability Score Overhaul"](https://github.com/subtledoctor/SubtleD_Stat_Overhauls#component-100-) from the mod [SubtleD_Stat_Overhauls](https://github.com/Gibberlings3/TalentsOfFaerun).
+
+- **Warning :** Discrepancies may occur if you use Subrace main component alongside mods or components that alter the base characteristics and attributes of existing races.
+
+
+## Available subraces
 
 <details>
   <summary>Aasimar</summary>
@@ -274,7 +317,7 @@ Ghostwise halflings have the following traits:
 </details>
 
 <details>
-  <summary>Deep gnomes</summary>
+  <summary>Deep gnome</summary>
 
 ---
 
@@ -351,6 +394,20 @@ Half gray orc have the following traits:
 </details>
 
 
+## Available races
+
+<details>
+  <summary>Kitsune (In progress)</summary>
+
+---
+
+**KITSUNE**: Kitsune have fox-like appearance and magical abilities, including shapeshifting and illusion magic. They are often seen as tricksters, using their abilities to deceive and confuse others. They are known to revere the fox spirit Iko, who is said to have protected them during times of crisis. While they can be chaotic, their tricks are usually harmless and playful.
+
+---
+
+</details>
+
+
 ## Installation
 
 ### Windows
@@ -360,6 +417,7 @@ This is a WeiDU mod, that means it is very easy to install. Simply unpack the do
 After installing the mod, you need to start a new game to select a subrace. The mod needs to be installed after other mods that modify campaign.2da.
 
 To uninstall, run "setup-subrace.exe" again and follow the prompts.
+
 
 ## Credits
 
@@ -400,8 +458,8 @@ Version 0.1
 - Initial release
 - English translation added
 
-## Legal Information
 
+## Legal Information
 
 BALDUR'S GATE II: SHADOWS OF AMN Developed and © 2000 BioWare Corp. All Rights
 Reserved. BALDUR'S GATE II: THRONE OF BHAAL Developed and © 2001 BioWare
