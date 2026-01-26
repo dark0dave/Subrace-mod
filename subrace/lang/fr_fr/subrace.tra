@@ -1,9 +1,9 @@
-@1000000 = ~Mod Subrace ( sous-race ) pour Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET)~
+@1000000 = ~Sous-races pour Enhanced Edition~
 @1000001 = ~Change les couleurs de la sous-race (Cheveux et Peau)~
 @1000002 = ~Ne pas changer les couleurs de la sous-race (Cheveux et Peau)~
-@1000003 = ~Nouvelles Races for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET)~
+@1000003 = ~Nouvelles Races pour Baldur's Gate Enhanced Edition (BG1EE, BG:SoD, BG2EE, EET and IWDEE)~
 @1000004 = ~Kitsune~
-@1000005 = ~Mod Subrace ( sous-race ) pour Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET)~
+@1000005 = ~Subrace ( sous-race ) pour Baldur's Gate Enhanced Edition (BG1EE, BG:SoD, BG2EE, EET and IWDEE)~
 @1000006 = ~Kenku~
 @1100000 = ~Ce composant n'est pas compatible avec votre jeu~
 
@@ -19,24 +19,24 @@
 @10   = ~~
 @11   = ~Aasimar~
 @12   = ~Tieffelin~
-@13   = ~Elfe noir~
+@13   = ~Elfe noir~ ~Elfe noire~
 @14   = ~Elfe sauvage~
 @15   = ~Costaud~
 @16   = ~Sagespectre~
 @17   = ~Svirfnebelin~
-@18   = ~Nain des collines~
+@18   = ~Nain des collines~ ~Naine des collines~
 @19   = ~Duergar~
 
 @20   = ~sous-race : ~
 
 @21   = ~AASIMAR~
 @22   = ~TIEFFELIN~
-@23   = ~ELFE NOIR~
+@23   = ~ELFE NOIR~ ~ELFE NOIRE~
 @24   = ~ELFE SAUVAGE~
 @25   = ~COSTAUD~
 @26   = ~SAGESPECTRE~
 @27   = ~SVIRFNEBELIN~
-@28   = ~NAIN DES COLLINES~
+@28   = ~NAIN DES COLLINES~ ~NAINE DES COLLINES~
 @29   = ~DUERGAR~
 
 @31   = ~HUMAIN~
@@ -208,12 +208,12 @@ Inconvénients :
 
 @521   = ~aasimar~
 @522   = ~tieffelin~
-@523   = ~elfe noir~
+@523   = ~elfe noir~ ~elfe noire~
 @524   = ~elfe sauvage~
 @525   = ~costaud~
 @526   = ~sagespectre~
 @527   = ~svirfnebelin~
-@528   = ~nain des collines~
+@528   = ~nain des collines~ ~naine des collines~
 @529   = ~duergar~
 
 @531   = ~humain~
