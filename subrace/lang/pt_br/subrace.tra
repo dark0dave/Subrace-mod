@@ -1,0 +1,342 @@
+@1000000 = ~Mod de Sub-raças para Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET)~
+@1000001 = ~Alterar cores das sub-raças (Cabelo e Pele)~
+@1000002 = ~Não alterar cores das sub-raças (Cabelo e Pele)~
+@1000003 = ~Mod de Novas Raças para Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET)~
+@1000004 = ~Kitsune~
+@1000005 = ~Sub-raças para Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET)~
+@1100000 = ~Este componente não é compatível com o seu jogo~
+
+///////////////////////////////////////////////////////////////////////////
+// Menu de Seleção de Sub-raça                                           //
+///////////////////////////////////////////////////////////////////////////
+
+@1 = ~Selecione uma sub-raça:~
+@2 = ~Desejo manter a raça primária.~
+@3 = ~Esta é a minha escolha.~
+@4 = ~Selecione uma sub-raça.~
+@5 = ~Você tem certeza?~
+@6 = ~Sim.~
+@7 = ~Não há sub-raças disponíveis para a raça escolhida.~
+
+@10   = ~~
+@11   = ~Aasimar~
+@12   = ~Tiefling~
+@13   = ~Drow~
+@14   = ~Elfo Selvagem~
+@15   = ~Halfling Coração-Forte~
+@16   = ~Halfling Sábio-Fantasma~
+@17   = ~Gnomo das Profundezas~
+@18   = ~Anão Dourado~
+@19   = ~Anão Cinzento~
+
+@20   = ~sub-raça: ~
+
+@21   = ~AASIMAR~
+@22   = ~TIEFLING~
+@23   = ~DROW~
+@24   = ~ELFO SELVAGEM~
+@25   = ~HALFLING CORAÇÃO-FORTE~
+@26   = ~HALFLING SÁBIO-FANTASMA~
+@27   = ~GNOMO DAS PROFUNDEZAS~
+@28   = ~ANÃO DOURADO~
+@29   = ~ANÃO CINZENTO~
+
+@31   = ~HUMANO~
+@32   = ~ELFO~
+@33   = ~ANÃO~
+@34   = ~HALFLING~
+@35   = ~GNOMO~
+@36   = ~MEIO-ELFO~
+@37   = ~MEIO-ORC~
+
+@40   = ~Queimadura Solar~
+@41   = ~Queimadura Solar
+(Invocação)
+
+Nível: 1
+Esfera: Sol
+Alcance: Alcance visual do conjurador
+Duração: Instantânea
+Tempo de Conjuração: 4
+Área de Efeito: 1 criatura
+Teste de Resistência: Especial
+
+Quando esta magia é conjurada, um raio brilhante de calor escaldante desce do céu e atinge um alvo à escolha do conjurador. Qualquer criatura atingida pelo raio sofre 1d6 pontos de dano, mais 1 ponto por nível do conjurador; no entanto, se o alvo for uma criatura morta-viva ou um monstro vulnerável à luz brilhante, o dano é de 1d6, mais 2 pontos por nível do conjurador. Além de sofrer dano, a vítima também fica cega por 3 rodadas. A vítima tem direito a um Teste de Resistência contra Magia para reduzir o dano à metade e evitar a cegueira.~
+
+@42   = ~Fogo Fátuo~
+@43   = ~Fogo Fátuo
+(Alteração)
+
+Nível: 1
+Esfera: Clima
+Alcance: Visão
+Duração: 4 rodadas por nível
+Tempo de Conjuração: 4
+Área de Efeito: Raio de 3 metros
+Teste de Resistência: Nenhum
+
+Esta magia delineia uma ou mais criaturas com um brilho violeta pálido, tornando suas posições e movimentos facilmente visíveis. Criaturas delineadas são mais fáceis de atingir, recebendo uma penalidade de -2 na Classe de Armadura.~
+
+@50   = ~Seleção de sub-raça:~
+@51   = ~SELEÇÃO DE SUB-RAÇA~
+
+///////////////////////////////////////////////////////////////////////////
+// DESCRIÇÕES DAS SUB-RAÇAS                                               //
+///////////////////////////////////////////////////////////////////////////
+
+@110  = ~AASIMAR: Aasimar são seres tocados pelos planos de base humana que carregam o sangue de um celestial ou de qualquer outro tipo de criatura de alinhamento puramente bom, como planetars, solares e avorais. Aasimar são geralmente de alinhamento bom e predispostos a lutar contra o mal no mundo. Costumam ser incomumente belos, e a maioria possui olhos sem pupilas de cor branco-pálido, cinza ou dourado, além de cabelos prateados, embora as especificidades variem de acordo com o tipo de celestial de quem descendem. Aasimar são abençoados com intuição e magnetismo pessoal, sendo atraídos pela causa e pelos juramentos dos paladinos.
+
+Os Aasimar têm as seguintes características:
+– Infravisão
+– Pode conjurar Queimadura Solar uma vez por dia
+– +1 Sabedoria, +1 Carisma
+– Resistência a ácido, frio e eletricidade: +20%
+– Recebe apenas 95% de toda a experiência ganha~
+
+@120  = ~TIEFLINGS: Tieflings são seres tocados pelos planos de base humana com uma pitada de ancestralidade feérica ou diabólica em sua linhagem, o que os predispõe a comportamentos travessos, mas não necessariamente ao mal, já que seu alinhamento varia tanto quanto o dos humanos comuns. Embora sua aparência seja muito semelhante à humana, eles frequentemente possuem sinais reveladores de sua ancestralidade, como pele morena, cabelos escuros ou avermelhados, bem como olhos que são orbes sólidos de preto, vermelho, branco, prateado ou dourado. Embora muitos ostentem chifres, caudas, dentes afiados e outras características incomuns, como pés fendidos, a maioria dos tieflings tenta esconder essas qualidades devido aos preconceitos sobre sua natureza e à discriminação que enfrentam.
+
+Os Tieflings têm as seguintes características:
+– Infravisão
+– Pode conjurar Cegueira uma vez por dia
+– +1 Inteligência, +1 Destreza, -1 Carisma
+– Resistência a fogo, frio e eletricidade: +15%
+– +10% em Esconder-se nas Sombras e Mover-se em Silêncio
+– Recebe apenas 95% de toda a experiência ganha~
+
+@130  = ~DROW: Elfos negros, também conhecidos como drow, são os primos subterrâneos dos elfos da lua. Amaldiçoados por sua lealdade a Lolth, a deusa-aranha, os drow possuem pele de ébano escuro, cabelos pálidos e olhos frequentemente vermelho-sangue, ao contrário de seus parentes da superfície. As sociedades drow são matriarcais e geralmente governadas por sacerdotisas cruéis de Lolth e suas casas nobres. Os elfos negros são conhecidos por sua arrogância, crueldade e inclinação para guerras civis.
+
+Os Drow têm as seguintes características:
+– Pode conjurar Fogo Fátuo três vezes por dia
+– +1 de bônus nos Testes de Resistência contra Magia
+– +1 Inteligência, +1 Carisma
+– +10% em Encontrar Armadilhas
+– +50% de Resistência à Magia
+– Cegueira à Luz: penalidade de -1 no THAC0 e Testes de Resistência sob luz solar
+– Recebe apenas 90% de toda a experiência ganha
+– Inicia com uma penalidade de -2 na Reputação~
+
+@140  = ~ELFOS SELVAGENS: Os raros elfos selvagens raramente são vistos por outros povos, pois vivem no coração de florestas densas e possuem uma habilidade incrível de permanecer ocultos. Também chamados de elfos verdes, sua pele tende a ser marrom-escura, e seus cabelos variam do preto ao castanho-claro, clareando para o branco prateado com a idade.
+
+Os Elfos selvagens têm as seguintes características:
+– +1 Constituição, -1 Inteligência~
+
+@150  = ~HALFLINGS CORAÇÃO-FORTE: Enquanto os halflings pés-ligeiros valorizam a experiência de viajar e conhecer novas terras e povos, os halflings coração-forte são mais organizados, ordeiros e industriosos. Os coração-forte frequentemente surpreendem aqueles mais familiarizados com seus primos nômades por sua natureza confiante e competitiva.
+
+Os Halflings coração-forte têm as seguintes características:
+– Ganha um ponto de proficiência em Machado~
+
+@160  = ~HALFLINGS FANTASMAS: Os halflings fantasmas são os primos selvagens e reclusos dos halflings pés-leves e strongheart. Eles são encontrados com mais frequência nas florestas do sul dos Reinos, vivendo em pequenas comunidades. Halflings fantasmas raramente são vistos em grandes cidades, mas ocasionalmente partem para explorar o mundo por razões conhecidas apenas por eles. Visitantes de assentamentos fantasmas frequentemente relatam que os halflings possuem um vínculo tão forte entre si que conseguem se comunicar sem falar.
+
+Os halflings fantasmas têm as seguintes características:
+– Podem usar a habilidade Armar Armadilha uma vez por dia (acumula se o halfling for ladrão)
+– +5% Encontrar Armadilhas~
+
+@170  = ~GNOMOS DAS PROFUNDEZAS: Também conhecidos como svirfneblin, os gnomos das profundezas dos Reinos são uma raça secreta e misteriosa. Encontrados nas cavernas mais profundas do Underdark, os svirfneblin vivem em constante medo de escravidão ou destruição pelas mãos de elfos negros, devoradores de mentes e duergar. Gnomos das profundezas são lendários por sua habilidade em lidar com pedra e gemas. Eles possuem pele marrom ou cinza e cabelos cinza ou brancos.
+
+Os gnomos das profundezas têm as seguintes características:
+– Podem conjurar Imagem Espelhada, Invisibilidade e Desfoque uma vez por dia
+– +1 Destreza, +1 Sabedoria, -1 Força, -2 Carisma (-1 se o Carisma base for menor que 3)
+– +2 Classe de Armadura contra projéteis
+– +10% Encontrar Armadilhas e Esconder-se nas Sombras (dobrado em áreas internas)
+– +50% Resistência à Magia
+– Não Detecção
+– +1 bônus em todas as Jogadas de Resistência
+– +1 bônus de THAC0 contra kobolds e goblinoides
+– Recebem apenas 85% de toda a experiência ganha~
+
+@180  = ~ANÕES DOURADOS: Em uma época em que a raça anã está em triste declínio, os anões dourados dos Reinos receberam um presente divino de Moradin, o Forjador de Almas. O pai dos deuses anões concedeu a Bênção do Trovão ao seu povo, resultando em um crescimento lento da população de anões dourados. Embora seus efeitos possam não ser sentidos por décadas, os anões dourados já estão começando a se restabelecer nos Reinos como comerciantes astutos e guerreiros orgulhosos, ainda que um tanto arrogantes.
+
+Os anões dourados têm as seguintes características:
+– +1 Carisma, -1 Destreza
+– +2 Classe de Armadura contra gigantes
+– +1 bônus de THAC0 contra aberrações que vivem no Underdark~
+
+@190  = ~ANÕES CINZENTOS: Também conhecidos como duergar, os anões cinzentos dos Reinos Esquecidos vivem ainda mais profundamente no subterrâneo do que seus primos anões do escudo e anões dourados. Os duergar compartilham pouco em comum com outros anões e praticam escravidão em suas cidades subterrâneas monstruosas. Frequentemente motivados pela ganância e sede de poder, os anões cinzentos são conhecidos em todos os Reinos como guerreiros ardilosos e eficientes que se destacam em movimentos furtivos. Duergar quase sempre possuem pele e cabelos cinzentos.
+
+Os duergar têm as seguintes características:
+– Infravisão
+– +10% Encontrar Armadilhas, +20% Mover-se Silenciosamente
+– +1 bônus em Jogadas de Resistência contra Magias
+– +2 Classe de Armadura contra gigantes
+– Podem conjurar Invisibilidade uma vez por dia
+– Sofrem uma penalidade de -2 em Carisma (-1 se o Carisma base for menor que 3)
+– Cegueira à Luz: -1 de penalidade em THAC0 e Jogadas de Resistência sob luz solar
+– Recebem apenas 90% de toda a experiência ganha~
+
+
+@200 = ~~
+
+
+@521   = ~aasimar~
+@522   = ~tiefling~
+@523   = ~drow~
+@524   = ~elfo selvagem~
+@525   = ~halfling strongheart~
+@526   = ~halfling fantasma~
+@527   = ~gnomo das profundezas~
+@528   = ~anão dourado~
+@529   = ~anão cinzento~
+
+@531   = ~humano~
+@532   = ~elfo~
+@533   = ~anão~
+@534   = ~halfling~
+@535   = ~gnomo~
+@536   = ~meio-elfo~
+@537   = ~meio-orc~
+
+
+/*new subraces*/
+/*HUMAN*/
+@1000 = ~MEIO-DRAGÃO~
+@1001 = ~MEIO-DRAGÃO
+Quando um dragão em forma polimorfada se une a outra criatura, a união às vezes produz descendentes meio-dragão. Uma criatura também pode se transformar em um meio-dragão como resultado da magia de um mago louco ou de um ritual de banho em sangue de dragão. Em todos esses casos, o resultado é uma criatura que combina a essência de um dragão com a forma de sua raça original. Independentemente de sua origem, todos os meio-dragões possuem características e aparência semelhantes, adquirindo sentidos especiais, resistência a energias destrutivas e um ataque de sopro.
+
+Vantagens:
+ Infravisão
+ Imunidade a sono, paralisia e cegueira
+ Força: +2
+
+ Resiste a 50% de um tipo de dano. O tipo de resistência depende da cor:
+ - Fogo: Latão, Ouro, Vermelho
+ - Frio: Prata, Branco
+ - Eletricidade: Azul, Bronze
+ - Ácido: Negro, Cobre
+ - Veneno: Verde
+
+ Sopro do Meio-Dragão:
+ Ataque de sopro 1 vez por dia a cada 5 níveis. O dano depende da cor:
+ - Fogo: Latão, Ouro, Vermelho
+ - Frio: Prata, Branco
+ - Eletricidade: Azul, Bronze
+ - Ácido: Negro, Cobre
+ - Veneno: Verde
+ O dano começa em 1d6 e aumenta conforme o nível:
+ - Nível 1: 1d6
+ - Nível 4: 2d6
+ - Nível 8: 3d6
+ - Nível 12: 4d6
+ - Nível 16: 5d6
+ Um teste de resistência contra sopro reduz o dano pela metade.
+
+Desvantagens:
+ Não pode usar elmos, escudos nem mantos
+ Não pode encontrar Familiar
+ Destreza: -2
+ Carisma: -1
+ Recebe apenas 85% da experiência ganha~
+@1002 = ~meio-dragão~
+@1003 = ~Meio-Dragão~
+
+
+/* elf */
+@1100 = ~ELFO DA LUA~
+@1101 = ~ELFOS DA LUA: Os elfos da lua escolheram as florestas para viver em isolamento, assim como muitos de seus irmãos. Eles veneram a lua e dela extraem seu poder mágico. Durante a lua cheia, os elfos da lua tornam-se especialmente poderosos. São os mais sociáveis entre os elfos e fazem contato facilmente com outras raças. Muitas vezes, por curiosidade e sede de aventura, juntam-se a grupos de aventureiros. Mais do que outros elfos, são atraídos por diversos caminhos. Elfos da lua amam música e tornam-se excelentes bardos. Possuem pele clara, às vezes com um tom azulado, e cabelos prateados, brancos, negros ou azuis. Seus olhos são azuis ou verdes com manchas douradas.
+
+Os elfos da lua têm as seguintes características:
+– +10% Mover-se Silenciosamente e Esconder-se nas Sombras
+– +1 Carisma, -1 Constituição~
+
+@1102 = ~elfo da lua~
+@1103 = ~Elfo da Lua~
+
+@1120  = "FEY'RI"
+@1121  = ~FEY'RI: Os fey'ri são descendentes élficos tocados pelos planos, com traços demoníacos em sua linhagem, o que os predispõe a um comportamento travesso e caótico, mas não necessariamente maligno. Embora sua aparência possa ser muito semelhante à dos elfos comuns — a ponto de às vezes serem indistinguíveis —, eles frequentemente apresentam sinais reveladores de sua ascendência, como presas, caudas farpadas, chifres, línguas bifurcadas e, em casos raros, asas. Devido a equívocos sobre sua natureza e à suposição de malignidade, sofrem forte discriminação, assim como os tieflings.
+
+Os fey'ri têm as seguintes características:
+– Podem conjurar Cegueira uma vez por dia
+– +1 Carisma
+– Resistência a fogo, frio e eletricidade: +15%
+– +10% Esconder-se nas Sombras e Mover-se Silenciosamente
+– Recebem apenas 95% da experiência ganha~
+
+@1122  = ~fey'ri~
+@1123  = ~Fey'ri~
+
+@1130 = "MEIO-DROW"
+@1131 = ~MEIO-DROW: Um meio-drow é descendente tanto de humanos quanto de drow. A maioria resulta de uniões entre drow seldarine e humanos da superfície, não sendo criados no Underdark. Eles geralmente possuem pele escura, cabelos prateados ou brancos e cores de olhos humanas.
+
+Os meio-drow têm as seguintes características:
+– Podem conjurar Fogo das Fadas uma vez por dia
+– +1 Inteligência
+– +5% Encontrar Armadilhas
+– +10% Resistência à Magia
+– Recebem apenas 95% da experiência ganha~
+
+@1132 = ~meio-drow~
+@1133 = ~Meio-drow~
+
+
+@1140 = "GENASI DO AR"
+@1141 = ~GENASI DO AR: Os genasi do ar (também conhecidos como duques e duquesas do vento, como às vezes se autodenominam) são descendentes humanos tocados pelos planos, com uma herança que inclui um ser planar do Plano Elemental do Ar, frequentemente um djinn. Esses indivíduos veem a si mesmos como herdeiros do céu, do vento e do próprio ar do mundo. Eles aparentam ser majoritariamente humanos, mas possuem um ou dois traços incomuns que refletem sua natureza quase elemental, como um tom azul-claro na pele ou nos cabelos, uma leve brisa constante ao seu redor ou uma carne fria ao toque.
+
+Os genasi do ar têm as seguintes características:
+– Infravisão
+– Imunidade à sufocação
+– Podem conjurar Aura do Ar Suave uma vez por dia
+– +1 Inteligência, +1 Destreza, -1 Sabedoria, -1 Carisma
+– +25% Resistência à eletricidade
+– +5% de dano elétrico causado
+– Recebem apenas 95% da experiência ganha~
+
+@1142 = ~genasi do ar~
+@1143 = ~Genasi do Ar~
+
+
+@1150 = "GENASI DA TERRA"
+@1151 = ~GENASI DA TERRA: Os genasi da terra (também conhecidos como príncipes e princesas da pedra, como às vezes se autodenominam) são descendentes humanos tocados pelos planos, com uma herança que inclui um ser planar do Plano Elemental da Terra, frequentemente um dao. Esses indivíduos são lentos para agir, ponderados no pensamento e firmes em seus costumes. Eles aparentam ser majoritariamente humanos, mas possuem um ou dois traços que refletem sua natureza quase elemental, como pele semelhante à terra, traços faciais ásperos ou olhos que lembram poços negros.
+
+Os genasi da terra têm as seguintes características:
+– Infravisão
+– Podem conjurar Pele de Pedra uma vez por dia, que por 9 horas protege o genasi contra o primeiro ataque físico recebido
+– +1 Força, +1 Constituição, -1 Sabedoria, -1 Carisma
+– +25% Resistência a ácido, +2% de resistência a todo dano físico
+– +5% de dano ácido causado
+– Recebem apenas 95% da experiência ganha~
+
+@1152 = ~genasi da terra~
+@1153 = ~Genasi da Terra~
+
+
+@1160 = "GENASI DO FOGO"
+@1161 = ~GENASI DO FOGO: Os genasi do fogo (também conhecidos como lordes e damas da chama, como às vezes se autodenominam) são descendentes humanos tocados pelos planos, com uma herança que inclui um ser planar do Plano Elemental do Fogo, frequentemente um efreet. Esses indivíduos são temperamentais e se irritam com facilidade, orgulhosos e destemidos na ação. Eles aparentam ser majoritariamente humanos, mas possuem um ou dois traços que refletem sua natureza quase elemental, como pele da cor de carvão queimado, cabelos vermelhos que ondulam como chamas ou olhos que brilham quando o genasi se enfurece.
+
+Os genasi do fogo têm as seguintes características:
+– Infravisão
+– Podem conjurar Mãos Flamejantes duas vezes por dia
+– +1 Inteligência, -1 Carisma
+– +25% Resistência a fogo, -10% Resistência a frio
+– +5% de dano de fogo causado
+– Recebem apenas 95% da experiência ganha~
+
+@1162 = ~genasi do fogo~
+@1163 = ~Genasi do Fogo~
+
+
+@1170 = "GENASI DA ÁGUA"
+@1171 = ~GENASI DA ÁGUA: Os genasi da água (também conhecidos como reis e rainhas do mar, como às vezes se autodenominam) são descendentes humanos tocados pelos planos, com uma herança que inclui um ser planar do Plano Elemental da Água, frequentemente um gênio marid. Esses indivíduos são pacientes e resistentes à mudança, preferindo desgastar seus oponentes lentamente, mas são capazes de grande violência em situações extremas. Eles aparentam ser majoritariamente humanos, mas possuem um ou dois traços que refletem sua natureza quase elemental, como pele levemente escamada, carne úmida, pele azul-esverdeada ou cabelos que ondulam como se estivessem debaixo d’água.
+
+Os genasi da água têm as seguintes características:
+– Infravisão
+– Podem conjurar Névoa Convulsiva uma vez por dia
+– +1 Constituição, -1 Carisma
+– +25% Resistência a frio
+– +5% de dano de frio causado
+– Recebem apenas 95% da experiência ganha~
+
+@1172 = ~genasi da água~
+@1173 = ~Genasi da Água~
+
+
+@1180 = "MEIO-ORC CINZENTO"
+@1181 = ~MEIO-ORCS CINZENTOS: Os meio-orcs cinzentos descendem de humanos e, especificamente, de orcs cinzentos. Os orcs cinzentos são tão cruéis, selvagens e bárbaros quanto seus primos do norte, mas carecem do impulso de conquista e escravização dos orcs das montanhas. Eles tendem a reagir de forma súbita e irracional aos acontecimentos, confiando mais em seus instintos e emoções do que na lógica. Quando surge uma oportunidade de atacar um inimigo odiado, um orc cinzento não hesita, mesmo após ter sido brutalmente derrotado dezenas de vezes pelo mesmo adversário. O verdadeiro poder por trás de uma tribo de orcs cinzentos não é o chefe, mas o alto sacerdote da tribo, geralmente um adepto ou clérigo (frequentemente mulher), que ocupa essa posição há muitos anos. Os orcs cinzentos são fanáticos, e a palavra de seus clérigos tribais é lei.
+
+Os meio-orcs cinzentos têm as seguintes características:
+– Velocidade de movimento é 2 pontos maior que o normal (padrão é 9)
+– +1 Sabedoria, -1 Constituição, -1 Carisma
+– Podem rastrear pelo olfato, concedendo +1 de bônus na Classe de Armadura e nos Testes de Resistência
+– Cegueira à Luz: -1 de penalidade em THAC0 e Testes de Resistência sob luz solar
+– Recebem apenas 95% da experiência ganha~
+
+@1182 = ~meio-orc cinzento~
+@1183 = ~Meio-Orc Cinzento~
