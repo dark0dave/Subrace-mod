@@ -236,7 +236,7 @@ Sun elves have the following traits:
 Fey'ri have the following traits:
 - May cast Blindness once per day
 - +1 Charisma
-- Fire, cold, and electrical resistance: +20%
+- Fire, cold, and electrical resistance: +15%
 - +10% Hide in Shadows and Move Silently
 - Gets only 95% of all experience gained
 
