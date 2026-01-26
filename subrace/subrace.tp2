@@ -14,10 +14,6 @@ ALWAYS
   OUTER_SET INSTALLED_IUI    = (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0)
 END
 
-LANGUAGE ~Português Brasileiro~
-         ~pt_BR~
-         ~subrace/lang/pt_BR/subrace.tra~
-         ~subrace/lang/pt_BR/kitsune.tra~
 LANGUAGE ~English~
          ~en_US~
          ~subrace/lang/en_US/subrace.tra~
@@ -34,7 +30,12 @@ LANGUAGE ~Francais (traduction: JohnBob)~
          ~subrace/lang/en_US/kitsune.tra~
          ~subrace/lang/fr_FR/subrace.tra~
          ~subrace/lang/fr_FR/kitsune.tra~
-
+ LANGUAGE ~Português Brasileiro~
+          ~pt_BR~
+         ~subrace/lang/en_US/subrace.tra~
+         ~subrace/lang/en_US/kitsune.tra~
+         ~subrace/lang/pt_BR/subrace.tra~
+         ~subrace/lang/pt_BR/kitsune.tra~
 BEGIN @1000001
 DESIGNATED 100
 SUBCOMPONENT @1000000
