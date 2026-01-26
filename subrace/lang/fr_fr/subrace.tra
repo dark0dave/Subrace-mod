@@ -261,7 +261,7 @@ Avantages :
 
 Inconvénients :
 - Ne peut pas utiliser les casques, les boucliers et les capes
-- Ne peut pas invoqué de familier
+- Ne peut pas invoquer de familier
 - Malus de 2 en Dextérité
 - Malus de 1 au Charisme
 - Obtient seulement 85 % de l'expérience acquise
@@ -324,7 +324,7 @@ Inconvénients :
 @1133 = ~Demi-elfe noir~ ~Demi-elfe noire~
 
 @1140 = ~GENASI D'AIR~
-@1141 = ~GENASIS D'AIR : Les genasis d'air (également connus sous le nom de duc ou duchesse du vent) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'air, principalement des djinns.
+@1141 = ~GENASIS D'AIR : Les genasis d'air (également connus sous le nom de duc ou duchesse du vent) sont le fruit de l'union d'un humain et d'une créature issue du Plan élémentaire de l'air, principalement des djinns.
 Se considérant comme les dépositaires du ciel, des vents et même de l'air dans son ensemble, les genasis d'air sont d'apparence humaine mais présentent toutefois un ou deux traits reflétant clairement leur nature élémentaire, comme une peau d'un bleu pâle et froide au toucher ou des cheveux aux reflets bleu azur.
 Une légère brise les enveloppe continuellement.
 
@@ -347,7 +347,7 @@ Inconvénients :
 @1143 = ~Genasi d'air~
 
 @1150 = ~GENASI DE TERRE~
-@1151 = ~GENASIS DE TERRE : Les genasis de terre (également connus sous le nom de prince ou princesse de la pierre) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de la terre, principalement des daos.
+@1151 = ~GENASIS DE TERRE : Les genasis de terre (également connus sous le nom de prince ou princesse de la pierre) sont le fruit de l'union d'un humain et d'une créature issue du Plan élémentaire de la terre, principalement des daos.
 Très attachés à leurs habitudes, réfléchis et pondérés, ils prennent leur temps pour agir et parfaire leurs raisonnements.
 Ressemblant pour la plupart à des humains, les genasis de terre présentent toutefois un ou deux traits reflétant clairement leur nature élémentaire, comme une peau comparable à de la terre, des traits rugueux ou des yeux profonds entièrement noirs.
 
@@ -370,7 +370,7 @@ Inconvénients :
 @1153 = ~Genasi de terre~
 
 @1160 = ~GENASI DE FEU~
-@1161 = ~GENASIS DE FEU : Les genasis de feu (également connus sous le nom de seigneur ou seigneuresse des flammes) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire du feu, principalement des éfrits.
+@1161 = ~GENASIS DE FEU : Les genasis de feu (également connus sous le nom de seigneur ou seigneuresse des flammes) sont le fruit de l'union d'un humain et d'une créature issue du Plan élémentaire du feu, principalement des éfrits.
 Fougueux, colériques, fiers et intrépides, les genasis de feu ont une apparence presque humaine, à l'exception d'un ou deux traits reflétant clairement leur nature élémentaire, comme une peau couleur anthracite, des cheveux roux flamboyants ou bien des yeux étincelants au grè de leur humeur.
 
 Avantages :
@@ -390,7 +390,7 @@ Inconvénients :
 @1163 = ~Genasi de feu~
 
 @1170 = ~GENASI D'EAU~
-@1171 = ~GENASIS D'EAU : Les genasis d'eau (également connus sous le nom de roi ou reine des océans) sont le fruit de l'union d'un human et d'une créature issue du Plan élémentaire de l'eau, principalement des marids.
+@1171 = ~GENASIS D'EAU : Les genasis d'eau (également connus sous le nom de roi ou reine des océans) sont le fruit de l'union d'un humain et d'une créature issue du Plan élémentaire de l'eau, principalement des marids.
 D'une patience à toute épreuve et peu enclins au changement, leur stratégie consiste à affaiblir lentement leurs adversaires. Toutefois face à des situations extrêmes les genasis d'eau peuvent faire preuve d'une violence inouïe.
 D'apparence essentiellement humaine, ils présentent quelques caractéristiques reflétant clairement leur nature élémentaire, une peau recouverte de fines écailles et légèrement visqueuse, un teint bleu-vert ou bien une chevelure ondulante qui leur donnent l'impression d'évoluer sous l'eau.
 
@@ -418,7 +418,7 @@ Les orques gris sont des fanatiques, et la parole des prêtres de leur tribu fai
 Avantages :
 - Bonus de 2 points à la vitesse de déplacement
 - Bonus de de 1 à la sagesse
-- Bonus de 1 à la classe d'armure et aux jets de sauvegarde, grace à leur excellent flair
+- Bonus de 1 à la classe d'armure et aux jets de sauvegarde, grâce à leur excellent flair
 
 Inconvénients :
 - Malus de 1 en Constitution
