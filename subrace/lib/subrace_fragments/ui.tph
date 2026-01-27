@@ -1,0 +1,4 @@
+COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
+COPY_EXISTING ~ui.menu~ ~override~
+	LPM SHOW_IN_CHARACTER_RECORD
+BUT_ONLY

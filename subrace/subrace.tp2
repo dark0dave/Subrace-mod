@@ -1,5 +1,5 @@
 BACKUP "weidu_external/subrace/backup/"
-AUTHOR ~tipun. tipun.iwd@google.com~
+SUPPORT ~tipun. tipun.iwd@google.com~
 VERSION ~0.3.2~
 README ~subrace/readme.md~
 
@@ -36,6 +36,7 @@ LANGUAGE ~Português Brasileiro~
          ~subrace/lang/en_US/kitsune.tra~
          ~subrace/lang/pt_BR/subrace.tra~
          ~subrace/lang/pt_BR/kitsune.tra~
+
 BEGIN @1000001
 DESIGNATED 100
 SUBCOMPONENT @1000000

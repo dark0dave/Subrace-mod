@@ -1,0 +1,20 @@
+ACTION_DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN ~baldur~   => ~~ END
+ACTION_DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN ~baldur25~ => ~~ END
+ACTION_IF (FILE_EXISTS_IN_GAME ~campaign.2da~) BEGIN
+    COPY_EXISTING ~campaign.2da~ ~override~
+        COUNT_2DA_ROWS 4 rws
+        FOR ( i = 0 ; i < rws ; ++i ) BEGIN
+            READ_2DA_ENTRY i 1 4 scrp
+            TO_UPPER scrp
+            PATCH_IF (!VARIABLE_IS_SET $campscr(~%scrp%~)) BEGIN
+                DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN ~%scrp%~ => ~~ END
+            END
+        END
+        BUT_ONLY
+END
+
+ACTION_PHP_EACH campscr AS wbcs => dummy BEGIN
+    ACTION_IF FILE_EXISTS_IN_GAME ~%wbcs%.bcs~ BEGIN
+        EXTEND_TOP ~%wbcs%.bcs~ ~subrace/baf/appendba.baf~
+    END
+END

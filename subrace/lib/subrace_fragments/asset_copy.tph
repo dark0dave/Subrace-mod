@@ -1,0 +1,17 @@
+COPY ~subrace/bam/srsubico.bam~ ~override~
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~sunscoh.bam~ BEGIN
+	COPY ~subrace/bam/sunscoh.bam~ ~override/sunscoh.bam~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~dff_p39.wav~ BEGIN
+	COPY ~subrace/wav/dff_p39.wav~ ~override~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~idpr113b.bam~ BEGIN
+	COPY ~subrace/bam/idpr113b.bam~ ~override~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~idpr113c.bam~ BEGIN
+	COPY ~subrace/bam/idpr113c.bam~ ~override~
+END
