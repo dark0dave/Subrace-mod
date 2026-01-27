@@ -61,7 +61,7 @@ srText = {}
 
 function zzSubraceString(char)
 	local rstr = Infinity_FetchString(char.race)
-	if srText[selectedCharacter]  == nil or srText[selectedCharacter]  == 10 then
+	if srText[selectedCharacter] == nil or srText[selectedCharacter] == 10 then
 		return rstr
 	else
 		return rstr .. " ( " .. srText[selectedCharacter]  .. " )"
@@ -173,24 +173,31 @@ end
 function onSubraceButton(buttonNum)
 	if multiplayerScreen:GetEngineState() == 0 and not selectedCharacter then
 		C:SetGlobal("P1_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 	if selectedCharacter == 1 then
 		C:SetGlobal("P1_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 	if selectedCharacter == 2 then
 		C:SetGlobal("P2_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 	if selectedCharacter == 3 then
 		C:SetGlobal("P3_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 	if selectedCharacter == 4 then
 		C:SetGlobal("P4_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 	if selectedCharacter == 5 then
 		C:SetGlobal("P5_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 	if selectedCharacter == 6 then
 		C:SetGlobal("P6_SUBRACE","GLOBAL",buttonNum)
+		return
 	end
 end
 

@@ -1166,8 +1166,6 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 	END
 END
 
-
-
 ACTION_IF ( INSTALLED_TIPUN )  BEGIN
 	OUTER_SPRINT file ~M_ZZRAND.LUA~
 END ELSE BEGIN
@@ -1184,6 +1182,16 @@ COPY_EXISTING ~%file%~ ~override~
 	END
 	IF_EXISTS
 
+COPY_EXISTING ~ui.menu~ ~override~
+	PATCH_IF GAME_IS ~iwdee~ BEGIN
+		REPLACE_TEXTUALLY ~createPartyScreen:OnCreateDeleteButtonClick(0)~ ~selectedCharacter = 1%LNL%%TAB%%TAB%%TAB%createPartyScreen:OnCreateDeleteButtonClick(0)~
+		REPLACE_TEXTUALLY ~createPartyScreen:OnCreateDeleteButtonClick(1)~ ~selectedCharacter = 2%LNL%%TAB%%TAB%%TAB%createPartyScreen:OnCreateDeleteButtonClick(1)~
+		REPLACE_TEXTUALLY ~createPartyScreen:OnCreateDeleteButtonClick(2)~ ~selectedCharacter = 3%LNL%%TAB%%TAB%%TAB%createPartyScreen:OnCreateDeleteButtonClick(2)~
+		REPLACE_TEXTUALLY ~createPartyScreen:OnCreateDeleteButtonClick(3)~ ~selectedCharacter = 4%LNL%%TAB%%TAB%%TAB%createPartyScreen:OnCreateDeleteButtonClick(3)~
+		REPLACE_TEXTUALLY ~createPartyScreen:OnCreateDeleteButtonClick(4)~ ~selectedCharacter = 5%LNL%%TAB%%TAB%%TAB%createPartyScreen:OnCreateDeleteButtonClick(4)~
+		REPLACE_TEXTUALLY ~createPartyScreen:OnCreateDeleteButtonClick(5)~ ~selectedCharacter = 6%LNL%%TAB%%TAB%%TAB%createPartyScreen:OnCreateDeleteButtonClick(5)~
+	END
+BUT_ONLY
 
 COPY_EXISTING ~M_ZZFUNC.LUA~ ~override~
 	SET offs = INDEX_BUFFER(~function[ %TAB%]+zZgetRaceDescCharRec~)
