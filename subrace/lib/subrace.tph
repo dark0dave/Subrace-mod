@@ -158,7 +158,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
 
   PATCH_IF spell_wizard_suffocate > 0 BEGIN
     LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_SUFFOCATE" RET spell_res END
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=206 target=2 timing=9 STR_VAR resource = EVAL "%spell_res%" END  
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=206 target=2 timing=9 STR_VAR resource = EVAL "%spell_res%" END
   END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
@@ -697,8 +697,8 @@ END
 //BLOCKEND
 
 //BLOCK DROW_DUERGAR
-ACTION_FOR_EACH cre IN 
-  bddrowf2 bddrowfm chevil06 cuguard drofod01 drofod03 drow01 drow03 drow06 loveone3 ohbdro01 sendro01 sendro03 sendro05 senfod01 sengua05 suraam uddrow27 uddrow28 udlesa udrunner udsola01 udsola02 bdkaelet bdshapur chevil07 cuardul cuphaer drofod02 drofod04 drow02 drow04 drow05 drow07 gortan3 gorwom04 ohbdro04 sendro02 senfod02 udardul uddrow29 uddrow31 udimrae udphae01 udphae02 vicpri01 bdumar drowsor drowspe drowvan malavon malavons ginafae nym DIRTLLEW l#nsnym 
+ACTION_FOR_EACH cre IN
+  bddrowf2 bddrowfm chevil06 cuguard drofod01 drofod03 drow01 drow03 drow06 loveone3 ohbdro01 sendro01 sendro03 sendro05 senfod01 sengua05 suraam uddrow27 uddrow28 udlesa udrunner udsola01 udsola02 bdkaelet bdshapur chevil07 cuardul cuphaer drofod02 drofod04 drow02 drow04 drow05 drow07 gortan3 gorwom04 ohbdro04 sendro02 senfod02 udardul uddrow29 uddrow31 udimrae udphae01 udphae02 vicpri01 bdumar drowsor drowspe drowvan malavon malavons ginafae nym DIRTLLEW l#nsnym
 BEGIN
   COPY_EXISTING ~%cre%.cre~ ~override~
     LPF ADD_CRE_EFFECT INT_VAR opcode=328 target=1 timing=9 parameter2=%CRE_BLINDED_IWD% special=1 END
