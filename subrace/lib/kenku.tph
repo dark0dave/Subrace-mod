@@ -1,11 +1,11 @@
 INCLUDE ~%MOD_FOLDER%/lib/newracelib.tph~
 
 // Kenku
-OUTER_SPRINT key @1
-OUTER_SET uppercase = RESOLVE_STR_REF(@1)
-OUTER_SET name = RESOLVE_STR_REF(@2)
-OUTER_SET desc = RESOLVE_STR_REF(@4)
-OUTER_SET biography = RESOLVE_STR_REF(@5)
+OUTER_SPRINT key @2101
+OUTER_SET uppercase = RESOLVE_STR_REF(@2101)
+OUTER_SET name = RESOLVE_STR_REF(@2102)
+OUTER_SET desc = RESOLVE_STR_REF(@2104)
+OUTER_SET biography = RESOLVE_STR_REF(@2105)
 
 LAF zd_new_race_setup STR_VAR key name desc uppercase biography RET race_index END
 
