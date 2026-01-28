@@ -35,7 +35,7 @@ jobs:
       prefix_macos: mac
       multi_platforms: 'linux:macos:windows'
       multi_autoupdate: true
-      case_sensitive: false
+      case_sensitive: true
       beautify: true
-      lower_case: false
+      lower_case: true
       include_submodules: 'false'
