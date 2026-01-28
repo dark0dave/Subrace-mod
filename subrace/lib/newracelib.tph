@@ -31,4 +31,14 @@ BEGIN
     INSERT_2DA_ROW race_index 2 ~%race_index% %key%~
   BUT_ONLY
 
+  // Engine strings
+  COPY_EXISTING ~enginest.2da~ ~override~
+    COUNT_2DA_COLS colcount
+    READ_2DA_ENTRIES_NOW engine_data colcount
+    INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_HELP_%key%                                   %desc%~
+    INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_LOWER_%key%                                  %name%~
+    INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_BIOGRAPHY_%key%                        %biography%~
+    INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_%key%                                  %uppercase%~
+    PRETTY_PRINT_2DA
+  BUT_ONLY
 END

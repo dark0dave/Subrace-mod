@@ -68,3 +68,21 @@ GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 
 INCLUDE ~subrace/lib/kitsune.tph~
+
+BEGIN @1000006
+DESIGNATED 301
+LABEL ~newrace-kenku~
+GROUP @1000003
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+
+INCLUDE ~subrace/lib/kenku.tph~
+
+
+BEGIN @1000100
+DESIGNATED 399
+LABEL ~newraces~
+GROUP @1000003
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+
+INCLUDE ~subrace/lib/kitsune.tph~
+INCLUDE ~subrace/lib/kenku.tph~
