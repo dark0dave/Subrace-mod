@@ -16,26 +16,41 @@ END
 
 LANGUAGE ~English~
          ~en_US~
+         ~subrace/lang/en_US/setup.tra~
          ~subrace/lang/en_US/subrace.tra~
          ~subrace/lang/en_US/kitsune.tra~
+         ~subrace/lang/en_US/kenku.tra~
+
 LANGUAGE ~Russian~
          ~ru_RU~
+         ~subrace/lang/en_US/setup.tra~
          ~subrace/lang/en_US/subrace.tra~
          ~subrace/lang/en_US/kitsune.tra~
+         ~subrace/lang/en_US/kenku.tra~
+         ~subrace/lang/ru_RU/setup.tra~
          ~subrace/lang/ru_RU/subrace.tra~
-         ~subrace/lang/ru_RU/kitsune.tra~
+
 LANGUAGE ~Francais (traduction: JohnBob)~
          ~fr_FR~
+         ~subrace/lang/en_US/setup.tra~
          ~subrace/lang/en_US/subrace.tra~
          ~subrace/lang/en_US/kitsune.tra~
+         ~subrace/lang/en_US/kenku.tra~
+         ~subrace/lang/fr_FR/setup.tra~
          ~subrace/lang/fr_FR/subrace.tra~
          ~subrace/lang/fr_FR/kitsune.tra~
+         ~subrace/lang/fr_FR/kenku.tra~
+
 LANGUAGE ~Português Brasileiro~
          ~pt_BR~
+         ~subrace/lang/en_US/setup.tra~
          ~subrace/lang/en_US/subrace.tra~
          ~subrace/lang/en_US/kitsune.tra~
+         ~subrace/lang/en_US/kenku.tra~
+         ~subrace/lang/pt_BR/setup.tra~
          ~subrace/lang/pt_BR/subrace.tra~
          ~subrace/lang/pt_BR/kitsune.tra~
+
 BEGIN @1000001
 DESIGNATED 100
 LABEL ~subrace-hair-and-skin~
@@ -66,6 +81,7 @@ DESIGNATED 300
 LABEL ~newrace-kitsune~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+FORBID_COMPONENT "subrace/subrace.tp2" 399 ~Already installed~
 
 INCLUDE ~subrace/lib/kitsune.tph~
 
@@ -74,6 +90,7 @@ DESIGNATED 301
 LABEL ~newrace-kenku~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+FORBID_COMPONENT "subrace/subrace.tp2" 399 ~Already installed~
 
 INCLUDE ~subrace/lib/kenku.tph~
 
@@ -83,6 +100,8 @@ DESIGNATED 399
 LABEL ~newraces~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
+FORBID_COMPONENT "subrace/subrace.tp2" 300 ~Already installed~
+FORBID_COMPONENT "subrace/subrace.tp2" 301 ~Already installed~
 
 INCLUDE ~subrace/lib/kitsune.tph~
 INCLUDE ~subrace/lib/kenku.tph~
