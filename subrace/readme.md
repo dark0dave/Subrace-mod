@@ -18,17 +18,23 @@
 
 ---
 
-**Updated by** : **szaumoor and dark0dave**
-
-[Link to Mod forum](https://www.gibberlings3.net/forums/topic/32267-subrace-mod/#comment-290572)
-
----
-
 **Original Author** : **Tipun**
 
 [Link to original Mod download](https://github.com/tipun81/Subrace-mod)
 
 [Link to original Mod forum](https://arcanecoast.ru/forum/viewtopic.php?f=31&t=1655&hilit=subrace&sid=f9f3a70c1c65f44447ac9399d6b758a9)
+
+[Link to Mod forum](https://www.gibberlings3.net/forums/topic/32267-subrace-mod/#comment-290572)
+
+---
+
+## Contributors
+
+- @tipun81 for the original mod
+- @EnigmaJazz for the infinity UI++ support
+- @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
+- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
+- @GraionDilach for play testing and general support
 
 ## Contents
 
@@ -49,7 +55,7 @@ The mod adds subraces and new races to the Enhanced Edition games. Installation 
 ## Compatibility
 
 
-- Subrace main component `"Subraces for Baldur's Gate Enhanced Edition"` is not compatible with the following components : 
+- Subrace main component `"Subraces for Baldur's Gate Enhanced Edition"` is not compatible with the following components :
    - ["New races and subraces"](https://htmlpreview.github.io/?https://github.com/Gibberlings3/TalentsOfFaerun/blob/master/dw_talents/doc/readme-dw_talents.html#races) from the mod [Talent of Faerûn](https://github.com/Gibberlings3/TalentsOfFaerun).
    - ["Ability Score Overhaul"](https://github.com/subtledoctor/SubtleD_Stat_Overhauls#component-100-) from the mod [SubtleD_Stat_Overhauls](https://github.com/Gibberlings3/TalentsOfFaerun).
 
@@ -177,7 +183,7 @@ Water genasi have the following traits:
 
 ---
 
-**DROWS**: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+**DROW**: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
 
 Drow have the following traits:
 - May cast Faerie Fire three times per day
@@ -198,7 +204,7 @@ Drow have the following traits:
 
 ---
 
-**HALF-DROWS**: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
+**HALF-DROW**: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
 
 Half-drow have the following traits:
 - May cast Faerie Fire once per day
@@ -421,11 +427,11 @@ To uninstall, run "setup-subrace.exe" again and follow the prompts.
 
 ## Credits
 
-Writing, coding & testing: tipun  
+Writing, coding & testing: tipun
 Updated version and additions : dark0dave and szaumoor, since v3.2
 
-English Translation: p_zombie, Apxu, yota13, tipun  
-French translation: JohnBob  
+English Translation: p_zombie, Apxu, yota13, tipun
+French translation: JohnBob
 
 Subrace MOD was created with the following software:
 
@@ -438,15 +444,49 @@ Subrace MOD was created with the following software:
 
 ## Version History
 
-Version 0.3.1
+### Version 0.3.3
+
+- New subraces: Sun Elf and Wood Elf by @szaumoor in #33
+- fix(multiplayer): Fix multiplayer bugs by @dark0dave in #41
+- french update by @11jo in #39
+- feat(tof): Forbid tof New races and subraces by @dark0dave in #42
+- Readme update by @11jo in #40
+- Fix by @szaumoor in #44
+- Brazilian Portuguese translation of Subrace-mod by @DarthNihilus530 in #47
+- Error fix by @DarthNihilus530 in #49
+- Readme Compatibility section by @11jo in #45
+- fix(iwdee): A fix for iwdee single player by @dark0dave in #50
+
+### Version 0.3.2
+
+- Many text improvements by @szaumoor in #4
+- feat(ci): add ci by @dark0dave in #6
+- fix(junk): fix remove junked files by @dark0dave in #7
+- Minor tra corrections, readme sync with tra by @szaumoor in #9
+- basic folder and file reorg by @szaumoor in #8
+- Feature/add feyri by @szaumoor in #10
+- half drow added by @szaumoor in #11
+- feat(lower): lower case all files by @dark0dave in #12
+- feat(kitsune): Add kitsune by @dark0dave in #13
+- Removed power params by @szaumoor in #14
+- Readme sync in drow desc by @szaumoor in #15
+- Added genasi subraces by @szaumoor in #24
+- Small code improvements by @szaumoor in #26
+- Half gray orc inclusion by @szaumoor in #27
+- Half-orcs! Not halforcs! by @szaumoor in #29
+- Basic markdown update by @szaumoor in #28
+- feat(lib): Convert some of the new race stuff to lib by @dark0dave in #25
+- Line break issue in deep gnome desc in readme by @szaumoor in #32
+
+### Version 0.3.1
 - some small fixes
 
-Version 0.3.0
+### Version 0.3.0
 - Rewritten ui.menu patching code to be more compatible with GUI mods
 - Added French translation
 - The subrace was added when creating a Random character in the Tipun's and Dragonspear++ GUI
 
-Version 0.2
+### Version 0.2
 - Change of descriptions of subraces
 - Magic resistance for drow and svirfneblin set to 50%
 - Added protection from reducing Charisma to 0
@@ -454,10 +494,9 @@ Version 0.2
 - Change in hair and skin color is determined by the user's choice
 - Subrace icon made transparent (Other options are being tested)
 
-Version 0.1
+### Version 0.1
 - Initial release
 - English translation added
-
 
 ## Legal Information
 
