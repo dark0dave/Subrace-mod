@@ -53,7 +53,7 @@ LANGUAGE ~Português Brasileiro~
 
 BEGIN @1000001
 DESIGNATED 100
-LABEL ~subrace-hair-and-skin~
+LABEL ~zz-zd-zs-subrace-hair-and-skin~
 SUBCOMPONENT @1000000
 GROUP @1000005
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
@@ -65,7 +65,7 @@ INCLUDE ~subrace/lib/subrace.tph~
 
 BEGIN @1000002
 DESIGNATED 200
-LABEL ~subrace-no-hair-and-skin~
+LABEL ~zz-zd-zs-subrace-no-hair-and-skin~
 SUBCOMPONENT @1000000
 GROUP @1000005
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
@@ -78,7 +78,7 @@ INCLUDE ~subrace/lib/subrace.tph~
 // New Races Components
 BEGIN @1000004
 DESIGNATED 300
-LABEL ~newrace-kitsune~
+LABEL ~zz-zd-zs-subrace-newrace-kitsune~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 FORBID_COMPONENT "subrace/subrace.tp2" 399 ~Already installed~
@@ -87,17 +87,16 @@ INCLUDE ~subrace/lib/kitsune.tph~
 
 BEGIN @1000006
 DESIGNATED 301
-LABEL ~newrace-kenku~
+LABEL ~zz-zd-zs-subrace-newrace-kenku~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 FORBID_COMPONENT "subrace/subrace.tp2" 399 ~Already installed~
 
 INCLUDE ~subrace/lib/kenku.tph~
 
-
 BEGIN @1000100
 DESIGNATED 399
-LABEL ~newraces~
+LABEL ~zz-zd-zs-subrace-newraces-all~
 GROUP @1000003
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
 FORBID_COMPONENT "subrace/subrace.tp2" 300 ~Already installed~

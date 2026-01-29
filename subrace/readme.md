@@ -18,17 +18,23 @@
 
 ---
 
-**Updated by** : **szaumoor and dark0dave**
-
-[Link to Mod forum](https://www.gibberlings3.net/forums/topic/32267-subrace-mod/#comment-290572)
-
----
-
 **Original Author** : **Tipun**
 
 [Link to original Mod download](https://github.com/tipun81/Subrace-mod)
 
 [Link to original Mod forum](https://arcanecoast.ru/forum/viewtopic.php?f=31&t=1655&hilit=subrace&sid=f9f3a70c1c65f44447ac9399d6b758a9)
+
+[Link to Mod forum](https://www.gibberlings3.net/forums/topic/32267-subrace-mod/#comment-290572)
+
+---
+
+## Contributors
+
+- @tipun81 for the original mod
+- @EnigmaJazz for the infinity UI++ support
+- @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
+- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
+- @GraionDilach for play testing and general support
 
 ## Contents
 
@@ -177,7 +183,7 @@ Water genasi have the following traits:
 
 ---
 
-**DROWS**: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+**DROW**: Dark elves, also known as drow, are the subterranean cousins of moon elves. Cursed for their allegiance with Lolth, the spider goddess, drow have dark ebony skin, pale hair, and eyes that are often blood red, unlike their surface relatives. Drow societies are matriarchal and usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
 
 Drow have the following traits:
 - May cast Faerie Fire three times per day
@@ -198,7 +204,7 @@ Drow have the following traits:
 
 ---
 
-**HALF-DROWS**: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
+**HALF-DROW**: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
 
 Half-drow have the following traits:
 - May cast Faerie Fire once per day
