@@ -51,56 +51,68 @@ LANGUAGE ~Português Brasileiro~
          ~subrace/lang/pt_BR/subrace.tra~
          ~subrace/lang/pt_BR/kitsune.tra~
 
-BEGIN @1000001
+BEGIN @1000001 /* Change subrace colors (Hair and Skin) */
 DESIGNATED 100
 LABEL ~zz-zd-zs-subrace-hair-and-skin~
-SUBCOMPONENT @1000000
-GROUP @1000005
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
-FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001
+SUBCOMPONENT @1000000 /* Subrace mod for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET) */
+GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
 
 OUTER_SET sr_colors = 1
 
 INCLUDE ~subrace/lib/subrace.tph~
 
-BEGIN @1000002
+BEGIN @1000002 /* No change subrace colors (Hair and Skin) */
 DESIGNATED 200
 LABEL ~zz-zd-zs-subrace-no-hair-and-skin~
-SUBCOMPONENT @1000000
-GROUP @1000005
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
-FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001
+SUBCOMPONENT @1000000 /* Subrace mod for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET) */
+GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
 
 OUTER_SET sr_colors = 2
 
 INCLUDE ~subrace/lib/subrace.tph~
 
+BEGIN @1100003 /* Modify ingame NPCs to use subrace settings */
+DESIGNATED 400
+LABEL ~zz-zd-zs-subrace-modify-npcs~
+GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+REQUIRE_PREDICATE MOD_IS_INSTALLED "subrace/subrace.tp2" 100 OR
+                  MOD_IS_INSTALLED "subrace/subrace.tp2" 200
+                  @1100004 /* requires subrace to be installed */
+FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
+
+INCLUDE ~subrace/lib/modify_npcs.tph~
+
 // New Races Components
-BEGIN @1000004
+BEGIN @1000004 /* Kitsune */
 DESIGNATED 300
 LABEL ~zz-zd-zs-subrace-newrace-kitsune~
-GROUP @1000003
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
-FORBID_COMPONENT "subrace/subrace.tp2" 399 ~Already installed~
+GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "subrace/subrace.tp2" 399 @1100005 /* Already installed */
 
 INCLUDE ~subrace/lib/kitsune.tph~
 
-BEGIN @1000006
+BEGIN @1000006 /* Kenku */
 DESIGNATED 301
 LABEL ~zz-zd-zs-subrace-newrace-kenku~
-GROUP @1000003
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
-FORBID_COMPONENT "subrace/subrace.tp2" 399 ~Already installed~
+GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "subrace/subrace.tp2" 399 @1100005 /* Already installed */
 
 INCLUDE ~subrace/lib/kenku.tph~
 
-BEGIN @1000100
+BEGIN @1000100 /* ALPHA: Install all new races */
 DESIGNATED 399
 LABEL ~zz-zd-zs-subrace-newraces-all~
-GROUP @1000003
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000
-FORBID_COMPONENT "subrace/subrace.tp2" 300 ~Already installed~
-FORBID_COMPONENT "subrace/subrace.tp2" 301 ~Already installed~
+GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "subrace/subrace.tp2" 300 @1100005 /* Already installed */
+FORBID_COMPONENT "subrace/subrace.tp2" 301 @1100005 /* Already installed */
 
 INCLUDE ~subrace/lib/kitsune.tph~
 INCLUDE ~subrace/lib/kenku.tph~

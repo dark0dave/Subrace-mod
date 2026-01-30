@@ -8,3 +8,7 @@
 @1000100 = ~ALPHA: Install all new races~
 @1100000 = ~This component is not compatible with your game~
 @1100001 = ~This component is not compatible with ToF New races and subraces~
+@1100002 = ~~
+@1100003 = ~Modify ingame NPCs to use subrace settings~
+@1100004 = ~requires subrace to be installed~
+@1100005 = ~Already installed~
