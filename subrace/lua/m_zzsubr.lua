@@ -87,7 +87,6 @@ function createSubraceTable(race)
 			{%Zdrow_title%, %drow_desc%, 3},
 			{%Zwild_elf_title%, %wild_elf_desc%, 4},
 			{%Zmoon_elf_title%, %moon_elf_desc%, 11},
-			{%Zfeyri_title%, %feyri_desc%, 12},
 			{%Zsun_elf_title%, %sun_elf_desc%, 19},
 			{%Zwood_elf_title%, %wood_elf_desc%, 20},
 		}
@@ -96,6 +95,7 @@ function createSubraceTable(race)
 		sbSubraceData = {
 			{%Zhalfelf_title%, %bghalfelf%, 10},
 			{%Zhalfdrow_title%, %halfdrow_desc%, 13},
+			{%Zfeyri_title%, %feyri_desc%, 12},
 		}
 	end
 	if race == 4 then --dwarf
@@ -253,7 +253,7 @@ zZsubraceStrings = {
 	{nil, 6, %Ztext_svirfn%, 9},
 	{nil, 0, -1, 10},
 	{nil, 2, %Ztext_moon_elf%, 11},
-	{nil, 2, %Ztext_feyri%, 12},
+	{nil, 3, %Ztext_feyri%, 12},
 	{nil, 3, %Ztext_halfdrow%, 13},
 	{nil, 1, %Ztext_air_genasi%, 14},
 	{nil, 1, %Ztext_earth_genasi%, 15},
