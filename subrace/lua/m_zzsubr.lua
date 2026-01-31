@@ -18,6 +18,9 @@ zZsubrTitleTable = {
 	['%Ztext_halfgrayorc%'] = {18, %halfgrayorc_desc%},
 	['%Ztext_sun_elf%'] = {19, %sun_elf_desc%},
 	['%Ztext_wood_elf%'] = {20, %wood_elf_desc%},
+	['%Ztext_dusk_elf%'] = {21, %dusk_elf_desc%},
+	['%Ztext_lythari%'] = {22, %lythari_desc%},
+	['%Ztext_snow_elf%'] = {23, %snow_elf_desc%},
 }
 
 function subt(chr)
@@ -40,6 +43,9 @@ function subt(chr)
 	elseif (chr == 18) then return Infinity_FetchString(%halfgrayorc_title%) --subrStrings.HALF_GRAY_ORC
 	elseif (chr == 19) then return Infinity_FetchString(%sun_elf_title%) --subrStrings.SUN_ELF
 	elseif (chr == 20) then return Infinity_FetchString(%wood_elf_title%) --subrStrings.WOOD_ELF
+	elseif (chr == 21) then return Infinity_FetchString(%dusk_elf_title%) --subrStrings.DUSK_ELF
+	elseif (chr == 22) then return Infinity_FetchString(%lythari_title%) --subrStrings.LYTHARI
+	elseif (chr == 23) then return Infinity_FetchString(%snow_elf_title%) --subrStrings.SNOW_ELF
 	else return ""
 	end
 end
@@ -89,6 +95,9 @@ function createSubraceTable(race)
 			{%Zmoon_elf_title%, %moon_elf_desc%, 11},
 			{%Zsun_elf_title%, %sun_elf_desc%, 19},
 			{%Zwood_elf_title%, %wood_elf_desc%, 20},
+			{%Zsnow_elf_title%, %snow_elf_desc%, 21},
+			{%Zlythari_title%, %lythari_desc%, 22},
+			{%Zsnow_elf_title%, %snow_elf_desc%, 23},
 		}
 	end
 	if race == 3 then --halfelf
@@ -148,6 +157,9 @@ function createSubraceTableEx()
 		{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
 		{%Zsun_elf_title%, %sun_elf_desc%, 19},
 		{%Zwood_elf_title%, %wood_elf_desc%, 20},
+		{%Zsnow_elf_title%, %snow_elf_desc%, 21},
+		{%Zlythari_title%, %lythari_desc%, 22},
+		{%Zsnow_elf_title%, %snow_elf_desc%, 23},
 	}
 end
 createSubraceTableEx()
@@ -262,6 +274,9 @@ zZsubraceStrings = {
 	{nil, 7, %Ztext_halfgrayorc%, 18},
 	{nil, 2, %Ztext_sun_elf%, 19},
 	{nil, 2, %Ztext_wood_elf%, 20},
+	{nil, 2, %Ztext_dusk_elf%, 21},
+	{nil, 2, %Ztext_lythari%, 22},
+	{nil, 2, %Ztext_snow_elf%, 23},
 }
 function zzCreateCharInfo(info)
 	local rc = 0
