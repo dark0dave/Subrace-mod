@@ -23,15 +23,6 @@
 
 ---
 
-## Contributors
-
-- @tipun81 for the original mod
-- @EnigmaJazz for the infinity UI++ support
-- @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
-- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
-- @GraionDilach for play testing and general support
-- Lava for text suggestions and Kenku Animations
-
 ## Contents
 
 0. Introduction
@@ -484,11 +475,14 @@ To uninstall, run "setup-subrace.exe" again and follow the prompts.
 
 ## Credits
 
-Writing, coding & testing: tipun
-Updated version and additions : dark0dave and szaumoor, since v3.2
+### Contributors
 
-English Translation: p_zombie, Apxu, yota13, tipun
-French translation: JohnBob
+- @tipun81 for the original mod
+- @EnigmaJazz for the infinity UI++ support
+- @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
+- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
+- @GraionDilach for play testing and general support
+- Lava for text suggestions and Kenku Animations
 
 Subrace MOD was created with the following software:
 
