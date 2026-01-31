@@ -562,20 +562,34 @@ COPY ~subrace/spl/idpr113.spl~ ~override/srsnscoh.spl~
 //SRBLIND  (SPWI106)
 COPY_EXISTING ~spwi106.spl~ ~override/srblind.spl~
 	LPM CONVERT_SPL_TO_INNATE
+  LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 parameter1 = 1 END
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srblind" END
 
 COPY_EXISTING ~spwi103.spl~ ~override/srbrnhds.spl~
 	LPM CONVERT_SPL_TO_INNATE
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srbrnhds" END
 
 COPY_EXISTING ~sppr318.spl~ ~override/srswtair.spl~
 	LPM CONVERT_SPL_TO_INNATE
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srswtair" END
 
 COPY_EXISTING ~spwi408.spl~ ~override/srethskn.spl~
 	LPM CONVERT_SPL_TO_INNATE
   LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
   LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 parameter1 = 1 END
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srethskn" END
 
+COPY_EXISTING ~spwi305.spl~ ~override/srwsplht.spl~
+	LPM CONVERT_SPL_TO_INNATE
+  LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap=1 END
+  LPF ALTER_HEADER INT_VAR target=5 speed=0 projectile=1 END
+  LPF ALTER_EFFECT_EX INT_VAR duration=24 STR_VAR match_duration_ex = "(o_duration > 6)" END
+  LPF ALTER_EFFECT INT_VAR power=1 STR_VAR match_power_ex = "(o_power > 1)" END
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwsplht" END
+ 
 COPY_EXISTING ~sppr250.spl~ ~override/srwrthfg.spl~
   LPM CONVERT_SPL_TO_INNATE
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwrthfg" END
 
 //SRFFIRE  (sppr116)  (sppr100)
 COPY ~subrace/spl/sppr100.spl~ ~override/srffire.spl~
@@ -585,9 +599,12 @@ COPY ~subrace/spl/sppr100.spl~ ~override/srffire.spl~
 	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=318 STR_VAR resource="srffire" END
 	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=206 STR_VAR resource="srffire" END
 	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=139 parameter1=RESOLVE_STR_REF(@42) END
+
 //SRSVMIM  (SPWI212) - Mirror Image
 COPY_EXISTING ~spwi212.spl~ ~override/srsvmim.spl~
 	LPM CONVERT_SPL_TO_INNATE
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srsvmim" END
+
 //SRSVINV  (spwi206) - Invisibility
 COPY_EXISTING ~spwi206.spl~ ~override/srsvinv.spl~
 	LPM CONVERT_SPL_TO_INNATE
@@ -595,9 +612,12 @@ COPY_EXISTING ~spwi206.spl~ ~override/srsvinv.spl~
 	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode="-1" target=1 END
 	LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete=174 END
 	WRITE_SHORT 0x22 0
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srsvinv" END
+
 //SRSVBLR  (spwi201) - Blur
 COPY_EXISTING ~spwi201.spl~ ~override/srsvblr.spl~
 	LPM CONVERT_SPL_TO_INNATE
+  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srsvblr" END
 //BLOCKEND
 
 //BLOCK SPELLS XP
