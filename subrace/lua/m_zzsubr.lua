@@ -95,7 +95,7 @@ function createSubraceTable(race)
 			{%Zmoon_elf_title%, %moon_elf_desc%, 11},
 			{%Zsun_elf_title%, %sun_elf_desc%, 19},
 			{%Zwood_elf_title%, %wood_elf_desc%, 20},
-			{%Zsnow_elf_title%, %snow_elf_desc%, 21},
+			{%Zdusk_elf_title%, %dusk_elf_desc%, 21},
 			{%Zlythari_title%, %lythari_desc%, 22},
 			{%Zsnow_elf_title%, %snow_elf_desc%, 23},
 		}
@@ -157,7 +157,7 @@ function createSubraceTableEx()
 		{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
 		{%Zsun_elf_title%, %sun_elf_desc%, 19},
 		{%Zwood_elf_title%, %wood_elf_desc%, 20},
-		{%Zsnow_elf_title%, %snow_elf_desc%, 21},
+		{%Zdusk_elf_title%, %dusk_elf_desc%, 21},
 		{%Zlythari_title%, %lythari_desc%, 22},
 		{%Zsnow_elf_title%, %snow_elf_desc%, 23},
 	}
