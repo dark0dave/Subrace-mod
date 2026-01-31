@@ -1,0 +1,52 @@
+
+ACTION_FOR_EACH scr IN viconia_ bdviconi viconia vico25 baeloth bdbaelot BEGIN
+  ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ BEGIN
+  	OUTER_SPRINT ~SUBRA~ ~VCBA~
+  	OUTER_SET lc_subr = 3
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
+  END
+END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_haer.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_tiefling END
+  //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srblind" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+
+ACTION_FOR_EACH scr IN haerdali haer25 BEGIN
+  ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ BEGIN
+    OUTER_SPRINT ~SUBRA~ ~HAER~
+    OUTER_SET lc_subr = 2
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
+  END
+END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_cael.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_aasimar END
+   //Acid resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=15 END
+   //Electricity resistance +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=15 END
+   //Infravision
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
+  //Give innate ability
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srsnscoh" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.bcs~ BEGIN
+  OUTER_SET lc_subr = 1
+  OUTER_SPRINT ~SUBRA~ ~CAEL~
+  EXTEND_TOP ~bdcaelar.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
+END
+
+ACTION_FOR_EACH cre IN
+  bddrowf2 bddrowfm chevil06 cuguard drofod01 drofod03 drow01 drow03 drow06 loveone3 ohbdro01 sendro01 sendro03 sendro05 senfod01 sengua05 suraam uddrow27 uddrow28 udlesa udrunner udsola01 udsola02 bdkaelet bdshapur chevil07 cuardul cuphaer drofod02 drofod04 drow02 drow04 drow05 drow07 gortan3 gorwom04 ohbdro04 sendro02 senfod02 udardul uddrow29 uddrow31 udimrae udphae01 udphae02 vicpri01 bdumar drowsor drowspe drowvan malavon malavons ginafae nym DIRTLLEW l#nsnym
+BEGIN
+  COPY_EXISTING ~%cre%.cre~ ~override~
+    LPF ADD_CRE_EFFECT INT_VAR opcode=328 target=1 timing=9 parameter2=%CRE_BLINDED_IWD% special=1 END
+  IF_EXISTS
+END
