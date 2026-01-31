@@ -109,6 +109,7 @@ IF
 THEN
 	RESPONSE #1
 		SetGlobal("Player_1_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
 		Continue()
 END
 
@@ -224,6 +225,7 @@ IF
 THEN
 	RESPONSE #1
 		SetGlobal("Player_2_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player2,SetGlobal("SUBRACE", "LOCALS",10))
 		Continue()
 END
 
@@ -339,6 +341,7 @@ IF
 THEN
 	RESPONSE #1
 		SetGlobal("Player_3_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player3,SetGlobal("SUBRACE", "LOCALS",10))
 		Continue()
 END
 
@@ -454,6 +457,7 @@ IF
 THEN
 	RESPONSE #1
 		SetGlobal("Player_4_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player4,SetGlobal("SUBRACE", "LOCALS",10))
 		Continue()
 END
 
@@ -569,6 +573,7 @@ IF
 THEN
 	RESPONSE #1
 		SetGlobal("Player_5_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player5,SetGlobal("SUBRACE", "LOCALS",10))
 		Continue()
 END
 
@@ -684,6 +689,7 @@ IF
 THEN
 	RESPONSE #1
 		SetGlobal("Player_6_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player6,SetGlobal("SUBRACE", "LOCALS",10))
 		Continue()
 END
 
