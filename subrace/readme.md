@@ -387,7 +387,7 @@ Half gray orc have the following traits:
 </details>
 
 <details>
-  <summary>Dusk elf (In progress)</summary>
+  <summary>Dusk elf</summary>
 
 ---
 
@@ -402,7 +402,7 @@ Dusk elves have the following traits:
 </details>
 
 <details>
-  <summary>Lythari (In progress)</summary>
+  <summary>Lythari</summary>
 
 ---
 
@@ -419,7 +419,7 @@ Lythari have the following traits:
 </details>
 
 <details>
-  <summary>Snow elves (In progress)</summary>
+  <summary>Snow elves</summary>
 
 ---
 
