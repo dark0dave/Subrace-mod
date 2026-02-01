@@ -338,3 +338,35 @@ Wood elves have the following traits:
 @1202 = ~wood elf~
 @1203 = ~Wood Elf~
 
+@1204 = "DUSK ELF"
+@1205 = ~DUSK ELVES: The dusk elf race is all but forgotten, and the few survivors live in secret places such as the Demiplane of Dread. Dusk elves are shunned by other elves, as they did not chose sides in an ancient war between elves, eladrin, and drow. This event caused both Corellon and Lolth to turn their backs on them and only the mercy and divine patronage of Sehanine saved them. Most of them have dark skin and hair, although some of them are somewhat pale. They are self-sufficient and skilled trackers.
+
+Dusk elves have the following traits:
+– +1 Strength, +1 Wisdom, -1 Intelligence, -1 Charisma
+– +5% Hide in Shadows~
+
+@1206 = ~dusk elf~
+@1207 = ~Dusk Elf~
+
+@1208 = "LYTHARI"
+@1209 = ~LYTHARI: Also known as Ly-tel-quessir, lythari are elven lycanthropic wolves. Often described as beautiful, having silver hair, and fur of the same color, when they change into wolves. Most of them have blue eyes. Many of them live in packs, but there are also those that live a nomadic life.
+
+Lythari have the following traits:
+– +1 Dexterity, +1 Wisdom, +1 Charisma, -2 Intelligence
+– +1 Armor Class vs. Wolves
+– May shapechange into a wolf once a day
+– Gets only 95% of all experience gained~
+
+@1210 = ~lythari~
+@1211 = ~Lythari~
+
+@1212 = "SNOW ELF"
+@1213 = ~SNOW ELVES: Snow elves are known to be reclusive. They mostly live in icy, mountainous regions far from big cities and towns. Most of them have pale skin, white or very light hair, as well as silver eyes. Many of them are known to be arrogant.
+
+Snow elves have the following traits:
+– +1 Dexterity, -1 Constitution
+– +10% Cold Resistance
+– May Set Snare once per day (90% chance of success)~
+
+@1214 = ~snow elf~
+@1215 = ~Snow Elf~

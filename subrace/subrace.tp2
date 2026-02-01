@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/subrace/backup~
 AUTHOR ~tipun. tipun.iwd@google.com~
-VERSION ~0.3.3~
+VERSION ~0.3.4~
 README ~subrace/readme.md~
 
 ALWAYS
@@ -87,6 +87,17 @@ FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is
 
 INCLUDE ~subrace/lib/modify_npcs.tph~
 
+BEGIN @1000100 /* ALPHA: Install all new races */
+DESIGNATED 399
+LABEL ~zz-zd-zs-subrace-newraces-all~
+GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "subrace/subrace.tp2" 300 @1100005 /* Already installed */
+FORBID_COMPONENT "subrace/subrace.tp2" 301 @1100005 /* Already installed */
+
+INCLUDE ~subrace/lib/kitsune.tph~
+INCLUDE ~subrace/lib/kenku.tph~
+
 // New Races Components
 BEGIN @1000004 /* Kitsune */
 DESIGNATED 300
@@ -104,15 +115,4 @@ GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "subrace/subrace.tp2" 399 @1100005 /* Already installed */
 
-INCLUDE ~subrace/lib/kenku.tph~
-
-BEGIN @1000100 /* ALPHA: Install all new races */
-DESIGNATED 399
-LABEL ~zz-zd-zs-subrace-newraces-all~
-GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
-FORBID_COMPONENT "subrace/subrace.tp2" 300 @1100005 /* Already installed */
-FORBID_COMPONENT "subrace/subrace.tp2" 301 @1100005 /* Already installed */
-
-INCLUDE ~subrace/lib/kitsune.tph~
 INCLUDE ~subrace/lib/kenku.tph~

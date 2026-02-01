@@ -1,20 +1,15 @@
 # Subrace MOD for Enhanced Edition
 
-#### For BGEE, BG2EE, EET, IWDEE
 
-[![Release](https://img.shields.io/github/v/release/dark0dave/Subrace-mod?include_prereleases&color=41788a)](https://github.com/dark0dave/Subrace-mod/releases)
-[![Published](https://img.shields.io/github/release-date-pre/dark0dave/Subrace-mod?display_date=published_at&label=published&color=014a69)](https://github.com/dark0dave/Subrace-mod/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/dark0dave/Subrace-mod/total?color=41788a)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Release](https://img.shields.io/github/v/release/dark0dave/Subrace-mod?include_prereleases&color=41788a&style=for-the-badge)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Published](https://img.shields.io/github/release-date-pre/dark0dave/Subrace-mod?display_date=published_at&label=published&color=014a69&style=for-the-badge)](https://github.com/dark0dave/Subrace-mod/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/dark0dave/Subrace-mod/total?color=41788a&style=for-the-badge)](https://github.com/dark0dave/Subrace-mod/releases)
 
-[![Language](https://img.shields.io/badge/language-english%20%7C%20russian%20%7C%20french-014a69)](https://github.com/dark0dave/Subrace-mod/releases)
-[![Games](https://img.shields.io/badge/games-BGEE%20%a0%20BG2EE%20%a0%20EET%20%a0%20IWDEE-41788a)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Language](https://img.shields.io/badge/language-english%20%7C%20russian%20%7C%20french-014a69?style=for-the-badge)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Games](https://img.shields.io/badge/games-BGEE%20%a0%20BG2EE%20%a0%20EET%20%a0%20IWDEE-41788a?style=for-the-badge)](https://github.com/dark0dave/Subrace-mod/releases)
 
-<!--
-
-![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fdark0dave%2FSubrace-mod&countColor=41788a&style=flat)
-
-[![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-014a69)](https://github.com/dark0dave/Subrace-mod/releases)
--->
+[![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-014a69?style=for-the-badge)](https://github.com/dark0dave/Subrace-mod/releases)
+[![Checks](https://img.shields.io/github/actions/workflow/status/dark0dave/Subrace-mod/checks.yaml?style=for-the-badge&color=41788a)](https://github.com/dark0dave/Subrace-mod/actions/workflows/checks.yaml)
 
 ---
 
@@ -27,14 +22,6 @@
 [Link to Mod forum](https://www.gibberlings3.net/forums/topic/32267-subrace-mod/#comment-290572)
 
 ---
-
-## Contributors
-
-- @tipun81 for the original mod
-- @EnigmaJazz for the infinity UI++ support
-- @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
-- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
-- @GraionDilach for play testing and general support
 
 ## Contents
 
@@ -399,6 +386,54 @@ Half gray orc have the following traits:
 
 </details>
 
+<details>
+  <summary>Dusk elf (In progress)</summary>
+
+---
+
+**DUSK ELVES**: The dusk elf race is all but forgotten, and the few survivors live in secret places such as the Demiplane of Dread. Dusk elves are shunned by other elves as they did not chose sides in an acient war between elves, eladrin, and drow. Which caused both Corellon and Lolth to turn their backs on them. Only the mercy and divine patronage of Sehanine, saved them. Most of them have dark skin and hair, some however, are somewhat pale. They are mostly self-sufficient and skilled trackers.
+
+Dusk elves have the following traits:
+- +1 Strength, +1 Wisdom, -1 Intelligence, -1 Charisma
+- +5% Hide in Shadows
+
+---
+
+</details>
+
+<details>
+  <summary>Lythari (In progress)</summary>
+
+---
+
+**LYTHARI**: Lythari, also known as Ly-tel-quessir, were elven lycanthropic wolves. Often described as beautiful, having silver hair, and fur of the same color, when they changed into wolves. Most of them had blue eyes. Many of them live in packs, but there are also those that live a nomadic life.
+
+Lythari have the following traits:
+- +1 Dexterity, +1 Wisdom, +1 Charisma, -2 Intelligence
+- +1 Armor Class vs. Wolves
+- May shapechange into wolves at will
+- Gets only 95% of all experience gained
+
+---
+
+</details>
+
+<details>
+  <summary>Snow elves (In progress)</summary>
+
+---
+
+**SNOW ELVES**: Snow elves are known to be reclusive. They mostly live in icy, mountainous regions far from big cities and towns. Most of them have plae skin, white or very light hair, as well as silver eyes. Many of them are known to be arrogant.
+
+Snow elves have the following traits:
+- +1 Dexterity, -1 Constitution
+- +10% Cold Resistance
+- May Set Snare once par day (90% chance of success)
+
+---
+
+</details>
+
 
 ## Available races
 
@@ -408,6 +443,19 @@ Half gray orc have the following traits:
 ---
 
 **KITSUNE**: Kitsune have fox-like appearance and magical abilities, including shapeshifting and illusion magic. They are often seen as tricksters, using their abilities to deceive and confuse others. They are known to revere the fox spirit Iko, who is said to have protected them during times of crisis. While they can be chaotic, their tricks are usually harmless and playful.
+
+---
+
+</details>
+
+<details>
+  <summary>Kenku (In progress)</summary>
+
+---
+
+**KENKU**: Kenku are blessed with keen observation and supernaturally accurate memories. None of them can remember the origin of the first kenku, however, and they often joke that there are as many kenku origin stories as there are kenku. Some of them paint their genesis as a curse, being a flightless bird people doomed to mimic other people's creations. Other kenku recite cryptic but beautiful poems about their advent being a blessed event in which they were sent into the multiverse to observe and catalog its many wonders.
+
+Attribution Note: The kenku inventory paperdoll was created by Lava for his [Vito IWD NPC](https://downloads.weaselmods.net/download/vito/), and later used in this mod with his permission.
 
 ---
 
@@ -427,11 +475,14 @@ To uninstall, run "setup-subrace.exe" again and follow the prompts.
 
 ## Credits
 
-Writing, coding & testing: tipun
-Updated version and additions : dark0dave and szaumoor, since v3.2
+### Contributors
 
-English Translation: p_zombie, Apxu, yota13, tipun
-French translation: JohnBob
+- @tipun81 for the original mod
+- @EnigmaJazz for the infinity UI++ support
+- @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
+- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
+- @GraionDilach for play testing and general support
+- Lava for text suggestions and Kenku Animations
 
 Subrace MOD was created with the following software:
 
