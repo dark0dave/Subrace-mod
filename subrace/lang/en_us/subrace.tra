@@ -227,8 +227,9 @@ Moon elves have the following traits:
 @1121  = ~FEY'RI: Fey'ri are elven-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous and chaotic behavior, but not necessarily to evil. Though their appearance can be very elven-like, to the point where they are sometimes indistinguishable from regular elves, they often have telltale signs that belie their ancestry such as fangs, barbed tails, horns, forked tongues, and even wings in some rare cases. Due to the misconceptions about their nature, and the assumption of evil, they face a lot of discrimination in a similar way tieflings do.
 
 Fey'ri have the following traits:
+– Infravision
 – May cast Blindness once per day
-– +1 Charisma
+– +1 Intelligence, +1 Dexterity, -1 Charisma
 – Fire, cold, and electrical resistance: +15%
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained~
