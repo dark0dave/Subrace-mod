@@ -455,8 +455,6 @@ Snow elves have the following traits:
 
 **KENKU**: Kenku are blessed with keen observation and supernaturally accurate memories. None of them can remember the origin of the first kenku, however, and they often joke that there are as many kenku origin stories as there are kenku. Some of them paint their genesis as a curse, being a flightless bird people doomed to mimic other people's creations. Other kenku recite cryptic but beautiful poems about their advent being a blessed event in which they were sent into the multiverse to observe and catalog its many wonders.
 
-Attribution Note: The kenku inventory paperdoll was created by Lava for his [Vito IWD NPC](https://downloads.weaselmods.net/download/vito/), and later used in this mod with his permission.
-
 ---
 
 </details>
@@ -492,6 +490,9 @@ Subrace MOD was created with the following software:
 - [vscodium](https://vscodium.com/)
 - [infinity viewer](https://github.com/dark0dave/infinity_viewer)
 
+### Attribution Note
+
+The kenku inventory paperdoll was created by Lava for his [Vito IWD NPC](https://downloads.weaselmods.net/download/vito/), and later used in this mod with his permission.
 
 ## Version History
 
