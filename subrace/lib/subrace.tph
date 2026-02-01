@@ -85,9 +85,9 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_aasim.spl~
   PATCH_IF ( sr_colors = 1 ) BEGIN
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=154 parameter2=3 END
   END
-   //Wisdom +1
+  //Wisdom +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
-   //Charisma +1
+  //Charisma +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
   // elemental resistances
   PATCH_FOR_EACH resistance IN 27 28 29 BEGIN
@@ -109,14 +109,12 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_tiefl.spl~
    //Hair color
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=19 parameter2=6 END
   END
-
    //intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1=1 END
    //Dexterity +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
    //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-
   // elemental resistances
   PATCH_FOR_EACH resistance IN 28 29 30 BEGIN
     LPF ADD_SPELL_EFFECT INT_VAR opcode=resistance target=2 timing=9 parameter1=15 END
@@ -131,14 +129,12 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_tiefl.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_air_genasi END
-
   PATCH_IF ( sr_colors = 1 ) BEGIN
    //Skin color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=110 parameter2=3 END
    // Hair color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=31 parameter2=6 END
   END
-
    //intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
    //dexterity +1
@@ -153,7 +149,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srswtair" END
-
   // +5% electricity damage dealt
   LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=3 END
   //XP bonus - 95%
@@ -167,14 +162,12 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_earth_genasi END
-
   PATCH_IF ( sr_colors = 1 ) BEGIN
    //Skin color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=137 parameter2=3 END
    // Hair color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=137 parameter2=6 END
   END
-
    // strength +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1=1 END
   // constitution +1
@@ -201,23 +194,21 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_fgena.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_fire_genasi END
-
   PATCH_IF ( sr_colors = 1 ) BEGIN
    //Skin color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=87 parameter2=3 END
    // Hair color
    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=80 parameter2=6 END
   END
-
-   //intelligence +1
+  //intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
   //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-   //Fire resistance +25
+  //Fire resistance +25
   LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
-   //Cold resistance -10
+  //Cold resistance -10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
-   //Infravision
+  //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
@@ -385,7 +376,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_emoon.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_ewood.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wood_elf END
-   //Strength +1
+  //Strength +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1=1 END
   //Intelligence -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1="-1" END
@@ -395,7 +386,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_ewood.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_esun.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_sun_elf END
-   //Constitution -1
+  //Constitution -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
   //Intelligence +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
@@ -632,9 +623,7 @@ COPY ~subrace/spl/spell.spl~ ~override/srsvshd.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 parameter2=%outdoor% duration=1 STR_VAR resource="srsvshd" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 duration=60 parameter1=10 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 duration=60 parameter1=10 END
-//BLOCKEND
 
-//BLOCK NPC
 COPY ~subrace/spl/spell.spl~ ~override/sr_vcba.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_drow END
@@ -653,9 +642,56 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_vcba.spl~
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
 
-//BLOCK CHARACTER RECORD
+// Dusk Elf
+COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
+  //Strength +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1 parameter1=1 END
+  //Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
+  //Intelligence -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-1" END
+  //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1="-1" END
+  //Hide in shadows +5
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
+
+// Lythari
+COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
+  //Charisma +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1=1 END
+  //Intelligence -2
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-2" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+  //Shapechange into wolf once a day
+  PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPIN110" END
+  END
+  PATCH_IF ( GAME_IS_IWDEE ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
+  END
+
+// Snow Elf
+COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Constitution -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
+  //Cold resistance +10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
+  // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL412" END
 
 COPY_EXISTING ~ui.menu~ ~override~
 	LPM SHOW_IN_CHARACTER_RECORD
 BUT_ONLY
-//BLOCKEND
