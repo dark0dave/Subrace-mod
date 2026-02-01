@@ -496,6 +496,55 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_duerg.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_DUERG END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
 
+// Dusk Elf
+COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
+  //Strength +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1 parameter1=1 END
+  //Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
+  //Intelligence -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-1" END
+  //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1="-1" END
+  //Hide in shadows +5
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
+
+// Lythari
+COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
+  //Charisma +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1=1 END
+  //Intelligence -2
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-2" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+  //Shapechange into wolf once a day
+  PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPIN110" END
+  END
+  PATCH_IF ( GAME_IS_IWDEE ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
+  END
+
+// Snow Elf
+COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Constitution -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
+  //Cold resistance +10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
+  // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL412" END
 //BLOCKEND
 
 //BLOCK ABILITY SPELLS
@@ -633,56 +682,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_vcba.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
-
-// Dusk Elf
-COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
-  //Strength +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1 parameter1=1 END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
-  //Intelligence -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-1" END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1="-1" END
-  //Hide in shadows +5
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
-
-// Lythari
-COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
-  //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1=1 END
-  //Intelligence -2
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-2" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
-  //Shapechange into wolf once a day
-  PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPIN110" END
-  END
-  PATCH_IF ( GAME_IS_IWDEE ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
-  END
-
-// Snow Elf
-COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
-  //Cold resistance +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
-  // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL412" END
 
 COPY_EXISTING ~ui.menu~ ~override~
 	LPM SHOW_IN_CHARACTER_RECORD
