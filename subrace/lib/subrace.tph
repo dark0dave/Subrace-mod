@@ -54,17 +54,17 @@ ACTION_IF (NOT FILE_EXISTS_IN_GAME ~idpr113c.bam~) BEGIN
 END
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
-  EVAL "%text_aasimar%"     => "text_aasimar"     EVAL "%text_drow%"         => "text_drow"
-  EVAL "%text_dwfduerg%"    => "text_dwfduerg"    EVAL "%text_dwfgold%"      => "text_dwfgold"
-  EVAL "%text_hflhide%"     => "text_hflhide"     EVAL "%text_hflstrong%"    => "text_hflstrong"
-  EVAL "%text_svirfn%"      => "text_svirfn"      EVAL "%text_tiefling%"     => "text_tiefling"
-  EVAL "%text_wild_elf%"    => "text_wild_elf"    EVAL "%text_moon_elf%"     => "text_moon_elf"
-  EVAL "%text_feyri%"       => "text_feyri"       EVAL "%text_halfdrow%"     => "text_halfdrow"
-  EVAL "%text_air_genasi%"  => "text_air_genasi"  EVAL "%text_earth_genasi%" => "text_earth_genasi"
-  EVAL "%text_fire_genasi%" => "text_fire_genasi" EVAL "%text_water_genasi%" => "text_water_genasi"
-  EVAL "%text_halfgrayorc%" => "text_halfgrayorc" EVAL "%text_sun_elf%"      => "text_sun_elf"
-  EVAL "%text_wood_elf%"    => "text_wood_elf"    EVAL "%text_dusk_elf%"     => "text_dusk_elf"
-  EVAL "%text_lythari%"     => "text_lythari"     EVAL "%text_snow_elf%"     => "text_snow_elf"
+  "%text_aasimar%"     => "text_aasimar"     "%text_drow%"         => "text_drow"
+  "%text_dwfduerg%"    => "text_dwfduerg"    "%text_dwfgold%"      => "text_dwfgold"
+  "%text_hflhide%"     => "text_hflhide"     "%text_hflstrong%"    => "text_hflstrong"
+  "%text_svirfn%"      => "text_svirfn"      "%text_tiefling%"     => "text_tiefling"
+  "%text_wild_elf%"    => "text_wild_elf"    "%text_moon_elf%"     => "text_moon_elf"
+  "%text_feyri%"       => "text_feyri"       "%text_halfdrow%"     => "text_halfdrow"
+  "%text_air_genasi%"  => "text_air_genasi"  "%text_earth_genasi%" => "text_earth_genasi"
+  "%text_fire_genasi%" => "text_fire_genasi" "%text_water_genasi%" => "text_water_genasi"
+  "%text_halfgrayorc%" => "text_halfgrayorc" "%text_sun_elf%"      => "text_sun_elf"
+  "%text_wood_elf%"    => "text_wood_elf"    "%text_dusk_elf%"     => "text_dusk_elf"
+  "%text_lythari%"     => "text_lythari"     "%text_snow_elf%"     => "text_snow_elf"
 END
 
 ACTION_PHP_EACH texts AS var => var_name BEGIN
