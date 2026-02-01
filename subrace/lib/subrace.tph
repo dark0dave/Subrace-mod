@@ -496,7 +496,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_duerg.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_DUERG END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
 
-// Dusk Elf
 COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
@@ -511,7 +510,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
   //Hide in shadows +5
   LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
 
-// Lythari
+
 COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
@@ -533,7 +532,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
   END
 
-// Snow Elf
+
 COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
