@@ -65,6 +65,10 @@ Saving Throw: None
 
 This spell outlines one or more creatures with a pale violet glow, making positions and movements easily visible. Outlined creatures are easier to strike, giving them an Armor Class penalty of -2.~
 
+@44 = ~Haste Self~
+@45 = ~Haste Self
+The wispling calls upon their innate power to haste themselves for 3 rounds, doubling their movement speed and attacking a number of times equal to the next whole number, up to 6 attacks per round. For example, if the wispling can normally attack 2.5 times per round, hasting would allow them to attack 3 times per round, and if they can attack 4 times per round, hasting would allow them to attack 5 times per round. This ability is considered magical and may be dispelled, behaving effectively like the arcane spell Haste, but with reduced duration and only affecting the wispling.~
+
 @50   = ~Subrace selection:~
 @51   = ~SUBRACE SELECTION~
 
