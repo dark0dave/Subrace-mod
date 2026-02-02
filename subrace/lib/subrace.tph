@@ -541,8 +541,34 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
   //Cold resistance +10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
-  // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
+  // Set Snare once a day
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spcl412" END
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_wsplg.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wispling END
+   //Infravision
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1=1 END
+   //Charisma -2
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-2" END
+  //Wisdom -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
+   //Hide in shadows +15
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=15 END
+   //Move silently +10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=59 target=2 timing=9 parameter1=10 END
+  // Movement rate +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=176 target=2 timing=9 parameter1=1 END
+  // Cast Haste Self one per day
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsplht" END
+  // Cast Polymorph Self one per day
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsppms" END
+  //XP bonus - 95% 
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
 //BLOCKEND
 
 //BLOCK ABILITY SPELLS
@@ -581,6 +607,10 @@ COPY_EXISTING ~spwi305.spl~ ~override/srwsplht.spl~
   LPF ALTER_EFFECT_EX INT_VAR duration=24 STR_VAR match_duration_ex = "(o_duration > 6)" END
   LPF ALTER_EFFECT INT_VAR power=1 STR_VAR match_power_ex = "(o_power > 1)" END
   LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwsplht" END
+
+COPY_EXISTING ~spwi305.spl~ ~override/srwsppms.spl~
+	LPM CONVERT_SPL_TO_INNATE
+  LPF CLONE_EFFECT INT_VAR match_opcode = 206 STR_VAR match_resource = "%SOURCE_RES%" resource="srwsppms" END
  
 COPY_EXISTING ~sppr250.spl~ ~override/srwrthfg.spl~
   LPM CONVERT_SPL_TO_INNATE
