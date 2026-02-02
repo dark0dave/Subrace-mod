@@ -620,7 +620,7 @@ COPY_EXISTING ~spwi305.spl~ ~override/srwsplht.spl~
 COPY_EXISTING ~spwi416.spl~ ~override/srwsppms.spl~
 	LPM CONVERT_SPL_TO_INNATE
   LPF ALTER_HEADER INT_VAR speed=0 END
-  LPF CLONE_EFFECT INT_VAR match_opcode = 206 STR_VAR match_resource = "%SOURCE_RES%" resource="srwsppms" END
+  LPF CLONE_EFFECT STR_VAR match_resource = "spwi416" resource="srwsppms" END
  
 COPY_EXISTING ~sppr250.spl~ ~override/srwrthfg.spl~
   LPM CONVERT_SPL_TO_INNATE
