@@ -214,7 +214,7 @@ function onSubraceButton(buttonNum)
 end
 
 function SubRaceOrGeneralHelp(sbr)
-	if sbr == nil then
+	if sbr == nil or sbr == 10 then
 		return Infinity_FetchString(%select_sgenhlp%)
 	else
 		return Infinity_FetchString(sbSubraceData[sbr][2])
