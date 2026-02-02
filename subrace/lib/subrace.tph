@@ -53,28 +53,23 @@ ACTION_IF (NOT FILE_EXISTS_IN_GAME ~idpr113c.bam~) BEGIN
 	COPY ~subrace/bam/idpr113c.bam~ ~override~
 END
 
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_aasimar      STR_VAR bam_file="SRSUBICO" RET text_aasimar=index      Ztext_aasimar=strref      END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_drow         STR_VAR bam_file="SRSUBICO" RET text_drow=index         Ztext_drow=strref         END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_dwfduerg     STR_VAR bam_file="SRSUBICO" RET text_dwfduerg=index     Ztext_dwfduerg=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_dwfgold      STR_VAR bam_file="SRSUBICO" RET text_dwfgold=index      Ztext_dwfgold=strref      END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_hflhide      STR_VAR bam_file="SRSUBICO" RET text_hflhide=index      Ztext_hflhide=strref      END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_hflstrong    STR_VAR bam_file="SRSUBICO" RET text_hflstrong=index    Ztext_hflstrong=strref    END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_svirfn       STR_VAR bam_file="SRSUBICO" RET text_svirfn=index       Ztext_svirfn=strref       END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_tiefling     STR_VAR bam_file="SRSUBICO" RET text_tiefling=index     Ztext_tiefling=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wild_elf     STR_VAR bam_file="SRSUBICO" RET text_wild_elf=index     Ztext_wild_elf=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_moon_elf     STR_VAR bam_file="SRSUBICO" RET text_moon_elf=index     Ztext_moon_elf=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_feyri        STR_VAR bam_file="SRSUBICO" RET text_feyri=index        Ztext_feyri=strref        END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfdrow     STR_VAR bam_file="SRSUBICO" RET text_halfdrow=index     Ztext_halfdrow=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_air_genasi   STR_VAR bam_file="SRSUBICO" RET text_air_genasi=index   Ztext_air_genasi=strref   END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_earth_genasi STR_VAR bam_file="SRSUBICO" RET text_earth_genasi=index Ztext_earth_genasi=strref END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_fire_genasi  STR_VAR bam_file="SRSUBICO" RET text_fire_genasi=index  Ztext_fire_genasi=strref  END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_water_genasi STR_VAR bam_file="SRSUBICO" RET text_water_genasi=index Ztext_water_genasi=strref END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_halfgrayorc  STR_VAR bam_file="SRSUBICO" RET text_halfgrayorc=index  Ztext_halfgrayorc=strref  END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_sun_elf      STR_VAR bam_file="SRSUBICO" RET text_sun_elf=index      Ztext_sun_elf=strref      END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_wood_elf     STR_VAR bam_file="SRSUBICO" RET text_wood_elf=index     Ztext_wood_elf=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_dusk_elf     STR_VAR bam_file="SRSUBICO" RET text_dusk_elf=index     Ztext_dusk_elf=strref     END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_lythari      STR_VAR bam_file="SRSUBICO" RET text_lythari=index      Ztext_lythari=strref      END
-LAF APPEND_STATDESC_ENTRY INT_VAR strref=text_snow_elf     STR_VAR bam_file="SRSUBICO" RET text_snow_elf=index     Ztext_snow_elf=strref     END
+ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
+  "%text_aasimar%"     => "text_aasimar"     "%text_drow%"         => "text_drow"
+  "%text_dwfduerg%"    => "text_dwfduerg"    "%text_dwfgold%"      => "text_dwfgold"
+  "%text_hflhide%"     => "text_hflhide"     "%text_hflstrong%"    => "text_hflstrong"
+  "%text_svirfn%"      => "text_svirfn"      "%text_tiefling%"     => "text_tiefling"
+  "%text_wild_elf%"    => "text_wild_elf"    "%text_moon_elf%"     => "text_moon_elf"
+  "%text_feyri%"       => "text_feyri"       "%text_halfdrow%"     => "text_halfdrow"
+  "%text_air_genasi%"  => "text_air_genasi"  "%text_earth_genasi%" => "text_earth_genasi"
+  "%text_fire_genasi%" => "text_fire_genasi" "%text_water_genasi%" => "text_water_genasi"
+  "%text_halfgrayorc%" => "text_halfgrayorc" "%text_sun_elf%"      => "text_sun_elf"
+  "%text_wood_elf%"    => "text_wood_elf"    "%text_dusk_elf%"     => "text_dusk_elf"
+  "%text_lythari%"     => "text_lythari"     "%text_snow_elf%"     => "text_snow_elf"
+END
+
+ACTION_PHP_EACH texts AS var => var_name BEGIN
+  LAF APPEND_STATDESC_ENTRY INT_VAR strref=var STR_VAR bam_file="SRSUBICO" RET EVAL "%var_name%"=index EVAL "Z%var_name%"=strref END
+END
 
 COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
 //BLOCK SUBRACE SPELLS
@@ -501,6 +496,54 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_duerg.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_DUERG END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
 
+COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
+  //Strength +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1 parameter1=1 END
+  //Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
+  //Intelligence -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-1" END
+  //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1="-1" END
+  //Hide in shadows +5
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
+
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Wisdom +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
+  //Charisma +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1=1 END
+  //Intelligence -2
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-2" END
+  //XP bonus - 95%
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+  //Shapechange into wolf once a day
+  PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPIN110" END
+  END
+  PATCH_IF ( GAME_IS_IWDEE ) BEGIN
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
+  END
+
+
+COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
+  //Portrait icon
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
+  //Dexterity +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+  //Constitution -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
+  //Cold resistance +10
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
+  // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL412" END
 //BLOCKEND
 
 //BLOCK ABILITY SPELLS
@@ -526,9 +569,6 @@ COPY_EXISTING ~spwi408.spl~ ~override/srethskn.spl~
 	LPM CONVERT_SPL_TO_INNATE
   LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
   LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 parameter1 = 1 END
-  // LPF ALTER_EFFECT INT_VAR
-  // LPF ~CD_EXTEND-O-MATIC~ INT_VAR step_dur=0 level_cap=10 step_size=9 END
-  // LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 header=1 parameter1=2 END
 
 COPY_EXISTING ~sppr250.spl~ ~override/srwrthfg.spl~
   LPM CONVERT_SPL_TO_INNATE
@@ -641,56 +681,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_vcba.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
   //XP bonus - 90%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
-
-// Dusk Elf
-COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
-  //Strength +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1 parameter1=1 END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
-  //Intelligence -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-1" END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1="-1" END
-  //Hide in shadows +5
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
-
-// Lythari
-COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
-  //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1=1 END
-  //Intelligence -2
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-2" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
-  //Shapechange into wolf once a day
-  PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPIN110" END
-  END
-  PATCH_IF ( GAME_IS_IWDEE ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
-  END
-
-// Snow Elf
-COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
-  //Cold resistance +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
-  // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL412" END
 
 COPY_EXISTING ~ui.menu~ ~override~
 	LPM SHOW_IN_CHARACTER_RECORD
