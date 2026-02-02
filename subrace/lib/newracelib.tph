@@ -2,6 +2,7 @@ DEFINE_ACTION_FUNCTION zd_new_race_setup
   INT_VAR
     race_index = 0
     race_id = 0
+    mixed = 0
   STR_VAR
     key = ""
     name = ""
@@ -23,7 +24,8 @@ BEGIN
     SET insert_index=race_index
     SET race_index+=1
     // name ID NAME DESCSTR UPPERCASE BIOGRAPHY
-    INSERT_2DA_ROW insert_index colcount ~%key%     %race_index%          %name%       %desc%       %uppercase%          %biography%~
+    INSERT_2DA_ROW insert_index colcount ~%key%    %race_index%          %name%       %desc%       %uppercase%          %biography%~
+    PRETTY_PRINT_2DA
   BUT_ONLY
 
   // Race IDS
@@ -38,7 +40,21 @@ BEGIN
     INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_HELP_%key%                                   %desc%~
     INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_LOWER_%key%                                  %name%~
     INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_BIOGRAPHY_%key%                        %biography%~
-    INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_%key%                                  %uppercase%~
+    INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_%key%                                  %mixed%~
     PRETTY_PRINT_2DA
   BUT_ONLY
+END
+
+// A reading from the holy iesdp
+// Each INI file contains the definition for a single creature animation. INI filenames are made up from the hexadecimal representation of the creature animation slot value and the .INI file extension. Example: Animation of 0x6004 CLERIC_MALE_GNOME is defined in 6004.INI.
+DEFINE_ACTION_FUNCTION zd_new_race_animation
+  STR_VAR
+    hexNumber = ""
+    animationName = ""
+    animationFile = ""
+BEGIN
+  APPEND ~animate.ids~ "0x%hexNumber% %animationName%" UNLESS "0x%hexNumber% %animationName%"
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/animations/%animationFile%~ ~override/%hexNumber%.ini~
 END
