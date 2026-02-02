@@ -38,7 +38,6 @@ ACTION_PHP_EACH campscr AS wbcs => dummy BEGIN
 	END
 END
 
-
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~sunscoh.bam~) BEGIN
 	COPY ~subrace/bam/sunscoh.bam~ ~override/sunscoh.bam~
 END
@@ -65,6 +64,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
   "%text_halfgrayorc%" => "text_halfgrayorc" "%text_sun_elf%"      => "text_sun_elf"
   "%text_wood_elf%"    => "text_wood_elf"    "%text_dusk_elf%"     => "text_dusk_elf"
   "%text_lythari%"     => "text_lythari"     "%text_snow_elf%"     => "text_snow_elf"
+  "%text_wispling%"    => "text_wispling"
 END
 
 ACTION_PHP_EACH texts AS var => var_name BEGIN
@@ -399,12 +399,11 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_hlstr.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_hlgho.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_hflhide END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=205 parameter2=115 STR_VAR resource=sr_hlgho END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=205 parameter2=115 STR_VAR resource="sr_hlgho" END
    //Find traps +5
   LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=5 END
    //Give innate ability
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="spcl412" END
-  //LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 parameter1=12 parameter2=3 timing=9 STR_VAR resource=SR_HLGHO END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_svirf.spl~
   //Portrait icon
