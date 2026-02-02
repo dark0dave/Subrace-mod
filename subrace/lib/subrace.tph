@@ -399,7 +399,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_hlstr.spl~
 COPY ~subrace/spl/spell.spl~ ~override/sr_hlgho.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_hflhide END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=205 parameter2=115 STR_VAR resource=SR_HLGHO END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=205 parameter2=115 STR_VAR resource=sr_hlgho END
    //Find traps +5
   LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=5 END
    //Give innate ability
@@ -433,8 +433,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_svirf.spl~
   PATCH_FOR_EACH race IN 161 112 111 165 BEGIN
     LPF ADD_SPELL_EFFECT INT_VAR opcode=177 target=2 timing=9 parameter1=race parameter2=4 STR_VAR resource="srsvatk" END
   END
-   //Find traps +10
-  //LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
    //Hide in shadows +10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=10 END
    //Hide in shadows no outdoors
@@ -448,7 +446,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_svirf.spl~
   //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_SVIRF END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource="sr_svirf" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_dwgld.spl~
@@ -497,7 +495,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_duerg.spl~
    //Charisma -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource=SR_DUERG END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource="sr_duerg" END
   LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
@@ -514,7 +512,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
   //Hide in shadows +5
   LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
 
-
 COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
@@ -530,12 +527,11 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
   //Shapechange into wolf once a day
   PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPIN110" END
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spin110" END
   END
   PATCH_IF ( GAME_IS_IWDEE ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL612" END
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spcl612" END
   END
-
 
 COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
   //Portrait icon
@@ -547,7 +543,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
   //Cold resistance +10
   LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
   // Set Snare once a day (BG2EE/BG1EE/IWDEE/EET)
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="SPCL412" END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spcl412" END
 //BLOCKEND
 
 //BLOCK ABILITY SPELLS

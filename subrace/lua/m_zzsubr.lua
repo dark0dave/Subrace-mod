@@ -25,7 +25,7 @@ zZsubrTitleTable = {
 }
 
 function subt(chr)
-	if (chr == 1)  then return Infinity_FetchString(%aasimar_title%) --subrStrings.AASIMAR
+	    if (chr == 1)  then return Infinity_FetchString(%aasimar_title%) --subrStrings.AASIMAR
 	elseif (chr == 2)  then return Infinity_FetchString(%tiefling_title%) --subrStrings.TIEFLING
 	elseif (chr == 3)  then return Infinity_FetchString(%drow_title%) --subrStrings.DROW
 	elseif (chr == 4)  then return Infinity_FetchString(%wild_elf_title%) --subrStrings.WILD_ELF
