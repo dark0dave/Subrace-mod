@@ -248,14 +248,18 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_feyri.spl~
    //Hair color
     LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=19 parameter2=6 END
   END
-   //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
+  //intelligence +1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1=1 END
    //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
+   //Charisma -1
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
   // elemental resistances
   PATCH_FOR_EACH resistance IN 28 29 30 BEGIN
     LPF ADD_SPELL_EFFECT INT_VAR opcode=resistance target=2 timing=9 parameter1=15 END
   END
+   //Infravision
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
   //Give innate ability
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srblind" END
   //XP bonus - 95%
