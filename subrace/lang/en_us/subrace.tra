@@ -67,7 +67,7 @@ This spell outlines one or more creatures with a pale violet glow, making positi
 
 @44 = ~Haste Self~
 @45 = ~Haste Self
-The wispling calls upon their innate power to haste themselves for 3 rounds, doubling their movement speed and attacking a number of times equal to the next whole number, up to 6 attacks per round. For example, if the wispling can normally attack 2.5 times per round, hasting would allow them to attack 3 times per round, and if they can attack 4 times per round, hasting would allow them to attack 5 times per round. This ability is considered magical and may be dispelled, behaving effectively like the arcane spell Haste, but with reduced duration and only affecting the wispling.~
+The wispling calls upon their innate power to haste themselves for 4 rounds, doubling their movement speed and attacking a number of times equal to the next whole number, up to 6 attacks per round. For example, if the wispling can normally attack 2.5 times per round, hasting would allow them to attack 3 times per round, and if they can attack 4 times per round, hasting would allow them to attack 5 times per round. This ability is considered magical and may be dispelled, behaving effectively like the arcane spell Haste, but with reduced duration and only affecting the wispling.~
 
 @50   = ~Subrace selection:~
 @51   = ~SUBRACE SELECTION~
@@ -377,7 +377,7 @@ Snow elves have the following traits:
 @1215 = ~Snow Elf~
 
 @1220 = "WISPLING"
-@1221 = ~WISPLINGS: Wisplings are planetouched descended from the breeding of halflings and demons. They are of normal halfling size and shape, with light brown skin and bright red hair, as well as angular features, and typically prefer to wear brightly colored clothing. They are energetic and normally unable to stay still. They are also deceptive and fond of pranks that ranged from merely mischievous to cruel. Wisplings had a natural talent for stealth, as well as an innate ability to change shape magically.
+@1221 = ~WISPLINGS: Wisplings are planetouched descended from the union of halflings and demons. While they retain the stature of their halfling kin, they are distinguished by angular features, light brown skin, and vivid red hair—often complemented by a preference for vibrant clothing. Restless and energetic, wisplings have a penchant for deception and pranks that range from mischievous to cruel. They combine a natural talent for stealth with innate magical abilities, allowing them to shapeshift and move with supernatural speed.
 
 Wisplings have the following traits:
 – Infravision
@@ -385,9 +385,8 @@ Wisplings have the following traits:
 – +15% Hide in Shadows, +10% Move Silently
 – Movement rate increased by a factor of 1
 – May cast Polymorph Self once per day as an innate ability
-– May caste Haste on themselves once per day, which lasts 3 rounds
-– Gets only 95% of all experience gained~
+– May cast Haste Self (4 rounds) once per day as an innate ability
+– Gets only 93% of all experience gained~
 
 @1222 = ~wispling~
 @1223 = ~Wispling~
-

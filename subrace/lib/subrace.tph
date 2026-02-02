@@ -575,8 +575,8 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_wsplg.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsplht" END
   // Cast Polymorph Self one per day
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsppms" END
-  //XP bonus - 95% 
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+  //XP bonus - 93% 
+  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=93 parameter2=2 END
 //BLOCKEND
 
 //BLOCK ABILITY SPELLS
