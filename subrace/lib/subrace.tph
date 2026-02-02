@@ -591,7 +591,6 @@ COPY ~subrace/spl/idpr113.spl~ ~override/srsnscoh.spl~
 //SRBLIND  (SPWI106)
 COPY_EXISTING ~spwi106.spl~ ~override/srblind.spl~
 	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 parameter1 = 1 END
   LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srblind" END
 
 COPY_EXISTING ~spwi103.spl~ ~override/srbrnhds.spl~
@@ -618,7 +617,7 @@ COPY_EXISTING ~spwi305.spl~ ~override/srwsplht.spl~
   LPF ALTER_EFFECT INT_VAR power=1 STR_VAR match_power_ex = "(o_power > 1)" END
   LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwsplht" END
 
-COPY_EXISTING ~spwi415.spl~ ~override/srwsppms.spl~
+COPY_EXISTING ~spwi416.spl~ ~override/srwsppms.spl~
 	LPM CONVERT_SPL_TO_INNATE
   LPF ALTER_HEADER INT_VAR speed=0 END
   LPF CLONE_EFFECT INT_VAR match_opcode = 206 STR_VAR match_resource = "%SOURCE_RES%" resource="srwsppms" END
