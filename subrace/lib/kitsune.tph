@@ -4,10 +4,11 @@ INCLUDE ~%MOD_FOLDER%/lib/newracelib.tph~
 OUTER_SPRINT key @2001
 OUTER_SET uppercase = RESOLVE_STR_REF(@2001)
 OUTER_SET name = RESOLVE_STR_REF(@2002)
+OUTER_SET mixed = RESOLVE_STR_REF(@2003)
 OUTER_SET desc = RESOLVE_STR_REF(@2004)
 OUTER_SET biography = RESOLVE_STR_REF(@2005)
 
-LAF zd_new_race_setup STR_VAR key name desc uppercase biography RET race_index END
+LAF zd_new_race_setup INT_VAR mixed STR_VAR key name desc uppercase biography RET race_index END
 
 // Classes
 OUTER_TEXT_SPRINT classes "$ $ %key%" // first two rows are not expanded
@@ -23,6 +24,10 @@ COPY_EXISTING ~clsrcreq.2da~ ~override~
   APPEND_COL ~clsrcreq.2da~ ~%classes%~
 BUT_ONLY
 
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
 // Mage:
 // COPY_EXISTING ~mgsrcreq.2da~ ~override~
 
@@ -32,12 +37,15 @@ COPY_EXISTING ~abracead.2da~ ~override~
   READ_2DA_ENTRIES_NOW statdata colcount
   // name          MOD_STR  MOD_DEX  MOD_CON  MOD_INT  MOD_WIS  MOD_CHR
   INSERT_2DA_ROW statdata colcount ~%key%   0        0        0        0        0        0~
+  PRETTY_PRINT_2DA
 BUT_ONLY
+
 COPY_EXISTING ~abracerq.2da~ ~override~
   COUNT_2DA_COLS colcount
   READ_2DA_ENTRIES_NOW statdata colcount
   // name MIN_STR MAX_STR MIN_DEX MAX_DEX MIN_CON MAX_CON MIN_INT MAX_INT MIN_WIS MAX_WIS MIN_CHR MAX_CHR
   INSERT_2DA_ROW statdata colcount ~%key%   3        18       3        18       3        18       3        18       3        18       3        18~
+  PRETTY_PRINT_2DA
 BUT_ONLY
 
 // Kitable
@@ -53,12 +61,17 @@ COPY_EXISTING ~kittable.2da~ ~override~
   APPEND_COL ~kittable.2da~ ~%kits%~
 BUT_ONLY
 
+COPY_EXISTING ~kittable.2da~ ~override~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
 // skillrac
 COPY_EXISTING ~skillrac.2da~ ~override~
   COUNT_2DA_COLS colcount
   READ_2DA_ENTRIES_NOW statdata colcount
   // name PICK_POCKETS OPEN_LOCKS FIND_TRAPS MOVE_SILENTLY HIDE_IN_SHADOWS DETECT_ILLUSION SET_TRAPS
   INSERT_2DA_ROW statdata colcount ~%key%    20              15              10              20              20                0                 0~
+  PRETTY_PRINT_2DA
 BUT_ONLY
 
 // TODO: racecolor.2da needs an extra column
