@@ -549,6 +549,14 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_wsplg.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wispling END
    //Infravision
   LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
+
+  PATCH_IF ( sr_colors = 1 ) BEGIN
+    //Skin color
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=9 parameter2=3 END
+   //Hair color
+    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=195 parameter2=6 END
+  END
+
   //Dexterity +1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
   //Intelligence +1
