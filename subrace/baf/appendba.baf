@@ -117,6 +117,11 @@ THEN
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
 		ActionOverride(Player1,ApplySpellRES("SR_ESNOW",Player1))
 		Continue()
+	RESPONSE #24
+		SetGlobal("Player_1_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",24))
+		ActionOverride(Player1,ApplySpellRES("SR_WSPLG",Player1))
+		Continue()
 END
 
 IF
@@ -247,6 +252,11 @@ THEN
 		SetGlobal("Player_2_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
 		ActionOverride(Player1,ApplySpellRES("SR_ESNOW",Player1))
+		Continue()
+	RESPONSE #24
+		SetGlobal("Player_2_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",24))
+		ActionOverride(Player1,ApplySpellRES("SR_WSPLG",Player1))
 		Continue()
 END
 
@@ -379,6 +389,11 @@ THEN
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
 		ActionOverride(Player1,ApplySpellRES("SR_ESNOW",Player1))
 		Continue()
+	RESPONSE #24
+		SetGlobal("Player_3_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",24))
+		ActionOverride(Player1,ApplySpellRES("SR_WSPLG",Player1))
+		Continue()
 END
 
 IF
@@ -509,6 +524,11 @@ THEN
 		SetGlobal("Player_4_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
 		ActionOverride(Player1,ApplySpellRES("SR_ESNOW",Player1))
+		Continue()
+	RESPONSE #24
+		SetGlobal("Player_4_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",24))
+		ActionOverride(Player1,ApplySpellRES("SR_WSPLG",Player1))
 		Continue()
 END
 
@@ -641,6 +661,11 @@ THEN
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
 		ActionOverride(Player1,ApplySpellRES("SR_ESNOW",Player1))
 		Continue()
+	RESPONSE #24
+		SetGlobal("Player_5_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",24))
+		ActionOverride(Player1,ApplySpellRES("SR_WSPLG",Player1))
+		Continue()
 END
 
 IF
@@ -771,6 +796,11 @@ THEN
 		SetGlobal("Player_6_Change_Subrace","GLOBAL",2)
 		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
 		ActionOverride(Player1,ApplySpellRES("SR_ESNOW",Player1))
+		Continue()
+	RESPONSE #24
+		SetGlobal("Player_6_Change_Subrace","GLOBAL",2)
+		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",24))
+		ActionOverride(Player1,ApplySpellRES("SR_WSPLG",Player1))
 		Continue()
 END
 

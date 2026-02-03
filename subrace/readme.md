@@ -435,6 +435,26 @@ Snow elves have the following traits:
 </details>
 
 
+
+</details>
+
+<details>
+  <summary>Wisplings</summary>
+
+
+**WISPLINGS**: Wisplings are planetouched descended from the union of halflings and demons. While they retain the stature of their halfling kin, they are distinguished by angular features, light brown skin, and vivid red hair—often complemented by a preference for vibrant clothing. Restless and energetic, wisplings have a penchant for deception and pranks that range from mischievous to cruel. They combine a natural talent for stealth with innate magical abilities, allowing them to shapeshift and move with supernatural speed.
+
+Wisplings have the following traits:
+– Infravision
+– +1 Dexterity, +1 Intelligence, -1 Wisdom, -2 Charisma
+– +15% Hide in Shadows, +10% Move Silently
+– Movement rate increased by a factor of 1
+– May cast Polymorph Self once per day as an innate ability
+– May cast Haste Self (4 rounds) once per day as an innate ability
+– Gets only 93% of all experience gained
+
+</details>
+
 ## Available races
 
 <details>
@@ -459,7 +479,6 @@ Snow elves have the following traits:
 
 </details>
 
-
 ## Installation
 
 ### Windows
@@ -470,7 +489,6 @@ After installing the mod, you need to start a new game to select a subrace. The 
 
 To uninstall, run "setup-subrace.exe" again and follow the prompts.
 
-
 ## Credits
 
 ### Contributors
@@ -478,7 +496,7 @@ To uninstall, run "setup-subrace.exe" again and follow the prompts.
 - @tipun81 for the original mod
 - @EnigmaJazz for the infinity UI++ support
 - @dark0dave and @szaumoor for scripting, modernization, re-balancing subraces, various spelling fixes, new subraces and new races
-- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support 
+- @11jo, @DarthNihilus530, p_zombie, Apxu, yota13, @tipun81 and others for translation and scripting support
 - @GraionDilach for play testing and general support
 - Lava for text suggestions and Kenku Animations
 
@@ -531,14 +549,17 @@ The kenku inventory paperdoll was created by Lava for his [Vito IWD NPC](https:/
 - Line break issue in deep gnome desc in readme by @szaumoor in #32
 
 ### Version 0.3.1
+
 - some small fixes
 
 ### Version 0.3.0
+
 - Rewritten ui.menu patching code to be more compatible with GUI mods
 - Added French translation
 - The subrace was added when creating a Random character in the Tipun's and Dragonspear++ GUI
 
 ### Version 0.2
+
 - Change of descriptions of subraces
 - Magic resistance for drow and svirfneblin set to 50%
 - Added protection from reducing Charisma to 0
@@ -547,6 +568,7 @@ The kenku inventory paperdoll was created by Lava for his [Vito IWD NPC](https:/
 - Subrace icon made transparent (Other options are being tested)
 
 ### Version 0.1
+
 - Initial release
 - English translation added
 
