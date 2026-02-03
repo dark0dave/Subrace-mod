@@ -242,8 +242,8 @@ COPY_EXISTING ~ui.menu~ ~override~
 			SET coord_y_btn = coord_y_list + height_list - height_btn - 7
 			SET height_list = height_list - height_btn - 14
 			PATCH_IF ( INSTALLED_IUI ) BEGIN
-				SET coord_x_btn = 100
-				SET coord_y_btn = 350
+				SET coord_x_btn = 90
+				SET coord_y_btn = 400
 				SET width_btn = 200
 				SET height_btn = 70
 			END
@@ -438,10 +438,18 @@ COPY_EXISTING ~ui.menu~ ~override~
 			SET coord_x_btn = coord_x_list + width_list / 2 - width_btn / 2
 			SET coord_y_btn = coord_y_list + height_list - height_btn - 7
 			SET height_list = height_list - height_btn - 14
+			PATCH_IF ( INSTALLED_IUI ) BEGIN
+				SET coord_x_btn = 90
+				SET coord_y_btn = 400
+				SET width_btn = 200
+				SET height_btn = 70
+			END
+			PATCH_IF ( !INSTALLED_IUI ) BEGIN
 				SET coord_x_btn = 100
 				SET coord_y_btn = 350
 				SET width_btn = 200
 				SET height_btn = 70
+			END
 			LPF FC_GETSET_ELEMENT_AREA
 				INT_VAR set_area = 1 coord_x = coord_x_btn coord_y = coord_y_btn width = width_btn height = height_btn
 				STR_VAR element_text = EVAL "%element_text%"
@@ -635,12 +643,18 @@ COPY_EXISTING ~ui.menu~ ~override~
 						action_string = EVAL "createSubraceTable(chargen.races[currentChargenRace].id)%LNL%%TAB%%TAB%%TAB%getSubrace = 1%LNL%%TAB%%TAB%%TAB%currChargenSubrace = 1"
 					RET element_text
 				END
-
-				SET coord_x_btn = 100
-				SET coord_y_btn = 350
-				SET width_btn = 200
-				SET height_btn = 70
-
+				PATCH_IF ( INSTALLED_IUI ) BEGIN
+					SET coord_x_btn = 90
+					SET coord_y_btn = 400
+					SET width_btn = 200
+					SET height_btn = 70
+				END
+				PATCH_IF ( !INSTALLED_IUI ) BEGIN
+					SET coord_x_btn = 100
+					SET coord_y_btn = 350
+					SET width_btn = 200
+					SET height_btn = 70
+				END
 				LPF FC_GETSET_ELEMENT_AREA
 					INT_VAR set_area = 1 coord_x = coord_x_btn coord_y = coord_y_btn width = width_btn height = height_btn
 					STR_VAR element_text = EVAL "%element_text%"
@@ -848,12 +862,18 @@ COPY_EXISTING ~ui.menu~ ~override~
 						action_string = EVAL "createSubraceTable(chargen.races[currentChargenRace].id)%LNL%%TAB%%TAB%%TAB%getSubrace = 1%LNL%%TAB%%TAB%%TAB%currChargenSubrace = 1"
 					RET element_text
 				END
-
-				SET coord_x_btn = 100
-				SET coord_y_btn = 350
-				SET width_btn = 200
-				SET height_btn = 70
-
+				PATCH_IF ( INSTALLED_IUI ) BEGIN
+					SET coord_x_btn = 90
+					SET coord_y_btn = 400
+					SET width_btn = 200
+					SET height_btn = 70
+				END
+				PATCH_IF ( !INSTALLED_IUI ) BEGIN
+					SET coord_x_btn = 100
+					SET coord_y_btn = 350
+					SET width_btn = 200
+					SET height_btn = 70
+				END
 				LPF FC_GETSET_ELEMENT_AREA
 					INT_VAR set_area = 1 coord_x = coord_x_btn coord_y = coord_y_btn width = width_btn height = height_btn
 					STR_VAR element_text = EVAL "%element_text%"
