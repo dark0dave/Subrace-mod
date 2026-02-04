@@ -247,7 +247,7 @@ COPY_EXISTING ~ui.menu~ ~override~
 			SET height_list = height_list - height_btn - 14
 			PATCH_IF ( INSTALLED_IUI ) BEGIN
 				SET coord_x_btn = 90
-				SET coord_y_btn = 400
+				SET coord_y_btn = 585
 				SET width_btn = 200
 				SET height_btn = 70
 			END
@@ -444,7 +444,7 @@ COPY_EXISTING ~ui.menu~ ~override~
 			SET height_list = height_list - height_btn - 14
 			PATCH_IF ( INSTALLED_IUI ) BEGIN
 				SET coord_x_btn = 90
-				SET coord_y_btn = 400
+				SET coord_y_btn = 585
 				SET width_btn = 200
 				SET height_btn = 70
 			END
@@ -649,7 +649,7 @@ COPY_EXISTING ~ui.menu~ ~override~
 				END
 				PATCH_IF ( INSTALLED_IUI ) BEGIN
 					SET coord_x_btn = 90
-					SET coord_y_btn = 400
+					SET coord_y_btn = 585
 					SET width_btn = 200
 					SET height_btn = 70
 				END
@@ -868,7 +868,7 @@ COPY_EXISTING ~ui.menu~ ~override~
 				END
 				PATCH_IF ( INSTALLED_IUI ) BEGIN
 					SET coord_x_btn = 90
-					SET coord_y_btn = 400
+					SET coord_y_btn = 585
 					SET width_btn = 200
 					SET height_btn = 70
 				END
