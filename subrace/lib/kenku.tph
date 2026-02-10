@@ -23,6 +23,10 @@ COPY_EXISTING ~clsrcreq.2da~ ~override~
   APPEND_COL ~clsrcreq.2da~ ~%classes%~
 BUT_ONLY
 
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
 // Mage:
 // COPY_EXISTING ~mgsrcreq.2da~ ~override~
 
@@ -32,12 +36,15 @@ COPY_EXISTING ~abracead.2da~ ~override~
   READ_2DA_ENTRIES_NOW statdata colcount
   // name          MOD_STR  MOD_DEX  MOD_CON  MOD_INT  MOD_WIS  MOD_CHR
   INSERT_2DA_ROW statdata colcount ~%key%   0        0        0        0        0        0~
+  PRETTY_PRINT_2DA
 BUT_ONLY
+
 COPY_EXISTING ~abracerq.2da~ ~override~
   COUNT_2DA_COLS colcount
   READ_2DA_ENTRIES_NOW statdata colcount
   // name MIN_STR MAX_STR MIN_DEX MAX_DEX MIN_CON MAX_CON MIN_INT MAX_INT MIN_WIS MAX_WIS MIN_CHR MAX_CHR
   INSERT_2DA_ROW statdata colcount ~%key%   3        18       3        18       3        18       3        18       3        18       3        18~
+  PRETTY_PRINT_2DA
 BUT_ONLY
 
 // Kitable
@@ -53,15 +60,30 @@ COPY_EXISTING ~kittable.2da~ ~override~
   APPEND_COL ~kittable.2da~ ~%kits%~
 BUT_ONLY
 
+COPY_EXISTING ~kittable.2da~ ~override~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
 // skillrac
 COPY_EXISTING ~skillrac.2da~ ~override~
   COUNT_2DA_COLS colcount
   READ_2DA_ENTRIES_NOW statdata colcount
   // name PICK_POCKETS OPEN_LOCKS FIND_TRAPS MOVE_SILENTLY HIDE_IN_SHADOWS DETECT_ILLUSION SET_TRAPS
   INSERT_2DA_ROW statdata colcount ~%key%    20              15              10              20              20                0                 0~
+  PRETTY_PRINT_2DA
 BUT_ONLY
 
 // TODO: racecolor.2da needs an extra column
 // TODO: racethac.2da for kenku
 // TODO: racefeat.2da
-// TODO: Animations look at (lava's)
+
+// Kindly provided by Lava
+OUTER_SPRINT hexNumber "6206"
+// OUTER_SET animationName = "L#_mage_male_kenku"
+OUTER_SPRINT animationName "MAGE_MALE_KENKU"
+OUTER_SPRINT animationFile "kenku.ini"
+LAF zd_new_race_animation STR_VAR hexNumber animationName animationFile END
+
+ACTION_BASH_FOR ~%MOD_FOLDER%/animations/l#kn~ ~^.+\.bam$~ BEGIN
+  COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
