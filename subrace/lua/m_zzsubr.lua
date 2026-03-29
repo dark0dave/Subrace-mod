@@ -188,8 +188,7 @@ end
 
 function onSubraceButton(buttonNum)
 	if multiplayerScreen:GetEngineState() == 0 and not selectedCharacter then
-		C:SetGlobal("P1_SUBRACE","GLOBAL",buttonNum)
-		return
+		selectedCharacter = 1
 	end
 	if selectedCharacter == 1 then
 		C:SetGlobal("P1_SUBRACE","GLOBAL",buttonNum)
