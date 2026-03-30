@@ -1080,7 +1080,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 		SET ofs = INDEX_BUFFER(~function[ %TAB%]+updateAttrTable~)
 		PATCH_IF ( ofs >= 0 ) BEGIN
 			SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
-			TEXT_SPRINT ~code~ ~%LNL%%TAB%srText[selectedCharacter]  = ""%srTextDesc%~
+			TEXT_SPRINT ~code~ ~%LNL%%TAB%if multiplayerScreen:GetEngineState() == 0 then%LNL%%TAB%%TAB%selectedCharacter = characters[currentID].PC%LNL%%TAB%end%LNL%%TAB%populateSRText()~
 			SET codeLen = STRING_LENGTH ~%code%~
 			INSERT_BYTES ofs2 codeLen
 			WRITE_ASCIIE ofs2 ~%code%~
@@ -1090,7 +1090,7 @@ DEFINE_PATCH_MACRO SHOW_IN_CHARACTER_RECORD BEGIN
 			SET ofs = INDEX_BUFFER(~function[ %TAB%]+updateAttrTable~ ofs)
 			PATCH_IF ( ofs >= 0 ) BEGIN
 				SET ofs2 = INDEX_BUFFER(~[%WNL%%LNL%%MNL%]~ ofs)
-				TEXT_SPRINT ~code~ ~%LNL%%TAB%srText[selectedCharacter]  = ""%srTextDesc%~
+				TEXT_SPRINT ~code~ ~%LNL%%TAB%if multiplayerScreen:GetEngineState() == 0 then%LNL%%TAB%%TAB%selectedCharacter = characters[currentID].PC%LNL%%TAB%end%LNL%%TAB%populateSRText()~
 				SET codeLen = STRING_LENGTH ~%code%~
 				INSERT_BYTES ofs2 codeLen
 				WRITE_ASCIIE ofs2 ~%code%~
