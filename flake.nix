@@ -13,6 +13,7 @@
         in {
           default = pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
+              envsubst
               ffmpeg
               git
               lua
