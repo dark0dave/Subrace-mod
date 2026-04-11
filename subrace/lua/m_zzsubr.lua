@@ -8,20 +8,19 @@ zZsubrTitleTable = {
 	['%Ztext_hflstrong%'] = {7, %hflstrong_desc%},
 	['%Ztext_hflhide%'] = {8, %hflhide_desc%},
 	['%Ztext_svirfn%'] = {9, %svirfn_desc%},
-	['%Ztext_moon_elf%'] = {11, %moon_elf_desc%},
-	['%Ztext_feyri%'] = {12, %feyri_desc%},
-	['%Ztext_halfdrow%'] = {13, %halfdrow_desc%},
-	['%Ztext_air_genasi%'] = {14, %air_genasi_desc%},
-	['%Ztext_earth_genasi%'] = {15, %earth_genasi_desc%},
-	['%Ztext_fire_genasi%'] = {16, %fire_genasi_desc%},
-	['%Ztext_water_genasi%'] = {17, %water_genasi_desc%},
-	['%Ztext_halfgrayorc%'] = {18, %halfgrayorc_desc%},
-	['%Ztext_sun_elf%'] = {19, %sun_elf_desc%},
-	['%Ztext_wood_elf%'] = {20, %wood_elf_desc%},
-	['%Ztext_dusk_elf%'] = {21, %dusk_elf_desc%},
-	['%Ztext_lythari%'] = {22, %lythari_desc%},
-	['%Ztext_snow_elf%'] = {23, %snow_elf_desc%},
-	['%Ztext_wispling%'] = {24, %wispling_desc%},
+	['%Ztext_feyri%'] = {11, %feyri_desc%},
+	['%Ztext_halfdrow%'] = {12, %halfdrow_desc%},
+	['%Ztext_air_genasi%'] = {13, %air_genasi_desc%},
+	['%Ztext_earth_genasi%'] = {14, %earth_genasi_desc%},
+	['%Ztext_fire_genasi%'] = {15, %fire_genasi_desc%},
+	['%Ztext_water_genasi%'] = {16, %water_genasi_desc%},
+	['%Ztext_halfgrayorc%'] = {17, %halfgrayorc_desc%},
+	['%Ztext_sun_elf%'] = {18, %sun_elf_desc%},
+	['%Ztext_wood_elf%'] = {19, %wood_elf_desc%},
+	['%Ztext_dusk_elf%'] = {20, %dusk_elf_desc%},
+	['%Ztext_lythari%'] = {21, %lythari_desc%},
+	['%Ztext_snow_elf%'] = {22, %snow_elf_desc%},
+	['%Ztext_wispling%'] = {23, %wispling_desc%},
 }
 
 function subt(chr)
@@ -34,20 +33,19 @@ function subt(chr)
 	elseif (chr == 7)  then return Infinity_FetchString(%hflstrong_title%) --subrStrings.HALFLING_STRONGHEART
 	elseif (chr == 8)  then return Infinity_FetchString(%hflhide_title%) --subrStrings.HALFLING_GHOSTWISE
 	elseif (chr == 9)  then return Infinity_FetchString(%svirfn_title%) --subrStrings.GNOME_DEEP
-	elseif (chr == 11) then return Infinity_FetchString(%moon_elf_title%) --subrStrings.MOON_ELF
-	elseif (chr == 12) then return Infinity_FetchString(%feyri_title%) --subrStrings.FEYRI
-	elseif (chr == 13) then return Infinity_FetchString(%halfdrow_title%) --subrStrings.HALF_DROW
-	elseif (chr == 14) then return Infinity_FetchString(%air_genasi_title%) --subrStrings.AIR_GENASI
-	elseif (chr == 15) then return Infinity_FetchString(%earth_genasi_title%) --subrStrings.EARTH_GENASI
-	elseif (chr == 16) then return Infinity_FetchString(%fire_genasi_title%) --subrStrings.FIRE_GENASI
-	elseif (chr == 17) then return Infinity_FetchString(%water_genasi_title%) --subrStrings.WATER_GENASI
-	elseif (chr == 18) then return Infinity_FetchString(%halfgrayorc_title%) --subrStrings.HALF_GRAY_ORC
-	elseif (chr == 19) then return Infinity_FetchString(%sun_elf_title%) --subrStrings.SUN_ELF
-	elseif (chr == 20) then return Infinity_FetchString(%wood_elf_title%) --subrStrings.WOOD_ELF
-	elseif (chr == 21) then return Infinity_FetchString(%dusk_elf_title%) --subrStrings.DUSK_ELF
-	elseif (chr == 22) then return Infinity_FetchString(%lythari_title%) --subrStrings.LYTHARI
-	elseif (chr == 23) then return Infinity_FetchString(%snow_elf_title%) --subrStrings.SNOW_ELF
-	elseif (chr == 24) then return Infinity_FetchString(%wispling_title%) --subrStrings.WISPLING
+	elseif (chr == 11) then return Infinity_FetchString(%feyri_title%) --subrStrings.FEYRI
+	elseif (chr == 12) then return Infinity_FetchString(%halfdrow_title%) --subrStrings.HALF_DROW
+	elseif (chr == 13) then return Infinity_FetchString(%air_genasi_title%) --subrStrings.AIR_GENASI
+	elseif (chr == 14) then return Infinity_FetchString(%earth_genasi_title%) --subrStrings.EARTH_GENASI
+	elseif (chr == 15) then return Infinity_FetchString(%fire_genasi_title%) --subrStrings.FIRE_GENASI
+	elseif (chr == 16) then return Infinity_FetchString(%water_genasi_title%) --subrStrings.WATER_GENASI
+	elseif (chr == 17) then return Infinity_FetchString(%halfgrayorc_title%) --subrStrings.HALF_GRAY_ORC
+	elseif (chr == 18) then return Infinity_FetchString(%sun_elf_title%) --subrStrings.SUN_ELF
+	elseif (chr == 19) then return Infinity_FetchString(%wood_elf_title%) --subrStrings.WOOD_ELF
+	elseif (chr == 20) then return Infinity_FetchString(%dusk_elf_title%) --subrStrings.DUSK_ELF
+	elseif (chr == 21) then return Infinity_FetchString(%lythari_title%) --subrStrings.LYTHARI
+	elseif (chr == 22) then return Infinity_FetchString(%snow_elf_title%) --subrStrings.SNOW_ELF
+	elseif (chr == 23) then return Infinity_FetchString(%wispling_title%) --subrStrings.WISPLING
 	else return ""
 	end
 end
@@ -92,10 +90,10 @@ function createSubraceTable(race)
 			{%Zhuman_title%, %bghuman%, 10},
 			{%Zaasimar_title%, %aasimar_desc%, 1},
 			{%Ztiefling_title%, %tiefling_desc%, 2},
-			{%Zair_genasi_title%, %air_genasi_desc%, 14},
-			{%Zearth_genasi_title%, %earth_genasi_desc%, 15},
-			{%Zfire_genasi_title%, %fire_genasi_desc%, 16},
-			{%Zwater_genasi_title%, %water_genasi_desc%, 17},
+			{%Zair_genasi_title%, %air_genasi_desc%, 13},
+			{%Zearth_genasi_title%, %earth_genasi_desc%, 14},
+			{%Zfire_genasi_title%, %fire_genasi_desc%, 15},
+			{%Zwater_genasi_title%, %water_genasi_desc%, 16},
 		}
 	end
 	if race == 2 then --elf
@@ -103,19 +101,18 @@ function createSubraceTable(race)
 			{%Zelf_title%, %bgelf%, 10},
 			{%Zdrow_title%, %drow_desc%, 3},
 			{%Zwild_elf_title%, %wild_elf_desc%, 4},
-			{%Zmoon_elf_title%, %moon_elf_desc%, 11},
-			{%Zsun_elf_title%, %sun_elf_desc%, 19},
-			{%Zwood_elf_title%, %wood_elf_desc%, 20},
-			{%Zdusk_elf_title%, %dusk_elf_desc%, 21},
-			{%Zlythari_title%, %lythari_desc%, 22},
-			{%Zsnow_elf_title%, %snow_elf_desc%, 23},
+			{%Zsun_elf_title%, %sun_elf_desc%, 18},
+			{%Zwood_elf_title%, %wood_elf_desc%, 19},
+			{%Zdusk_elf_title%, %dusk_elf_desc%, 20},
+			{%Zlythari_title%, %lythari_desc%, 21},
+			{%Zsnow_elf_title%, %snow_elf_desc%, 22},
 		}
 	end
 	if race == 3 then --halfelf
 		sbSubraceData = {
 			{%Zhalfelf_title%, %bghalfelf%, 10},
-			{%Zhalfdrow_title%, %halfdrow_desc%, 13},
-			{%Zfeyri_title%, %feyri_desc%, 12},
+			{%Zhalfdrow_title%, %halfdrow_desc%, 12},
+			{%Zfeyri_title%, %feyri_desc%, 11},
 		}
 	end
 	if race == 4 then --dwarf
@@ -130,7 +127,7 @@ function createSubraceTable(race)
 			{%Zhalfling_title%, %bghalfling%, 10},
 			{%Zhflstrong_title%, %hflstrong_desc%, 7},
 			{%Zhflhide_title%, %hflhide_desc%, 8},
-			{%Zwispling_title%, %wispling_desc%, 24},
+			{%Zwispling_title%, %wispling_desc%, 23},
 		}
 	end
 	if race == 6 then --gnome
@@ -142,10 +139,11 @@ function createSubraceTable(race)
 	if race == 7 then --halforc
 		sbSubraceData = {
 			{%Zhalforc_title%, %bghalforc%, 10},
-			{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
+			{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 17},
 		}
 	end
 end
+
 sbSubraceDataEx = {}
 function createSubraceTableEx()
 	sbSubraceDataEx = {
@@ -159,20 +157,19 @@ function createSubraceTableEx()
 		{%Zhflhide_title%, %hflhide_desc%, 8},
 		{%Zsvirfn_title%, %svirfn_desc%, 9},
 		{0, 0, 10},
-		{%Zmoon_elf_title%, %moon_elf_desc%, 11},
-		{%Zfeyri_title%, %feyri_desc%, 12},
-		{%Zhalfdrow_title%, %halfdrow_desc%, 13},
-		{%Zair_genasi_title%, %air_genasi_desc%, 14},
-		{%Zearth_genasi_title%, %earth_genasi_desc%, 15},
-		{%Zfire_genasi_title%, %fire_genasi_desc%, 16},
-		{%Zwater_genasi_title%, %water_genasi_desc%, 17},
-		{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 18},
-		{%Zsun_elf_title%, %sun_elf_desc%, 19},
-		{%Zwood_elf_title%, %wood_elf_desc%, 20},
-		{%Zdusk_elf_title%, %dusk_elf_desc%, 21},
-		{%Zlythari_title%, %lythari_desc%, 22},
-		{%Zsnow_elf_title%, %snow_elf_desc%, 23},
-		{%Zwispling_title%, %wispling_desc%, 24},
+		{%Zfeyri_title%, %feyri_desc%, 11},
+		{%Zhalfdrow_title%, %halfdrow_desc%, 12},
+		{%Zair_genasi_title%, %air_genasi_desc%, 13},
+		{%Zearth_genasi_title%, %earth_genasi_desc%, 14},
+		{%Zfire_genasi_title%, %fire_genasi_desc%, 15},
+		{%Zwater_genasi_title%, %water_genasi_desc%, 16},
+		{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 17},
+		{%Zsun_elf_title%, %sun_elf_desc%, 18},
+		{%Zwood_elf_title%, %wood_elf_desc%, 19},
+		{%Zdusk_elf_title%, %dusk_elf_desc%, 20},
+		{%Zlythari_title%, %lythari_desc%, 21},
+		{%Zsnow_elf_title%, %snow_elf_desc%, 22},
+		{%Zwispling_title%, %wispling_desc%, 23},
 	}
 end
 createSubraceTableEx()
@@ -276,20 +273,19 @@ zZsubraceStrings = {
 	{nil, 5, %Ztext_hflhide%, 8},
 	{nil, 6, %Ztext_svirfn%, 9},
 	{nil, 0, -1, 10},
-	{nil, 2, %Ztext_moon_elf%, 11},
-	{nil, 3, %Ztext_feyri%, 12},
-	{nil, 3, %Ztext_halfdrow%, 13},
-	{nil, 1, %Ztext_air_genasi%, 14},
-	{nil, 1, %Ztext_earth_genasi%, 15},
-	{nil, 1, %Ztext_fire_genasi%, 16},
-	{nil, 1, %Ztext_water_genasi%, 17},
-	{nil, 7, %Ztext_halfgrayorc%, 18},
-	{nil, 2, %Ztext_sun_elf%, 19},
-	{nil, 2, %Ztext_wood_elf%, 20},
-	{nil, 2, %Ztext_dusk_elf%, 21},
-	{nil, 2, %Ztext_lythari%, 22},
-	{nil, 2, %Ztext_snow_elf%, 23},
-	{nil, 5, %Ztext_wispling%, 24},
+	{nil, 3, %Ztext_feyri%, 11},
+	{nil, 3, %Ztext_halfdrow%, 12},
+	{nil, 1, %Ztext_air_genasi%, 13},
+	{nil, 1, %Ztext_earth_genasi%, 14},
+	{nil, 1, %Ztext_fire_genasi%, 15},
+	{nil, 1, %Ztext_water_genasi%, 16},
+	{nil, 7, %Ztext_halfgrayorc%, 17},
+	{nil, 2, %Ztext_sun_elf%, 18},
+	{nil, 2, %Ztext_wood_elf%, 19},
+	{nil, 2, %Ztext_dusk_elf%, 20},
+	{nil, 2, %Ztext_lythari%, 21},
+	{nil, 2, %Ztext_snow_elf%, 22},
+	{nil, 5, %Ztext_wispling%, 23},
 }
 function zzCreateCharInfo(info)
 	local rc = 0

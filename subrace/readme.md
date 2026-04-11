@@ -205,21 +205,6 @@ Half-drow have the following traits:
 </details>
 
 <details>
-  <summary>Moon elf</summary>
-
----
-
-**MOON ELVES**: The moon elves have chosen forests for solitude, as have many of their brethren. They worship the moon and derive their magical power from it. On a full moon, moon elves become especially powerful. They are the most sociable among their fellows and easily make contact with other races. Often, out of curiosity and a thirst for adventure, they join the groups of adventurers. More than other elves, they are drawn to a variety of paths. Moon elves love music and make excellent bards. They have fair skin, sometimes with a bluish tinge, and silver-white, black, or blue hair. Their eyes are blue or green with gold spots.
-
-Moon elves have the following traits:
-- +10% Move Silently and Hide in Shadows
-- +1 Charisma, -1 Constitution
-
----
-
-</details>
-
-<details>
   <summary>Wild elf</summary>
 
 ---
