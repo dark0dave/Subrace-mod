@@ -53,18 +53,28 @@ ACTION_IF (NOT FILE_EXISTS_IN_GAME ~idpr113c.bam~) BEGIN
 END
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
-  "%text_aasimar%"     => "text_aasimar"     "%text_drow%"         => "text_drow"
-  "%text_dwfduerg%"    => "text_dwfduerg"    "%text_dwfgold%"      => "text_dwfgold"
-  "%text_hflhide%"     => "text_hflhide"     "%text_hflstrong%"    => "text_hflstrong"
-  "%text_svirfn%"      => "text_svirfn"      "%text_tiefling%"     => "text_tiefling"
-  "%text_wild_elf%"    => "text_wild_elf"    "%text_moon_elf%"     => "text_moon_elf"
-  "%text_feyri%"       => "text_feyri"       "%text_halfdrow%"     => "text_halfdrow"
-  "%text_air_genasi%"  => "text_air_genasi"  "%text_earth_genasi%" => "text_earth_genasi"
-  "%text_fire_genasi%" => "text_fire_genasi" "%text_water_genasi%" => "text_water_genasi"
-  "%text_halfgrayorc%" => "text_halfgrayorc" "%text_sun_elf%"      => "text_sun_elf"
-  "%text_wood_elf%"    => "text_wood_elf"    "%text_dusk_elf%"     => "text_dusk_elf"
-  "%text_lythari%"     => "text_lythari"     "%text_snow_elf%"     => "text_snow_elf"
-  "%text_wispling%"    => "text_wispling"
+  "%text_aasimar%"      => "text_aasimar"
+  "%text_drow%"         => "text_drow"
+  "%text_dwfduerg%"     => "text_dwfduerg"
+  "%text_dwfgold%"      => "text_dwfgold"
+  "%text_hflhide%"      => "text_hflhide"
+  "%text_hflstrong%"    => "text_hflstrong"
+  "%text_svirfn%"       => "text_svirfn"
+  "%text_wild_elf%"     => "text_wild_elf"
+  "%text_tiefling%"     => "text_tiefling"
+  "%text_feyri%"        => "text_feyri"
+  "%text_halfdrow%"     => "text_halfdrow"
+  "%text_air_genasi%"   => "text_air_genasi"
+  "%text_earth_genasi%" => "text_earth_genasi"
+  "%text_fire_genasi%"  => "text_fire_genasi"
+  "%text_water_genasi%" => "text_water_genasi"
+  "%text_halfgrayorc%"  => "text_halfgrayorc"
+  "%text_sun_elf%"      => "text_sun_elf"
+  "%text_wood_elf%"     => "text_wood_elf"
+  "%text_dusk_elf%"     => "text_dusk_elf"
+  "%text_lythari%"      => "text_lythari"
+  "%text_snow_elf%"     => "text_snow_elf"
+  "%text_wispling%"     => "text_wispling"
 END
 
 ACTION_PHP_EACH texts AS var => var_name BEGIN
@@ -360,18 +370,6 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_ewild.spl~
    //intlligence -1
   LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1="-1" END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_emoon.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_moon_elf END
-   //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
-   //Hide in shadows +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=10 END
-   //Move silently +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=59 target=2 timing=9 parameter1=10 END
-   //Constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
-
 COPY ~subrace/spl/spell.spl~ ~override/sr_ewood.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wood_elf END
@@ -575,7 +573,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_wsplg.spl~
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsplht" END
   // Cast Polymorph Self one per day
   LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsppms" END
-  //XP bonus - 93% 
+  //XP bonus - 93%
   LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=93 parameter2=2 END
 //BLOCKEND
 
@@ -621,7 +619,7 @@ COPY_EXISTING ~spwi416.spl~ ~override/srwsppms.spl~
 	LPM CONVERT_SPL_TO_INNATE
   LPF ALTER_HEADER INT_VAR speed=0 END
   LPF CLONE_EFFECT STR_VAR match_resource = "spwi416" resource="srwsppms" END
- 
+
 COPY_EXISTING ~sppr250.spl~ ~override/srwrthfg.spl~
   LPM CONVERT_SPL_TO_INNATE
   LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwrthfg" END
