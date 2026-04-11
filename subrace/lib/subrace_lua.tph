@@ -166,7 +166,7 @@ ACTION_IF ( INSTALLED_DSUI ) BEGIN
 end~
 END
 
-COPY ~subrace/ids/subrace.ids~ ~override~
+COPY ~subrace/ids/zd_subr.ids~ ~override~
 
 OUTER_SPRINT ~tilde~ "~"
 

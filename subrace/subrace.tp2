@@ -59,7 +59,7 @@ GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2,
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
 
-OUTER_SET sr_colors = 1
+OUTER_SET zd_colors = 1
 
 INCLUDE ~subrace/lib/subrace.tph~
 
@@ -71,7 +71,7 @@ GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2,
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
 
-OUTER_SET sr_colors = 2
+OUTER_SET zd_colors = 2
 
 INCLUDE ~subrace/lib/subrace.tph~
 
