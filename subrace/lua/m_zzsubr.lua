@@ -52,6 +52,15 @@ function subt(chr)
 	end
 end
 
+function findSubrace(char)
+	for k, v in pairs(char.statusEffects) do
+		if (zZsubrTitleTable[tostring(v.strRef)] ~= nil) then
+			return Infinity_FetchString(v.strRef)
+		end
+	end
+	return nil
+end
+
 function getSubraceTitleButton(currS)
 	if subt(currS) ~= "" then
 		return subt(currS)
@@ -66,27 +75,13 @@ getSubrace = 0
 sbSubraceData = {}
 srText = {}
 
-function populateSRText()
-	if rawequal(next(srText), nil) then
-		srText[0] = ""
-		srText[1] = subt(C:GetGlobal("Player_1_Change_Subrace","GLOBAL"))
-		srText[2] = subt(C:GetGlobal("Player_2_Change_Subrace","GLOBAL"))
-		srText[3] = subt(C:GetGlobal("Player_3_Change_Subrace","GLOBAL"))
-		srText[4] = subt(C:GetGlobal("Player_4_Change_Subrace","GLOBAL"))
-		srText[5] = subt(C:GetGlobal("Player_5_Change_Subrace","GLOBAL"))
-		srText[6] = subt(C:GetGlobal("Player_6_Change_Subrace","GLOBAL"))
-	end
-end
-
 function zzSubraceString(char)
 	local rstr = Infinity_FetchString(char.race)
-	if multiplayerScreen:GetEngineState() == 0 and not selectedCharacter then
-		selectedCharacter = characters[currentID].PC
-	end
-	if srText[selectedCharacter] == nil or srText[selectedCharacter] == "" then
+	local subrace = findSubrace(char)
+	if subrace == nil then
 		return rstr
 	else
-		return rstr .. " ( " .. srText[selectedCharacter]  .. " )"
+		return rstr .. " ( " .. subrace  .. " )"
 	end
 end
 
