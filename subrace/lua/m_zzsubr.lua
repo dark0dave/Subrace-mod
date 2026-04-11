@@ -79,7 +79,7 @@ function zzSubraceString(char)
 	if subrace == nil then
 		return rstr
 	else
-		return rstr .. " ( " .. subrace  .. " )"
+		return rstr .. " (" .. subrace  .. ")"
 	end
 end
 
@@ -306,7 +306,7 @@ function zzCreateCharInfo(info)
 				tail = string.sub(info, y + 1)
 				for k, v in pairs(zZsubraceStrings) do
 					if rc == v[2] and currSubrace == v[4] then
-						info = head .. ' ( ' .. Infinity_FetchString(v[3]) .. ' )' .. tail
+						info = head .. ' (' .. Infinity_FetchString(v[3]) .. ')' .. tail
 					end
 				end
 			end
