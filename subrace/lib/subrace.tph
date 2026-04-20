@@ -118,8 +118,8 @@ ACTION_PHP_EACH texts AS var => var_name  BEGIN
     END
 END
 
-COPY ~subrace/lua/m_zzsubr.lua~ ~override~
-    EVALUATE_BUFFER
+// Lua helper code
+COPY ~subrace/lua~ ~override~ EVALUATE_BUFFER
 // BLOCK SUBRACE SPELLS
 COPY ~subrace/spl/spell.spl~ ~override/zd_aasim.spl~
     // Portrait icon
