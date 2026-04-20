@@ -3,11 +3,11 @@ ACTION_FOR_EACH scr IN viconia_ bdviconi viconia vico25 baeloth bdbaelot BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ BEGIN
   	OUTER_SPRINT ~SUBRA~ ~VCBA~
   	OUTER_SET lc_subr = 3
-    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/zd_subr.baf~ EVALUATE_BUFFER
   END
 END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_haer.spl~
+COPY ~subrace/spl/spell.spl~ ~override/zd_haer.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_tiefling END
   //Give innate ability
@@ -19,11 +19,11 @@ ACTION_FOR_EACH scr IN haerdali haer25 BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ BEGIN
     OUTER_SPRINT ~SUBRA~ ~HAER~
     OUTER_SET lc_subr = 2
-    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
+    EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/zd_subr.baf~ EVALUATE_BUFFER
   END
 END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_cael.spl~
+COPY ~subrace/spl/spell.spl~ ~override/zd_cael.spl~
   //Portrait icon
   LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_aasimar END
    //Acid resistance +15
@@ -40,7 +40,7 @@ COPY ~subrace/spl/spell.spl~ ~override/sr_cael.spl~
 ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.bcs~ BEGIN
   OUTER_SET lc_subr = 1
   OUTER_SPRINT ~SUBRA~ ~CAEL~
-  EXTEND_TOP ~bdcaelar.bcs~ ~subrace/baf/sr_subr.baf~ EVALUATE_BUFFER
+  EXTEND_TOP ~bdcaelar.bcs~ ~subrace/baf/zd_subr.baf~ EVALUATE_BUFFER
 END
 
 ACTION_FOR_EACH cre IN

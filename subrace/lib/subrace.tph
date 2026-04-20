@@ -5,740 +5,2370 @@ INCLUDE ~subrace/lib/subrace_lua.tph~
 
 OUTER_SET spell_wizard_suffocate = IDS_OF_SYMBOL(spell WIZARD_SUFFOCATE)
 
-LAF ADD_SPLPROT_ENTRY INT_VAR value_hex=1 STR_VAR label="OUTDOOR"    definition="0x106  0x1  8" RET outdoor   =index END
-LAF ADD_SPLPROT_ENTRY INT_VAR value_hex=1 STR_VAR label="NOTOUTDOOR" definition="0x106  0x1  9" RET notoutdoor=index END
+LAF ADD_SPLPROT_ENTRY
+    INT_VAR
+        value_hex = 1
+    STR_VAR
+        label      = "OUTDOOR"
+        definition = "0x106  0x1  8"
+    RET
+        outdoor = index
+END
+LAF ADD_SPLPROT_ENTRY
+    INT_VAR
+        value_hex = 1
+    STR_VAR
+        label      = "NOTOUTDOOR"
+        definition = "0x106  0x1  9"
+    RET
+        notoutdoor = index
+END
 
 LAF ADD_IDS_ENTRY
-  INT_VAR minValue = 0 preferredValue = 140
-  STR_VAR idsFile = "splstate.ids" identifier = "CRE_BLINDED_IWD"
-  RET CRE_BLINDED_IWD = value
+    INT_VAR
+        minValue       = 0
+        preferredValue = 140
+    STR_VAR
+        idsFile    = "splstate.ids"
+        identifier = "CRE_BLINDED_IWD"
+    RET
+        CRE_BLINDED_IWD = value
 END
 
 CLEAR_IDS_MAP
 
 /* Baldur */
-ACTION_DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN ~baldur~   => ~~ END
-ACTION_DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN ~baldur25~ => ~~ END
+ACTION_DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN
+    ~baldur~ => ~~
+END
+ACTION_DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN
+    ~baldur25~ => ~~
+END
 ACTION_IF (FILE_EXISTS_IN_GAME ~campaign.2da~) BEGIN
-	COPY_EXISTING ~campaign.2da~ ~override~
-		COUNT_2DA_ROWS 4 rws
-		FOR ( i = 0 ; i < rws ; ++i ) BEGIN
-			READ_2DA_ENTRY i 1 4 scrp
-			TO_UPPER scrp
-			PATCH_IF (!VARIABLE_IS_SET $campscr(~%scrp%~)) BEGIN
-				DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN ~%scrp%~ => ~~ END
-			END
-		END
-		BUT_ONLY
+    COPY_EXISTING ~campaign.2da~ ~override~
+        COUNT_2DA_ROWS 4 rws
+        FOR (i = 0; i < rws; ++i) BEGIN
+            READ_2DA_ENTRY i 1 4 scrp
+            TO_UPPER scrp
+            PATCH_IF (!VARIABLE_IS_SET $campscr(~%scrp%~)) BEGIN
+                DEFINE_ASSOCIATIVE_ARRAY campscr BEGIN
+                    ~%scrp%~ => ~~
+                END
+            END
+        END
+    BUT_ONLY
 END
 
-ACTION_PHP_EACH campscr AS wbcs => dummy BEGIN
-	ACTION_IF FILE_EXISTS_IN_GAME ~%wbcs%.bcs~ BEGIN
-		EXTEND_TOP ~%wbcs%.bcs~ ~subrace/baf/appendba.baf~
-	END
+ACTION_PHP_EACH campscr AS wbcs => dummy  BEGIN
+    ACTION_IF FILE_EXISTS_IN_GAME ~%wbcs%.bcs~ BEGIN
+        EXTEND_TOP ~%wbcs%.bcs~ ~subrace/baf/appendba.baf~
+    END
 END
 
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~sunscoh.bam~) BEGIN
-	COPY ~subrace/bam/sunscoh.bam~ ~override/sunscoh.bam~
+    COPY ~subrace/bam/sunscoh.bam~ ~override/sunscoh.bam~
 END
-COPY ~subrace/bam/srsubico.bam~ ~override~
+COPY ~subrace/bam/zdsubico.bam~ ~override~
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~dff_p39.wav~) BEGIN
-	COPY ~subrace/wav/dff_p39.wav~ ~override~
+    COPY ~subrace/wav/dff_p39.wav~ ~override~
 END
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~idpr113b.bam~) BEGIN
-	COPY ~subrace/bam/idpr113b.bam~ ~override~
+    COPY ~subrace/bam/idpr113b.bam~ ~override~
 END
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~idpr113c.bam~) BEGIN
-	COPY ~subrace/bam/idpr113c.bam~ ~override~
+    COPY ~subrace/bam/idpr113c.bam~ ~override~
 END
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
-  "%text_aasimar%"      => "text_aasimar"
-  "%text_drow%"         => "text_drow"
-  "%text_dwfduerg%"     => "text_dwfduerg"
-  "%text_dwfgold%"      => "text_dwfgold"
-  "%text_hflhide%"      => "text_hflhide"
-  "%text_hflstrong%"    => "text_hflstrong"
-  "%text_svirfn%"       => "text_svirfn"
-  "%text_wild_elf%"     => "text_wild_elf"
-  "%text_tiefling%"     => "text_tiefling"
-  "%text_feyri%"        => "text_feyri"
-  "%text_halfdrow%"     => "text_halfdrow"
-  "%text_air_genasi%"   => "text_air_genasi"
-  "%text_earth_genasi%" => "text_earth_genasi"
-  "%text_fire_genasi%"  => "text_fire_genasi"
-  "%text_water_genasi%" => "text_water_genasi"
-  "%text_halfgrayorc%"  => "text_halfgrayorc"
-  "%text_sun_elf%"      => "text_sun_elf"
-  "%text_wood_elf%"     => "text_wood_elf"
-  "%text_dusk_elf%"     => "text_dusk_elf"
-  "%text_lythari%"      => "text_lythari"
-  "%text_snow_elf%"     => "text_snow_elf"
-  "%text_wispling%"     => "text_wispling"
+    "%text_aasimar%"      => "text_aasimar"
+    "%text_drow%"         => "text_drow"
+    "%text_dwfduerg%"     => "text_dwfduerg"
+    "%text_dwfgold%"      => "text_dwfgold"
+    "%text_hflhide%"      => "text_hflhide"
+    "%text_hflstrong%"    => "text_hflstrong"
+    "%text_svirfn%"       => "text_svirfn"
+    "%text_wild_elf%"     => "text_wild_elf"
+    "%text_tiefling%"     => "text_tiefling"
+    "%text_feyri%"        => "text_feyri"
+    "%text_halfdrow%"     => "text_halfdrow"
+    "%text_air_genasi%"   => "text_air_genasi"
+    "%text_earth_genasi%" => "text_earth_genasi"
+    "%text_fire_genasi%"  => "text_fire_genasi"
+    "%text_water_genasi%" => "text_water_genasi"
+    "%text_halfgrayorc%"  => "text_halfgrayorc"
+    "%text_sun_elf%"      => "text_sun_elf"
+    "%text_wood_elf%"     => "text_wood_elf"
+    "%text_dusk_elf%"     => "text_dusk_elf"
+    "%text_lythari%"      => "text_lythari"
+    "%text_snow_elf%"     => "text_snow_elf"
+    "%text_wispling%"     => "text_wispling"
 END
 
-ACTION_PHP_EACH texts AS var => var_name BEGIN
-  LAF APPEND_STATDESC_ENTRY INT_VAR strref=var STR_VAR bam_file="SRSUBICO" RET EVAL "%var_name%"=index EVAL "Z%var_name%"=strref END
+ACTION_PHP_EACH texts AS var => var_name  BEGIN
+    LAF APPEND_STATDESC_ENTRY
+        INT_VAR
+            strref = var
+        STR_VAR
+            bam_file = "ZDSUBICO"
+        RET
+            EVAL
+            "%var_name%"  = index
+            EVAL
+            "Z%var_name%" = strref
+    END
 END
 
-COPY ~subrace/lua/m_zzsubr.lua~ ~override~ EVALUATE_BUFFER
-//BLOCK SUBRACE SPELLS
-COPY ~subrace/spl/spell.spl~ ~override/sr_aasim.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_aasimar END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=154 parameter2=3 END
-  END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
-  //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
-  // elemental resistances
-  PATCH_FOR_EACH resistance IN 27 28 29 BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=resistance target=2 timing=9 parameter1=15 END
-  END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srsnscoh" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/lua/m_zzsubr.lua~ ~override~
+    EVALUATE_BUFFER
+// BLOCK SUBRACE SPELLS
+COPY ~subrace/spl/spell.spl~ ~override/zd_aasim.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_aasimar
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 154
+                parameter2 = 3
+        END
+    END
+    // Wisdom +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // elemental resistances
+    PATCH_FOR_EACH resistance IN 27 28 29 BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = resistance
+                target     = 2
+                timing     = 9
+                parameter1 = 15
+        END
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdsnscoh"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_tiefl.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_tiefling END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=84 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=19 parameter2=6 END
-  END
-   //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1=1 END
-   //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  // elemental resistances
-  PATCH_FOR_EACH resistance IN 28 29 30 BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=resistance target=2 timing=9 parameter1=15 END
-  END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srblind" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_tiefl.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_tiefling
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 84
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 19
+                parameter2 = 6
+        END
+    END
+    // intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // elemental resistances
+    PATCH_FOR_EACH resistance IN 28 29 30 BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = resistance
+                target     = 2
+                timing     = 9
+                parameter1 = 15
+        END
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdblind"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_agena.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_air_genasi END
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-   //Skin color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=110 parameter2=3 END
-   // Hair color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=31 parameter2=6 END
-  END
-   //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
-   //dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
-  //Wisdom -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-   //Electricity resistance +25
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=29 target=2 timing=9 parameter1=25 END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srswtair" END
-  // +5% electricity damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=3 END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_agena.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_air_genasi
+    END
+    PATCH_IF (zd_colors = 1) BEGIN
+        // Skin color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 110
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 31
+                parameter2 = 6
+        END
+    END
+    // intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Wisdom -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Electricity resistance +25
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 29
+            target     = 2
+            timing     = 9
+            parameter1 = 25
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdswtair"
+    END
+    // +5% electricity damage dealt
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 332
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+            parameter2 = 3
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
+    PATCH_IF spell_wizard_suffocate > 0 BEGIN
+        LPF RES_NUM_OF_SPELL_NAME
+            STR_VAR
+                spell_name = "WIZARD_SUFFOCATE"
+            RET
+                spell_res
+        END
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode = 206
+                target = 2
+                timing = 9
+            STR_VAR
+                resource = EVAL "%spell_res%"
+        END
+    END
 
-  PATCH_IF spell_wizard_suffocate > 0 BEGIN
-    LPF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "WIZARD_SUFFOCATE" RET spell_res END
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=206 target=2 timing=9 STR_VAR resource = EVAL "%spell_res%" END
-  END
+COPY ~subrace/spl/spell.spl~ ~override/zd_egena.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_earth_genasi
+    END
+    PATCH_IF (zd_colors = 1) BEGIN
+        // Skin color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 137
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 137
+                parameter2 = 6
+        END
+    END
+    // strength +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 44
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // constitution +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 10
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Wisdom -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Acid resistance +25
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 27
+            target     = 2
+            timing     = 9
+            parameter1 = 25
+    END
+    // +2% physical resistance
+    PATCH_FOR_EACH op IN 86 87 88 89 BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = op
+                target     = 2
+                timing     = 9
+                parameter1 = 2
+        END
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdethskn"
+    END
+    // +5% acid damage dealt
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 332
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+            parameter2 = 4
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_egena.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_earth_genasi END
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-   //Skin color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=137 parameter2=3 END
-   // Hair color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=137 parameter2=6 END
-  END
-   // strength +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1=1 END
-  // constitution +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1=1 END
-  // Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  // Wisdom -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
-   //Acid resistance +25
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=27 target=2 timing=9 parameter1=25 END
-  // +2% physical resistance
-  PATCH_FOR_EACH op IN 86 87 88 89 BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=op target=2 timing=9 parameter1=2 END
-  END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srethskn" END
-  // +5% acid damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=4 END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_fgena.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_fire_genasi
+    END
+    PATCH_IF (zd_colors = 1) BEGIN
+        // Skin color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 87
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 80
+                parameter2 = 6
+        END
+    END
+    // intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Fire resistance +25
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 30
+            target     = 2
+            timing     = 9
+            parameter1 = 25
+    END
+    // Cold resistance -10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 28
+            target     = 2
+            timing     = 9
+            parameter1 = "-10"
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdbrnhds"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdbrnhds"
+    END
+    // +5% fire damage dealt
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 332
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+            parameter2 = 1
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_fgena.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_fire_genasi END
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-   //Skin color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=87 parameter2=3 END
-   // Hair color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=80 parameter2=6 END
-  END
-  //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  //Fire resistance +25
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=30 target=2 timing=9 parameter1=25 END
-  //Cold resistance -10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1="-10" END
-  //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srbrnhds" END
-  // +5% fire damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=1 END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_wgena.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_water_genasi
+    END
+    PATCH_IF (zd_colors = 1) BEGIN
+        // Skin color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 189
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 18
+                parameter2 = 6
+        END
+    END
+    // constitution +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 10
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Cold resistance 25
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 28
+            target     = 2
+            timing     = 9
+            parameter1 = 25
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdwrthfg"
+    END
+    // +5% cold damage dealt
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 332
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+            parameter2 = 2
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_wgena.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_water_genasi END
+COPY ~subrace/spl/spell.spl~ ~override/zd_feyri.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_feyri
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 84
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 19
+                parameter2 = 6
+        END
+    END
+    // intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // elemental resistances
+    PATCH_FOR_EACH resistance IN 28 29 30 BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = resistance
+                target     = 2
+                timing     = 9
+                parameter1 = 15
+        END
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdblind"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-   //Skin color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=189 parameter2=3 END
-   // Hair color
-   LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=18 parameter2=6 END
-  END
+COPY ~subrace/spl/spell.spl~ ~override/zd_drow.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_drow
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 182
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 79
+                parameter2 = 6
+        END
+    END
+    // Set spell state
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 328
+            target     = 2
+            timing     = 9
+            parameter2 = %CRE_BLINDED_IWD%
+            special    = 1
+    END
+    // intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Find traps +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Reputation
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 108
+            target     = 2
+            timing     = 9
+            parameter1 = "-2"
+    END
+    // Magic resistance 50%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 166
+            target     = 2
+            timing     = 9
+            parameter1 = 50
+    END
+    // Save vs. spells +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 37
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // Give innate ability
+    FOR (count=0; count<3; ++count) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode = 171
+                target = 2
+                timing = 9
+            STR_VAR
+                resource = "zdffire"
+        END
+    END
+    // Day blindness
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 272
+            target     = 2
+            timing     = 9
+            parameter1 = 6
+            parameter2 = 3
+        STR_VAR
+            resource = "zddblind"
+    END
+    // XP bonus - 90%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 90
+            parameter2 = 2
+    END
 
-  // constitution +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1=1 END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-   //Cold resistance 25
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=25 END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9 STR_VAR resource="srwrthfg" END
-  // +5% cold damage dealt
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=332 target=2 timing=9 parameter1=5 parameter2=2 END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_hgroc.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_halfgrayorc
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 14
+                parameter2 = 3
+        END
+    END
+    // Set spell state
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 328
+            target     = 2
+            timing     = 9
+            parameter2 = %CRE_BLINDED_IWD%
+            special    = 1
+    END
+    // constitution -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 10
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Wisdom +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Save +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 325
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // AC +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 0
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // Movement rate +2
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 176
+            target     = 2
+            timing     = 9
+            parameter1 = 2
+    END
+    // Day blindness
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 272
+            target     = 2
+            timing     = 9
+            parameter1 = 6
+            parameter2 = 3
+        STR_VAR
+            resource = "zddblind"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_feyri.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_feyri END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=84 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=19 parameter2=6 END
-  END
-  //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1=1 END
-   //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  // elemental resistances
-  PATCH_FOR_EACH resistance IN 28 29 30 BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=resistance target=2 timing=9 parameter1=15 END
-  END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-  //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srblind" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_hdrow.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_halfdrow
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 63
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 79
+                parameter2 = 6
+        END
+    END
+    // intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Find traps +5
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // 10% magic resistance
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 166
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdffire"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_drow.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_drow END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=182 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=79 parameter2=6 END
-  END
-  //Set spell state
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=328 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
-   //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
-   //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
-   //Find traps +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
-   //Reputation
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=108 target=2 timing=9 parameter1="-2" END
-   //Magic resistance 50%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=166 target=2 timing=9 parameter1=50 END
-   //Save vs. spells +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=37 target=2 timing=9 parameter1=1 END
-   //Give innate ability
-  FOR (count=0; count<3; ++count) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srffire" END
-  END
-   //Day blindness
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
-  //XP bonus - 90%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_ewild.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_wild_elf
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 1
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 29
+                parameter2 = 6
+        END
+    END
+    // Constitution +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 10
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // intlligence -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_hgroc.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_halfgrayorc END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=14 parameter2=3 END
-  END
+COPY ~subrace/spl/spell.spl~ ~override/zd_ewood.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_wood_elf
+    END
+    // Strength +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 44
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Intelligence -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // ranged THAC0 +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 167
+            parameter1 = 1
+            target     = 2
+            timing     = 1
+    END
 
-  //Set spell state
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=328 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
+COPY ~subrace/spl/spell.spl~ ~override/zd_esun.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_sun_elf
+    END
+    // Constitution -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 10
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
 
-  // constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
-  // Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  // Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_hlstr.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_hflstrong
+    END
+    // +1 axe proficiency point
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 233
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+            parameter2 = 65628
+    END
 
-   //Save +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=325 target=2 timing=9 parameter1=1 END
-  //AC +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=0 target=2 timing=9 parameter1=1 END
-  // Movement rate +2
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=176 target=2 timing=9 parameter1=2 END
-   //Day blindness
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_hlgho.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_hflhide
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 318
+            target     = 2
+            duration   = 1
+            parameter1 = 205
+            parameter2 = 115
+        STR_VAR
+            resource = "zd_hlgho"
+    END
+    // Find traps +5
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "spcl412"
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_hdrow.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_halfdrow END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=63 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=79 parameter2=6 END
-  END
-   //intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
-   //Find traps +5
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
-  // 10% magic resistance
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=166 target=2 timing=9 parameter1=10 END
-   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srffire" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_svirf.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_svirfn
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 10
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 0
+                parameter2 = 6
+        END
+    END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Wisdom +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Strength -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 44
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Magic resistance 50
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 166
+            target     = 2
+            timing     = 9
+            parameter1 = 50
+    END
+    // +2 Missile AC
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 0
+            target     = 2
+            timing     = 9
+            parameter1 = 2
+            parameter2 = 2
+    END
+    // Non detection
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 7
+            target = 2
+            timing = 9
+    END
+    // Save vs. all +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 325
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // Attack bonus
+    PATCH_FOR_EACH race IN 161 112 111 165 BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 177
+                target     = 2
+                timing     = 9
+                parameter1 = race
+                parameter2 = 4
+            STR_VAR
+                resource = "zdsvatk"
+        END
+    END
+    // Hide in shadows +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 275
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Hide in shadows no outdoors
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 272
+            target     = 2
+            timing     = 9
+            parameter1 = 6
+            parameter2 = 3
+        STR_VAR
+            resource = "zdsvshd"
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdsvmim"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdsvinv"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdsvblr"
+    END
+    // XP bonus - 85%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 85
+            parameter2 = 2
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 318
+            target     = 2
+            duration   = 1
+            parameter1 = 3
+            parameter2 = 133
+        STR_VAR
+            resource = "zd_svirf"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_ewild.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wild_elf END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=1 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=29 parameter2=6 END
-  END
-   //Constitution +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1=1 END
-   //intlligence -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1="-1" END
+COPY ~subrace/spl/spell.spl~ ~override/zd_dwgld.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_dwfgold
+    END
+    // Charisma +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Dexterity -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // +2 AC vs giants
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 177
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+            parameter2 = 3
+        STR_VAR
+            resource = "zddwacg"
+    END
+    // Attack bonus
+    PATCH_FOR_EACH race IN 2 172 124 116 123 BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 177
+                target     = 2
+                timing     = 9
+                parameter1 = race
+                parameter2 = 4
+            STR_VAR
+                resource = "zdsvatk"
+        END
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_ewood.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wood_elf END
-  //Strength +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1=1 END
-  //Intelligence -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1="-1" END
-  // ranged THAC0 +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=167 parameter1=1 target=2 timing=1 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_duerg.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_dwfduerg
+    END
+    // Skin color
+    PATCH_IF (zd_colors = 1) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 63
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 5
+                parameter2 = 6
+        END
+    END
+    // Set spell state
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 328
+            target     = 2
+            timing     = 9
+            parameter2 = %CRE_BLINDED_IWD%
+            special    = 1
+    END
+    // Find traps +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Save vs. spells +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 37
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // Move silently +20
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 59
+            target     = 2
+            timing     = 9
+            parameter1 = 20
+    END
+    // +2 AC vs giants
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 177
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+            parameter2 = 3
+        STR_VAR
+            resource = "zddwacg"
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdsvinv"
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // Reputation
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 108
+            target     = 2
+            timing     = 9
+            parameter1 = "-1"
+    END
+    // Day blindness
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 272
+            target     = 2
+            timing     = 9
+            parameter1 = 6
+            parameter2 = 3
+        STR_VAR
+            resource = "zddblind"
+    END
+    // XP bonus - 90%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 90
+            parameter2 = 2
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 318
+            target     = 2
+            duration   = 1
+            parameter1 = 3
+            parameter2 = 133
+        STR_VAR
+            resource = "zd_duerg"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_esun.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_sun_elf END
-  //Constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1  parameter1="-1" END
-  //Intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1  parameter1=1 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_edusk.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_dusk_elf
+    END
+    // Strength +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 44
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Wisdom +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Intelligence -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Charisma -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Hide in shadows +5
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 275
+            target     = 2
+            timing     = 9
+            parameter1 = 5
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_hlstr.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_hflstrong END
-   // +1 axe proficiency point
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=233 target=2 timing=9 parameter1=1 parameter2=65628 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_elyth.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_lythari
+    END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Wisdom +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Intelligence -2
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = "-2"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
+    // Shapechange into wolf once a day
+    PATCH_IF (GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode = 171
+                target = 1
+                timing = 9
+            STR_VAR
+                resource = "spin110"
+        END
+    END
+    PATCH_IF (GAME_IS_IWDEE) BEGIN
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode = 171
+                target = 1
+                timing = 9
+            STR_VAR
+                resource = "spcl612"
+        END
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_hlgho.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_hflhide END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=205 parameter2=115 STR_VAR resource="sr_hlgho" END
-   //Find traps +5
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=5 END
-   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="spcl412" END
+COPY ~subrace/spl/spell.spl~ ~override/zd_esnow.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_snow_elf
+    END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Constitution -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 10
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Cold resistance +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 28
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Set Snare once a day
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 1
+            timing = 9
+        STR_VAR
+            resource = "spcl412"
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_svirf.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_svirfn END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=10 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=0 parameter2=6 END
-  END
-   //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1=1 END
-   //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1=1 END
-   //Strength -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1  parameter1="-1" END
-  //Magic resistance 50
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=166 target=2 timing=9 parameter1=50 END
-   //+2 Missile AC
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=0 target=2 timing=9  parameter1=2 parameter2=2 END
-   //Non detection
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  END
-   //Save vs. all +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=325 target=2 timing=9 parameter1=1 END
-   //Attack bonus
-  PATCH_FOR_EACH race IN 161 112 111 165 BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=177 target=2 timing=9 parameter1=race parameter2=4 STR_VAR resource="srsvatk" END
-  END
-   //Hide in shadows +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=10 END
-   //Hide in shadows no outdoors
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srsvshd" END
-   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srsvmim" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srsvinv" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srsvblr" END
-  //XP bonus - 85%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=85 parameter2=2 END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource="sr_svirf" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
+COPY ~subrace/spl/spell.spl~ ~override/zd_wsplg.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_wispling
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    PATCH_IF (zd_colors = 1) BEGIN
+        // Skin color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 9
+                parameter2 = 3
+        END
+        // Hair color
+        LPF ADD_SPELL_EFFECT
+            INT_VAR
+                opcode     = 7
+                target     = 2
+                timing     = 9
+                parameter1 = 195
+                parameter2 = 6
+        END
+    END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma -2
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-2"
+    END
+    // Wisdom -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 49
+            target     = 2
+            timing     = 1
+            parameter1 = "-1"
+    END
+    // Hide in shadows +15
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 275
+            target     = 2
+            timing     = 9
+            parameter1 = 15
+    END
+    // Move silently +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 59
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Movement rate +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 176
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // Cast Haste Self one per day
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 1
+            timing = 9
+        STR_VAR
+            resource = "zdwsplht"
+    END
+    // Cast Polymorph Self one per day
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 1
+            timing = 9
+        STR_VAR
+            resource = "zdwsppms"
+    END
+    // XP bonus - 93%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 93
+            parameter2 = 2
+    END
+// BLOCKEND
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_dwgld.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dwfgold END
-   //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1=1 END
-   //Dexterity -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1  parameter1="-1" END
-   //+2 AC vs giants
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=177 target=2 timing=9 parameter1=5 parameter2=3  STR_VAR resource="srdwacg" END
-   //Attack bonus
-  PATCH_FOR_EACH race IN 2 172 124 116 123 BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=177 target=2 timing=9 parameter1=race parameter2=4 STR_VAR resource="srsvatk" END
-  END
-
-COPY ~subrace/spl/spell.spl~ ~override/sr_duerg.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dwfduerg END
-   //Skin color
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=63 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9  parameter1=5 parameter2=6 END
-  END
-  //Set spell state
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=328 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
-   //Find traps +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
-   //Save vs. spells +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=37 target=2 timing=9 parameter1=1 END
-   //Move silently +20
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=59 target=2 timing=9 parameter1=20 END
-   //+2 AC vs giants
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=177 target=2 timing=9 parameter1=5 parameter2=3  STR_VAR resource="srdwacg" END
-   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srsvinv" END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-   //Reputation
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=108 target=2 timing=9 parameter1="-1" END
-   //Day blindness
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
-  //XP bonus - 90%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
-   //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 duration=1 parameter1=3 parameter2=133 STR_VAR resource="sr_duerg" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-1" END
-
-COPY ~subrace/spl/spell.spl~ ~override/sr_edusk.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_dusk_elf END
-  //Strength +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=44 target=2 timing=1 parameter1=1 END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
-  //Intelligence -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-1" END
-  //Charisma -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1="-1" END
-  //Hide in shadows +5
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=5 END
-
-COPY ~subrace/spl/spell.spl~ ~override/sr_elyth.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_lythari END
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Wisdom +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1 parameter1=1 END
-  //Charisma +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1 parameter1=1 END
-  //Intelligence -2
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1="-2" END
-  //XP bonus - 95%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=95 parameter2=2 END
-  //Shapechange into wolf once a day
-  PATCH_IF ( GAME_IS_BGEE OR GAME_IS_BG2EE OR GAME_IS_EET ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spin110" END
-  END
-  PATCH_IF ( GAME_IS_IWDEE ) BEGIN
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spcl612" END
-  END
-
-COPY ~subrace/spl/spell.spl~ ~override/sr_esnow.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_snow_elf END
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Constitution -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=10 target=2 timing=1 parameter1="-1" END
-  //Cold resistance +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=28 target=2 timing=9 parameter1=10 END
-  // Set Snare once a day
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="spcl412" END
-
-COPY ~subrace/spl/spell.spl~ ~override/sr_wsplg.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_wispling END
-   //Infravision
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=63 target=2 timing=9 END
-
-  PATCH_IF ( sr_colors = 1 ) BEGIN
-    //Skin color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=9 parameter2=3 END
-   //Hair color
-    LPF ADD_SPELL_EFFECT INT_VAR opcode=7 target=2 timing=9 parameter1=195 parameter2=6 END
-  END
-
-  //Dexterity +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=15 target=2 timing=1 parameter1=1 END
-  //Intelligence +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=19 target=2 timing=1 parameter1=1 END
-   //Charisma -2
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=6 target=2 timing=1  parameter1="-2" END
-  //Wisdom -1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=49 target=2 timing=1  parameter1="-1" END
-   //Hide in shadows +15
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 timing=9 parameter1=15 END
-   //Move silently +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=59 target=2 timing=9 parameter1=10 END
-  // Movement rate +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=176 target=2 timing=9 parameter1=1 END
-  // Cast Haste Self one per day
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsplht" END
-  // Cast Polymorph Self one per day
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=1 timing=9 STR_VAR resource="srwsppms" END
-  //XP bonus - 93%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=93 parameter2=2 END
-//BLOCKEND
-
-//BLOCK ABILITY SPELLS
-//SRSNSCOH (IDPR113)
+// BLOCK ABILITY SPELLS
+// zdSNSCOH (IDPR113)
 ADD_PROJECTILE ~subrace/pro/idpro000.pro~
-COPY ~subrace/spl/idpr113.spl~ ~override/srsnscoh.spl~
-	SAY 0x08 @40
-	SAY 0x50 @41
-	LPM CONVERT_SPL_TO_INNATE
-	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=324 opcode=318 STR_VAR resource="srsnscoh" END
-	LPF ALTER_SPELL_HEADER INT_VAR projectile=idpro000 END
-//SRBLIND  (SPWI106)
-COPY_EXISTING ~spwi106.spl~ ~override/srblind.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srblind" END
+COPY ~subrace/spl/idpr113.spl~ ~override/zdsnscoh.spl~
+    SAY 0x08 @40
+    SAY 0x50 @41
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_SPELL_EFFECT
+        INT_VAR
+            match_opcode = 324
+            opcode       = 318
+        STR_VAR
+            resource = "zdsnscoh"
+    END
+    LPF ALTER_SPELL_HEADER
+        INT_VAR
+            projectile = idpro000
+    END
+// zdBLIND  (SPWI106)
+COPY_EXISTING ~spwi106.spl~ ~override/zdblind.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdblind"
+    END
 
-COPY_EXISTING ~spwi103.spl~ ~override/srbrnhds.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srbrnhds" END
+COPY_EXISTING ~spwi103.spl~ ~override/zdbrnhds.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdbrnhds"
+    END
 
-COPY_EXISTING ~sppr318.spl~ ~override/srswtair.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srswtair" END
+COPY_EXISTING ~sppr318.spl~ ~override/zdswtair.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdswtair"
+    END
 
-COPY_EXISTING ~spwi408.spl~ ~override/srethskn.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap = 1 END
-  LPF ALTER_EFFECT INT_VAR check_globals=0 match_opcode = 218 parameter1 = 1 END
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srethskn" END
+COPY_EXISTING ~spwi408.spl~ ~override/zdethskn.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ~CD_TRIM-O-MATIC~
+        INT_VAR
+            level_cap = 1
+    END
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            match_opcode  = 218
+            parameter1    = 1
+    END
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdethskn"
+    END
 
-COPY_EXISTING ~spwi305.spl~ ~override/srwsplht.spl~
-  SAY 0x08 @44
-  SAY 0x50 @45
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ~CD_TRIM-O-MATIC~ INT_VAR level_cap=1 END
-  LPF ALTER_HEADER INT_VAR target=5 speed=0 projectile=1 END
-  LPF ALTER_EFFECT_EX INT_VAR duration=24 STR_VAR match_duration_ex = "(o_duration > 6)" END
-  LPF ALTER_EFFECT INT_VAR power=1 STR_VAR match_power_ex = "(o_power > 1)" END
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwsplht" END
+COPY_EXISTING ~spwi305.spl~ ~override/zdwsplht.spl~
+    SAY 0x08 @44
+    SAY 0x50 @45
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ~CD_TRIM-O-MATIC~
+        INT_VAR
+            level_cap = 1
+    END
+    LPF ALTER_HEADER
+        INT_VAR
+            target     = 5
+            speed      = 0
+            projectile = 1
+    END
+    LPF ALTER_EFFECT_EX
+        INT_VAR
+            duration = 24
+        STR_VAR
+            match_duration_ex = "(o_duration > 6)"
+    END
+    LPF ALTER_EFFECT
+        INT_VAR
+            power = 1
+        STR_VAR
+            match_power_ex = "(o_power > 1)"
+    END
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdwsplht"
+    END
 
-COPY_EXISTING ~spwi416.spl~ ~override/srwsppms.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_HEADER INT_VAR speed=0 END
-  LPF CLONE_EFFECT STR_VAR match_resource = "spwi416" resource="srwsppms" END
+COPY_EXISTING ~spwi416.spl~ ~override/zdwsppms.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_HEADER
+        INT_VAR
+            speed = 0
+    END
+    LPF CLONE_EFFECT
+        STR_VAR
+            match_resource = "spwi416"
+            resource       = "zdwsppms"
+    END
 
-COPY_EXISTING ~sppr250.spl~ ~override/srwrthfg.spl~
-  LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srwrthfg" END
+COPY_EXISTING ~sppr250.spl~ ~override/zdwrthfg.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdwrthfg"
+    END
 
-//SRFFIRE  (sppr116)  (sppr100)
-COPY ~subrace/spl/sppr100.spl~ ~override/srffire.spl~
-	SAY 0x08 @42
-	SAY 0x50 @43
-	LPM CONVERT_SPL_TO_INNATE
-	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=318 STR_VAR resource="srffire" END
-	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=206 STR_VAR resource="srffire" END
-	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=139 parameter1=RESOLVE_STR_REF(@42) END
+// zdFFIRE  (sppr116)  (sppr100)
+COPY ~subrace/spl/sppr100.spl~ ~override/zdffire.spl~
+    SAY 0x08 @42
+    SAY 0x50 @43
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_SPELL_EFFECT
+        INT_VAR
+            match_opcode = 318
+        STR_VAR
+            resource = "zdffire"
+    END
+    LPF ALTER_SPELL_EFFECT
+        INT_VAR
+            match_opcode = 206
+        STR_VAR
+            resource = "zdffire"
+    END
+    LPF ALTER_SPELL_EFFECT
+        INT_VAR
+            match_opcode = 139
+            parameter1   = RESOLVE_STR_REF(@42)
+    END
 
-//SRSVMIM  (SPWI212) - Mirror Image
-COPY_EXISTING ~spwi212.spl~ ~override/srsvmim.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srsvmim" END
+// zdSVMIM  (SPWI212) - Mirror Image
+COPY_EXISTING ~spwi212.spl~ ~override/zdsvmim.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdsvmim"
+    END
 
-//SRSVINV  (spwi206) - Invisibility
-COPY_EXISTING ~spwi206.spl~ ~override/srsvinv.spl~
-	LPM CONVERT_SPL_TO_INNATE
-	LPF ALTER_SPELL_HEADER INT_VAR target=5 speed=0 END
-	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode="-1" target=1 END
-	LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete=174 END
-	WRITE_SHORT 0x22 0
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srsvinv" END
+// zdSVINV  (spwi206) - Invisibility
+COPY_EXISTING ~spwi206.spl~ ~override/zdsvinv.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_SPELL_HEADER
+        INT_VAR
+            target = 5
+            speed  = 0
+    END
+    LPF ALTER_SPELL_EFFECT
+        INT_VAR
+            match_opcode = "-1"
+            target       = 1
+    END
+    LPF DELETE_SPELL_EFFECT
+        INT_VAR
+            opcode_to_delete = 174
+    END
+    WRITE_SHORT 0x22 0
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdsvinv"
+    END
 
-//SRSVBLR  (spwi201) - Blur
-COPY_EXISTING ~spwi201.spl~ ~override/srsvblr.spl~
-	LPM CONVERT_SPL_TO_INNATE
-  LPF ALTER_EFFECT INT_VAR check_globals=0 silent=1 STR_VAR match_resource = "%SOURCE_RES%" resource = "srsvblr" END
-//BLOCKEND
+// zdSVBLR  (spwi201) - Blur
+COPY_EXISTING ~spwi201.spl~ ~override/zdsvblr.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdsvblr"
+    END
+// BLOCKEND
 
-//BLOCK SPELLS XP
-//SRSVATK.EFF - +1 THAC0
-COPY ~subrace/eff/effect.eff~ ~override/srsvatk.eff~
-  WRITE_LONG  0x10 278
-  WRITE_LONG  0x14 2
-  WRITE_LONG  0x1c 1
-  WRITE_LONG  0x24 1
-  WRITE_SHORT 0x2c 100
+// BLOCK SPELLS XP
+// zdsvatk.EFF - +1 THAC0
+COPY ~subrace/eff/effect.eff~ ~override/zdsvatk.eff~
+    WRITE_LONG 0x10 278
+    WRITE_LONG 0x14 2
+    WRITE_LONG 0x1c 1
+    WRITE_LONG 0x24 1
+    WRITE_SHORT 0x2c 100
 
-//SRDWACG.EFF - +4 AC
-COPY ~subrace/eff/effect.eff~ ~override/srdwacg.eff~
-  WRITE_LONG  0x10 0
-  WRITE_LONG  0x14 2
-  WRITE_LONG  0x1c 4
-  WRITE_LONG  0x24 1
-  WRITE_SHORT 0x2c 100
+// zdDWACG.EFF - +4 AC
+COPY ~subrace/eff/effect.eff~ ~override/zddwacg.eff~
+    WRITE_LONG 0x10 0
+    WRITE_LONG 0x14 2
+    WRITE_LONG 0x1c 4
+    WRITE_LONG 0x24 1
+    WRITE_SHORT 0x2c 100
 
-//Drow blindness
-//SRDBLIND.EFF - Cast Spell SRDBLIND.spl
-COPY ~subrace/eff/effect.eff~ ~override/srdblind.eff~
-  WRITE_LONG  0x10 146
-  WRITE_LONG  0x14 2
-  WRITE_LONG  0x20 1
-  WRITE_LONG  0x24 1
-  WRITE_SHORT 0x2c 100
-  WRITE_ASCII 0x30 ~srdblind~ (8)
+// Drow blindness
+// zdDBLIND.EFF - Cast Spell zdDBLIND.spl
+COPY ~subrace/eff/effect.eff~ ~override/zddblind.eff~
+    WRITE_LONG 0x10 146
+    WRITE_LONG 0x14 2
+    WRITE_LONG 0x20 1
+    WRITE_LONG 0x24 1
+    WRITE_SHORT 0x2c 100
+    WRITE_ASCII 0x30 ~zddblind~ (8)
 
-COPY ~subrace/spl/spell.spl~ ~override/srdblind.spl~
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=321 target=2 timing=1 STR_VAR resource="srdblind" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 parameter2=%notoutdoor% duration=1 STR_VAR resource="srdblind" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 parameter2=90 duration=1 STR_VAR resource="srdblind" END
-  //-1 THAC0
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=278 target=2 parameter1="-1" duration=60 END
-  //-1 Saves
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=325 target=2 parameter1="-1" duration=60 END
-  //Hide in shadows
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 parameter1="-5" duration=60 END
-  //Open locks
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=90 target=2 parameter1="-5" duration=60 END
-  //Find traps
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 parameter1="-5" duration=60 END
-  //Pick pockets
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=92 target=2 parameter1="-5" duration=60 END
-  //Move silently
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=59 target=2 parameter1="-5" duration=60 END
-  //Set trap
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=277 target=2 parameter1="-5" duration=60 END
-  //Visual range
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=262 target=2 parameter1="-4" duration=60 END
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 parameter2=8  duration=60 END
+COPY ~subrace/spl/spell.spl~ ~override/zddblind.spl~
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 321
+            target = 2
+            timing = 1
+        STR_VAR
+            resource = "zddblind"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 318
+            target     = 2
+            parameter2 = %notoutdoor%
+            duration   = 1
+        STR_VAR
+            resource = "zddblind"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 318
+            target     = 2
+            parameter2 = 90
+            duration   = 1
+        STR_VAR
+            resource = "zddblind"
+    END
+    // -1 THAC0
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 278
+            target     = 2
+            parameter1 = "-1"
+            duration   = 60
+    END
+    // -1 Saves
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 325
+            target     = 2
+            parameter1 = "-1"
+            duration   = 60
+    END
+    // Hide in shadows
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 275
+            target     = 2
+            parameter1 = "-5"
+            duration   = 60
+    END
+    // Open locks
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 90
+            target     = 2
+            parameter1 = "-5"
+            duration   = 60
+    END
+    // Find traps
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            parameter1 = "-5"
+            duration   = 60
+    END
+    // Pick pockets
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 92
+            target     = 2
+            parameter1 = "-5"
+            duration   = 60
+    END
+    // Move silently
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 59
+            target     = 2
+            parameter1 = "-5"
+            duration   = 60
+    END
+    // Set trap
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 277
+            target     = 2
+            parameter1 = "-5"
+            duration   = 60
+    END
+    // Visual range
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 262
+            target     = 2
+            parameter1 = "-4"
+            duration   = 60
+    END
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            parameter2 = 8
+            duration   = 60
+    END
 
-//Hide in shadows no outdoors
-//SRSVSHD.EFF - Apply effect list SRSVSHD.spl
-COPY ~subrace/eff/effect.eff~ ~override/srsvshd.eff~
-  WRITE_LONG  0x10 146
-  WRITE_LONG  0x14 2
-  WRITE_LONG  0x20 1
-  WRITE_LONG  0x24 1
-  WRITE_SHORT 0x2c 100
-  WRITE_ASCII 0x30 ~srsvshd~ (8)
+// Hide in shadows no outdoors
+// zdSVSHD.EFF - Apply effect list zdSVSHD.spl
+COPY ~subrace/eff/effect.eff~ ~override/zdsvshd.eff~
+    WRITE_LONG 0x10 146
+    WRITE_LONG 0x14 2
+    WRITE_LONG 0x20 1
+    WRITE_LONG 0x24 1
+    WRITE_SHORT 0x2c 100
+    WRITE_ASCII 0x30 ~zdsvshd~ (8)
 
-COPY ~subrace/spl/spell.spl~ ~override/srsvshd.spl~
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=321 target=2 timing=1 STR_VAR resource="srsvshd" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=318 target=2 parameter2=%outdoor% duration=1 STR_VAR resource="srsvshd" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=275 target=2 duration=60 parameter1=10 END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 duration=60 parameter1=10 END
+COPY ~subrace/spl/spell.spl~ ~override/zdsvshd.spl~
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 321
+            target = 2
+            timing = 1
+        STR_VAR
+            resource = "zdsvshd"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 318
+            target     = 2
+            parameter2 = %outdoor%
+            duration   = 1
+        STR_VAR
+            resource = "zdsvshd"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 275
+            target     = 2
+            duration   = 60
+            parameter1 = 10
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            duration   = 60
+            parameter1 = 10
+    END
 
-COPY ~subrace/spl/spell.spl~ ~override/sr_vcba.spl~
-  //Portrait icon
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=142 target=2 timing=9 parameter2=text_drow END
-  //Set spell state
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=328 target=2 timing=9  parameter2=%CRE_BLINDED_IWD% special=1  END
-   //Find traps +10
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=91 target=2 timing=9 parameter1=10 END
-   //Save vs. spells +1
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=37 target=2 timing=9 parameter1=1 END
-   //Give innate ability
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srffire" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srffire" END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=171 target=2 timing=9  STR_VAR resource="srffire" END
-   //Day blindness
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=272 target=2 timing=9 parameter1=6 parameter2=3  STR_VAR resource="srdblind" END
-  //XP bonus - 90%
-  LPF ADD_SPELL_EFFECT INT_VAR opcode=104 target=2 timing=9 parameter1=90 parameter2=2 END
+COPY ~subrace/spl/spell.spl~ ~override/zd_vcba.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_drow
+    END
+    // Set spell state
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 328
+            target     = 2
+            timing     = 9
+            parameter2 = %CRE_BLINDED_IWD%
+            special    = 1
+    END
+    // Find traps +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 91
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Save vs. spells +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 37
+            target     = 2
+            timing     = 9
+            parameter1 = 1
+    END
+    // Give innate ability
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdffire"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdffire"
+    END
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 2
+            timing = 9
+        STR_VAR
+            resource = "zdffire"
+    END
+    // Day blindness
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 272
+            target     = 2
+            timing     = 9
+            parameter1 = 6
+            parameter2 = 3
+        STR_VAR
+            resource = "zddblind"
+    END
+    // XP bonus - 90%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 90
+            parameter2 = 2
+    END
 
 COPY_EXISTING ~ui.menu~ ~override~
-	LPM SHOW_IN_CHARACTER_RECORD
+    LPM SHOW_IN_CHARACTER_RECORD
 BUT_ONLY
