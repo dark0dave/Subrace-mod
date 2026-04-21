@@ -10,14 +10,20 @@
       devShells = forAllSystems (system:
         let
           pkgs = import nixpkgs { inherit system; };
+          remote = builtins.fetchTarball {
+            url = "https://github.com/jdx/hk/archive/refs/tags/v1.43.0.tar.gz";
+            sha256 = "0m7xjcsc7rv8pr3pyq5dx1j00bl51ik30ci51i4s11n0b7fqiix8";
+          };
+          hk = pkgs.callPackage (remote + "/default.nix") { };
         in {
+          packages = { hk = hk; };
           default = pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
               envsubst
               ffmpeg
               git
+              hk
               lua
-              pre-commit
               weidu
             ];
           };

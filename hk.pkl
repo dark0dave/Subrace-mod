@@ -1,0 +1,37 @@
+amends "package://github.com/jdx/hk/releases/download/v1.43.0/hk@1.43.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.43.0/hk@1.43.0#/Builtins.pkl"
+
+local builtin_hooks = new Mapping<String, Step> {
+  ["check-merge-conflict"] = Builtins.check_merge_conflict
+  ["check-case-conflict"] = Builtins.check_case_conflict
+  ["check-conventional-commit"] = Builtins.check_merge_conflict
+  ["pkl-format"] = Builtins.pkl_format
+}
+
+local local_hooks = new Mapping<String, Step> {
+  ["check-weidu"] {
+    exclude = Regex(#"^\.hk/"#)
+    check = ".github/scripts/check-weidu.sh {{files}}"
+  }
+  ["ie-file-check"] {
+    exclude = Regex(#"^\.hk/"#)
+    check = ".github/scripts/check-ie.sh"
+  }
+  ["version-check"] {
+    check = ".github/scripts/check-version.sh"
+  }
+  ["git-check"] {
+    check = ".github/scripts/check-git.sh"
+  }
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps {
+      ...builtin_hooks
+      ...local_hooks
+    }
+  }
+}
