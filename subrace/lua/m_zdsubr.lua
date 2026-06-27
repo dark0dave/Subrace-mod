@@ -178,7 +178,7 @@ function getRaceSubraceTitle(sbr)
 	if sbr == 1 then
 		return Infinity_FetchString(%select_subraceA%)
 	else
-		return t("RACE_TITLE")
+		return getUiString("RACE_TITLE")
 	end
 end
 
