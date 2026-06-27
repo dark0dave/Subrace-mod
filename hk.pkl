@@ -14,6 +14,11 @@ local builtin_hooks = new Mapping<String, Step> {
 }
 
 local local_hooks = new Mapping<String, Step> {
+  ["codespell"] {
+    glob = List("subrace/lang/en_us/*.tra", "*.tp2", "*.lua", "*.d", "readme.md")
+    exclude = List("hk.pkl",)
+    check = "codespell -c {{files}} --config .codespellrc"
+  }
   ["check-ie"] {
     glob = List("*.bam","*.baf","*.cre","*.d","*.itm","*.spl","*.sto","*.wav","*.vvc")
     check = ".github/scripts/check-ie.sh {{files}}"
@@ -23,7 +28,7 @@ local local_hooks = new Mapping<String, Step> {
     fix = "git add --renormalize ."
   }
   ["weidu-check"] {
-    glob = List("*.d","*.tp2","*.tpa","*.tpp","*.tph")
+    glob = List("*.d","*.tp2","*.tpa","*.tpp")
     check = ".github/scripts/check-weidu.sh {{files}}"
   }
   ["version-check"] {

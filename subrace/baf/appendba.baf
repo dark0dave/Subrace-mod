@@ -2,1589 +2,1750 @@
 // Player 1
 // -------------------------------------------
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL", 0)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 0)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",1)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 1)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",1)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",1))
-		ActionOverride(Player1,ApplySpellRES("ZD_AASIM",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 1)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 1))
+        ActionOverride(Player1, ApplySpellRES("ZD_AASIM", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",2)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 2)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",2))
-		ActionOverride(Player1,ApplySpellRES("ZD_TIEFL",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 2)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 2))
+        ActionOverride(Player1, ApplySpellRES("ZD_TIEFL", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",3)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 3)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",3)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",3))
-		ActionOverride(Player1,ApplySpellRES("ZD_DROW",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 3)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 3))
+        ActionOverride(Player1, ApplySpellRES("ZD_DROW", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",4)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 4)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",4)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",4))
-		ActionOverride(Player1,ApplySpellRES("ZD_EWILD",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 4)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 4))
+        ActionOverride(Player1, ApplySpellRES("ZD_EWILD", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",5)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 5)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",5)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",5))
-		ActionOverride(Player1,ApplySpellRES("ZD_DWGLD",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 5)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 5))
+        ActionOverride(Player1, ApplySpellRES("ZD_DWGLD", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",6)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 6)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",6)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",6))
-		ActionOverride(Player1,ApplySpellRES("ZD_DUERG",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 6)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 6))
+        ActionOverride(Player1, ApplySpellRES("ZD_DUERG", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",7)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 7)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",7)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",7))
-		ActionOverride(Player1,ApplySpellRES("ZD_HLSTR",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 7)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 7))
+        ActionOverride(Player1, ApplySpellRES("ZD_HLSTR", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",8)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 8)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",8)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",8))
-		ActionOverride(Player1,ApplySpellRES("ZD_HLGHO",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 8)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 8))
+        ActionOverride(Player1, ApplySpellRES("ZD_HLGHO", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",9)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 9)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",9)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",9))
-		ActionOverride(Player1,ApplySpellRES("ZD_SVIRF",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 9)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 9))
+        ActionOverride(Player1, ApplySpellRES("ZD_SVIRF", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",10)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 10)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",10))
-
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",11)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 11)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",11)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",11))
-		ActionOverride(Player1,ApplySpellRES("ZD_FEYRI",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 11)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 11))
+        ActionOverride(Player1, ApplySpellRES("ZD_FEYRI", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",12)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 12)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",12)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",12))
-		ActionOverride(Player1,ApplySpellRES("ZD_HDROW",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 12)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 12))
+        ActionOverride(Player1, ApplySpellRES("ZD_HDROW", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",13)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 13)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",13)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",13))
-		ActionOverride(Player1,ApplySpellRES("ZD_AGENA",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 13)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 13))
+        ActionOverride(Player1, ApplySpellRES("ZD_AGENA", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",14)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 14)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",14)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player1,ApplySpellRES("ZD_EGENA",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 14)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 14))
+        ActionOverride(Player1, ApplySpellRES("ZD_EGENA", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",15)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 15)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",15)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player1,ApplySpellRES("ZD_FGENA",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 15)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 15))
+        ActionOverride(Player1, ApplySpellRES("ZD_FGENA", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",16)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 16)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",16)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player1,ApplySpellRES("ZD_WGENA",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 16)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 16))
+        ActionOverride(Player1, ApplySpellRES("ZD_WGENA", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",17)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 17)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",17)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player1,ApplySpellRES("ZD_HGROC",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 17)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 17))
+        ActionOverride(Player1, ApplySpellRES("ZD_HGROC", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",18)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 18)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",18)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",18))
-		ActionOverride(Player1,ApplySpellRES("ZD_ESUN",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 18)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 18))
+        ActionOverride(Player1, ApplySpellRES("ZD_ESUN", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",19)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 19)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",19)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",19))
-		ActionOverride(Player1,ApplySpellRES("ZD_EWOOD",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 19)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 19))
+        ActionOverride(Player1, ApplySpellRES("ZD_EWOOD", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",20)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 20)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",20)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",20))
-		ActionOverride(Player1,ApplySpellRES("ZD_EDUSK",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 20)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 20))
+        ActionOverride(Player1, ApplySpellRES("ZD_EDUSK", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",21)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 21)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",21)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",21))
-		ActionOverride(Player1,ApplySpellRES("ZD_ELYTH",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 21)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 21))
+        ActionOverride(Player1, ApplySpellRES("ZD_ELYTH", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",22)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 22)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",22)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",22))
-		ActionOverride(Player1,ApplySpellRES("ZD_ESNOW",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 22)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 22))
+        ActionOverride(Player1, ApplySpellRES("ZD_ESNOW", Player1))
 END
 
 IF
-	Global("Player_1_Change_Subrace","GLOBAL",0)
-	Global("P1_SUBRACE","GLOBAL",23)
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 23)
 THEN
-	RESPONSE #100
-		SetGlobal("P1_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_1_Change_Subrace","GLOBAL",23)
-		ActionOverride(Player1,SetGlobal("SUBRACE","LOCALS",23))
-		ActionOverride(Player1,ApplySpellRES("ZD_WSPLG",Player1))
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player1, ApplySpellRES("ZD_WSPLG", Player1))
+END
+
+IF
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 24)
+    OR(4)
+      Class(Player1,THIEF_ALL)
+      Class(Player1,RANGER_ALL)
+      Class(Player1,BARD_ALL)
+      Class(Player1,SORCERER)
+THEN
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player1, ApplySpellRES("ZD_YUAN1", Player1))
+END
+IF
+    Global("Player_1_Change_Subrace", "GLOBAL", 0)
+    Global("P1_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P1_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_1_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player1, ApplySpellRES("ZD_YUAN2", Player1))
 END
 // -------------------------------------------
 // Player 2
 // -------------------------------------------
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL", 0)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 0)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",1)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 1)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",1)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",1))
-		ActionOverride(Player2,ApplySpellRES("ZD_AASIM",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 1)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 1))
+        ActionOverride(Player2, ApplySpellRES("ZD_AASIM", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",2)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 2)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",2))
-		ActionOverride(Player2,ApplySpellRES("ZD_TIEFL",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 2)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 2))
+        ActionOverride(Player2, ApplySpellRES("ZD_TIEFL", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",3)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 3)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",3)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",3))
-		ActionOverride(Player2,ApplySpellRES("ZD_DROW",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 3)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 3))
+        ActionOverride(Player2, ApplySpellRES("ZD_DROW", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",4)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 4)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",4)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",4))
-		ActionOverride(Player2,ApplySpellRES("ZD_EWILD",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 4)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 4))
+        ActionOverride(Player2, ApplySpellRES("ZD_EWILD", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",5)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 5)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",5)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",5))
-		ActionOverride(Player2,ApplySpellRES("ZD_DWGLD",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 5)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 5))
+        ActionOverride(Player2, ApplySpellRES("ZD_DWGLD", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",6)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 6)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",6)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",6))
-		ActionOverride(Player2,ApplySpellRES("ZD_DUERG",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 6)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 6))
+        ActionOverride(Player2, ApplySpellRES("ZD_DUERG", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",7)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 7)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",7)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",7))
-		ActionOverride(Player2,ApplySpellRES("ZD_HLSTR",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 7)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 7))
+        ActionOverride(Player2, ApplySpellRES("ZD_HLSTR", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",8)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 8)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",8)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",8))
-		ActionOverride(Player2,ApplySpellRES("ZD_HLGHO",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 8)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 8))
+        ActionOverride(Player2, ApplySpellRES("ZD_HLGHO", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",9)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 9)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",9)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",9))
-		ActionOverride(Player2,ApplySpellRES("ZD_SVIRF",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 9)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 9))
+        ActionOverride(Player2, ApplySpellRES("ZD_SVIRF", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",10)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 10)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",10))
-
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",11)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 11)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",11)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",11))
-		ActionOverride(Player2,ApplySpellRES("ZD_FEYRI",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 11)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 11))
+        ActionOverride(Player2, ApplySpellRES("ZD_FEYRI", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",12)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 12)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",12)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",12))
-		ActionOverride(Player2,ApplySpellRES("ZD_HDROW",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 12)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 12))
+        ActionOverride(Player2, ApplySpellRES("ZD_HDROW", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",13)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 13)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",13)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",13))
-		ActionOverride(Player2,ApplySpellRES("ZD_AGENA",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 13)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 13))
+        ActionOverride(Player2, ApplySpellRES("ZD_AGENA", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",14)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 14)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",14)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player2,ApplySpellRES("ZD_EGENA",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 14)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 14))
+        ActionOverride(Player2, ApplySpellRES("ZD_EGENA", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",15)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 15)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",15)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player2,ApplySpellRES("ZD_FGENA",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 15)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 15))
+        ActionOverride(Player2, ApplySpellRES("ZD_FGENA", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",16)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 16)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",16)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player2,ApplySpellRES("ZD_WGENA",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 16)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 16))
+        ActionOverride(Player2, ApplySpellRES("ZD_WGENA", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",17)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 17)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",17)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player2,ApplySpellRES("ZD_HGROC",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 17)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 17))
+        ActionOverride(Player2, ApplySpellRES("ZD_HGROC", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",18)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 18)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",18)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",18))
-		ActionOverride(Player2,ApplySpellRES("ZD_ESUN",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 18)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 18))
+        ActionOverride(Player2, ApplySpellRES("ZD_ESUN", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",19)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 19)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",19)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",19))
-		ActionOverride(Player2,ApplySpellRES("ZD_EWOOD",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 19)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 19))
+        ActionOverride(Player2, ApplySpellRES("ZD_EWOOD", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",20)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 20)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",20)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",20))
-		ActionOverride(Player2,ApplySpellRES("ZD_EDUSK",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 20)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 20))
+        ActionOverride(Player2, ApplySpellRES("ZD_EDUSK", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",21)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 21)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",21)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",21))
-		ActionOverride(Player2,ApplySpellRES("ZD_ELYTH",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 21)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 21))
+        ActionOverride(Player2, ApplySpellRES("ZD_ELYTH", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",22)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 22)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",22)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",22))
-		ActionOverride(Player2,ApplySpellRES("ZD_ESNOW",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 22)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 22))
+        ActionOverride(Player2, ApplySpellRES("ZD_ESNOW", Player2))
 END
 
 IF
-	Global("Player_2_Change_Subrace","GLOBAL",0)
-	Global("P2_SUBRACE","GLOBAL",23)
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 23)
 THEN
-	RESPONSE #100
-		SetGlobal("P2_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_2_Change_Subrace","GLOBAL",23)
-		ActionOverride(Player2,SetGlobal("SUBRACE","LOCALS",23))
-		ActionOverride(Player2,ApplySpellRES("ZD_WSPLG",Player2))
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player2, ApplySpellRES("ZD_WSPLG", Player2))
+END
+
+IF
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player2, ApplySpellRES("ZD_WSPLG", Player2))
+END
+
+IF
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 24)
+    OR(4)
+      Class(Player2,THIEF_ALL)
+      Class(Player2,RANGER_ALL)
+      Class(Player2,BARD_ALL)
+      Class(Player2,SORCERER)
+THEN
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player2, ApplySpellRES("ZD_YUAN1", Player2))
+END
+IF
+    Global("Player_2_Change_Subrace", "GLOBAL", 0)
+    Global("P2_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P2_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_2_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player2, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player2, ApplySpellRES("ZD_YUAN2", Player2))
 END
 // -------------------------------------------
 // Player 3
 // -------------------------------------------
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL", 0)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 0)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",1)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 1)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",1)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",1))
-		ActionOverride(Player3,ApplySpellRES("ZD_AASIM",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 1)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 1))
+        ActionOverride(Player3, ApplySpellRES("ZD_AASIM", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",2)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 2)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",2))
-		ActionOverride(Player3,ApplySpellRES("ZD_TIEFL",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 2)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 2))
+        ActionOverride(Player3, ApplySpellRES("ZD_TIEFL", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",3)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 3)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",3)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",3))
-		ActionOverride(Player3,ApplySpellRES("ZD_DROW",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 3)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 3))
+        ActionOverride(Player3, ApplySpellRES("ZD_DROW", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",4)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 4)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",4)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",4))
-		ActionOverride(Player3,ApplySpellRES("ZD_EWILD",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 4)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 4))
+        ActionOverride(Player3, ApplySpellRES("ZD_EWILD", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",5)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 5)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",5)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",5))
-		ActionOverride(Player3,ApplySpellRES("ZD_DWGLD",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 5)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 5))
+        ActionOverride(Player3, ApplySpellRES("ZD_DWGLD", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",6)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 6)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",6)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",6))
-		ActionOverride(Player3,ApplySpellRES("ZD_DUERG",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 6)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 6))
+        ActionOverride(Player3, ApplySpellRES("ZD_DUERG", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",7)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 7)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",7)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",7))
-		ActionOverride(Player3,ApplySpellRES("ZD_HLSTR",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 7)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 7))
+        ActionOverride(Player3, ApplySpellRES("ZD_HLSTR", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",8)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 8)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",8)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",8))
-		ActionOverride(Player3,ApplySpellRES("ZD_HLGHO",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 8)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 8))
+        ActionOverride(Player3, ApplySpellRES("ZD_HLGHO", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",9)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 9)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",9)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",9))
-		ActionOverride(Player3,ApplySpellRES("ZD_SVIRF",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 9)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 9))
+        ActionOverride(Player3, ApplySpellRES("ZD_SVIRF", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",10)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 10)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",10))
-
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",11)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 11)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",11)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",11))
-		ActionOverride(Player3,ApplySpellRES("ZD_FEYRI",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 11)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 11))
+        ActionOverride(Player3, ApplySpellRES("ZD_FEYRI", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",12)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 12)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",12)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",12))
-		ActionOverride(Player3,ApplySpellRES("ZD_HDROW",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 12)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 12))
+        ActionOverride(Player3, ApplySpellRES("ZD_HDROW", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",13)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 13)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",13)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",13))
-		ActionOverride(Player3,ApplySpellRES("ZD_AGENA",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 13)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 13))
+        ActionOverride(Player3, ApplySpellRES("ZD_AGENA", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",14)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 14)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",14)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player3,ApplySpellRES("ZD_EGENA",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 14)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 14))
+        ActionOverride(Player3, ApplySpellRES("ZD_EGENA", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",15)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 15)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",15)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player3,ApplySpellRES("ZD_FGENA",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 15)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 15))
+        ActionOverride(Player3, ApplySpellRES("ZD_FGENA", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",16)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 16)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",16)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player3,ApplySpellRES("ZD_WGENA",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 16)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 16))
+        ActionOverride(Player3, ApplySpellRES("ZD_WGENA", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",17)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 17)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",17)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player3,ApplySpellRES("ZD_HGROC",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 17)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 17))
+        ActionOverride(Player3, ApplySpellRES("ZD_HGROC", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",18)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 18)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",18)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",18))
-		ActionOverride(Player3,ApplySpellRES("ZD_ESUN",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 18)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 18))
+        ActionOverride(Player3, ApplySpellRES("ZD_ESUN", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",19)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 19)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",19)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",19))
-		ActionOverride(Player3,ApplySpellRES("ZD_EWOOD",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 19)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 19))
+        ActionOverride(Player3, ApplySpellRES("ZD_EWOOD", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",20)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 20)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",20)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",20))
-		ActionOverride(Player3,ApplySpellRES("ZD_EDUSK",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 20)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 20))
+        ActionOverride(Player3, ApplySpellRES("ZD_EDUSK", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",21)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 21)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",21)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",21))
-		ActionOverride(Player3,ApplySpellRES("ZD_ELYTH",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 21)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 21))
+        ActionOverride(Player3, ApplySpellRES("ZD_ELYTH", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",22)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 22)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",22)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",22))
-		ActionOverride(Player3,ApplySpellRES("ZD_ESNOW",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 22)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 22))
+        ActionOverride(Player3, ApplySpellRES("ZD_ESNOW", Player3))
 END
 
 IF
-	Global("Player_3_Change_Subrace","GLOBAL",0)
-	Global("P3_SUBRACE","GLOBAL",23)
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 23)
 THEN
-	RESPONSE #100
-		SetGlobal("P3_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_3_Change_Subrace","GLOBAL",23)
-		ActionOverride(Player3,SetGlobal("SUBRACE","LOCALS",23))
-		ActionOverride(Player3,ApplySpellRES("ZD_WSPLG",Player3))
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player3, ApplySpellRES("ZD_WSPLG", Player3))
+END
+
+IF
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 24)
+    OR(4)
+      Class(Player3,THIEF_ALL)
+      Class(Player3,RANGER_ALL)
+      Class(Player3,BARD_ALL)
+      Class(Player3,SORCERER)
+THEN
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player3, ApplySpellRES("ZD_YUAN1", Player3))
+END
+IF
+    Global("Player_3_Change_Subrace", "GLOBAL", 0)
+    Global("P3_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P3_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_3_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player3, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player3, ApplySpellRES("ZD_YUAN2", Player3))
 END
 // -------------------------------------------
 // Player 4
 // -------------------------------------------
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL", 0)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 0)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",1)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 1)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",1)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",1))
-		ActionOverride(Player4,ApplySpellRES("ZD_AASIM",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 1)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 1))
+        ActionOverride(Player4, ApplySpellRES("ZD_AASIM", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",2)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 2)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",2))
-		ActionOverride(Player4,ApplySpellRES("ZD_TIEFL",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 2)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 2))
+        ActionOverride(Player4, ApplySpellRES("ZD_TIEFL", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",3)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 3)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",3)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",3))
-		ActionOverride(Player4,ApplySpellRES("ZD_DROW",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 3)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 3))
+        ActionOverride(Player4, ApplySpellRES("ZD_DROW", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",4)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 4)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",4)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",4))
-		ActionOverride(Player4,ApplySpellRES("ZD_EWILD",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 4)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 4))
+        ActionOverride(Player4, ApplySpellRES("ZD_EWILD", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",5)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 5)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",5)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",5))
-		ActionOverride(Player4,ApplySpellRES("ZD_DWGLD",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 5)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 5))
+        ActionOverride(Player4, ApplySpellRES("ZD_DWGLD", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",6)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 6)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",6)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",6))
-		ActionOverride(Player4,ApplySpellRES("ZD_DUERG",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 6)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 6))
+        ActionOverride(Player4, ApplySpellRES("ZD_DUERG", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",7)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 7)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",7)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",7))
-		ActionOverride(Player4,ApplySpellRES("ZD_HLSTR",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 7)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 7))
+        ActionOverride(Player4, ApplySpellRES("ZD_HLSTR", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",8)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 8)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",8)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",8))
-		ActionOverride(Player4,ApplySpellRES("ZD_HLGHO",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 8)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 8))
+        ActionOverride(Player4, ApplySpellRES("ZD_HLGHO", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",9)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 9)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",9)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",9))
-		ActionOverride(Player4,ApplySpellRES("ZD_SVIRF",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 9)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 9))
+        ActionOverride(Player4, ApplySpellRES("ZD_SVIRF", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",10)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 10)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",10))
-
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",11)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 11)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",11)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",11))
-		ActionOverride(Player4,ApplySpellRES("ZD_FEYRI",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 11)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 11))
+        ActionOverride(Player4, ApplySpellRES("ZD_FEYRI", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",12)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 12)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",12)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",12))
-		ActionOverride(Player4,ApplySpellRES("ZD_HDROW",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 12)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 12))
+        ActionOverride(Player4, ApplySpellRES("ZD_HDROW", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",13)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 13)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",13)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",13))
-		ActionOverride(Player4,ApplySpellRES("ZD_AGENA",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 13)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 13))
+        ActionOverride(Player4, ApplySpellRES("ZD_AGENA", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",14)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 14)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",14)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player4,ApplySpellRES("ZD_EGENA",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 14)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 14))
+        ActionOverride(Player4, ApplySpellRES("ZD_EGENA", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",15)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 15)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",15)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player4,ApplySpellRES("ZD_FGENA",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 15)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 15))
+        ActionOverride(Player4, ApplySpellRES("ZD_FGENA", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",16)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 16)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",16)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player4,ApplySpellRES("ZD_WGENA",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 16)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 16))
+        ActionOverride(Player4, ApplySpellRES("ZD_WGENA", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",17)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 17)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",17)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player4,ApplySpellRES("ZD_HGROC",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 17)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 17))
+        ActionOverride(Player4, ApplySpellRES("ZD_HGROC", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",18)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 18)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",18)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",18))
-		ActionOverride(Player4,ApplySpellRES("ZD_ESUN",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 18)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 18))
+        ActionOverride(Player4, ApplySpellRES("ZD_ESUN", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",19)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 19)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",19)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",19))
-		ActionOverride(Player4,ApplySpellRES("ZD_EWOOD",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 19)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 19))
+        ActionOverride(Player4, ApplySpellRES("ZD_EWOOD", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",20)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 20)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",20)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",20))
-		ActionOverride(Player4,ApplySpellRES("ZD_EDUSK",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 20)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 20))
+        ActionOverride(Player4, ApplySpellRES("ZD_EDUSK", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",21)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 21)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",21)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",21))
-		ActionOverride(Player4,ApplySpellRES("ZD_ELYTH",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 21)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 21))
+        ActionOverride(Player4, ApplySpellRES("ZD_ELYTH", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",22)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 22)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",22)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",22))
-		ActionOverride(Player4,ApplySpellRES("ZD_ESNOW",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 22)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 22))
+        ActionOverride(Player4, ApplySpellRES("ZD_ESNOW", Player4))
 END
 
 IF
-	Global("Player_4_Change_Subrace","GLOBAL",0)
-	Global("P4_SUBRACE","GLOBAL",23)
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 23)
 THEN
-	RESPONSE #100
-		SetGlobal("P4_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_4_Change_Subrace","GLOBAL",23)
-		ActionOverride(Player4,SetGlobal("SUBRACE","LOCALS",23))
-		ActionOverride(Player4,ApplySpellRES("ZD_WSPLG",Player4))
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player4, ApplySpellRES("ZD_WSPLG", Player4))
+END
+
+IF
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 24)
+    OR(4)
+      Class(Player4,THIEF_ALL)
+      Class(Player4,RANGER_ALL)
+      Class(Player4,BARD_ALL)
+      Class(Player4,SORCERER)
+THEN
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player4, ApplySpellRES("ZD_YUAN1", Player4))
+END
+IF
+    Global("Player_4_Change_Subrace", "GLOBAL", 0)
+    Global("P4_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P4_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_4_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player4, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player4, ApplySpellRES("ZD_YUAN2", Player4))
 END
 // -------------------------------------------
 // Player 5
 // -------------------------------------------
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL", 0)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 0)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",1)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 1)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",1)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",1))
-		ActionOverride(Player5,ApplySpellRES("ZD_AASIM",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 1)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 1))
+        ActionOverride(Player5, ApplySpellRES("ZD_AASIM", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",2)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 2)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",2))
-		ActionOverride(Player5,ApplySpellRES("ZD_TIEFL",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 2)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 2))
+        ActionOverride(Player5, ApplySpellRES("ZD_TIEFL", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",3)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 3)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",3)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",3))
-		ActionOverride(Player5,ApplySpellRES("ZD_DROW",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 3)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 3))
+        ActionOverride(Player5, ApplySpellRES("ZD_DROW", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",4)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 4)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",4)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",4))
-		ActionOverride(Player5,ApplySpellRES("ZD_EWILD",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 4)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 4))
+        ActionOverride(Player5, ApplySpellRES("ZD_EWILD", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",5)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 5)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",5)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",5))
-		ActionOverride(Player5,ApplySpellRES("ZD_DWGLD",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 5)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 5))
+        ActionOverride(Player5, ApplySpellRES("ZD_DWGLD", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",6)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 6)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",6)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",6))
-		ActionOverride(Player5,ApplySpellRES("ZD_DUERG",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 6)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 6))
+        ActionOverride(Player5, ApplySpellRES("ZD_DUERG", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",7)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 7)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",7)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",7))
-		ActionOverride(Player5,ApplySpellRES("ZD_HLSTR",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 7)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 7))
+        ActionOverride(Player5, ApplySpellRES("ZD_HLSTR", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",8)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 8)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",8)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",8))
-		ActionOverride(Player5,ApplySpellRES("ZD_HLGHO",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 8)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 8))
+        ActionOverride(Player5, ApplySpellRES("ZD_HLGHO", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",9)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 9)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",9)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",9))
-		ActionOverride(Player5,ApplySpellRES("ZD_SVIRF",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 9)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 9))
+        ActionOverride(Player5, ApplySpellRES("ZD_SVIRF", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",10)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 10)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",10))
-
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",11)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 11)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",11)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",11))
-		ActionOverride(Player5,ApplySpellRES("ZD_FEYRI",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 11)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 11))
+        ActionOverride(Player5, ApplySpellRES("ZD_FEYRI", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",12)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 12)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",12)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",12))
-		ActionOverride(Player5,ApplySpellRES("ZD_HDROW",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 12)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 12))
+        ActionOverride(Player5, ApplySpellRES("ZD_HDROW", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",13)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 13)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",13)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",13))
-		ActionOverride(Player5,ApplySpellRES("ZD_AGENA",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 13)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 13))
+        ActionOverride(Player5, ApplySpellRES("ZD_AGENA", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",14)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 14)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",14)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player5,ApplySpellRES("ZD_EGENA",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 14)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 14))
+        ActionOverride(Player5, ApplySpellRES("ZD_EGENA", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",15)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 15)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",15)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player5,ApplySpellRES("ZD_FGENA",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 15)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 15))
+        ActionOverride(Player5, ApplySpellRES("ZD_FGENA", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",16)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 16)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",16)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player5,ApplySpellRES("ZD_WGENA",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 16)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 16))
+        ActionOverride(Player5, ApplySpellRES("ZD_WGENA", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",17)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 17)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",17)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player5,ApplySpellRES("ZD_HGROC",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 17)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 17))
+        ActionOverride(Player5, ApplySpellRES("ZD_HGROC", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",18)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 18)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",18)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",18))
-		ActionOverride(Player5,ApplySpellRES("ZD_ESUN",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 18)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 18))
+        ActionOverride(Player5, ApplySpellRES("ZD_ESUN", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",19)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 19)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",19)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",19))
-		ActionOverride(Player5,ApplySpellRES("ZD_EWOOD",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 19)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 19))
+        ActionOverride(Player5, ApplySpellRES("ZD_EWOOD", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",20)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 20)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",20)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",20))
-		ActionOverride(Player5,ApplySpellRES("ZD_EDUSK",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 20)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 20))
+        ActionOverride(Player5, ApplySpellRES("ZD_EDUSK", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",21)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 21)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",21)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",21))
-		ActionOverride(Player5,ApplySpellRES("ZD_ELYTH",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 21)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 21))
+        ActionOverride(Player5, ApplySpellRES("ZD_ELYTH", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",22)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 22)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",22)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",22))
-		ActionOverride(Player5,ApplySpellRES("ZD_ESNOW",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 22)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 22))
+        ActionOverride(Player5, ApplySpellRES("ZD_ESNOW", Player5))
 END
 
 IF
-	Global("Player_5_Change_Subrace","GLOBAL",0)
-	Global("P5_SUBRACE","GLOBAL",23)
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 23)
 THEN
-	RESPONSE #100
-		SetGlobal("P5_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_5_Change_Subrace","GLOBAL",23)
-		ActionOverride(Player5,SetGlobal("SUBRACE","LOCALS",23))
-		ActionOverride(Player5,ApplySpellRES("ZD_WSPLG",Player5))
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player5, ApplySpellRES("ZD_WSPLG", Player5))
+END
+
+IF
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 24)
+    OR(4)
+      Class(Player5,THIEF_ALL)
+      Class(Player5,RANGER_ALL)
+      Class(Player5,BARD_ALL)
+      Class(Player5,SORCERER)
+THEN
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player5, ApplySpellRES("ZD_YUAN1", Player5))
+END
+IF
+    Global("Player_5_Change_Subrace", "GLOBAL", 0)
+    Global("P5_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P5_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_5_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player5, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player5, ApplySpellRES("ZD_YUAN2", Player5))
 END
 // -------------------------------------------
 // Player 6
 // -------------------------------------------
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL", 0)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 0)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player1,SetGlobal("SUBRACE", "LOCALS",10))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player1, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",1)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 1)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",1)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",1))
-		ActionOverride(Player6,ApplySpellRES("ZD_AASIM",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 1)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 1))
+        ActionOverride(Player6, ApplySpellRES("ZD_AASIM", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",2)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 2)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",2)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",2))
-		ActionOverride(Player6,ApplySpellRES("ZD_TIEFL",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 2)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 2))
+        ActionOverride(Player6, ApplySpellRES("ZD_TIEFL", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",3)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 3)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",3)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",3))
-		ActionOverride(Player6,ApplySpellRES("ZD_DROW",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 3)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 3))
+        ActionOverride(Player6, ApplySpellRES("ZD_DROW", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",4)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 4)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",4)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",4))
-		ActionOverride(Player6,ApplySpellRES("ZD_EWILD",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 4)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 4))
+        ActionOverride(Player6, ApplySpellRES("ZD_EWILD", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",5)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 5)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",5)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",5))
-		ActionOverride(Player6,ApplySpellRES("ZD_DWGLD",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 5)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 5))
+        ActionOverride(Player6, ApplySpellRES("ZD_DWGLD", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",6)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 6)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",6)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",6))
-		ActionOverride(Player6,ApplySpellRES("ZD_DUERG",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 6)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 6))
+        ActionOverride(Player6, ApplySpellRES("ZD_DUERG", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",7)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 7)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",7)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",7))
-		ActionOverride(Player6,ApplySpellRES("ZD_HLSTR",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 7)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 7))
+        ActionOverride(Player6, ApplySpellRES("ZD_HLSTR", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",8)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 8)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",8)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",8))
-		ActionOverride(Player6,ApplySpellRES("ZD_HLGHO",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 8)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 8))
+        ActionOverride(Player6, ApplySpellRES("ZD_HLGHO", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",9)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 9)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",9)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",9))
-		ActionOverride(Player6,ApplySpellRES("ZD_SVIRF",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 9)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 9))
+        ActionOverride(Player6, ApplySpellRES("ZD_SVIRF", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",10)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 10)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",10)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",10))
-
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 10)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 10))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",11)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 11)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",11)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",11))
-		ActionOverride(Player6,ApplySpellRES("ZD_FEYRI",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 11)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 11))
+        ActionOverride(Player6, ApplySpellRES("ZD_FEYRI", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",12)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 12)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",12)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",12))
-		ActionOverride(Player6,ApplySpellRES("ZD_HDROW",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 12)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 12))
+        ActionOverride(Player6, ApplySpellRES("ZD_HDROW", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",13)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 13)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",13)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",13))
-		ActionOverride(Player6,ApplySpellRES("ZD_AGENA",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 13)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 13))
+        ActionOverride(Player6, ApplySpellRES("ZD_AGENA", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",14)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 14)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",14)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",14))
-		ActionOverride(Player6,ApplySpellRES("ZD_EGENA",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 14)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 14))
+        ActionOverride(Player6, ApplySpellRES("ZD_EGENA", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",15)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 15)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",15)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",15))
-		ActionOverride(Player6,ApplySpellRES("ZD_FGENA",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 15)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 15))
+        ActionOverride(Player6, ApplySpellRES("ZD_FGENA", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",16)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 16)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",16)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",16))
-		ActionOverride(Player6,ApplySpellRES("ZD_WGENA",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 16)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 16))
+        ActionOverride(Player6, ApplySpellRES("ZD_WGENA", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",17)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 17)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",17)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",17))
-		ActionOverride(Player6,ApplySpellRES("ZD_HGROC",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 17)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 17))
+        ActionOverride(Player6, ApplySpellRES("ZD_HGROC", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",18)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 18)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",18)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",18))
-		ActionOverride(Player6,ApplySpellRES("ZD_ESUN",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 18)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 18))
+        ActionOverride(Player6, ApplySpellRES("ZD_ESUN", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",19)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 19)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",19)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",19))
-		ActionOverride(Player6,ApplySpellRES("ZD_EWOOD",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 19)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 19))
+        ActionOverride(Player6, ApplySpellRES("ZD_EWOOD", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",20)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 20)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",20)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",20))
-		ActionOverride(Player6,ApplySpellRES("ZD_EDUSK",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 20)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 20))
+        ActionOverride(Player6, ApplySpellRES("ZD_EDUSK", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",21)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 21)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",21)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",21))
-		ActionOverride(Player6,ApplySpellRES("ZD_ELYTH",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 21)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 21))
+        ActionOverride(Player6, ApplySpellRES("ZD_ELYTH", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",22)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 22)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",22)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",22))
-		ActionOverride(Player6,ApplySpellRES("ZD_ESNOW",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 22)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 22))
+        ActionOverride(Player6, ApplySpellRES("ZD_ESNOW", Player6))
 END
 
 IF
-	Global("Player_6_Change_Subrace","GLOBAL",0)
-	Global("P6_SUBRACE","GLOBAL",23)
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 23)
 THEN
-	RESPONSE #100
-		SetGlobal("P6_SUBRACE","GLOBAL", 999)
-		SetGlobal("Player_6_Change_Subrace","GLOBAL",23)
-		ActionOverride(Player6,SetGlobal("SUBRACE","LOCALS",23))
-		ActionOverride(Player6,ApplySpellRES("ZD_WSPLG",Player6))
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 23)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 23))
+        ActionOverride(Player6, ApplySpellRES("ZD_WSPLG", Player6))
+END
+
+IF
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 24)
+    OR(4)
+      Class(Player6,THIEF_ALL)
+      Class(Player6,RANGER_ALL)
+      Class(Player6,BARD_ALL)
+      Class(Player6,SORCERER)
+THEN
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player6, ApplySpellRES("ZD_YUAN1", Player6))
+END
+IF
+    Global("Player_6_Change_Subrace", "GLOBAL", 0)
+    Global("P6_SUBRACE", "GLOBAL", 24)
+THEN
+    RESPONSE #100
+        SetGlobal("P6_SUBRACE", "GLOBAL", 999)
+        SetGlobal("Player_6_Change_Subrace", "GLOBAL", 24)
+        ActionOverride(Player6, SetGlobal("SUBRACE", "LOCALS", 24))
+        ActionOverride(Player6, ApplySpellRES("ZD_YUAN2", Player6))
 END

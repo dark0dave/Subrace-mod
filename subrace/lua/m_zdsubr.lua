@@ -21,6 +21,7 @@ zZsubrTitleTable = {
 	['%Ztext_lythari%'] = {21, %lythari_desc%},
 	['%Ztext_snow_elf%'] = {22, %snow_elf_desc%},
 	['%Ztext_wispling%'] = {23, %wispling_desc%},
+	['%Ztext_yuanti%'] = {24, %yuanti_desc%},
 }
 
 function subt(chr)
@@ -46,6 +47,7 @@ function subt(chr)
 	elseif (chr == 21) then return Infinity_FetchString(%lythari_title%) --subrStrings.LYTHARI
 	elseif (chr == 22) then return Infinity_FetchString(%snow_elf_title%) --subrStrings.SNOW_ELF
 	elseif (chr == 23) then return Infinity_FetchString(%wispling_title%) --subrStrings.WISPLING
+	elseif (chr == 24) then return Infinity_FetchString(%yuanti_title%) --subrStrings.YUANTI
 	else return ""
 	end
 end
@@ -94,6 +96,7 @@ function createSubraceTable(race)
 			{%Zearth_genasi_title%, %earth_genasi_desc%, 14},
 			{%Zfire_genasi_title%, %fire_genasi_desc%, 15},
 			{%Zwater_genasi_title%, %water_genasi_desc%, 16},
+			{%Zyuanti_title%, %yuanti_desc%, 24},
 		}
 	end
 	if race == 2 then --elf
@@ -170,6 +173,7 @@ function createSubraceTableEx()
 		{%Zlythari_title%, %lythari_desc%, 21},
 		{%Zsnow_elf_title%, %snow_elf_desc%, 22},
 		{%Zwispling_title%, %wispling_desc%, 23},
+		{%Zyuanti_title%, %yuanti_desc%, 24},
 	}
 end
 createSubraceTableEx()
@@ -286,6 +290,7 @@ zZsubraceStrings = {
 	{nil, 2, %Ztext_lythari%, 21},
 	{nil, 2, %Ztext_snow_elf%, 22},
 	{nil, 5, %Ztext_wispling%, 23},
+  {nil, 1, %Ztext_yuanti%, 24},
 }
 function zzCreateCharInfo(info)
 	local rc = 0

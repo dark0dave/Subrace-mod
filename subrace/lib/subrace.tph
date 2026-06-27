@@ -102,6 +102,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
     "%text_lythari%"      => "text_lythari"
     "%text_snow_elf%"     => "text_snow_elf"
     "%text_wispling%"     => "text_wispling"
+    "%text_yuanti%"       => "text_yuanti"
 END
 
 ACTION_PHP_EACH texts AS var => var_name  BEGIN
@@ -545,7 +546,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_fgena.spl~
                 parameter2 = 6
         END
     END
-    // intelligence +1
+    // Intelligence +1
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode     = 19
@@ -649,7 +650,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_wgena.spl~
                 parameter2 = 6
         END
     END
-    // constitution +1
+    // Constitution +1
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode     = 10
@@ -737,7 +738,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_feyri.spl~
                 parameter2 = 6
         END
     END
-    // intelligence +1
+    // Intelligence +1
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode     = 19
@@ -835,7 +836,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_drow.spl~
             parameter2 = %CRE_BLINDED_IWD%
             special    = 1
     END
-    // intelligence +1
+    // Intelligence +1
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode     = 19
@@ -1042,7 +1043,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_hdrow.spl~
                 parameter2 = 6
         END
     END
-    // intelligence +1
+    // Intelligence +1
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode     = 19
@@ -1122,7 +1123,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_ewild.spl~
             timing     = 1
             parameter1 = 1
     END
-    // intlligence -1
+    // Intelligence -1
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode     = 19
@@ -1876,7 +1877,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_wsplg.spl~
             timing     = 9
             parameter1 = 1
     END
-    // Cast Haste Self one per day
+    // Cast Haste Self once per day
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode = 171
@@ -1885,7 +1886,7 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_wsplg.spl~
         STR_VAR
             resource = "zdwsplht"
     END
-    // Cast Polymorph Self one per day
+    // Cast Polymorph Self once per day
     LPF ADD_SPELL_EFFECT
         INT_VAR
             opcode = 171
@@ -1902,6 +1903,130 @@ COPY ~subrace/spl/spell.spl~ ~override/zd_wsplg.spl~
             timing     = 9
             parameter1 = 93
             parameter2 = 2
+    END
+
+COPY ~subrace/spl/spell.spl~ ~override/zd_yuan0.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_yuanti
+    END
+    // Infravision
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 63
+            target = 2
+            timing = 9
+    END
+    // PATCH_IF (zd_colors = 1) BEGIN
+    //     // Skin color
+    //     LPF ADD_SPELL_EFFECT
+    //         INT_VAR
+    //             opcode     = 7
+    //             target     = 2
+    //             timing     = 9
+    //             parameter1 = 9
+    //             parameter2 = 3
+    //     END
+    //     // Hair color
+    //     LPF ADD_SPELL_EFFECT
+    //         INT_VAR
+    //             opcode     = 7
+    //             target     = 2
+    //             timing     = 9
+    //             parameter1 = 195
+    //             parameter2 = 6
+    //     END
+    // END
+    // Dexterity +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 15
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Intelligence +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 19
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Charisma +1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = 1
+    END
+    // Hide in shadows +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 275
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Move silently +10
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 59
+            target     = 2
+            timing     = 9
+            parameter1 = 10
+    END
+    // Cast Charm Person once per day
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode = 171
+            target = 1
+            timing = 9
+        STR_VAR
+            resource = "zdwi104"
+    END
+
+COPY_EXISTING ~zd_yuan0.spl~ ~override/zd_yuan1.spl~
+    // XP bonus - 93%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 93
+            parameter2 = 2
+    END
+
+COPY_EXISTING ~zd_yuan0.spl~ ~override/zd_yuan2.spl~
+    // XP bonus - 90%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 93
+            parameter2 = 2
+    END
+    // Thaco -1
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 278
+            target     = 2
+            parameter1 = "-1"
+            duration   = 60
+    END
+    // -1 Saves
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 325
+            target     = 2
+            parameter1 = "-1"
+            duration   = 60
     END
 // BLOCKEND
 
@@ -2108,6 +2233,18 @@ COPY_EXISTING ~spwi201.spl~ ~override/zdsvblr.spl~
         STR_VAR
             match_resource = "%SOURCE_RES%"
             resource       = "zdsvblr"
+    END
+
+// zdwi104  (zdwi104) - Charm Person
+COPY_EXISTING ~SPWI104.spl~ ~override/zdwi104.spl~
+    LPM CONVERT_SPL_TO_INNATE
+    LPF ALTER_EFFECT
+        INT_VAR
+            check_globals = 0
+            silent        = 1
+        STR_VAR
+            match_resource = "%SOURCE_RES%"
+            resource       = "zdwi104"
     END
 // BLOCKEND
 

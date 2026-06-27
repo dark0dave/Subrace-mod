@@ -419,10 +419,6 @@ Snow elves have the following traits:
 
 </details>
 
-
-
-</details>
-
 <details>
   <summary>Wisplings</summary>
 
@@ -437,6 +433,23 @@ Wisplings have the following traits:
 – May cast Polymorph Self once per day as an innate ability
 – May cast Haste Self (4 rounds) once per day as an innate ability
 – Gets only 93% of all experience gained
+
+</details>
+
+</details>
+
+<details>
+  <summary>Pureblood Yuanti</summary>
+
+**Pureblood Yuanti**: Yuan-ti are descended from humans whose bloodlines have been intermingled with those of snakes. They’re shrewd and smooth, able to form alliances with other creatures when it suits them, but they always prioritize their own goals. Yuan-ti who can convincingly pass as human—using proper clothing, cosmetics, and magic—are called purebloods. These agents are often tasked with infiltrating humanoid societies and running covert operations that demand close, hands-on interaction with humans.
+
+Pureblood Yuanti have the following traits:
+– Infravision
+– +1 Dexterity, +1 Intelligence, +1 Charisma
+– +10% Hide in Shadows and +10% Move Silently
+– May cast Charm Person once per day as an innate ability
+– Gets only 93% of all experience gained if not a is Single Class Sorcerer, Rogue, Bard or Ranger, 90% if otherwise
+– -1 penalty to THAC0 and Saving Throws if not a Single Class Sorcerer, Rogue, Bard or Ranger
 
 </details>
 
