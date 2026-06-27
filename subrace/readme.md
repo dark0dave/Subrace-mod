@@ -489,9 +489,8 @@ Subrace MOD was created with the following software:
 
 - [Near Infinity](https://github.com/Argent77/NearInfinity/releases)
 - [WeiDU](http://www.weidu.org)
-- [AkelPad](http://akelpad.sourceforge.net/ru/index.php)
 - [vscodium](https://vscodium.com/)
-- [infinity viewer](https://github.com/dark0dave/infinity_viewer)
+- [bgforge](https://bgforge.net/)
 
 ### Attribution Note
 
