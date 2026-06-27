@@ -232,7 +232,7 @@ Fey'ri have the following traits:
 @1123  = ~Fey'ri~
 
 @1130 = "HALF-DROW"
-@1131 = ~HALF-DROW: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors. 
+@1131 = ~HALF-DROW: A half-drow is a descendant of both human and drow ancestries. Most of them result from liaisons between Seldarine drow and human surfacers and are not raised in the Underdark. They often have dusky skin, silver or white hair, and human eye colors.
 
 Half-drow have the following traits:
 – May cast Faerie Fire once per day
@@ -245,7 +245,7 @@ Half-drow have the following traits:
 @1133 = ~Half-drow~
 
 @1140 = "AIR GENASI"
-@1141 = ~AIR GENASI: Air genasi (also known as wind dukes and duchesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Air, often from a djinn. These individuals see themselves as the inheritors of the sky, the wind and the very air of the world. They appear mostly human, with one or two unusual traits reflecting their quasi-elemental nature, such as a light blue color to their skin or hair, a slight breeze in their presence at all times, or flesh that is cool to the touch. 
+@1141 = ~AIR GENASI: Air genasi (also known as wind dukes and duchesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Air, often from a djinn. These individuals see themselves as the inheritors of the sky, the wind and the very air of the world. They appear mostly human, with one or two unusual traits reflecting their quasi-elemental nature, such as a light blue color to their skin or hair, a slight breeze in their presence at all times, or flesh that is cool to the touch.
 
 Air genasi have the following traits:
 – Infravision
@@ -260,7 +260,7 @@ Air genasi have the following traits:
 @1143 = ~Air genasi~
 
 @1150 = "EARTH GENASI"
-@1151 = ~EARTH GENASI: Earth genasi (also known as stone princes and princesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Earth, often from a dao. These individuals are slow to act, ponderous in thought and set in their ways. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as earthlike skin, rough facial features or eyes like black pits. 
+@1151 = ~EARTH GENASI: Earth genasi (also known as stone princes and princesses, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Earth, often from a dao. These individuals are slow to act, ponderous in thought and set in their ways. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as earthlike skin, rough facial features or eyes like black pits.
 
 Earth genasi have the following traits:
 – Infravision
@@ -274,7 +274,7 @@ Earth genasi have the following traits:
 @1153 = ~Earth genasi~
 
 @1160 = "FIRE GENASI"
-@1161 = ~FIRE GENASI: Fire genasi (also known as flame lords and ladies, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Fire, often from an efreet. These individuals are hot-blooded and quick to anger, proud and unafraid to take action. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as skin the color of burnt coal, red hair that waves like flames or eyes that glow when the Genasi is angry. 
+@1161 = ~FIRE GENASI: Fire genasi (also known as flame lords and ladies, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Fire, often from an efreet. These individuals are hot-blooded and quick to anger, proud and unafraid to take action. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as skin the color of burnt coal, red hair that waves like flames or eyes that glow when the Genasi is angry.
 
 Fire genasi have the following traits:
 – Infravision
@@ -288,11 +288,11 @@ Fire genasi have the following traits:
 @1163 = ~Fire genasi~
 
 @1170 = "WATER GENASI"
-@1171 = ~WATER GENASI: Water genasi (also known as sea kings and queens, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Water, often from a marid genie. These individuals are patient and slow to change, preferring to wear away opposition slowly, but are capable of great violence in extreme situations. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as lightly-scaled skin, clammy flesh, blue-green skin or hair that waves as if underwater. 
+@1171 = ~WATER GENASI: Water genasi (also known as sea kings and queens, as they sometimes call themselves) are human-based planetouched with a heritage that includes a planar being from the Elemental Plane of Water, often from a marid genie. These individuals are patient and slow to change, preferring to wear away opposition slowly, but are capable of great violence in extreme situations. They appear mostly human, with one or two traits reflecting their quasi-elemental nature, such as lightly-scaled skin, clammy flesh, blue-green skin or hair that waves as if underwater.
 
 Water genasi have the following traits:
 – Infravision
-– May cast Writhing Fog once per day 
+– May cast Writhing Fog once per day
 – +1 Constitution, -1 Charisma
 – +25% Cold resistance
 – +5% Cold damage dealt
@@ -302,10 +302,10 @@ Water genasi have the following traits:
 @1173 = ~Water genasi~
 
 @1180 = "HALF GRAY ORC"
-@1181 = ~HALF GRAY ORCS: Half gray orcs are descended from humans and specifically, gray orcs. Gray orcs are just as mean, savage, and barbaric as their northern cousins, but they lack the mountain orc's drive to conquer and enslave. Gray orcs are quite likely to react suddenly and irrationally to events, trusting their heart and instincts more readily than logic. When presented with an opportunity to attack a hated rival, a gray orc doesn't hesitate to attack even having been brutally defeated dozens of times before by the same enemy. The true power behind a tribe of gray orcs is not the chieftain, but the tribe's high priest, typically an adept or a cleric (often female), who has held the position for many years. The gray orcs are zealots, and the word of their tribal clerics is law. 
+@1181 = ~HALF GRAY ORCS: Half gray orcs are descended from humans and specifically, gray orcs. Gray orcs are just as mean, savage, and barbaric as their northern cousins, but they lack the mountain orc's drive to conquer and enslave. Gray orcs are quite likely to react suddenly and irrationally to events, trusting their heart and instincts more readily than logic. When presented with an opportunity to attack a hated rival, a gray orc doesn't hesitate to attack even having been brutally defeated dozens of times before by the same enemy. The true power behind a tribe of gray orcs is not the chieftain, but the tribe's high priest, typically an adept or a cleric (often female), who has held the position for many years. The gray orcs are zealots, and the word of their tribal clerics is law.
 
 Half gray orcs have the following traits:
-– Movement speed is 2 points higher than normal (default is 9) 
+– Movement speed is 2 points higher than normal (default is 9)
 – +1 Wisdom, -1 Constitution, -1 Charisma
 – Can track by sense of smell, resulting in a +1 bonus to Saving Throws and Armor Class
 – Light Blindness: -1 penalty to THAC0 and Saving Throws while under sunlight
@@ -315,7 +315,7 @@ Half gray orcs have the following traits:
 @1183 = ~Half Gray Orc~
 
 @1190 = "SUN ELF"
-@1191 = ~SUN ELVES: Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft. 
+@1191 = ~SUN ELVES: Sun elves hail from Evermeet where non-elves are not allowed, and therefore are less common in Faêrun than moon elves. Also called gold elves, they have bronze skin, golden blond, copper, or black hair, and green or gold eyes. These are seen as the most civilized and haughty elves, preferring to remain separate from non-elven races. Most sun elves lead a life of study and contemplation, which serves to sharpen their minds, but leaves their bodies soft.
 
 Sun elves have the following traits:
 – +1 Intelligence, -1 Constitution~
