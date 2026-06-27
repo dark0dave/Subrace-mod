@@ -1,32 +1,49 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/2cd3cac16691a933e94276f0a810453f17775c28";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+    hk = {
+      url = "github:jdx/hk/v1.44.2";
+    };
   };
-  outputs = { self, nixpkgs }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      hk,
+    }:
     let
-      systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
-      forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
-    in {
-      devShells = forAllSystems (system:
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+      forEachSystem = f: nixpkgs.lib.genAttrs systems (system: f system);
+    in
+    {
+      devShells = forEachSystem (
+        system:
         let
           pkgs = import nixpkgs { inherit system; };
-          remote = builtins.fetchTarball {
-            url = "https://github.com/jdx/hk/archive/refs/tags/v1.43.0.tar.gz";
-            sha256 = "0m7xjcsc7rv8pr3pyq5dx1j00bl51ik30ci51i4s11n0b7fqiix8";
-          };
-          hk = pkgs.callPackage (remote + "/default.nix") { };
-        in {
-          packages = { hk = hk; };
-          default = pkgs.mkShell {
-            nativeBuildInputs = with pkgs; [
-              envsubst
-              ffmpeg
-              git
-              hk
-              lua
-              weidu
-            ];
-          };
-        });
+        in
+        {
+          default =
+            with pkgs;
+            mkShell rec {
+              nativeBuildInputs = [
+                codespell
+                envsubst
+                ffmpeg
+                git
+                hk.packages.${system}.default
+                lua
+                nixfmt
+                weidu
+                yamlfmt
+              ];
+              env.HK_PKL_BACKEND = "pklr";
+            };
+        }
+      );
+      formatter = forEachSystem (system: nixpkgs.${system}.nixfmt);
     };
 }
