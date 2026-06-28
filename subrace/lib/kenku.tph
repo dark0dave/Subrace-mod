@@ -4,10 +4,11 @@ INCLUDE ~%MOD_FOLDER%/lib/newracelib.tph~
 OUTER_SPRINT key @2101
 OUTER_SET uppercase = RESOLVE_STR_REF(@2101)
 OUTER_SET name = RESOLVE_STR_REF(@2102)
+OUTER_SET mixed = RESOLVE_STR_REF(@2103)
 OUTER_SET desc = RESOLVE_STR_REF(@2104)
 OUTER_SET biography = RESOLVE_STR_REF(@2105)
 
-LAF zd_new_race_setup STR_VAR key name desc uppercase biography RET race_index END
+LAF zd_new_race_setup STR_VAR key name desc uppercase mixed biography RET race_index END
 
 // Classes
 OUTER_TEXT_SPRINT classes "$ $ %key%" // first two rows are not expanded
@@ -27,8 +28,23 @@ COPY_EXISTING ~clsrcreq.2da~ ~override~
   PRETTY_PRINT_2DA
 BUT_ONLY
 
-// Mage:
-// COPY_EXISTING ~mgsrcreq.2da~ ~override~
+// Mage Special
+OUTER_TEXT_SPRINT magespec "$ $ %key%" // first two rows are not expanded
+COPY_EXISTING ~mgsrcreq.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  COUNT_2DA_ROWS colcount row_count
+  READ_2DA_ENTRIES_NOW classdata colcount
+  FOR (row=0;row<row_count;++row) BEGIN
+    // Copy Human 
+    READ_2DA_ENTRY_FORMER classdata row 2 mage_setting
+    SPRINT magespec "%magespec% %mage_setting%"
+  END
+  APPEND_COL ~mgsrcreq.2da~ ~%magespec%~
+BUT_ONLY
+
+COPY_EXISTING ~mgsrcreq.2da~ ~override~
+PRETTY_PRINT_2DA
+BUT_ONLY
 
 // Stats
 COPY_EXISTING ~abracead.2da~ ~override~

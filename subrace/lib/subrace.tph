@@ -120,7 +120,7 @@ ACTION_PHP_EACH texts AS var => var_name  BEGIN
 END
 
 // Lua helper code
-COPY ~subrace/lua~ ~override~ EVALUATE_BUFFER
+COPY ~subrace/lua/m_zdsubr.lua~ ~override~ EVALUATE_BUFFER
 // BLOCK SUBRACE SPELLS
 COPY ~subrace/spl/spell.spl~ ~override/zd_aasim.spl~
     SAY 0x08 @11 /* Aasimar */
