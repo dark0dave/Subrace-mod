@@ -396,25 +396,20 @@ Pureblood Yuan-ti have the following traits:
 @1227 = ~Pureblood Yuan-ti~
 
 @1224 = "CHANGELING"
-@1225 = ~CHANGELING: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
+@1225 = ~CHANGELING: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes, but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
 
 Changelings have the following traits:
-– Immunity to Charm and Sleep
-– Gets only 95% of all experience gained
-– Starts with a -2 penalty to Charisma and Reputation
+– Immunity to charm and sleep magics.
+– Gets only 95% of all experience gained.
+– Starts with a -2 penalty to Charisma and Reputation.
 – May Shapeshift into a different medium-sized humanoid of any gender at will:
 
-ELVEN SHAPE: This form negates the Charisma penalty, and confers them a +1 THAC0 bonus when using bows and swords, but a -1 penalty to their Saving Throws vs. Death.
-
 HUMAN SHAPE: This form negates the Charisma penalty and does not confer any bonuses or penalties.
-
-GNOMISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to their Saving Throws vs. Spell, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their movement speed is 20% slower.
-
-HALFLING SHAPE: This form negates the Charisma penalty, grants them a +10 point bonus to all their thieving skills, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their Strength is reduced by 1.
-
+ELVEN SHAPE: This form negates the Charisma penalty, and confers them a +1 THAC0 bonus when using bows and swords, but a -1 penalty to their Saving Throws vs. Death.
 DWARVEN SHAPE: The form grants them a +1 bonus to their Saving Throws vs. Death, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their Dexterity is reduced by 1.
-
-HALF-ORCISH SHAPE: This form grants them a +1 bonus to melee damage, but their thieving skills are reduced by 5 points.~
+HALFLING SHAPE: This form negates the Charisma penalty, grants them a +10 point bonus to all their thieving skills, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their Strength is reduced by 1.
+GNOMISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to their Saving Throws vs. Spell, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their movement speed is 20% slower.
+HALF-ORCISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to melee damage, but their thieving skills are reduced by 5 points.~
 
 @1226 = ~changeling~
 @1227 = ~Changeling~
