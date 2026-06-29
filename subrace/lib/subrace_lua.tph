@@ -17,6 +17,8 @@ OUTER_SET water_genasi_title  = RESOLVE_STR_REF (@1170)
 OUTER_SET water_genasi_desc   = RESOLVE_STR_REF (@1171)
 OUTER_SET yuanti_title        = RESOLVE_STR_REF (@1224)
 OUTER_SET yuanti_desc         = RESOLVE_STR_REF (@1225)
+OUTER_SET changeling_title    = RESOLVE_STR_REF (@1228)
+OUTER_SET changeling_desc     = RESOLVE_STR_REF (@1229)
 //elf
 OUTER_SET elf_title       = RESOLVE_STR_REF (@32)
 OUTER_SET drow_title      = RESOLVE_STR_REF (@23)
@@ -70,6 +72,7 @@ OUTER_SET Zearth_genasi_title = RESOLVE_STR_REF (@1152)
 OUTER_SET Zfire_genasi_title  = RESOLVE_STR_REF (@1162)
 OUTER_SET Zwater_genasi_title = RESOLVE_STR_REF (@1172)
 OUTER_SET Zyuanti_title       = RESOLVE_STR_REF (@1226)
+OUTER_SET Zchangeling_title   = RESOLVE_STR_REF (@1230)
 //elf
 OUTER_SET Zelf_title       = RESOLVE_STR_REF (@532)
 OUTER_SET Zdrow_title      = RESOLVE_STR_REF (@523)
@@ -123,6 +126,7 @@ OUTER_SET text_lythari        = RESOLVE_STR_REF(@1211)
 OUTER_SET text_snow_elf       = RESOLVE_STR_REF(@1215)
 OUTER_SET text_wispling       = RESOLVE_STR_REF(@1223)
 OUTER_SET text_yuanti         = RESOLVE_STR_REF(@1227)
+OUTER_SET text_changeling     = RESOLVE_STR_REF(@1231)
 
 ACTION_IF ( GAME_IS ~iwdee~ ) BEGIN
 	OUTER_SET bghuman    = 37481  OUTER_SET bghuman_r    = 37482
