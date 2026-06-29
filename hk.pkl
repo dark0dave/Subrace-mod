@@ -27,6 +27,10 @@ local local_hooks = new Mapping<String, Step> {
     check = ".github/scripts/check-git.sh"
     fix = "git add --renormalize ."
   }
+  ["tra-check"] {
+    glob = List("*.tra")
+    check = ".github/scripts/check-tra.sh {{files}}"
+  }
   ["weidu-check"] {
     glob = List("*.d","*.tp2","*.tpa","*.tpp")
     check = ".github/scripts/check-weidu.sh {{files}}"

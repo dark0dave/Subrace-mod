@@ -395,8 +395,8 @@ Pureblood Yuan-ti have the following traits:
 @1226 = ~pureblood yuan-ti~
 @1227 = ~Pureblood Yuan-ti~
 
-@1224 = "CHANGELING"
-@1225 = ~CHANGELING: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes, but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
+@1228 = "CHANGELING"
+@1229 = ~CHANGELING: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes, but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
 
 Changelings have the following traits:
 – Immunity to charm and sleep magics.
@@ -411,5 +411,5 @@ HALFLING SHAPE: This form negates the Charisma penalty, grants them a +10 point 
 GNOMISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to their Saving Throws vs. Spell, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their movement speed is 20% slower.
 HALF-ORCISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to melee damage, but their thieving skills are reduced by 5 points.~
 
-@1226 = ~changeling~
-@1227 = ~Changeling~
+@1230 = ~changeling~
+@1231 = ~Changeling~
