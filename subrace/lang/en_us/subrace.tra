@@ -78,7 +78,7 @@ Aasimar have the following traits:
 – Infravision
 – May cast Sunscorch once per day
 – +1 Wisdom, +1 Charisma
-– Acid, cold, and electrical resistance: +20%
+– Acid, cold, and electricity resistance: +15%
 – Gets only 95% of all experience gained~
 
 @120  = ~TIEFLINGS: Tieflings are human-based planetouched with a hint of the fiendish in their bloodline, which predisposes them to mischievous behavior, but not necessarily to evil, as their alignment vary as much as it does for full humans. Though their appearance is very human-like, they often have telltale signs that belie their ancestry such as dusky skin, dark or reddish hair, as well as eyes that are solid orbs of black, red, white, silver or gold. Though many sport horns, tails, sharp teeth, and other more unusual features such as cloven feet, most tieflings try to hide these qualities from others due to the misconceptions about their nature, and the discrimination they face because of it.
@@ -87,7 +87,7 @@ Tieflings have the following traits:
 – Infravision
 – May cast Blindness once per day
 – +1 Intelligence, +1 Dexterity, -1 Charisma
-– Fire, cold, and electrical resistance: +15%
+– Fire, cold, and electricity resistance: +15%
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained~
 
@@ -224,7 +224,7 @@ Fey'ri have the following traits:
 – Infravision
 – May cast Blindness once per day
 – +1 Intelligence, +1 Dexterity, -1 Charisma
-– Fire, cold, and electrical resistance: +15%
+– Fire, cold, and electricity resistance: +15%
 – +10% Hide in Shadows and Move Silently
 – Gets only 95% of all experience gained~
 
@@ -389,14 +389,14 @@ Pureblood Yuan-ti have the following traits:
 – +1 Dexterity, +1 Intelligence, +1 Charisma
 – +10% Hide in Shadows, +10% Move Silently
 – May cast Charm Person once per day as an innate ability
-– Gets only 93% of all experience gained if not a is Single Class Sorcerer, Rogue, Bard or Ranger, 90% if otherwise
+– Gets only 90% of all experience gained if they're not a single-classed thief or ranger, a bard, or a sorcerer. Otherwise, they receive 93% of all XP.
 – -1 penalty to THAC0 and Saving Throws if not a single-classed thief or ranger, a bard, or a sorcerer~
 
 @1226 = ~pureblood yuan-ti~
 @1227 = ~Pureblood Yuan-ti~
 
-@1224 = "CHANGELING"
-@1225 = ~CHANGELING: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes, but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
+@1228 = "CHANGELING"
+@1229 = ~CHANGELINGS: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes, but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
 
 Changelings have the following traits:
 – Immunity to charm and sleep magics.
@@ -411,5 +411,5 @@ HALFLING SHAPE: This form negates the Charisma penalty, grants them a +10 point 
 GNOMISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to their Saving Throws vs. Spell, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their movement speed is 20% slower.
 HALF-ORCISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to melee damage, but their thieving skills are reduced by 5 points.~
 
-@1226 = ~changeling~
-@1227 = ~Changeling~
+@1230 = ~changeling~
+@1231 = ~Changeling~
