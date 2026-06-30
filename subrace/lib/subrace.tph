@@ -103,6 +103,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY texts BEGIN
     "%text_snow_elf%"     => "text_snow_elf"
     "%text_wispling%"     => "text_wispling"
     "%text_yuanti%"       => "text_yuanti"
+    "%text_changeling%"   => "text_changeling"
 END
 
 ACTION_PHP_EACH texts AS var => var_name  BEGIN
@@ -2010,7 +2011,7 @@ COPY_EXISTING ~zd_yuan0.spl~ ~override/zd_yuan2.spl~
             opcode     = 104
             target     = 2
             timing     = 9
-            parameter1 = 93
+            parameter1 = 90
             parameter2 = 2
     END
     // Thaco -1
@@ -2029,6 +2030,54 @@ COPY_EXISTING ~zd_yuan0.spl~ ~override/zd_yuan2.spl~
             parameter1 = "-1"
             duration   = 60
     END
+
+COPY ~subrace/spl/spell.spl~ ~override/zd_chang.spl~
+    // Portrait icon
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 142
+            target     = 2
+            timing     = 9
+            parameter2 = text_changeling
+    END
+    // PATCH_IF (zd_colors = 1) BEGIN
+    //     // Skin color
+    //     LPF ADD_SPELL_EFFECT
+    //         INT_VAR
+    //             opcode     = 7
+    //             target     = 2
+    //             timing     = 9
+    //             parameter1 = 9
+    //             parameter2 = 3
+    //     END
+    //     // Hair color
+    //     LPF ADD_SPELL_EFFECT
+    //         INT_VAR
+    //             opcode     = 7
+    //             target     = 2
+    //             timing     = 9
+    //             parameter1 = 195
+    //             parameter2 = 6
+    //     END
+    // END
+    // Charisma -2
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 6
+            target     = 2
+            timing     = 1
+            parameter1 = "-2"
+    END
+    // XP bonus - 95%
+    LPF ADD_SPELL_EFFECT
+        INT_VAR
+            opcode     = 104
+            target     = 2
+            timing     = 9
+            parameter1 = 95
+            parameter2 = 2
+    END
+
 // BLOCKEND
 
 // BLOCK ABILITY SPELLS
