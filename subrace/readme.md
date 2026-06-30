@@ -62,7 +62,7 @@ Aasimar have the following traits:
 - Infravision
 - May cast Sunscorch once per day
 - +1 Wisdom, +1 Charisma
-- Acid, cold, and electrical resistance: +15%
+- Acid, cold, and electricity resistance: +15%
 - Gets only 95% of all experience gained
 
 ---
@@ -80,7 +80,7 @@ Tiefling have the following traits:
 - Infravision
 - May cast Blindness once per day
 - +1 Intelligence, +1 Dexterity, -1 Charisma
-- Fire, cold, and electrical resistance: +15%
+- Fire, cold, and electricity resistance: +15%
 - +10% Hide in Shadows and Move Silently
 - Gets only 95% of all experience gained
 
@@ -257,7 +257,7 @@ Sun elves have the following traits:
 Fey'ri have the following traits:
 - May cast Blindness once per day
 - +1 Charisma
-- Fire, cold, and electrical resistance: +15%
+- Fire, cold, and electricity resistance: +15%
 - +10% Hide in Shadows and Move Silently
 - Gets only 95% of all experience gained
 
@@ -422,17 +422,20 @@ Snow elves have the following traits:
 <details>
   <summary>Wisplings</summary>
 
+---
 
 **WISPLINGS**: Wisplings are planetouched descended from the union of halflings and demons. While they retain the stature of their halfling kin, they are distinguished by angular features, light brown skin, and vivid red hair—often complemented by a preference for vibrant clothing. Restless and energetic, wisplings have a penchant for deception and pranks that range from mischievous to cruel. They combine a natural talent for stealth with innate magical abilities, allowing them to shapeshift and move with supernatural speed.
 
-Wisplings have the following traits:
-– Infravision
-– +1 Dexterity, +1 Intelligence, -1 Wisdom, -2 Charisma
-– +15% Hide in Shadows, +10% Move Silently
-– Movement rate increased by a factor of 1
-– May cast Polymorph Self once per day as an innate ability
-– May cast Haste Self (4 rounds) once per day as an innate ability
-– Gets only 93% of all experience gained
+Wisplings have the following traits:  
+– Infravision  
+– +1 Dexterity, +1 Intelligence, -1 Wisdom, -2 Charisma  
+– +15% Hide in Shadows, +10% Move Silently  
+– Movement rate increased by a factor of 1  
+– May cast Polymorph Self once per day as an innate ability  
+– May cast Haste Self (4 rounds) once per day as an innate ability  
+– Gets only 93% of all experience gained  
+
+---
 
 </details>
 
@@ -441,35 +444,48 @@ Wisplings have the following traits:
 <details>
   <summary>Pureblood Yuan-ti</summary>
 
+---
+
 **Pureblood Yuan-ti**: Yuan-ti are descended from humans whose bloodlines have been intermingled with those of snakes. They're shrewd and smooth, able to form alliances with other creatures when it suits them, but they always prioritize their own goals. Yuan-ti who can convincingly pass as human—using proper clothing, cosmetics, and magic—are called purebloods. These agents are often tasked with infiltrating humanoid societies and running covert operations that demand close, hands-on interaction with humans.
 
-Pureblood Yuan-ti have the following traits:
-– Infravision
-– +1 Dexterity, +1 Intelligence, +1 Charisma
-– +10% Hide in Shadows, +10% Move Silently
-– May cast Charm Person once per day as an innate ability
-– Gets only 93% of all experience gained if not a is Single Class Sorcerer, Rogue, Bard or Ranger, 90% if otherwise
-– -1 penalty to THAC0 and Saving Throws if not a single-classed thief or ranger, a bard, or a sorcerer
+Pureblood Yuan-ti have the following traits:  
+– Infravision  
+– +1 Dexterity, +1 Intelligence, +1 Charisma  
+– +10% Hide in Shadows, +10% Move Silently  
+– May cast Charm Person once per day as an innate ability  
+– Gets only 90% of all experience gained if they're not a single-classed thief or ranger, a bard, or a sorcerer. Otherwise, they receive 93% of all XP.  
+– -1 penalty to THAC0 and Saving Throws if not a single-classed thief or ranger, a bard, or a sorcerer  
+
+---
 
 </details>
 
 <details>
   <summary>Changeling</summary>
 
+---
+
 **Changeling**: Changelings are a humanoid race related to doppelgangers who have a natural ability for shapeshifting into other humanoid forms, making them effective as actors, spies, and criminals. A typical changeling has skin of a pale grey hue, thin hair of a light silvery shade, and large blank white eyes, but they rarely appear publicly in this form. They are subtle and deceptive in their ways. How a changeling chooses and uses each new guise they adopt is up to each individual whether it's for mischief, entertainment, heroism, or terrible misdeeds.
 
-Changelings have the following traits:
-– Immunity to charm and sleep magics.
-– Gets only 95% of all experience gained.
-– Starts with a -2 penalty to Charisma and Reputation.
-– May Shapeshift into a different medium-sized humanoid of any gender at will:
+Changelings have the following traits:  
+– Immunity to charm and sleep magics.  
+– Gets only 95% of all experience gained.  
+– Starts with a -2 penalty to Charisma and Reputation.  
+– May Shapeshift into a different medium-sized humanoid of any gender at will:  
 
-HUMAN SHAPE: This form negates the Charisma penalty and does not confer any bonuses or penalties.
+HUMAN SHAPE: This form negates the Charisma penalty and does not confer any bonuses or penalties.  
+
 ELVEN SHAPE: This form negates the Charisma penalty, and confers them a +1 THAC0 bonus when using bows and swords, but a -1 penalty to their Saving Throws vs. Death.
+
 DWARVEN SHAPE: The form grants them a +1 bonus to their Saving Throws vs. Death, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their Dexterity is reduced by 1.
+
 HALFLING SHAPE: This form negates the Charisma penalty, grants them a +10 point bonus to all their thieving skills, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their Strength is reduced by 1.
-GNOMISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to their Saving Throws vs. Spell, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their movement speed is 20% slower.
-HALF-ORCISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to melee damage, but their thieving skills are reduced by 5 points.
+
+GNOMISH SHAPE: This form negates the Charisma penalty, grants them a +1 bonus to their Saving Throws vs. Spell, and a +2 bonus to Armor Class and Saving Throws vs. giant humanoids, but their movement speed is 20% slower.  
+
+HALF-ORCISH SHAPE: This form grants them a +1 bonus to melee damage, but their thieving skills are reduced by 5 points.
+
+---
 
 </details>
 
