@@ -453,7 +453,7 @@ Pureblood Yuan-ti have the following traits:
 – +1 Dexterity, +1 Intelligence, +1 Charisma  
 – +10% Hide in Shadows, +10% Move Silently  
 – May cast Charm Person once per day as an innate ability  
-– Gets only 93% of all experience gained if not a is Single Class Sorcerer, Rogue, Bard or Ranger, 90% if otherwise  
+– Gets only 90% of all experience gained if they're not a single-classed thief or ranger, a bard, or a sorcerer. Otherwise, they receive 93% of all XP.  
 – -1 penalty to THAC0 and Saving Throws if not a single-classed thief or ranger, a bard, or a sorcerer  
 
 ---
