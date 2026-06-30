@@ -62,7 +62,7 @@ Aasimar have the following traits:
 - Infravision
 - May cast Sunscorch once per day
 - +1 Wisdom, +1 Charisma
-- Acid, cold, and electrical resistance: +15%
+- Acid, cold, and electricity resistance: +15%
 - Gets only 95% of all experience gained
 
 ---
@@ -80,7 +80,7 @@ Tiefling have the following traits:
 - Infravision
 - May cast Blindness once per day
 - +1 Intelligence, +1 Dexterity, -1 Charisma
-- Fire, cold, and electrical resistance: +15%
+- Fire, cold, and electricity resistance: +15%
 - +10% Hide in Shadows and Move Silently
 - Gets only 95% of all experience gained
 
@@ -257,7 +257,7 @@ Sun elves have the following traits:
 Fey'ri have the following traits:
 - May cast Blindness once per day
 - +1 Charisma
-- Fire, cold, and electrical resistance: +15%
+- Fire, cold, and electricity resistance: +15%
 - +10% Hide in Shadows and Move Silently
 - Gets only 95% of all experience gained
 
