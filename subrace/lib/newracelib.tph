@@ -24,7 +24,7 @@ BEGIN
     SET insert_index=race_index
     SET race_index+=1
     // name ID NAME DESCSTR UPPERCASE BIOGRAPHY
-    INSERT_2DA_ROW insert_index colcount ~%key%    %race_index%          %name%       %desc%       %uppercase%          %biography%~
+    INSERT_2DA_ROW insert_index colcount ~%key%     %race_index%          %name%       %desc%       %mixed%          %biography%~
     PRETTY_PRINT_2DA
   BUT_ONLY
 
