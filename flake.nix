@@ -24,7 +24,7 @@
         {
           default =
             with pkgs;
-            mkShell rec {
+            mkShell {
               nativeBuildInputs = [
                 codespell
                 envsubst
@@ -32,6 +32,7 @@
                 git
                 hk
                 lua
+                nil
                 nixfmt
                 weidu
                 yamlfmt
@@ -39,6 +40,6 @@
             };
         }
       );
-      formatter = forEachSystem (system: nixpkgs.${system}.nixfmt);
+      formatter = forEachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
     };
 }
