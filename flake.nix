@@ -1,15 +1,11 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
-    hk = {
-      url = "github:jdx/hk/v1.44.2";
-    };
   };
   outputs =
     {
       self,
       nixpkgs,
-      hk,
     }:
     let
       systems = [
@@ -34,13 +30,12 @@
                 envsubst
                 ffmpeg
                 git
-                hk.packages.${system}.default
+                hk
                 lua
                 nixfmt
                 weidu
                 yamlfmt
               ];
-              env.HK_PKL_BACKEND = "pklr";
             };
         }
       );
