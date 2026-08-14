@@ -25,14 +25,14 @@
 
 ## Contents
 
-0. Introduction
+1. Introduction
 1. [Compatibility](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#compatibility)
-2. [Available subraces](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-subraces)
-3. [Available races](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-races)
-4. Installation
-5. Credits
-6. [Version History](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#version-history)
-7. Legal Information
+1. [Available subraces](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-subraces)
+1. [Available races](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#available-races)
+1. Installation
+1. Credits
+1. [Version History](https://github.com/dark0dave/Subrace-mod/blob/main/subrace/readme.md#version-history)
+1. Legal Information
 
 ## Introduction
 
@@ -476,16 +476,6 @@ Pureblood Yuanti have the following traits:
 ---
 
 </details>
-
-## Installation
-
-### Windows
-
-This is a WeiDU mod, that means it is very easy to install. Simply unpack the downloaded archive into your game's installation directory (where you can find the file "chitin.key") and run "setup-subrace.exe". Follow the instructions and you are ready to start.
-
-After installing the mod, you need to start a new game to select a subrace. The mod needs to be installed after other mods that modify campaign.2da.
-
-To uninstall, run "setup-subrace.exe" again and follow the prompts.
 
 ## Credits
 

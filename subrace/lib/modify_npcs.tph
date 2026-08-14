@@ -1,8 +1,8 @@
 
 ACTION_FOR_EACH scr IN viconia_ bdviconi viconia vico25 baeloth bdbaelot BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%scr%.bcs~ BEGIN
-  	OUTER_SPRINT ~SUBRA~ ~VCBA~
-  	OUTER_SET lc_subr = 3
+    OUTER_SPRINT ~SUBRA~ ~VCBA~
+    OUTER_SET lc_subr = 3
     EXTEND_TOP ~%scr%.bcs~ ~subrace/baf/zd_subr.baf~ EVALUATE_BUFFER
   END
 END

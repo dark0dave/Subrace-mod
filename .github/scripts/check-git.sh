@@ -21,8 +21,7 @@ function gitCheck() {
 
   # Report errors based on git configuration.
   # Respect overrides in .gitattributes if present.
-  # git diff-index --check "${commit}"
-  # disabled to promote collab
+  git diff-index --check "${commit}"
 }
 
 function forbidSubmodules() {
