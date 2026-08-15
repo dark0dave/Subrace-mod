@@ -145,6 +145,9 @@ function createSubraceTable(race)
 			{%Zhalfgrayorc_title%, %halfgrayorc_desc%, 17},
 		}
 	end
+	if race > 7 then
+		sbSubraceData = {}
+	end
 end
 
 sbSubraceDataEx = {}
