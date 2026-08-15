@@ -9,6 +9,7 @@ local builtin_hooks = new Mapping<String, Step> {
   ["check-case-conflict"] = Builtins.check_case_conflict
   ["check-merge-conflict"] = Builtins.check_merge_conflict
   ["end-of-file-fixer"] = Builtins.newlines
+  ["nil"] = Builtins.nil
   ["nix-fmt"] = Builtins.nix_fmt
   ["trailing-whitespace"] = Builtins.trailing_whitespace
   ["yamlfmt"] = Builtins.yamlfmt
