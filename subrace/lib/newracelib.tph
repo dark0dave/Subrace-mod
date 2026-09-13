@@ -24,13 +24,15 @@ BEGIN
     SET insert_index=race_index
     SET race_index+=1
     // name ID NAME DESCSTR UPPERCASE BIOGRAPHY
-    INSERT_2DA_ROW insert_index colcount ~%key%    %race_index%          %name%       %desc%       %uppercase%          %biography%~
+    INSERT_2DA_ROW insert_index colcount ~%key%     %race_index%          %name%       %desc%       %mixed%          %biography%~
+    LPF a7#normalize_table END
     PRETTY_PRINT_2DA
   BUT_ONLY
 
   // Race IDS
   COPY_EXISTING ~race.ids~ ~override~
     INSERT_2DA_ROW race_index 2 ~%race_index% %key%~
+    LPF a7#normalize_table END
   BUT_ONLY
 
   // Engine strings
@@ -41,6 +43,7 @@ BEGIN
     INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_LOWER_%key%                                  %name%~
     INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_BIOGRAPHY_%key%                        %biography%~
     INSERT_2DA_ROW engine_data colcount ~STRREF_GUI_MIXED_%key%                                  %mixed%~
+    LPF a7#normalize_table END
     PRETTY_PRINT_2DA
   BUT_ONLY
 END
