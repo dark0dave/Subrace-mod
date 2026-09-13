@@ -1,4 +1,5 @@
 INCLUDE ~%MOD_FOLDER%/lib/newracelib.tph~
+INCLUDE ~%MOD_FOLDER%/lib/2dafunctions.tph~
 
 // Kitsune
 OUTER_SPRINT key @2001
@@ -10,34 +11,13 @@ OUTER_SET biography = RESOLVE_STR_REF(@2005)
 
 LAF zd_new_race_setup INT_VAR mixed STR_VAR key name desc uppercase biography RET race_index END
 
-// Classes
-OUTER_TEXT_SPRINT classes "$ $ %key%" // first two rows are not expanded
-COPY_EXISTING ~clsrcreq.2da~ ~override~
-  COUNT_2DA_COLS colcount
-  COUNT_2DA_ROWS colcount row_count
-  READ_2DA_ENTRIES_NOW classdata colcount
-  FOR (row=0;row<row_count;++row) BEGIN
-    // Copy halfling classes
-    READ_2DA_ENTRY_FORMER classdata row 5 class_setting
-    SPRINT classes "%classes% %class_setting%"
-  END
-  APPEND_COL ~clsrcreq.2da~ ~%classes%~
-BUT_ONLY
-
-COPY_EXISTING ~clsrcreq.2da~ ~override~
-  PRETTY_PRINT_2DA
-BUT_ONLY
-
-// Mage:
-// COPY_EXISTING ~mgsrcreq.2da~ ~override~
-
 // Stats
 COPY_EXISTING ~abracead.2da~ ~override~
   COUNT_2DA_COLS colcount
   READ_2DA_ENTRIES_NOW statdata colcount
   // name          MOD_STR  MOD_DEX  MOD_CON  MOD_INT  MOD_WIS  MOD_CHR
-  INSERT_2DA_ROW statdata colcount ~%key%   0        0        0        0        0        0~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW statdata colcount ~%key%    0        1        0        1        -1        0~
+  LPF a7#normalize_table END
 BUT_ONLY
 
 COPY_EXISTING ~abracerq.2da~ ~override~
@@ -45,24 +25,72 @@ COPY_EXISTING ~abracerq.2da~ ~override~
   READ_2DA_ENTRIES_NOW statdata colcount
   // name MIN_STR MAX_STR MIN_DEX MAX_DEX MIN_CON MAX_CON MIN_INT MAX_INT MIN_WIS MAX_WIS MIN_CHR MAX_CHR
   INSERT_2DA_ROW statdata colcount ~%key%   3        18       3        18       3        18       3        18       3        18       3        18~
-  PRETTY_PRINT_2DA
+  LPF a7#normalize_table END
 BUT_ONLY
 
-// Kitable
+// Classes
+OUTER_TEXT_SPRINT classes "$ $ %key%" // first two rows are not expanded
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  COUNT_2DA_ROWS colcount row_count
+  READ_2DA_ENTRIES_NOW classdata colcount
+  FOR (row=0;row<row_count;++row) BEGIN
+    // Copy elf classes
+    READ_2DA_ENTRY_FORMER classdata row 2 class_setting
+    SPRINT classes "%classes% %class_setting%"
+  END
+  APPEND_COL ~clsrcreq.2da~ ~%classes%~
+BUT_ONLY
+
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  PRETTY_PRINT_2DA
+  LPF a7#normalize_table END
+BUT_ONLY
+
+// Mage Special
+OUTER_TEXT_SPRINT magespec "$ $ %key%" // first two rows are not expanded
+COPY_EXISTING ~mgsrcreq.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  COUNT_2DA_ROWS colcount row_count
+  READ_2DA_ENTRIES_NOW classdata colcount
+  FOR (row=0;row<row_count;++row) BEGIN
+    // Copy elf mage settings
+    READ_2DA_ENTRY_FORMER classdata row 3 mage_setting
+    SPRINT magespec "%magespec% %mage_setting%"
+  END
+  APPEND_COL ~mgsrcreq.2da~ ~%magespec%~
+BUT_ONLY
+
+COPY_EXISTING ~mgsrcreq.2da~ ~override~
+  PRETTY_PRINT_2DA
+  LPF a7#normalize_table END
+BUT_ONLY
+
+// Kits
 OUTER_TEXT_SPRINT kits "$ $ %key%" // first two rows are not expanded
 COPY_EXISTING ~kittable.2da~ ~override~
   COUNT_2DA_COLS colcount
-  READ_2DA_ENTRIES_NOW classdata colcount
-  FOR (row=0;row<classdata;++row) BEGIN
-    // Copy halfling classes
-    READ_2DA_ENTRY_FORMER classdata row 6 kits_setting
-    SPRINT kits "%kits% %kits_setting%"
+  READ_2DA_ENTRIES_NOW kitdata colcount
+  FOR (row=0;row<kitdata;++row) BEGIN
+    // Get elf kits
+    READ_2DA_ENTRY_FORMER kitdata row 4 kits_setting
+    // Copy elf kits to kitsune kits
+    INNER_PATCH_SAVE kit_name ~%kits_setting%~ BEGIN
+      REPLACE_TEXTUALLY ~E$~ ~K~
+    END
+    INNER_ACTION BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%kits_setting%.2DA~ BEGIN
+        COPY_EXISTING ~%kits_setting%.2DA~ ~override/%kit_name%.2da~
+      END
+    END
+    SPRINT kits "%kits% %kit_name%"
   END
   APPEND_COL ~kittable.2da~ ~%kits%~
 BUT_ONLY
 
 COPY_EXISTING ~kittable.2da~ ~override~
   PRETTY_PRINT_2DA
+  LPF a7#normalize_table END
 BUT_ONLY
 
 // skillrac
@@ -71,10 +99,46 @@ COPY_EXISTING ~skillrac.2da~ ~override~
   READ_2DA_ENTRIES_NOW statdata colcount
   // name PICK_POCKETS OPEN_LOCKS FIND_TRAPS MOVE_SILENTLY HIDE_IN_SHADOWS DETECT_ILLUSION SET_TRAPS
   INSERT_2DA_ROW statdata colcount ~%key%    20              15              10              20              20                0                 0~
+BUT_ONLY
+
+COPY_EXISTING ~skillrac.2da~ ~override~
   PRETTY_PRINT_2DA
+  LPF a7#normalize_table END
+BUT_ONLY
+
+// bonuses for items
+COPY_EXISTING ~racethac.2da~ ~override~
+  COUNT_2DA_COLS colcount
+  READ_2DA_ENTRIES_NOW data colcount
+  FOR (row=0;row<data;++row) BEGIN
+    // Copy human thaco
+    READ_2DA_ENTRY_FORMER data row 2 setting
+    SPRINT thaco "%thaco% %setting%"
+  END
+  SPRINT thaco "%thaco% 0"
+  SPRINT thaco "%thaco% 0"
+  APPEND_COL ~racethac.2da~ ~%thaco%~
+BUT_ONLY
+
+COPY_EXISTING ~racethac.2da~ ~override~
+  LPF a7#normalize_table END
 BUT_ONLY
 
 // TODO: racecolor.2da needs an extra column
-// TODO: racethac.2da for kitsune
-// TODO: racefeat.2da
+// TODO: racefeat.2da if you need infravision
 // TODO: Animations
+
+COPY ~subrace/lua/m_zdksun.lua~ ~override~ EVALUATE_BUFFER
+
+// Handle race marlacky
+COPY_EXISTING ~ui.menu~ ~override~
+  REPLACE_TEXTUALLY
+  ~createCharScreen:OnRaceSelectButtonClick.*$~
+  ~theOldSwitchAroooooo(currentChargenRace)~
+  COPY_EXISTING ~ui.menu~ ~override~
+  REPLACE_TEXTUALLY
+  ~function proficiencyOrGeneralHelp()~
+  ~function proficiencyOrGeneralHelp()%LNL%%TAB%revert(currentChargenRace)~
+
+COPY_EXISTING ~ui.menu~ ~override~
+  REPLACE_TEXTUALLY ~text lua "chargen\.information.*$~ ~text lua "getRaceTitle()"~
