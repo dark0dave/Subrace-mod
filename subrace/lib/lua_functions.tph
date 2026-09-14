@@ -40,7 +40,7 @@ DEFINE_PATCH_MACRO FC_INSERT_MENU_ELEMENT BEGIN
 	END
 END
 
-DEFINE_PATCH_MACRO FC_FIND_UI_BRACES BEGIN /**/
+DEFINE_PATCH_MACRO FC_FIND_UI_BRACES BEGIN
 	SET offsA = INDEX_BUFFER(~{~ offs) + 1
 	SET nums = 2
 	WHILE ( nums > 1 ) BEGIN
@@ -314,33 +314,6 @@ BEGIN
 		END
 	END
 END
-
-/*DEFINE_PATCH_FUNCTION FC_REPLACE_ELEMENT_ACTION
-	STR_VAR
-		element_text = ""
-		action_type = "action"
-		action_string = ""
-	RET
-		element_text
-BEGIN
-	PATCH_IF ( ~%action_string%~ STR_CMP ~~ ) BEGIN
-		SPRINT ~action_text~  ~%action_type%%LNL%%TAB%%TAB%"%LNL%%TAB%%TAB%%TAB%%action_string%%LNL%%TAB%%TAB%"~
-		SET lennew = STRING_LENGTH ~%element_text%~
-		INNER_PATCH_SAVE ~element_text~ ~%element_text%~ BEGIN
-			SET offs = INDEX_BUFFER(~%action_type%[ %TAB%%WNL%%LNL%%MNL%]*"~)
-			PATCH_IF ( offs >= 0 ) BEGIN
-				SET offs1 = INDEX_BUFFER(~"~ offs) + 1
-				SET offs2 = INDEX_BUFFER(~"~ offs1) + 1
-				DELETE_BYTES offs offs2 - offs
-			END ELSE BEGIN
-				SET offs = lennew - 2
-			END
-			SET len = STRING_LENGTH ~%action_text%~
-			INSERT_BYTES offs len
-			WRITE_ASCIIE offs  ~%action_text%~
-		END
-	END
-END*/
 
 DEFINE_PATCH_FUNCTION FC_REPLACE_ELEMENT_ACTION
 	INT_VAR
