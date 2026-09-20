@@ -40,6 +40,6 @@
             };
         }
       );
-      formatter = forEachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
+      formatter = forEachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt);
     };
 }
