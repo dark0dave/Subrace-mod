@@ -76,7 +76,7 @@ COPY_EXISTING ~kittable.2da~ ~override~
     READ_2DA_ENTRY_FORMER kitdata row 4 kits_setting
     // Copy elf kits to kitsune kits
     INNER_PATCH_SAVE kit_name ~%kits_setting%~ BEGIN
-      REPLACE_TEXTUALLY ~E$~ ~K~
+      REPLACE_TEXTUALLY ~E$~ ~KI~
     END
     INNER_ACTION BEGIN
       ACTION_IF FILE_EXISTS_IN_GAME ~%kits_setting%.2DA~ BEGIN
@@ -128,17 +128,21 @@ BUT_ONLY
 // TODO: racefeat.2da if you need infravision
 // TODO: Animations
 
-COPY ~subrace/lua/m_zdksun.lua~ ~override~ EVALUATE_BUFFER
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~m_zdnewr.lua~
+BEGIN
+  COPY ~subrace/lua/m_zdnewr.lua~ ~override~
 
-// Handle race marlacky
-COPY_EXISTING ~ui.menu~ ~override~
-  REPLACE_TEXTUALLY
-  ~createCharScreen:OnRaceSelectButtonClick.*$~
-  ~theOldSwitchAroooooo(currentChargenRace)~
+  // Handle race marlacky
   COPY_EXISTING ~ui.menu~ ~override~
-  REPLACE_TEXTUALLY
-  ~function proficiencyOrGeneralHelp()~
-  ~function proficiencyOrGeneralHelp()%LNL%%TAB%revert(currentChargenRace)~
+    REPLACE_TEXTUALLY
+    ~createCharScreen:OnRaceSelectButtonClick.*$~
+    ~switch(currentChargenRace)~
 
-COPY_EXISTING ~ui.menu~ ~override~
-  REPLACE_TEXTUALLY ~text lua "chargen\.information.*$~ ~text lua "getRaceTitle()"~
+  COPY_EXISTING ~ui.menu~ ~override~
+    REPLACE_TEXTUALLY
+    ~function proficiencyOrGeneralHelp()~
+    ~function proficiencyOrGeneralHelp()%LNL%%TAB%revert(currentChargenRace)~
+
+  COPY_EXISTING ~ui.menu~ ~override~
+    REPLACE_TEXTUALLY ~text lua "chargen\.information.*$~ ~text lua "getRaceTitle()"~
+END

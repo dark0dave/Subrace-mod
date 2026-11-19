@@ -17,16 +17,16 @@ end
 function debugChargen()
   print(dump(chargen))
 end
-function theOldSwitchAroooooo(race)
-  if race == %race_index% then
+function switch(race)
+  if race > 7 then
     createCharScreen:OnRaceSelectButtonClick(swap.placeholder)
+    swap.selected = race
   else
     createCharScreen:OnRaceSelectButtonClick(race)
   end
-  swap.selected = race
 end
 function revert(race)
-  if race == %race_index% then
+  if race > 7 then
     createCharScreen:OnRaceSelectButtonClick(swap.selected)
   end
 end
