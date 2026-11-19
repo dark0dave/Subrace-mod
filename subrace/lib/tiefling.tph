@@ -25,6 +25,9 @@ COPY_EXISTING "racetext.2da" ~override~
     COUNT_2DA_ROWS colcount row_count
     FOR (v = 0; v <= row_count; ++v) BEGIN
         READ_2DA_ENTRY v 1 colcount res
+        PATCH_IF (race_index < res) BEGIN
+          SET v = row_count + 1
+        END
         SET insert_index = v
         PATCH_IF (~%race_index%~ STRING_EQUAL ~%res%~) BEGIN
             REMOVE_2DA_ROW insert_index colcount
