@@ -1,0 +1,3 @@
+OUTER_SET zd_colors = 2
+
+INCLUDE ~subrace/lib/subrace.tph~
