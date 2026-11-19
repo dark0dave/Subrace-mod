@@ -1,0 +1,10 @@
+INCLUDE ~%MOD_FOLDER%/lib/components/comp_%COMPONENT_NUMBER%.tpa~
+
+OUTER_SET INSTALLED_LEUI   = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR
+                              (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
+                              (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) OR
+                              (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
+OUTER_SET INSTALLED_LEUIBG = INSTALLED_LEUI AND GAME_IS ~bgee bg2ee eet~
+OUTER_SET INSTALLED_DSUI   = (FILE_EXISTS_IN_GAME ~RGCGWDE.png~)
+OUTER_SET INSTALLED_TIPUN  = (FILE_EXISTS_IN_GAME ~m_zZFunc.lua~)
+OUTER_SET INSTALLED_IUI    = (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0)

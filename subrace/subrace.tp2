@@ -1,17 +1,10 @@
 BACKUP ~weidu_external/subrace/backup~
-AUTHOR ~tipun. tipun.iwd@google.com~
+SUPPORT ~https://github.com/dark0dave/Subrace-mod/issues~
 VERSION ~0.3.4~
 README ~subrace/readme.md~
 
 ALWAYS
-  OUTER_SET INSTALLED_LEUI   = (MOD_IS_INSTALLED ~leui.tp2~ 0) OR
-                               (MOD_IS_INSTALLED ~leui-iwdee.tp2~ 0) OR
-                               (MOD_IS_INSTALLED ~leui-sod.tp2~ 0) OR
-                               (MOD_IS_INSTALLED ~leui-bg1ee.tp2~ 0)
-  OUTER_SET INSTALLED_LEUIBG = INSTALLED_LEUI AND GAME_IS ~bgee bg2ee eet~
-  OUTER_SET INSTALLED_DSUI   = (FILE_EXISTS_IN_GAME ~RGCGWDE.png~)
-  OUTER_SET INSTALLED_TIPUN  = (FILE_EXISTS_IN_GAME ~m_zZFunc.lua~)
-  OUTER_SET INSTALLED_IUI    = (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0)
+  INCLUDE ~k0_iskp/lib/always.tpa~
 END
 
 LANGUAGE ~English~
@@ -59,10 +52,6 @@ GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2,
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
 
-OUTER_SET zd_colors = 1
-
-INCLUDE ~subrace/lib/subrace.tph~
-
 BEGIN @1000002 /* No change subrace colors (Hair and Skin) */
 DESIGNATED 200
 LABEL ~zz-zd-zs-subrace-no-hair-and-skin~
@@ -70,10 +59,6 @@ SUBCOMPONENT @1000000 /* Subrace mod for Baldur's Gate Enhanced Edition (BG1, BG
 GROUP @1000005 /* Subraces for Baldur's Gate Enhanced Edition (BG1, BG:SoD, BG2, EET) */
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
-
-OUTER_SET zd_colors = 2
-
-INCLUDE ~subrace/lib/subrace.tph~
 
 BEGIN @1100003 /* Modify ingame NPCs to use subrace settings */
 DESIGNATED 400
@@ -85,19 +70,6 @@ REQUIRE_PREDICATE MOD_IS_INSTALLED "subrace/subrace.tp2" 100 OR
                   @1100004 /* requires subrace to be installed */
 FORBID_COMPONENT "dw_talents/dw_talents.tp2" 20000 @1100001 /* This component is not compatible with ToF New races and subraces */
 
-INCLUDE ~subrace/lib/modify_npcs.tph~
-
-BEGIN @1000100 /* ALPHA: Install all new races */
-DESIGNATED 399
-LABEL ~zz-zd-zs-subrace-newraces-all~
-GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
-FORBID_COMPONENT "subrace/subrace.tp2" 300 @1100005 /* Already installed */
-FORBID_COMPONENT "subrace/subrace.tp2" 301 @1100005 /* Already installed */
-
-INCLUDE ~subrace/lib/kitsune.tph~
-INCLUDE ~subrace/lib/kenku.tph~
-
 // New Races Components
 BEGIN @1000004 /* Kitsune */
 DESIGNATED 300
@@ -106,8 +78,6 @@ GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "subrace/subrace.tp2" 399 @1100005 /* Already installed */
 
-INCLUDE ~subrace/lib/kitsune.tph~
-
 BEGIN @1000006 /* Kenku */
 DESIGNATED 301
 LABEL ~zz-zd-zs-subrace-newrace-kenku~
@@ -115,4 +85,10 @@ GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
 FORBID_COMPONENT "subrace/subrace.tp2" 399 @1100005 /* Already installed */
 
-INCLUDE ~subrace/lib/kenku.tph~
+BEGIN @1000100 /* ALPHA: Install all new races */
+DESIGNATED 399
+LABEL ~zz-zd-zs-subrace-newraces-all~
+GROUP @1000003 /* ALPHA: New Races mod for Baldur's Gate Enhanced Edition (BG1EE, BG2EE, EET) */
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1100000 /* This component is not compatible with your game */
+FORBID_COMPONENT "subrace/subrace.tp2" 300 @1100005 /* Already installed */
+FORBID_COMPONENT "subrace/subrace.tp2" 301 @1100005 /* Already installed */
