@@ -1,0 +1,39 @@
+INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+INCLUDE ~%MOD_FOLDER%/lib/2dafunctions.tph~
+
+// Tiefling
+OUTER_SET uppercase = RESOLVE_STR_REF(~TIEFLING~)
+OUTER_SET name = RESOLVE_STR_REF(~tiefling~)
+OUTER_SET mixed = RESOLVE_STR_REF(~Tiefling~)
+OUTER_SET desc = RESOLVE_STR_REF(~TIEFLING: Tieflings are the offspring of the planes, as varied as the places they call home. Superficially human, their appearance always betrays them: some sport small horns, other have pointed ears, scales, a cloven hoof, or just a wicked gleam in their eye that never leaves. What they all have in common is a quick temper and a chip on their shoulder.~)
+OUTER_SET biography = RESOLVE_STR_REF(~~)
+OUTER_SET race_index = 153 // Default
+
+// Find or Add Tiefling race id, if it exists
+LAF ADD_IDS_ENTRY
+    INT_VAR
+        minValue       = 1
+        preferredValue = "%race_index%"
+    RET
+        race_index = value
+END
+
+// Find or add to racetext.2da
+COPY_EXISTING "racetext.2da" ~override~
+  COUNT_2DA_COLS colcount
+  COUNT_2DA_ROWS colcount row_count
+  FOR (v = 0; v <= row_count; ++v) BEGIN
+    READ_2DA_ENTRY v 1 colcount res
+    LOOKUP_IDS_SYMBOL_OF_INT retVal ~RACE~ v
+    SET insert_index = v
+    PATCH_IF (~%res%~ STRING_EQUAL ~%v%~) BEGIN
+      REMOVE_2DA_ROW v colcount
+      SET v = row_count + 1
+    END
+  END
+
+  // name ID NAME DESCSTR UPPERCASE BIOGRAPHY
+  INSERT_2DA_ROW insert_index colcount ~%uppercase%     %race_index%          %name%       %desc%       %mixed%          %biography%~
+  LPF a7#normalize_table END
+  PRETTY_PRINT_2DA
+BUT_ONLY
