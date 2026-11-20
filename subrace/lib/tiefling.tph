@@ -2,10 +2,10 @@ INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
 INCLUDE ~%MOD_FOLDER%/lib/2dafunctions.tph~
 
 // Tiefling
-OUTER_SET uppercase = RESOLVE_STR_REF(~TIEFLING~)
-OUTER_SET name = RESOLVE_STR_REF(~tiefling~)
-OUTER_SET mixed = RESOLVE_STR_REF(~Tiefling~)
-OUTER_SET desc = RESOLVE_STR_REF(~TIEFLING: Tieflings are the offspring of the planes, as varied as the places they call home. Superficially human, their appearance always betrays them: some sport small horns, other have pointed ears, scales, a cloven hoof, or just a wicked gleam in their eye that never leaves. What they all have in common is a quick temper and a chip on their shoulder.~)
+OUTER_SET uppercase = RESOLVE_STR_REF(@2200 /* TIEFLING */)
+OUTER_SET name = RESOLVE_STR_REF(@2201 /* tiefling */)
+OUTER_SET mixed = RESOLVE_STR_REF(@2202 /* Tiefling */)
+OUTER_SET desc = RESOLVE_STR_REF(@2203 /* TIEFLING: Tieflings are the offspring of the planes, as varied as the places they call home. Superficially human, their appearance always betrays them: some sport small horns, other have pointed ears, scales, a cloven hoof, or just a wicked gleam in their eye that never leaves. What they all have in common is a quick temper and a chip on their shoulder. */)
 OUTER_SET biography = RESOLVE_STR_REF(~~)
 OUTER_SET race_index = 153  // Default
 
